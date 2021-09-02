@@ -12,6 +12,7 @@ force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
 	if(#suna == 1) goto ja_e_de_outra;
 	if(#nevoa == 1) goto ja_e_de_outra;
 	if(#nuvem == 1) goto ja_e_de_outra;
+	if(#virounuke == 1) { end; }
 	mes "[^3131FFNaruto MMORPG Online^000000]";
 	mes "Seja bem vindo!";
 	next;
@@ -113,6 +114,7 @@ force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
 	if(#suna == 1) goto ja_e_de_suna;
 	if(#nevoa == 1) goto ja_e_de_outra;
 	if(#nuvem == 1) goto ja_e_de_outra;
+	if(#virounuke == 1) { end; }
 	mes "[^3131FFNaruto MMORPG Online^000000]";
 	mes "Seja bem vindo!";
 	next;
@@ -212,6 +214,7 @@ reuniao,61,36,5	script	Mizukage#1	4_f_babayaga,{
 	if(#suna == 1) goto ja_e_de_outra;
 	if(#nevoa == 1) goto ja_e_de_nevoa;
 	if(#nuvem == 1) goto ja_e_de_outra;
+	if(#virounuke == 1) { end; }
 	mes "[Mizukage]";
 	mes "Seja bem vindo!";
 	next;
@@ -318,6 +321,7 @@ force_1-1,31,26,5	script	Raikage#1	870,{
 	if(#suna == 1) goto ja_e_de_outra;
 	if(#nevoa == 1) goto ja_e_de_outra;
 	if(#nuvem == 1) goto ja_e_de_nuvem;
+	if(#virounuke == 1) { end; }
 	mes "[^3131FFNaruto MMORPG Online^000000]";
 	mes "Seja bem vindo!";
 	next;

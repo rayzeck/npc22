@@ -213,12 +213,14 @@ mes "[^DC143CShinobi Misterioso^000000]";
 mes "Vejo que esta determinado a ser livre então eu vou te ajudar. No deserto vive um amigo meu, o Strope, ele irá te guiar para o próximo passo.";
 warp "moc_fild01",200,185;
 dispbottom "Você recebeu nível para encarar a dificuldade dessa sua nova vida!";
-atcommand "@blvl 500";
-atcommand "@vit 1000";
-atcommand "@str 1000";
-atcommand "@dex 1000";
+atcommand "@blvl 999";
+atcommand "@agi 400";
+atcommand "@vit 400";
+atcommand "@str 400";
+atcommand "@dex 400";
 atcommand "@speed 80";
 atcommand "@heal";
+set #virounuke,1;
 close;
 
 L_nao:
