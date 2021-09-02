@@ -636,13 +636,6 @@ end;
 
 }
 
-//moc_pryd02,51,90,4	script	Saída#25	45,1,1,{
-
-warp "prt_in",250,15;
-end;
-
-}
-
 prt_in,227,45,5	script	Riki	765,{
 
 if (nukenin == 1) {mes "[^DC143CRiki^000000]"; mes "Não tenho nada pra falar com você"; close;}
@@ -708,12 +701,8 @@ if(countitem(30033) == 1) {delitem 30033,1;}
 if(countitem(30034) == 1) {delitem 30034,1;}
 if(countitem(30035) == 1) {delitem 30035,1;}
 
-if (#nevoa == 1) {getitem 31224,1;}
-if (#nuvem == 1) {getitem 31224,1;}
-if (#konoha == 1) {getitem 31224,1;}
-if (#suna == 1) {getitem 31224,1;}
-getitem 31224,1;
-equip 31224;
+getitem 31226,1;
+equip 31226;
 atcommand "@job 4019";
 set nukenin,1;
 next;
