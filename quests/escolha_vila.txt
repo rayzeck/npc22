@@ -1,6 +1,7 @@
 force_1-1,28,32,5	script	Katsuyu#1	1031,{
 npctalk "Oi. "+strcharinfo(0)+", você está ferido?";
 atcommand "@effect 7";
+atcommand "@heal";
 sleep 800;
 npctalk "Eu vou te curar.";
 close;

@@ -157,7 +157,7 @@ force_1-1,40,26,3	script	Shinobi Misterioso#10	412,{
 //lou_in02 241 172
 //lou_in02 54 179
 
-//if(jounin != 1) {mes "Você é muito fraquinho pra falar comigo"; close;}
+if (#virounuke == 1) {dispbottom "Termine a quest!"; warp "moc_fild01",200,185; close;}
 if (quest_nukenin != 0) {mes "[^DC143CShinobi Misterioso^000000]"; mes "Não tenho nada pra falar com você"; close;}
 
 mes "[^DC143CShinobi Misterioso^000000]";
