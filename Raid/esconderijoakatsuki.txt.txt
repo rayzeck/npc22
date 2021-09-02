@@ -1,0 +1,263 @@
+prontera,151,178,6	script	Esconderijo da Akatsuki	4_M_JOB_KNIGHT2,{
+
+	//Caso alguém morra lá dentro, falando com o npc será levado imediatamente para dentro da sala.
+	
+	if($AKT_STATUS)
+	{
+		for(set .@i,0; .@i<getarraysize($aktAID); set .@i,.@i+1)
+		{ if(getcharid(3) == $aktAID[.@i]){ warp "pvp_n_1-5",65,99; end; } }
+		
+		if(getcharid(1) == $AKT_gID)
+		{
+			mes ".::[ Informante ]::.";
+			mes " ";
+			mes "^FF0000* Você não pode participar após o seu grupo já estiver batalhando!^000000";
+			close;
+		}
+	}
+
+	mes ".::[ Informante ]::.";
+	mes " ";
+	mes "O que você quer aqui?";
+	
+	if(select("Entrar no esconderijo!:Desejo obter informações...!")==2)
+	{
+		next;
+		mes ".::[ Informante ]::.";
+		mes " ";
+		mes "Sou o informante que descobriu um dos esconderijos da akatsuki, e irei levar grupos de ninjas qualificados para investigar o local...";
+		
+		next;
+		mes ".::[ Informante ]::.";
+		mes " ";
+		mes "Cada grupo entrará por vez, afim de recolher informações de forma segura, cada grupo poderá entrar no local "+.limit+"x por dia, se o lider do grupo for vip então o grupo poderá entrar até "+.limitvip+"x ao dia, o resete acontece as 00h (meia-noite)!";
+		
+		next;
+		mes ".::[ Informante ]::.";
+		mes " ";
+		mes "Sabemos que varias ondas de zetsus brancos aparecem ao adentrar, e um tempo limite determinará se o grupo continuará até o fim da investigação, caso contrário o grupo será removido do local!";
+		close;
+	}
+	
+	//Checkings
+	
+	if(!getcharid(1)){ mes "^FF0000* Você não tem grupo!"; close; }
+	if(getpartyleader(getcharid(1),2) != getcharid(0)){ mes "^FF0000* Somente o lider pode iniciar!"; close; }
+	if($AKT_STATUS){ mes "^FF0000* Já existe um grupo dentro do esconderijo agora, espere eles saírem!"; close; }
+	
+	next;
+	mes ".::[ Informante ]::.";
+	mes " ";
+	mes "Seu grupo está preparado e pronto para entrar no local?";
+	if(select("Estamos prontos!:Irei verificar...")==2){ close; }
+	
+	//Controle de vinculos dos players no grupo
+	
+	getpartymember getcharid(1),2;
+	set .@partycount,$@partymembercount;
+	set .@lVIP,(getgroupid() >= .vipLvL ? 1:0);
+	deletearray $aktAID[0],getarraysize($aktAID);
+	
+	for(set .@i,0; .@i<.@partycount; set .@i,.@i+1)
+	{		
+		query_sql "SELECT `aktcnt` FROM `login` WHERE `account_id`="+$@partymemberaid[.@i]+"",.@rst;
+
+		if(.@rst >= (.@lVIP ? .limitvip:.limit))
+		{
+			query_sql "SELECT `name` FROM `char` WHERE `account_id`="+$@partymemberaid[.@i]+" AND `online`=1",.@rst$; 
+			mes "^FF0000* "+(strcharinfo(0) == .@rst$ ? "Você":"O jogador "+.@rst$+"")+" atingiu o limite diário!^000000";
+			close;
+		}
+		
+		setarray $aktAID[.@i],$@partymemberaid[.@i];				
+	}
+	
+	//alterar status para ocupado e pega o id do grupo e guarda os ids da conta.
+	set $AKT_STATUS,1;
+	set $AKT_gID,getcharid(1);
+	
+	//Enviar o grupo para uma das 4 wheres (altere o rand(1,1) para rand(1,4) para usar as 4 where)
+	switch(rand(1,1))
+	{
+		case 1: warpparty "pvp_n_1-5",65,99,$AKT_gID; break;
+		case 2: warpparty "pvp_n_1-5",133,99,$AKT_gID; break;
+		case 3: warpparty "pvp_n_1-5",99,133,$AKT_gID; break;
+		case 4: warpparty "pvp_n_1-5",99,65,$AKT_gID; break;
+	}
+	
+	//Starta o tempo e da inicio ao summons
+	donpcevent "#akt_time::OnInicioEvnt";
+	end;
+	
+
+//Reseta o vinculo da conta com o script (defino para meia-noite 00h)
+OnHour00: query_sql "UPDATE `login` SET `aktcnt`=0"; end;
+	
+OnInit:	
+	
+	//Configurações
+	
+	//Level min considerado vip (getgmlevel() ou getgroupid())!
+	set .vipLvL,10;
+	
+	//limite por dia (padrão)
+	set .limit,1;
+	
+	//Limite por dia caso o lider seja vip
+	set .limitvip,3;
+
+end;
+}
+
+//Informe a where onde deseja por o chat com o cronômetro!
+pvp_n_1-5,83,113,0	script	#akt_time	111,{
+end;
+
+OnInicioEvnt:
+
+	initnpctimer;
+	end;
+
+OnTimer1000:
+
+	//reseta o cronômetro em chat a cada round finalizado e inicia os summons de cada round.
+	if(!.round) set .round,1;
+	set .m,10;
+	set .s,0;
+	sleep 500;
+	
+	switch(.round)
+	{
+		case 1:
+				set .mobcount,15; //Total de mobs 1º round
+				mapannounce "pvp_n_1-5","[1º Round]: Vocês tem 10 minutos para eliminar os mobs e ir para o próximo round!",bc_map;
+				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Branco",1244,.mobcount,"#akt_time::OnMobsCount";
+				break;
+		case 2:
+				set .mobcount,15; //Total de mobs 2º round
+				mapannounce "pvp_n_1-5","[2º Round]: Vocês tem 10 minutos para eliminar os mobs e ir para o próximo round!",bc_map;
+				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Branco",1250,.mobcount,"#akt_time::OnMobsCount";
+				break;
+		case 3:
+				set .mobcount,1; //Total de mobs 3º round
+				mapannounce "pvp_n_1-5","[3º Round]: Vocês tem 10 minutos para eliminar o lider dos zetsus brancos e ir para o round final!",bc_map;
+				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Negro",1251,.mobcount,"#akt_time::OnMobsCount";
+				break;
+		case 4:
+				set .mobcount,3; //Total de mobs 4º round
+				mapannounce "pvp_n_1-5","[4º Round]: Vocês tem 10 minutos para eliminar os 3 membros da akatsuki!",bc_map;
+				monster "pvp_n_1-5",91,107,"Pain",1596,1,"#akt_time::OnMobsCount";
+				monster "pvp_n_1-5",91,107,"Nagato",1098,1,"#akt_time::OnMobsCount";
+				monster "pvp_n_1-5",91,107,"Konan",1252,1,"#akt_time::OnMobsCount";
+				break;
+	}
+	end;
+
+
+//Controle do tempo caso o grupo não consiga finalizar a tempo será removido do mapa.	
+OnTimer600000: callsub LimpaMap,.mobcount; end;	//10min
+
+//Contagem dos mobs para finalizar o round e iniciar o seguinte.
+OnMobsCount:
+
+	set .mobcount,.mobcount-1;
+	
+	if(!.mobcount && .round)
+	{
+		switch(.round)
+		{
+			case 1:
+					mapannounce "pvp_n_1-5","[1º Round]: Todos os monstros foram eliminados, vai começar o próximo round!",bc_map;
+					set .round,2;				
+					stopnpctimer;
+					initnpctimer;
+					break;
+			case 2:
+					mapannounce "pvp_n_1-5","[2º Round]: Todos os monstros foram eliminados, vai começar o próximo round!",bc_map;
+					set .round,3;
+					stopnpctimer;
+					initnpctimer;
+					break;
+			case 3:
+					mapannounce "pvp_n_1-5","[3º Round]: O lider dos zetsus brancos foi eliminado, vai começar o último round!",bc_map;
+					set .round,4;
+					stopnpctimer;
+					initnpctimer;
+					break;
+			case 4:
+					mapannounce "pvp_n_1-5","[4º Round]: Vocês mostraram que trabalho em equipe é a melhor maneira de concluir uma missão com sucesso!",bc_map;					
+					stopnpctimer;	
+					set .round,0;
+					set $AKT_gID,0;
+					
+					for(set .@i,0; .@i<getarraysize($aktAID); set .@i,.@i+1)
+					{ query_sql "UPDATE `login` SET `aktcnt`=`aktcnt`+1 WHERE `account_id`="+$aktAID[.@i]+""; }					
+					
+					sleep 5000;
+					set $AKT_STATUS,0;	
+					mapwarp "pvp_n_1-5","prontera",160,178;
+					break;
+		}
+	}
+
+	end;
+
+//Responsável por fazer a limpeza do mapa e do script se o tempo esgotar.
+LimpaMap:
+
+	if(getarg(0))
+	{
+		mapannounce "pvp_n_1-5","O tempo acabou, infelizmente vocês não tiveram êxito neste round!!",bc_map;
+		set $AKT_STATUS,0;
+		set .round,0;
+		set .mobcount,0;
+		set .m,0;
+		set .s,0;
+		stopnpctimer;
+		killmonsterall "pvp_n_1-5";		
+		mapwarp "pvp_n_1-5","prontera",160,178;
+	}
+	
+	end;
+	
+	
+OnInit:
+
+	//Não alterar!
+	//OBS: Informações de exibição do chat, controle de tempo visual e colunas sql!
+	
+	//Mapflags
+	setarray .@mapflag[0],MF_NOLOOT,MF_NOWARPTO,MF_NORETURN,MF_NOGO,MF_NOWARP,MF_NOSAVE,MF_NOTELEPORT,MF_NOMEMO;
+	
+	for(set .@i,0; .@i<getarraysize(.@mapflag); set .@i,.@i+1)
+	{ setmapflag "pvp_n_1-5",.@mapflag[.@i]; }
+	
+	//Check de coluna
+	query_sql "SHOW COLUMNS FROM `login` LIKE 'aktcnt'",.@r$,.@r2,.@r3,.@r4,.@r5,.@r6;
+	
+	if(!getarraysize(.@r$))
+	{ query_sql "ALTER TABLE `login` ADD `aktcnt` TINYINT(1) NOT NULL default '0'"; }
+	
+	set $AKT_STATUS,0;
+	set $AKT_gID,0;
+	if(getarraysize($aktAID)) deletearray $aktAID[0],getarraysize($aktAID);
+	set .round,0;
+	set .m,0;
+	set .s,0;
+	while(true)
+	{
+		if(.round)
+		{ waitingroom "[ "+.round+"º R: "+.m+"M:"+.s+"s ]",0; set .s,.s-1; }
+		else
+		{ waitingroom "[OFF]",0; }
+		
+		sleep 1000;		
+		
+		if(.s <= 0)
+		{
+			set .s,59;
+			if(.m) set .m,.m-1;
+		}
+		delwaitingroom;		
+	}
+}
