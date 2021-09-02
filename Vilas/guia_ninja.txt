@@ -1,0 +1,228 @@
+konoha3,103,231,5	script	Shinobi Guia#1	121,{
+
+mes "[^0000FFShinobi Guia^000000]";
+mes "Olá Shinobi, sou o guia de nossa aldeia.";
+next;
+mes "[^0000FFShinobi Guia^000000]";
+mes "Posso te levar aos principais pontos da vila.";
+mes "Para onde você gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+	next;					
+	case 1:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",239,248;				
+			end;
+
+	case 2:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",280,161;				
+			end;
+
+	case 3:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",194,232;				
+			end;
+
+	case 4:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",215,81;				
+			end;
+
+	case 5:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",188,89;				
+			end;
+
+	case 6:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "konoha3",302,222;				
+			end;
+	}
+}
+
+
+// ------------------------------------------------------------------------
+
+
+kumogakure,96,123,5	script	Shinobi Guia#2	49,{
+
+mes "[^0000FFShinobi Guia^000000]";
+mes "Olá Shinobi, sou o guia de nossa aldeia.";
+next;
+mes "[^0000FFShinobi Guia^000000]";
+mes "Posso te levar aos principais pontos da vila.";
+mes "Para onde você gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+	next;					
+	case 1:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",222,110;				
+			end;
+
+	case 2:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",122,148;				
+			end;
+
+	case 3:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",159,236;				
+			end;
+
+	case 4:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",146,26;				
+			end;
+
+	case 5:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",187,80;				
+			end;
+
+	case 6:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kumogakure",100,73;				
+			end;
+	}
+}
+
+
+// ------------------------------------------------------------------------
+
+
+sunagakure,214,253,5	script	Shinobi Guia#3	48,{
+
+mes "[^0000FFShinobi Guia^000000]";
+mes "Olá Shinobi, sou o guia de nossa aldeia.";
+next;
+mes "[^0000FFShinobi Guia^000000]";
+mes "Posso te levar aos principais pontos da vila.";
+mes "Para onde você gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+	next;					
+	case 1:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",224,126;				
+			end;
+
+	case 2:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",168,122;				
+			end;
+
+	case 3:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",200,188;				
+			end;
+
+	case 4:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",199,71;				
+			end;
+
+	case 5:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",297,212;				
+			end;
+
+	case 6:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "sunagakure",167,211;				
+			end;
+	}
+}
+
+
+// ------------------------------------------------------------------------
+
+
+kirigakure,220,175,5	script	Shinobi Guia#4	117,{
+
+mes "[^0000FFShinobi Guia^000000]";
+mes "Olá Shinobi, sou o guia de nossa aldeia.";
+next;
+mes "[^0000FFShinobi Guia^000000]";
+mes "Posso te levar aos principais pontos da vila.";
+mes "Para onde você gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+	next;					
+	case 1:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",192,153;				
+			end;
+
+	case 2:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",157,156;				
+			end;
+
+	case 3:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",200,182;				
+			end;
+
+	case 4:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",209,46;				
+			end;
+
+	case 5:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",171,273;				
+			end;
+
+	case 6:
+		mes "[^0000FFShinobi Guia^000000]";
+		mes "Muito bem, acompanhe-me.";
+		close2;				
+			warp "kirigakure",124,166;				
+			end;
+	}
+}
+

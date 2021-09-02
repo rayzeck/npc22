@@ -1,0 +1,494 @@
+treinamento,67,46,5	script	Ninja Misterioso	880,{
+
+if(checkquest(50000) == 1 || checkquest(50001) == 1 || checkquest(50002) == 1 || checkquest(50003) == 1 || checkquest(50004) == 1 || checkquest(50005) == 1 || checkquest(50008) == 1 || checkquest(50009) == 1 || checkquest(50010) == 1 || checkquest(50011) == 1 || checkquest(50100) == 1 || checkquest(50101) == 1 || checkquest(50102) == 1 || checkquest(50104) == 1 || checkquest(50105) == 1 || checkquest(50200) == 1 || checkquest(50201) == 1 || checkquest(50202) == 1 || checkquest(500203) == 1 || checkquest(50204) == 1 || checkquest(50205) == 1 || checkquest(50208) == 1 || checkquest(50209) == 1 || checkquest(50210) == 1 || checkquest(50211) == 1) {
+		
+		mes "[Troca de Kuchiyose]";
+		mes "Você precisa concluir sua quest de Kuchiyose ativa antes de trocar de contrato.";
+		close;
+	}
+
+
+if(getskilllv(2500) == 1 || getskilllv(2501) == 1 || getskilllv(2502) == 1 || getskilllv(2505) == 1 || getskilllv(2504) == 1) {
+
+		mes "[Troca de Kuchiyose]";
+		mes "Vejo que você já possui um contrato nivel 1, você gostaria de troca-lo?";
+		if(select("- Sim:- Não") == 2) { close; }
+		next;
+
+		if(countitem(7014) < 1) { next; mes .@menu$; mes "Você precisa do ticket de troca Kuchiyose"; close; }
+
+		mes .@menu$;				
+		mes "Para qual Contrato de Kuchiyose gostaria de mudar?";				
+		switch(select("- Sapos:- Cobras:- Lesmas:- Tartarugas:- Cachorros")) {					
+			next;					
+			case 1:						
+				if (getskilllv(2500) == 1)  { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com os Sapos."; 
+					close; 
+				}						
+				if (getskilllv(2501) == 1) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 1) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 1)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}			
+				if (getskilllv(2504) == 1) { 
+					skill 2504,0,0;	
+					set #kuchiyose5,0;
+				}			
+				skill 2500,1,3;
+				set #kuchiyose2,1;						
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com os Sapos.";						
+				close;	
+				
+			case 2:	
+		
+				if (getskilllv(2500) == 1)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 1) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Cobras."; 
+					close; 
+				}						
+				if (getskilllv(2502) == 1) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 1)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}		
+				if (getskilllv(2504) == 1) { 
+					skill 2504,0,0;	
+					set #kuchiyose5,0;
+				}				
+				skill 2501,1,3;	
+				set #kuchiyose3,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Cobras.";						
+				close;					
+				
+			case 3:						
+				if (getskilllv(2500) == 1)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0; 
+				}						
+				if (getskilllv(2501) == 1) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 1) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Lesmas."; 
+					close; 
+				}						
+				if (getskilllv(2505) == 1)  {
+					skill 2505,0,0;
+					set #kuchiyose4,0; 
+				}		
+				if (getskilllv(2504) == 1) { 
+					skill 2504,0,0;	
+					set #kuchiyose5,0;
+				}				
+				skill 2502,1,3;	
+				set #kuchiyose,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Lesmas.";						
+				close;
+				
+			case 4:						
+				if (getskilllv(2500) == 1)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 1) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 1) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 1)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Tartarugas."; 
+					close; 
+				}		
+				if (getskilllv(2504) == 1) { 
+					skill 2504,0,0;
+					set #kuchiyose5,0;	
+				}			
+				skill 2505,1,3;	
+				set #kuchiyose4,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Tartarugas.";						
+				close;
+			case 5:						
+				if (getskilllv(2500) == 1)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 1) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 1) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 1)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}
+				if (getskilllv(2504) == 1)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com os Cachorros."; 
+					close; 	
+				}					
+				skill 2504,1,3;	
+				set #kuchiyose5,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com os Cachorros.";						
+				close;
+		}
+	}
+
+if(getskilllv(2500) == 2 || getskilllv(2501) == 2 || getskilllv(2502) == 2 || getskilllv(2505) == 2 || getskilllv(2504) == 2) {
+			mes "[Troca de Kuchiyose]";
+			mes "Vejo que você já possui um contrato nivel 2, você gostaria de troca-lo?";
+			if(select("- Sim:- Não") == 2) { close; }
+			next;
+
+		if(countitem(7014) < 1) { next; mes .@menu$; mes "Você precisa do ticket de troca Kuchyose"; close; }
+
+		mes .@menu$;				
+		mes "Para qual Contrato de Kuchyose gostaria de mudar?";				
+		switch(select("- Sapos:- Cobras:- Lesmas:- Tartarugas:- Cachorros")) {					
+			next;					
+			case 1:						
+				if (getskilllv(2500) == 2)  { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com os Sapos."; 
+					close; 
+				}						
+				if (getskilllv(2501) == 2) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 2) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 2)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}	
+				if (getskilllv(2504) == 2)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}						
+				skill 2500,2,3;	
+				set #kuchiyose2,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com os Sapos.";						
+				close;	
+				
+			case 2:	
+		
+				if (getskilllv(2500) == 2)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 2) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Cobras."; 
+					close; 
+				}						
+				if (getskilllv(2502) == 2) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 2)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}		
+				if (getskilllv(2504) == 2)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}				
+				skill 2501,2,3;	
+				set #kuchiyose3,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Cobras.";						
+				close;					
+				
+			case 3:						
+				if (getskilllv(2500) == 2)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 2) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 2) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Lesmas."; 
+					close; 
+				}						
+				if (getskilllv(2505) == 2)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}		
+				if (getskilllv(2504) == 2)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}				
+				skill 2502,2,3;	
+				set #kuchiyose,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Lesmas.";						
+				close;
+				
+			case 4:						
+				if (getskilllv(2500) == 2)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 2) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 2) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 2)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Tartarugas."; 
+					close; 
+				}		
+				if (getskilllv(2504) == 2)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}				
+				skill 2505,2,3;	
+				set #kuchiyose4,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Tartarugas.";						
+				close;	
+			case 5:						
+				if (getskilllv(2500) == 2)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 2) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 2) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 2)  {
+					skill 2505,0,0;
+					set #kuchiyose4,0;
+				}		
+				if (getskilllv(2504) == 2)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com os Cachorros."; 
+					close;  
+				}				
+				skill 2504,2,3;	
+				set #kuchiyose5,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com os Cachorros.";						
+				close;
+		}
+	}				
+
+
+if(getskilllv(2500) == 3 || getskilllv(2501) == 3 || getskilllv(2502) == 3 || getskilllv(2505) == 3 || getskilllv(2504) == 3) {
+			mes "[Troca de Kuchiyose]";
+			mes "Vejo que você já possui um contrato nivel 3, você gostaria de troca-lo?";
+			if(select("- Sim:- Não") == 2) { close; }
+			next;
+
+		if(countitem(7014) < 1) { next; mes .@menu$; mes "Você precisa do ticket de troca Kuchyose"; close; }
+
+		mes .@menu$;				
+		mes "Para qual Contrato de Kuchyose gostaria de mudar?";				
+		switch(select("- Sapos:- Cobras:- Lesmas:- Tartarugas:- Cachorros")) {					
+			next;					
+			case 1:						
+				if (getskilllv(2500) == 3)  { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com os Sapos."; 
+					close; 
+				}						
+				if (getskilllv(2501) == 3) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 3) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 3)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}	
+				if (getskilllv(2504) == 3)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}					
+				skill 2500,3,3;	
+				set #kuchiyose2,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com os Sapos.";						
+				close;	
+				
+			case 2:	
+		
+				if (getskilllv(2500) == 3)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 3) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Cobras."; 
+					close; 
+				}						
+				if (getskilllv(2502) == 3) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 3)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}	
+				if (getskilllv(2504) == 3)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}					
+				skill 2501,3,3;	
+				set #kuchiyose3,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Cobras.";						
+				close;					
+				
+			case 3:						
+				if (getskilllv(2500) == 3)  { 
+					skill 2500,0,0;
+					set #kuchiyose2,0; 
+				}						
+				if (getskilllv(2501) == 3) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 3) { 
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Lesmas."; 
+					close; 
+				}						
+				if (getskilllv(2505) == 3)  {
+					skill 2505,0,0; 
+					set #kuchiyose4,0;
+				}	
+				if (getskilllv(2504) == 3)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}					
+				skill 2502,3,3;	
+				set #kuchiyose,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Lesmas.";						
+				close;
+				
+			case 4:						
+				if (getskilllv(2500) == 3)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 3) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 3) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 3)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Tartarugas."; 
+					close; 
+				}	
+				if (getskilllv(2504) == 3)  {
+					skill 2504,0,0; 
+					set #kuchiyose5,0;
+				}					
+				skill 2505,3,3;	
+				set #kuchiyose4,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Tartarugas.";						
+				close;
+			case 5:						
+				if (getskilllv(2500) == 3)  { 
+					skill 2500,0,0; 
+					set #kuchiyose2,0;
+				}						
+				if (getskilllv(2501) == 3) { 
+					skill 2501,0,0;
+					set #kuchiyose3,0;
+				}						
+				if (getskilllv(2502) == 3) { 
+					skill 2502,0,0;
+					set #kuchiyose,0;
+				}						
+				if (getskilllv(2505) == 3)  {
+					skill 2505,0,0;
+					set #kuchiyose4,0;
+				}	
+				if (getskilllv(2504) == 3)  {
+					mes .@menu$; next; 
+					mes "Você já tem contrato com as Cachorros."; 
+					close;
+				}					
+				skill 2504,3,3;	
+				set #kuchiyose5,1;					
+				delitem 7014,1;						
+				mes .@menu$;						
+				mes "Vinculo alterado, agora você possui contrato com as Cachorros.";						
+				close;
+		}
+	}
+	mes "[Ninja Misterioso]";
+	mes "Você ainda não tem nenhum contrato...";
+	close;
+}
+	
+	

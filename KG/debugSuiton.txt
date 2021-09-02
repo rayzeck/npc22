@@ -1,0 +1,10 @@
+sec_in02,147,178,5	script	DebugSuiton	99,{
+mes "Desbugando...";
+
+set PoDiamante,0; 
+skill 2447,0,3; 
+set HaranBanshou,0;
+skill 88,0,3;
+close;
+	
+}

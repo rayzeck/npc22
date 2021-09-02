@@ -1,0 +1,191 @@
+-	script	Disable_Exit	-1,{
+OnInit:
+	hideonnpc "Voltar para a vila";
+	end;
+}
+-	script	PronteraUnderAttack	-1,{
+
+
+OnClock1832:
+OnClock2123:
+
+
+startdefender:	
+	
+	announce "Atenção! Os capangas e alguns generais da Vila oculta do som estão atacando as vilas",0;
+	sleep2 5000;
+	announce "Jogadores, defendem suas vilas dos ataques da vila inimiga, agora!",0;
+	sleep2 30000;
+	announce "Derrote o general responsável pelo ataque o mais rápido possível!",0;
+	sleep2 7000;
+	announce "Relatório da entrada principal: Ataque inimigo chegando em 10 segundos, preparar a defesa!!",0;
+	sleep2 10000;
+	announce "O general com os capangas chegaram ao portão principal, iniciem o ataque!!",0;
+	sleep2 5000;
+	goto L_OnSummon;
+L_OnSummon:
+	setmapflag	"konoha3",31; // 31 mean mf_nomobloot
+	setmapflag	"konoha3",31; // 32 mean mf_nomvploot
+	setmapflag	"sunagakure",31; // if error, open db/const.txt find mf_noloot and set that number
+	setmapflag	"sunagakure",32;
+	setmapflag	"kirigakure",31;
+	setmapflag	"kirigakure",32;
+	setmapflag	"kumogakure",31;
+	setmapflag	"kumogakure",32;
+ 
+	monster "konoha3",210,74,"Capanga",1301,50,"PronteraUnderAttack::OnMobLose";
+	monster "konoha3",210,74,"General Dosu",3003,1,"PronteraUnderAttack::OnMobWin1";
+
+	monster "sunagakure",198,74,"Capanga",1301,50,"PronteraUnderAttack::OnMobLose";
+	monster "sunagakure",198,74,"General Zaku",3003,1,"PronteraUnderAttack::OnMobWin2";
+
+	monster "kirigakure",163,13,"Capanga",1301,50,"PronteraUnderAttack::OnMobLose";
+	monster "kirigakure",163,13,"General Kin",3003,1,"PronteraUnderAttack::OnMobWin3";
+
+	monster "kumogakure",139,33,"Capanga",1301,50,"PronteraUnderAttack::OnMobLose";
+	monster "kumogakure",139,33,"General Abumi",3003,1,"PronteraUnderAttack::OnMobWin4";
+
+	initnpctimer;
+	set $oroinvocado,0;
+	end;
+
+OnTimer3600000:
+	announce "O ataque não foi impedido em uma das vilas",0;
+	sleep2 3000;
+	killmonster "konoha3","PronteraUnderAttack::OnMobLose";
+	killmonster "konoha3","PronteraUnderAttack::OnMobWin1";
+	killmonster "sunagakure","PronteraUnderAttack::OnMobLose";
+	killmonster "sunagakure","PronteraUnderAttack::OnMobWin2";
+	killmonster "kirigakure","PronteraUnderAttack::OnMobLose";
+	killmonster "kirigakure","PronteraUnderAttack::OnMobWin3";
+	killmonster "kumogakure","PronteraUnderAttack::OnMobLose";
+	killmonster "kumogakure","PronteraUnderAttack::OnMobWin4";
+	killmonster "in_hunter","Voltar para a vila::OnMafiaKilled";
+	removemapflag	"konoha3",31; // 31 mean mf_nomobloot
+	removemapflag	"konoha3",31; // 32 mean mf_nomvploot
+	removemapflag	"sunagakure",31; // if error, open db/const.txt find mf_noloot and set that number
+	removemapflag	"sunagakure",32;
+	removemapflag	"kirigakure",31;
+	removemapflag	"kirigakure",32;
+	removemapflag	"kumogakure",31;
+	removemapflag	"kumogakure",32;
+	stopnpctimer;
+	end;
+
+OnMobLose:
+	dispbottom "Tolo... não sou o líder... *Se suicida*";
+	end;
+
+OnMobWin1:
+//	removemapflag	konoha3,31;
+//	removemapflag	konoha3,32;
+//	atcommand "@cleanmap";
+	killmonster "konoha3","PronteraUnderAttack::OnMobLose";
+	killmonster "konoha3","PronteraUnderAttack::OnMobWin1";
+	getitem 7017,2;
+	dispbottom "Você derrotou o General Dosu, e recebeu um prêmio por isso";
+	announce strcharinfo(0) + " derrotou General Dosu! As tropas de Dosu estão recuando",0;
+	sleep2 5000;
+	announce "Espere, Dosu está fazendo alguma coisa no chão , ele está fazendo um último jutsu! O jogador "+strcharinfo(0)+" foi levado para um local estranho",0;
+	warp "orcsdun01",69,125;
+	mapannounce "orcsdun01","[Evento]: Aguarde enquanto a situação nas outras vilas seja definida",0;
+	donpcevent "Voltar para a vila::OnEnable";
+	set $oroinvocado,1;
+	end;
+
+OnMobWin2:
+//	removemapflag	sunagakure,31;
+//	removemapflag	sunagakure,32;
+//	atcommand "@cleanmap";
+	killmonster "sunagakure","PronteraUnderAttack::OnMobLose";
+	killmonster "sunagakure","PronteraUnderAttack::OnMobWin2";
+	getitem 7017,2;
+	dispbottom "Você derrotou o General Zaku, e recebeu um prêmio por isso";
+	announce strcharinfo(0) + " derrotou General Zaku! As tropas de Zaku estão recuando",0;
+	sleep2 5000;
+	announce "Espere, Zaku está fazendo alguma coisa no chão , ele está fazendo um último jutsu! O jogador "+strcharinfo(0)+" foi levado para um local estranho",0;
+	warp "orcsdun01",69,125;
+//	mapannounce "orcsdun01","[Evento]: Aguarde enquanto a situação nas outras vilas seja definida",0;
+	donpcevent "Voltar para a vila::OnEnable";
+	set $oroinvocado,1;
+	end;
+
+OnMobWin3:
+//	removemapflag	kirigakure,31;
+//	removemapflag	kirigakure,32;
+//	atcommand "@cleanmap";
+	killmonster "kirigakure","PronteraUnderAttack::OnMobLose";
+	killmonster "kirigakure","PronteraUnderAttack::OnMobWin3";
+	getitem 7017,2;
+	dispbottom "Você derrotou o General Kin, e recebeu um prêmio por isso";
+	announce strcharinfo(0) + " derrotou General Kin! As tropas de Kin estão recuando",0;
+	sleep2 5000;
+	announce "Espere, Kin está fazendo alguma coisa no chão , ele está fazendo um último jutsu! O jogador "+strcharinfo(0)+" foi levado para um local estranho",0;
+	warp "orcsdun01",69,125;
+	mapannounce "orcsdun01","[Evento]: Aguarde enquanto a situação nas outras vilas seja definida",0;
+	donpcevent "Voltar para a vila::OnEnable";
+	set $oroinvocado,1;
+	end;
+
+OnMobWin4:
+//	removemapflag	kumogakure,31;
+//	removemapflag	kumogakure,32;
+//	atcommand "@cleanmap";
+	killmonster "kumogakure","PronteraUnderAttack::OnMobLose";
+	killmonster "kumogakure","PronteraUnderAttack::OnMobWin4";
+	getitem 7017,2;
+	dispbottom "Você derrotou o General Abumi, e recebeu um prêmio por isso";
+	announce strcharinfo(0) + " derrotou General Abumi! As tropas de Abumi estão recuando",0;
+	sleep2 5000;
+	announce "Espere, Abumi está fazendo alguma coisa no chão , ele está fazendo um último jutsu! O jogador "+strcharinfo(0)+" foi levado para um local estranho",0;
+	warp "orcsdun01",69,125;
+	mapannounce "orcsdun01","[Evento]: Aguarde enquanto a situação nas outras vilas seja definida",0;
+	donpcevent "Voltar para a vila::OnEnable";
+	set $oroinvocado,1;
+	end;
+
+
+
+}
+
+orcsdun01,75,114,5	script	Voltar para a vila	119,{
+
+	warp "prontera",0,0;
+	end;
+OnEnable:
+	if($oroinvocado == 1) {end;}
+	announce "[Evento Invasão]: Você se encontra em um local desconhecido",0;
+	sleep2 5000;
+	announce "[Evento invasão]: Voz desconhecida: HAHAHAHA! Vocês que derrotaram meus generais? É hora de vocês sentirem o poder dos nukenins.",0;
+	sleep2 5000;
+	mapannounce "orcsdun01","[Evento invasão]: Uma sombra surge e vai se aproximando de você, será possível...?!",0;
+	sleep2 5000;
+	mapannounce "orcsdun01","[Evento invasão]: Não acredito, é Pain!",0;
+	sleep2 10000;
+	monster "orcsdun01",64,120,"Pain",3598,1,"Voltar para a vila::OnMafiaKilled";
+	announce "Pain aparece pra enfrentar os shinobis que derrotaram seus generais, os shinobis estão em apuros",0;
+	mapannounce "orcsdun01","[Evento invasão]: Pain: Então foram vocês fracotes que derrotaram meus generais? Tsc, matarei todos vocês",0;
+	sleep2 3000;
+ 
+	end;
+OnMafiaKilled:
+	announce strcharinfo(0)+" derrotou o Pain, mas era apenas um bunshin!",0;
+	sleep2 5000;
+	announce "[Pain]: Ainda não terminamos "+strcharinfo(0)+", suas vilas serão minhas, aguarde que voltaremos a atacar!",0;
+	sleep2 5000;
+	announce "[Pain]: e da próxima vez não terei piedade!",0;
+	sleep2 5000;
+	announce "["+strcharinfo(0)+"] : Até se você tiver 10 vidas, eu darei um jeito de te matar!",0;
+	sleep2 5000;
+	announce "[Evento Invasão] : Obrigado a todos os shinobis que ajudaram a defender, e principalmente o "+strcharinfo(0)+" por derrotar o bunshin de Pain",0;
+	sleep2 5000;
+	announce "[Evento Invasão] : "+strcharinfo(0)+" receberá agora seu prêmio por derrotar o bunshin de Pain",0;
+	getitem 7017,2;
+	dispbottom "Seu prêmio foi entregue, parabéns";
+	warp "SavePoint",0,0;
+	end;
+}
+in_hunter	mapflag	nowarp
+in_hunter	mapflag	nowarpto
+in_hunter	mapflag	noteleport
+in_hunter	mapflag	nosave

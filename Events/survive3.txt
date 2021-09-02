@@ -1,0 +1,10 @@
+in_hunter,97,21,4	script	BaseKonoha	60,{
+mes "Vou invocar a Base da Suna, e vc deve destruí-la.";
+close2;
+monster "ra_san05",267,32,"Base de Konoha",3022,1,"BaseKonoha::OnMobKyuu";
+end;
+
+	OnMobKyuu:
+			announce "O shinobi "+strcharinfo(0)+" detonou em pedaços a base de Konoha! É incrível!",0;
+			end;
+}

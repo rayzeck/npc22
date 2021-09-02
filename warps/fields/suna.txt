@@ -1,0 +1,48 @@
+// Sunagakure
+moc_fild12,159,380,4	script	Entrada pra Suna	45,2,2,{
+
+	if(#suna == 1) { goto entrar; }
+	if($EEinfo[1] == 1) { end; }
+
+	entrar:
+	warp "sunagakure", 199,65;
+	if(countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1){announce strcharinfo(0)+" da Akatsuki acaba de invadir Sunagakure.",bc_blue|bc_all; end;}
+	if(nukenin == 1) {announce strcharinfo(0)+" da Nukenin acaba de invadir Sunagakure.",bc_blue|bc_all; end;}
+	if(#konoha == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Konoha acaba de invadir Sunagakure.",bc_blue|bc_all; end;}
+	if(#nevoa == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Névoa acaba de invadir Sunagakure.",bc_blue|bc_all; end;}
+	if(#nuvem == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Nuvem acaba de invadir Sunagakure.",bc_blue|bc_all; end;}
+	end;
+}
+
+sunagakure,199,61,0	script	suna#1	45,2,2,{
+
+	warp "moc_fild12",159,375;
+	end;
+}
+
+moc_fild02,331,18,0	warp	fild suna#1	2,2,moc_fild13,298,367
+moc_fild13,302,370,0	warp	fild suna#2	2,2,moc_fild02,331,23
+
+moc_fild02,70,18,0	warp	fild suna#3	2,2,moc_fild13,143,364
+moc_fild13,145,368,0	warp	fild suna#4	2,2,moc_fild02,70,22
+
+moc_fild01,379,162,0	warp	fild suna#5	2,2,moc_fild13,33,172
+moc_fild13,29,172,0	warp	fild suna#6	2,2,moc_fild01,375,162
+
+moc_fild01,312,16,0	warp	fild suna#7	2,2,moc_fild04,312,376
+moc_fild04,312,381,0	warp	fild suna#8	2,2,moc_fild01,312,22
+
+moc_fild01,84,17,0	warp	fild suna#9	2,2,moc_fild04,95,377
+moc_fild04,91,381,0	warp	fild suna#10	2,2,moc_fild01,84,23
+
+moc_fild04,19,207,0	warp	fild suna#11	2,2,moc_fild12,283,171
+moc_fild12,288,168,0	warp	fild suna#12	2,2,moc_fild04,24,207
+
+moc_fild12,21,303,0	warp	fild suna#13	3,3,moc_fild09,369,196
+moc_fild09,374,197,0	warp	fild suna#14	2,2,moc_fild12,25,303
+
+moc_fild09,267,371,0	warp	fild suna#15	2,2,moc_fild05,267,24
+moc_fild05,267,18,0	warp	fild suna#16	2,2,moc_fild09,267,365
+
+moc_fild09,81,369,0	warp	fild suna#17	2,2,moc_fild05,82,21
+moc_fild05,82,16,0	warp	fild suna#18	2,2,moc_fild09,79,364

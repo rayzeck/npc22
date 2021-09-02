@@ -1,0 +1,179 @@
+prontera,100,100,4	script	testandokg	1_m_knightmaster,{
+
+
+
+	.@npc$ = "[" + strnpcinfo(1) + "]";
+
+	
+
+	.@questid = 40009;
+
+	.@item1 = 900;
+
+	.@item2 = 910;
+
+	.@itemqnt1 = 1;
+
+	.@itemqnt2 = 1;
+
+	
+
+	if(pegoukg == 5) {
+
+		mes .@npc$;
+
+		mes "Você já chegou no nivel máximo dos Mitsashi.";
+
+		close;
+
+	}
+
+	
+	if(pegoukg == 4) {
+
+			mes .@npc$;
+
+			mes "Você novamente? Em busca de mais poder?";
+
+			if(select("- Sim:- Não estou interessado") == 2) close;
+			
+			next;
+
+			mes .@npc$;
+
+			mes "Para aprimorar sua Técnica eu preciso de:";
+
+			mes "30 Pergaminho Mitsashi e 30.000.000 de Zeny.";
+
+			if(select("- Aqui está:- Não estou interessado") == 2) close;
+			
+			next;
+
+		if(countitem(.@item2) >= 30 && Zeny >= 30000000) {
+
+			set pegoukg,5; 
+			announce " "+strcharinfo(0)+" Acaba de aprimorar sua Técnica com Armas Ninja ao máximo!",bc_blue|bc_all; 
+			if(countitem(30113)) { delitem 30113,1; getitem2 30113,1,1,0,0,30097,0,0,0; equip 30113; }
+			delitem .@item2,30;
+			Zeny = Zeny - 30000000;
+			mes .@npc$;
+			mes "Parabéns, você acabou de aprimorar sua Técnica com Armas Ninja.";
+
+			close;
+
+		}
+
+		mes .@npc$;
+
+		mes "Você não tem todos os itens ainda.";
+
+		close;
+
+	}
+
+
+	if(checkquest(.@questid) == 1) {
+
+		if(countitem(.@item1) >= .@itemqnt1 && countitem(.@item2) >= .@itemqnt2 && Zeny >= 30000000) {
+
+			set pegoukg,4; 
+
+			set expkg,0; 
+
+			announce " "+strcharinfo(0)+" Acaba de melhorar seu Mitsashi para o nível 4!",bc_blue|bc_all; 
+
+			
+			delitem 30113,1; 
+			getitem2 30113,1,1,0,0,30093,0,0,0;
+
+			equip 30113;
+
+			delitem .@item1,.@itemqnt1;
+
+			delitem .@item2,.@itemqnt2;
+
+			Zeny = Zeny - 30000000;
+
+			completequest .@questid;
+
+			erasequest .@questid;
+
+			mes .@npc$;
+
+			mes "Parabéns, você acabou de liberar seu poder Mitsashi.";
+
+			close;
+
+		}
+
+		mes .@npc$;
+
+		mes "Você não tem todos os itens ainda.";
+
+		close;
+
+	}
+
+	
+
+	if(countitem(30113) && expkg >= 5000000) {
+
+		mes .@npc$;
+
+		mes "Esses olhos, cheios de vida, me lembram de quando eu era jovem...Hahaha! mas enfim, veio atras de respostas não é mesmo?";
+
+		next;
+
+		mes .@npc$;
+
+		mes "Realmente nosso clã é repleto de segredos, mas apenas membros dignos podem conhece-los.";
+
+		next;
+
+		mes .@npc$;
+
+		mes "Sera voce digno de saber nossos segredos?";
+
+		if(select("- Sim, estou pronto:- Não estou pronto ainda") == 2) { next; mes .@npc$; mes "Certo, estarei aqui quando estiver preparado."; close; }
+
+			next;
+
+			mes .@npc$;
+
+			mes "Para continuar o treinamento você precisa pagar 30.000.000 Zeny.";
+
+			mes "Gostaria de continuar o treinamento?";
+
+			if(select("- Sim, gostaria:- Não estou interessado") == 2) close;
+
+					next;
+
+					mes .@npc$;
+
+					mes "Certo, vejo a determinação em seu olhar, vamos começar o treinamento.";
+
+					next;
+
+					mes .@npc$;
+
+					mes "Para iniciar me traga os seguintes itens:";
+
+					mes "1 Kit Cirurgico";
+
+					mes "1 Pergaminho Mitsashi";
+
+					mes "30.000.000 Zeny";
+
+					setquest .@questid;
+
+					close;
+
+	}
+
+	mes .@npc$;
+
+	mes "Você não é Mitsashi ou não está pronto para evolui-lo.";
+
+	close;
+
+}

@@ -1,0 +1,158 @@
+-	script	Evento#BK	BestKiller#BK -1,{
+
+OnInit:
+set $BKinfo[1], 0;
+end;
+
+OnClock2200:
+Announce "[Best Killer]: O evento iniciará em 5 minutos. Preparem-se para a matança.",0;
+end;
+OnClock2202:
+Announce "[Best Killer]: O evento iniciará em 3 minutos. Preparem-se para a matança.",0;
+end;
+OnClock2204:
+Announce "[Best Killer]: O evento iniciará em 1 minutos. Preparem-se para a matança.",0;
+end;
+OnClock2205:
+Announce "[Best Killer]: Evento iniciado! Boa sorte a todos.",0;
+set $BKinfo[1], 1;
+end;
+
+OnClock2230:
+Announce "[Best Killer]: Evento finalizado.",0;
+set $BKinfo[1],0;
+end;
+
+OnPCKillEvent:
+if($BKinfo[1] == 1 && strcharinfo(3) == "pvp_n_4-3"){
+dispbottom "Pontos: "+BKpts;
+set BKpts, BKpts+1;
+}
+end;
+
+
+OnPCDieEvent:
+if($BKinfo[1] == 1 && strcharinfo(3) == "pvp_n_4-3"){
+warp "treinamento",98,136;
+}
+end;
+}
+
+
+in_hunter,60,103,3	script	Best Killer#BK	56,{
+
+// Nome do npc
+set .npc$,"^800000[Best Killer]^000000";
+
+if(getgmlevel() > 5 && $BKinfo[1] == 0){
+mes "Gostaria de abrir o evento?";
+if(select("Não:Sim") == 1) close;
+Announce "[Best Killer]: Evento iniciado pelo Staffer "+strcharinfo(0)+"! Boa sorte a todos.",0;
+set $BKinfo[1], 1;
+close2;
+partyleave;
+warp "pvp_n_4-3",0,0;
+end;
+}
+
+if(getgmlevel() > 5 && $BKinfo[1] == 1){
+mes "Gostaria de fechar o evento?";
+if(select("Não:Sim") == 1) close;
+Announce "[Best Killer]: Evento finalizado pelo Staffer "+strcharinfo(0)+".",0;
+set $BKinfo[1],0;
+close;
+end;
+}
+
+
+mes .npc$;
+mes "Olá "+strcharinfo(0)+" o que posso fazer por você?";
+next;
+switch(select("Entrar["+getmapusers ("pvp_n_4-3")+"]:Usar Pontos")){
+case 1:
+if($BKinfo[1] == 0){
+mes .npc$;
+mes "O evento está fechado no momento.";
+close;
+end;
+}
+if(BaseLevel < 999){
+mes .npc$;
+mes "Você precisa ser level 999 para participar.";
+close;
+end;
+}
+close2;
+partyleave;
+warp "pvp_n_4-3",0,0;
+end;
+
+case 2:
+next;
+mes .npc$;
+mes "Você possui: "+BKpts+" pontos.";
+mes "Oque gostaria de adquirir?";
+setarray $BKinfo[2],781,31075,31010,31012,31127,31086,5224,31090,31020,5,20,20,20,20,20,20,20,20;
+switch(select("Fragmento de Fuuin no Sho[5]:Raiton Maligno[20]:Chakra Maligno[20]:Chakra Amaterasu[20]:Mascará Kakashi Branca[20]:Chakra Amarelo[20]:Cachecol do Eremes[20]:Cachecol Renegedo Vermelho[29]:Canino Negro de Konoha[20]")){
+case 1:
+set .@prize, 2;
+break;
+case 2:
+set .@prize, 3;
+break;
+case 3:
+set .@prize, 4;
+break;
+case 4:
+set .@prize, 5;
+break;
+case 5:
+set .@prize, 6;
+break;
+case 6:
+set .@prize, 7;
+break;
+case 7:
+set .@prize, 8;
+break;
+case 8:
+set .@prize, 9;
+break;
+case 9:
+set .@prize, 10;
+break;
+
+}
+next;
+mes .npc$;
+mes "Gostaria de adiquirir um "+getitemname($BKinfo[.@prize])+" por "+$BKinfo[.@prize+9]+" pontos?";
+if(select("Não:Sim") == 1) close;
+
+if($BKinfo[.@prize+9] > BKpts){
+next;
+mes .npc$;
+mes "Você não possui pontos suficientes.";
+close;
+end;
+}
+
+getitem $BKinfo[.@prize], 1;
+set BKpts, BKpts - $BKinfo[.@prize+9];
+close;
+end;
+}
+end;
+}
+
+pvp_n_4-3	mapflag	nowarp
+pvp_n_4-3	mapflag	noteleport
+pvp_n_4-3	mapflag	nowarpto
+pvp_n_4-3	mapflag	nobranch
+pvp_n_4-3	mapflag	nosave	SavePoint
+pvp_n_4-3	mapflag	nomemo
+pvp_n_4-3	mapflag	nopenalty
+pvp_n_4-3	mapflag	noexp
+pvp_n_4-3	mapflag	pvp
+pvp_n_4-3	mapflag	pvp_noguild
+pvp_n_4-3	mapflag	pvp_noparty
+pvp_n_4-3	mapflag	noparty

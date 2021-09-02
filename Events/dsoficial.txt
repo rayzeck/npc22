@@ -1,0 +1,297 @@
+//===== rAthena Script =======================================
+//= Devil Square
+//===== By: ==================================================
+//= Kirlein, Stillhard (translation), AnnieRuru (rewrite)
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//= rAthena Project
+//===== Description: =========================================
+//= Devil Square, based on the event in MU Online.
+//= Defeat three waves of monsters for treasure.
+//===== Additional Comments: =================================
+//= 1.0 First version, edited. [Euphy]
+//============================================================
+
+treinamento,80,132,5	script	Guardião Tesouro Shinobi#1	121,{
+	set .@gm_level, 99; // GM level required to start/stop the event
+
+	mes "[Tesouro Shinobi]";
+	mes "Essa é a entrada da ^FF0000Devil Square^000000.";
+	mes "Se você falhar na sua missão e morrer, deverá aguardar até o próximo evento para voltar.";
+	next;
+	switch(select("Entrar.:Informações.:" + ((getgmlevel() >= .@gm_level) ? "GM Menu." : "") + ":Cancel.")) {
+	case 1:
+		if (.start != 1) { // registration period
+			mes "[Guardião Tesouro Shinobi]";
+			mes "Tesouro Shinobi está fechado.";
+			mes "Ela irá ser aberta nos seguintes horários:";
+			mes "00:00 , 02:00 , 04:00 , 06:00"; // Coloque os horários que você escolheu aqui
+			mes "08:00 , 10:00 , 12:00 , 14:00";
+			mes "16:00 , 18:00 , 20:00 , 22:00";
+			close;
+		}
+		if (BaseLevel < 900) { // requirements
+			mes "[Guardião Tesouro Shinobi]";
+			mes "É necessário que você seja no mínimo level 900 para a Devil Square.";
+			close;
+		}
+		announce strcharinfo(0)+" entrou no Evento Tesouro Shinobi.", bc_npc;
+		percentheal 100,100;
+		warp "ordeal_1-1",183,182;
+		close;
+	case 2:
+		mes "[Guardião Tesouro Shinobi]";
+		mes "Dentro do evento você precisa derrotar 3 ondas de monstros, que vão se fortalecendo cada vez mais.";
+		next;
+		mes "[Guardião Tesouro Shinobi]";
+		mes "Caso consiga derrotar todos os seus inimigos, será fornecido 10 Caixas de Tesouro espalhadas pelo mapa para os sobreviventes!";
+		close;
+	case 3:
+		mes "[Guardião Tesouro Shinobi]";
+		switch (.start) { // event states
+			case 0: mes "Tesouro Shinobi ainda não começou."; break;
+			case 1: mes "Tesouro Shinobi está aceitando participantes."; break;
+			case 2: mes "Tesouro Shinobi está no Round "+ .round +" com "+ .mob +" monstros vivos."; break;
+		}
+		next;
+		switch(select("Começar evento.:Parar evento.:Cancel.")) {
+		case 1:
+			mes "[Guardião Tesouro Shinobi]";
+			if (.start)
+				mes "Tesouro Shinobi já iniciou.";
+			else {
+				mes "Iniciando Tesouro Shinobi.";
+				donpcevent strnpcinfo(0)+"::OnStartEvent";
+			}
+			close;
+		case 2:
+			mes "[Guardião Tesouro Shinobi]";
+			if (!.start)
+				mes "Tesouro Shinobi ainda não começou.";
+			else {
+				mes "Terminando o Tesouro Shinobi...";
+				donpcevent strnpcinfo(0)+"::OnStopEvent";
+			}
+			close;
+		case 3:
+			break;
+		}
+		break;
+	case 4:
+		break;
+	}
+	mes "[Guardião Tesouro Shinobi]";
+	mes "Vejo você em breve, shinobi!";
+	close;
+
+OnStartEvent:
+OnMon1200:	OnMon1800:	OnMon2359:
+OnWed1200:	OnWed1800:	OnWed2359:
+OnFri1200:	OnFri1800:	OnFri2359:
+	.start = 1;
+	disablenpc "Guardião Tesouro Shinobi#2";
+	mapannounce "ordeal_1-1","Tesouro Shinobi agora está fechado.", bc_map;
+	killmonsterall "ordeal_1-1";
+	announce "Tesouro Shinobi está aberto. O evento inicia em 5 minutos.", bc_all;
+	sleep 60000;
+	announce "Tesouro Shinobi vai iniciar em 4 minutos.", bc_all;
+	sleep 60000;
+	announce "Tesouro Shinobi vai iniciar em 3 minutos.", bc_all;
+	sleep 60000;
+	announce "Tesouro Shinobi vai iniciar em 2 minutos.", bc_all;
+	sleep 60000;
+	announce "Tesouro Shinobi vai iniciar em 1 minuto.", bc_all;
+	sleep 60000;
+	announce "Tesouro Shinobi está iniciada, derrotem seus inimigos!", bc_all;
+	if ( !getmapusers("ordeal_1-1") )
+		goto OnStopEvent;
+	.start = 2;
+	.round = 1;
+	.mob = 100;
+	monster "ordeal_1-1",59,63,"[TS] JOUNIN",1634,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",34,148,"[TS] JOUNIN",1634,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",61,238,"[TS] JOUNIN",1634,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,264,"[TS] JOUNIN",1634,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",239,60,"[TS] JOUNIN",1634,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",265,149,"[TS] SHINOBI",1401,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",241,58,"[TS] SHINOBI",1401,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",150,38,"[TS] SHINOBI",1401,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",84,82,"[TS] SHINOBI",1401,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",55,149,"[TS] SHINOBI",1401,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",79,219,"[TS] SASUKE",1999,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,243,"[TS] SASUKE",1999,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",223,223,"[TS] SASUKE",1999,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",240,149,"[TS] SASUKE",1999,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",219,80,"[TS] SASUKE",1999,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",150,61,"[TS] JUUGO",1996,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",106,105,"[TS] JUUGO",1996,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",89,148,"[TS] JUUGO",1996,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",105,193,"[TS] JUUGO",1996,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,211,"[TS] JUUGO",1996,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",193,193,"[TS] SUIGETSU",1998,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",214,150,"[TS] SUIGETSU",1998,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",193,105,"[TS] SUIGETSU",1998,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,89,"[TS] SUIGETSU",1998,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",134,134,"[TS] SUIGETSU",1998,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",128,150,"[TS] KARIN",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",134,165,"[TS] KARIN",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",148,172,"[TS] KARIN",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",205,205,"[TS] KARIN",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",228,150,"[TS] KARIN",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",165,165,"[TS] ANBU",1635,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",169,150,"[TS] ANBU",1635,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",164,134,"[TS] ANBU",1635,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",151,129,"[TS] ANBU",1635,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",220,150,"[TS] ANBU",1635,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",203,95,"[TS] CAPITÃO ANBU",1992,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,74,"[TS] CAPITÃO ANBU",1992,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",144,144,"[TS] CAPITÃO ANBU",1992,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",155,155,"[TS] CAPITÃO ANBU",1992,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",92,89,"[TS] CAPITÃO ANBU",1992,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",144,155,"[TS] BANDIDO",1373,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",155,144,"[TS] BANDIDO",1373,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",71,148,"[TS] BANDIDO",1373,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",94,202,"[TS] BANDIDO",1373,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,232,"[TS] BANDIDO",1373,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,150,"[TS] BYORGUE",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",149,21,"[TS] BYORGUE",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",150,278,"[TS] BYORGUE",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",278,150,"[TS] BYORGUE",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	monster "ordeal_1-1",21,150,"[TS] BYORGUE",1997,2,strnpcinfo(0)+"::OnDevilDead";
+	end;
+
+OnDevilDead:
+	.mob--;
+	if ( .mob == 25 || .mob == 5 )
+		announce "Tesouro Shinobi : "+ .mob +" monstros vivos no round 1.", bc_map;
+	else if ( .mob <= 0 ) {
+		announce "Tesouro Shinobi agora está no Round 2!", bc_map;
+		goto OnDevil2;
+	}
+	end;
+
+OnDevil2:
+	.round = 2;
+	.mob = 85;
+	monster "ordeal_1-1",59,63,"[TS] LEAK",2156,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",34,148,"[TS] LEAK",2156,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",61,238,"[TS] LEAK",2156,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,264,"[TS] LEAK",2156,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",239,60,"[TS] LEAK",2156,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",265,149,"[TS] LADY BRANCA",1630,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",241,58,"[TS] LADY BRANCA",1630,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",150,38,"[TS] LADY BRANCA",1630,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",84,82,"[TS] LADY BRANCA",1630,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",55,149,"[TS] LADY BRANCA",1630,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",79,219,"[TS] GIOIA",2251,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,243,"[TS] GIOIA",2251,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",223,223,"[TS] GIOIA",2251,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",240,149,"[TS] GIOIA",2251,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",219,80,"[TS] GIOIA",2251,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",150,61,"[TS] BRINARANEA",3091,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",106,105,"[TS] BRINARANEA",3091,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",89,148,"[TS] BRINARANEA",3091,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",105,193,"[TS] BRINARANEA",3091,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,211,"[TS] BRINARANEA",3091,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",193,193,"[TS] NIDHOOG",3180,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",214,150,"[TS] NIDHOOG",3180,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",193,105,"[TS] NIDHOOG",3180,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,89,"[TS] NIDHOOG",3180,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",134,134,"[TS] NIDHOOG",3180,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",128,150,"[TS] IFRIT",2110,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",134,165,"[TS] IFRIT",2110,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",148,172,"[TS] IFRIT",2110,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",205,205,"[TS] IFRIT",2110,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",228,150,"[TS] IFRIT",2110,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",165,165,"[TS] GOPINICH",1885,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",169,150,"[TS] GOPINICH",1885,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",164,134,"[TS] GOPINICH",1885,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",151,129,"[TS] GOPINICH",1885,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",220,150,"[TS] GOPINICH",1885,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",203,95,"[TS] ATROCE",1785,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,74,"[TS] ATROCE",1785,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",144,144,"[TS] ATROCE",1785,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",155,155,"[TS] ATROCE",1785,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",92,89,"[TS] ATROCE",1785,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",149,150,"[TS] NUKENIN RANK S",1249,2,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",224,219,"[TS] NUKENIN RANK S",1249,1,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",225,238,"[TS] NUKENIN RANK S",1249,1,strnpcinfo(0)+"::OnDevilDead2";
+	monster "ordeal_1-1",60,61,"[TS] NUKENIN RANK S",1249,1,strnpcinfo(0)+"::OnDevilDead2";
+
+	end;
+
+OnDevilDead2:
+	.mob--;
+	if ( .mob == 25 || .mob == 5 )
+		announce "Tesouro Shinobi : "+ .mob +" monstros vivos no round 2.", bc_map;
+	else if ( .mob <= 0 ) {
+		announce "Tesouro Shinobi agora está no Round 3!", bc_map;
+		goto OnDevil3;
+	}
+	end;
+
+OnDevil3:
+	.round = 3;
+	.mob = 1;
+	areamonster "ordeal_1-1",167,150,171,150,"[TS] Nukenin Rank SS",1250,1,strnpcinfo(0)+"::OnDevilDead3";
+	end;
+
+OnDevilDead3:
+	.mob--;
+	if ( .mob == 3 || .mob == 1 )
+		announce "Tesouro Shinobi : "+ .mob +" monstros vivos no Round 3!", bc_map;
+	else if ( .mob <= 0 ) {
+		announce "Tesouro Shinobi : Parabéns, aqui estão as 10 Caixas de Tesouro!", bc_map;
+		goto OnDevil4;
+	}
+	end;
+
+OnDevil4:
+	.round = 4;
+	.mob = 10;
+	monster "ordeal_1-1",149,26,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",54,54,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",26,150,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",54,245,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",167,149,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",131,149,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",149,274,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",244,244,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",274,149,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	monster "ordeal_1-1",245,52,"Treasure Chest",1360,1,strnpcinfo(0)+"::OnTreasureDead";
+	end;
+
+OnTreasureDead:
+	.mob--;
+	announce "Tesouro Shinobi : "+ strcharinfo(0) +" abriu uma Caixa de Tesouro no Tesouro Shinobi!", bc_all;
+	if ( .mob <= 0 )
+		goto OnStopEvent;
+	end;
+
+OnStopEvent:
+	killmonsterall "ordeal_1-1";
+	enablenpc "Guardião Tesouro Shinobi#2";
+	.start = .round = .mob = 0;
+	end;
+}
+
+ordeal_1-1,150,150,7	script	Guardião Tesouro Shinobi#2	406,{
+	mes "[Exit]";
+	mes "Até mais, shinobi!";
+	close2;
+	warp "SavePoint",0,0;
+	end;
+}
+
+ordeal_1-1	mapflag	nowarp
+ordeal_1-1	mapflag	nowarpto
+ordeal_1-1	mapflag	noteleport
+ordeal_1-1	mapflag	monster_noteleport
+ordeal_1-1	mapflag	nosave	SavePoint
+ordeal_1-1	mapflag	nomemo
+ordeal_1-1	mapflag	nobranch
+ordeal_1-1	mapflag	nopenalty
+ordeal_1-1	mapflag	noicewall
+ordeal_1-1	mapflag	pvpon
+ordeal_1-1	mapflag gvgon

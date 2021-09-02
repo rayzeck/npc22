@@ -1,0 +1,87 @@
+//////// World Boss - Fox Naruto MMORPG Online 2019 ////////
+//////// Invocação do Monstro Madara - Evento WB    ////////
+
+-	script	WorldBossTeste8	-1,{
+
+OnTue2100:
+set $worldboss,1;
+pvpoff "guild_vs3";
+announce "[World Boss]: O evento está aberto e começa em 5 minutos, acesso pelo Centro de Treinamento!",0;
+sleep 300000;
+announce "[Uchiha Madara]: Escutem! Neste mundo, sempre que houver uma luz, haverá também sombras.",0;
+sleep 4000;
+announce "[Uchiha Madara]: Enquanto o conceito de vencedores existir também deve haver perdedores.",0;
+sleep 4000;
+announce "[Uchiha Madara]: O desejo egoísta de querer manter a paz provoca guerras e o ódio nasce para proteger o amor.",0;
+sleep 4000;
+announce "[Uchiha Madara]: E agora...não há luz, nem esperança, há apenas desespero. Vocês conhecerão meu PODER!",0;
+set $worldboss,0;
+monster "guild_vs3",50,50,"World Boss: Madara",3582,1,"WorldBossTeste8::OnMobMadara";
+end;
+
+	OnMobMadara:
+			announce "[World Boss]: "+strcharinfo(0)+" derrotou Uchiha Madara! Recompensa: 1 Fuuin no Sho!",0;
+			getitem 753,1;
+			getitem 734,5;
+			getitem 8002,5;
+			sleep 5000;
+			announce "[World Boss]: 4 baús de tesouro estão disponíveis para os vencedores!",0;
+			monster "guild_vs3",15,50,"World Boss: Baú",1360,1,"WorldBossTeste8::OnMobBau1";
+			monster "guild_vs3",50,85,"World Boss: Baú",1360,1,"WorldBossTeste8::OnMobBau2";
+			monster "guild_vs3",85,50,"World Boss: Baú",1360,1,"WorldBossTeste8::OnMobBau3";
+			monster "guild_vs3",50,15,"World Boss: Baú",1360,1,"WorldBossTeste8::OnMobBau4";
+			end;
+
+	OnMobBau1:
+			announce "[World Boss]: "+strcharinfo(0)+" abriu o baú Oeste e ganhou 1 Fragmento de Fuuin no Sho!",0;
+			getitem 781,1;
+			end;
+
+	OnMobBau2:
+			announce "[World Boss]: "+strcharinfo(0)+" abriu o baú Norte e ganhou 1 Fragmento de Fuuin no Sho!",0;
+			getitem 781,1;
+			end;
+
+	OnMobBau3:
+			announce "[World Boss]: "+strcharinfo(0)+" abriu o baú Leste e ganhou 1 Fragmento de Fuuin no Sho!",0;
+			getitem 781,1;
+			end;
+
+	OnMobBau4:
+			announce "[World Boss]: "+strcharinfo(0)+" abriu o baú Sul e ganhou 1 Fragmento de Fuuin no Sho!",0;
+			getitem 781,1;
+			end;
+
+
+		}
+
+treinamento,73,157,5	script	World Boss	49,{
+
+mes "^ff0000[World Boss]^000000";
+mes "Olá "+ strcharinfo(0) +", pronto para enfrentar o World Boss da semana?";
+menu "- Sim.",r1,"- Não.",r2;
+		
+r1:
+if ($worldboss == 0) { 
+mes "A entrada está bloqueada, voltaremos semana que vem!";
+close;
+}
+
+if(!getcharid(2)) {
+	mes "Você precisa estar dentro do clã da sua vila";
+	close;
+}
+
+mes "^ff0000[World Boss]^000000";
+mes "Boa sorte, "+ strcharinfo(0) +"!";
+next;
+warp "guild_vs3", 50,50;
+close2;
+
+r2:
+next;
+mes "^ff0000[World Boss]^000000";
+mes "Ficaremos abertos por pouco tempo, corra!";
+close;	
+}	
+

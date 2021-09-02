@@ -1,0 +1,8 @@
+prontera,155,155,4	script	DebugRokubi	99,{
+mes "Debug Bijuu.";
+set $Ichibi_nuvem, 0;
+set $Ichibi_konoha, 1;
+set $Hachibi_nuvem, 0;
+set $Hachibi_konoha, 1;
+close;
+}

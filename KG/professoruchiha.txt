@@ -1,0 +1,277 @@
+bibli_01,66,39,3	script	Professor Uchiha::profuchiha	952,{
+mes "[Professor Uchiha]";
+mes "Olá, shinobi! Sou um professor contratado pelo clã Uchiha para aqueles que desejam trocar o poder do Mangekyou Sharingan!";
+next;
+mes "[Professor Uchiha]";
+mes "Te dou várias opções, desde se tornar membro do clã Uchiha, ou até mesmo realizar trocas para outras Hiddens.";
+next;
+mes "[Professor Uchiha]";
+mes "Vamos continuar então.";
+next;
+if(!getequipisequiped(EQI_HEAD_MID)) { mes "[Professor Uchiha]"; mes "Você precisa estar com sua Hidden equipada."; close; }
+mes "[Professor Uchiha]";
+mes "Você quer trocar de habilidade no Sharingan ou virar usuário de outra Kekkei Genkai/Hidden?";
+menu "Se tornar membro do clã Uchiha.",uchihamem,"Trocar habilidade Sharingan.",trocasha,"Não desejo trocar.",naotroca;
+
+uchihamem:
+next;
+if(countitem(7013) < 1 ) { mes "[Professor Uchiha]"; mes "Verme inútil! Você não tem o item de Troca de Hidden!"; close;  }
+mes "[Professor Uchiha]";
+mes "Excelente! Ser membro do clã Uchiha é a melhor escolha da sua vida!";
+next;
+mes "[Professor Uchiha]";
+mes "Atenção para as opções!";
+next;
+mes "[Professor Uchiha]";
+mes "Escolha qual árvore do Sharingan você quer. Lembre-se que caso você não tenha o Mangekyou, a hidden será entregue no mesmo nível que a sua atual. ";
+menu "- Mangekyou Itachi",itachi1,"- Mangekyou Sasuke",sasuke1,"- Mangekyou Obito",obito1,"- Mangekyou Madara",madara1;
+								
+									itachi1:
+										if(getequipcardid(EQI_HEAD_MID,0) == 30090) { getitem2 30101,1,1,0,0,30090,0,0,0; equip 30101; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30091) { getitem2 30102,1,1,0,0,30091,0,0,0; equip 30102; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30092) { getitem2 30103,1,1,0,0,30092,0,0,0; equip 30103; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30093) { getitem2 30104,1,1,0,0,30094,0,0,0; equip 30104;}
+										if(getequipcardid(EQI_HEAD_MID,0) == 30097) { getitem2 30104,1,1,0,0,30098,0,0,0; equip 30104;}
+										if(countitem(30105) >= 1) { delitem 30105,1; }
+										if(countitem(30106) >= 1) { delitem 30106,1; }
+										if(countitem(30107) >= 1) { delitem 30107,1; }
+										if(countitem(30108) >= 1) { delitem 30108,1; }
+										if(countitem(30109) >= 1) { delitem 30109,1; }
+										if(countitem(30110) >= 1) { delitem 30110,1; }
+										if(countitem(30111) >= 1) { delitem 30111,1; }
+										if(countitem(30112) >= 1) { delitem 30112,1; }
+										if(countitem(30113) >= 1) { delitem 30113,1; }
+										if(countitem(30114) >= 1) { delitem 30114,1; }
+										if(countitem(30115) >= 1) { delitem 30115,1; }
+										if(countitem(30116) >= 1) { delitem 30116,1; }
+										if(countitem(30117) >= 1) { delitem 30117,1; }
+										if(countitem(30118) >= 1) { delitem 30118,1; }
+										if(countitem(30119) >= 1) { delitem 30119,1; }
+										if(countitem(30120) >= 1) { delitem 30120,1; }
+										if(countitem(30121) >= 1) { delitem 30121,1; }
+										if(countitem(30122) >= 1) { delitem 30122,1; }
+										if(countitem(30123) >= 1) { delitem 30123,1; }
+										if(countitem(30124) >= 1) { delitem 30124,1; }
+										if(countitem(30125) >= 1) { delitem 30125,1; }
+										if(countitem(1233) >= 1)  { delitem 1233,1;  }
+										if(countitem(30126) >= 1) { delitem 30126,1; }
+										if(countitem(30130) >= 1) { delitem 30130,1; }
+										if(countitem(30131) >= 1) { delitem 30131,1; }
+										if(countitem(1236) >= 1)  { delitem 1236,1;  }
+										if(countitem(30132) >= 1) { delitem 30132,1; }
+										if(countitem(30133) >= 1) { delitem 30133,1; }
+										if(countitem(30134) >= 1) { delitem 30134,1; }
+										if(countitem(30139) >= 1) { delitem 30139,1; }
+										if(countitem(30137) >= 1) { delitem 30137,1; }
+										if(countitem(1114) >= 1)  { delitem 1114,1;  }
+										if(countitem(30127) >= 1) { delitem 30127,1; }
+										if(countitem(30138) >= 1) { delitem 30138,1; }
+										delitem 7013,1;
+										mes "Troca bem sucedida.";
+										close;
+
+									sasuke1:
+										if(getequipcardid(EQI_HEAD_MID,0) == 30090) { getitem2 30101,1,1,0,0,30090,0,0,0; equip 30101; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30091) { getitem2 30102,1,1,0,0,30091,0,0,0; equip 30102; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30092) { getitem2 30103,1,1,0,0,30092,0,0,0; equip 30103; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30093) { getitem2 30104,1,1,0,0,30095,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30097) { getitem2 30104,1,1,0,0,30099,0,0,0; equip 30104; }
+										if(countitem(30105) >= 1) { delitem 30105,1; }
+										if(countitem(30106) >= 1) { delitem 30106,1; }
+										if(countitem(30107) >= 1) { delitem 30107,1; }
+										if(countitem(30108) >= 1) { delitem 30108,1; }
+										if(countitem(30109) >= 1) { delitem 30109,1; }
+										if(countitem(30110) >= 1) { delitem 30110,1; }
+										if(countitem(30111) >= 1) { delitem 30111,1; }
+										if(countitem(30112) >= 1) { delitem 30112,1; }
+										if(countitem(30113) >= 1) { delitem 30113,1; }
+										if(countitem(30114) >= 1) { delitem 30114,1; }
+										if(countitem(30115) >= 1) { delitem 30115,1; }
+										if(countitem(30116) >= 1) { delitem 30116,1; }
+										if(countitem(30117) >= 1) { delitem 30117,1; }
+										if(countitem(30118) >= 1) { delitem 30118,1; }
+										if(countitem(30119) >= 1) { delitem 30119,1; }
+										if(countitem(30120) >= 1) { delitem 30120,1; }
+										if(countitem(30121) >= 1) { delitem 30121,1; }
+										if(countitem(30122) >= 1) { delitem 30122,1; }
+										if(countitem(30123) >= 1) { delitem 30123,1; }
+										if(countitem(30124) >= 1) { delitem 30124,1; }
+										if(countitem(30125) >= 1) { delitem 30125,1; }
+										if(countitem(1233) >= 1)  { delitem 1233,1;  }
+										if(countitem(30126) >= 1) { delitem 30126,1; }
+										if(countitem(30130) >= 1) { delitem 30130,1; }
+										if(countitem(30131) >= 1) { delitem 30131,1; }
+										if(countitem(1236) >= 1)  { delitem 1236,1;  }
+										if(countitem(30132) >= 1) { delitem 30132,1; }
+										if(countitem(30133) >= 1) { delitem 30133,1; }
+										if(countitem(30134) >= 1) { delitem 30134,1; }
+										if(countitem(30139) >= 1) { delitem 30139,1; }
+										if(countitem(30137) >= 1) { delitem 30137,1; }
+										if(countitem(1114) >= 1)  { delitem 1114,1;  }
+										if(countitem(30127) >= 1) { delitem 30127,1; }
+										if(countitem(30138) >= 1) { delitem 30138,1; }
+										delitem 7013,1;
+										mes "Troca bem sucedida.";
+										close;
+
+									obito1:
+										if(getequipcardid(EQI_HEAD_MID,0) == 30090) { getitem2 30101,1,1,0,0,30090,0,0,0; equip 30101; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30091) { getitem2 30102,1,1,0,0,30091,0,0,0; equip 30102; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30092) { getitem2 30103,1,1,0,0,30092,0,0,0; equip 30103; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30093) { getitem2 30104,1,1,0,0,30096,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30097) { getitem2 30104,1,1,0,0,30100,0,0,0; equip 30104; }
+										if(countitem(30105) >= 1) { delitem 30105,1; }
+										if(countitem(30106) >= 1) { delitem 30106,1; }
+										if(countitem(30107) >= 1) { delitem 30107,1; }
+										if(countitem(30108) >= 1) { delitem 30108,1; }
+										if(countitem(30109) >= 1) { delitem 30109,1; }
+										if(countitem(30110) >= 1) { delitem 30110,1; }
+										if(countitem(30111) >= 1) { delitem 30111,1; }
+										if(countitem(30112) >= 1) { delitem 30112,1; }
+										if(countitem(30113) >= 1) { delitem 30113,1; }
+										if(countitem(30114) >= 1) { delitem 30114,1; }
+										if(countitem(30115) >= 1) { delitem 30115,1; }
+										if(countitem(30116) >= 1) { delitem 30116,1; }
+										if(countitem(30117) >= 1) { delitem 30117,1; }
+										if(countitem(30118) >= 1) { delitem 30118,1; }
+										if(countitem(30119) >= 1) { delitem 30119,1; }
+										if(countitem(30120) >= 1) { delitem 30120,1; }
+										if(countitem(30121) >= 1) { delitem 30121,1; }
+										if(countitem(30122) >= 1) { delitem 30122,1; }
+										if(countitem(30123) >= 1) { delitem 30123,1; }
+										if(countitem(30124) >= 1) { delitem 30124,1; }
+										if(countitem(30125) >= 1) { delitem 30125,1; }
+										if(countitem(1233) >= 1)  { delitem 1233,1;  }
+										if(countitem(30126) >= 1) { delitem 30126,1; }
+										if(countitem(30130) >= 1) { delitem 30130,1; }
+										if(countitem(30131) >= 1) { delitem 30131,1; }
+										if(countitem(1236) >= 1)  { delitem 1236,1;  }
+										if(countitem(30132) >= 1) { delitem 30132,1; }
+										if(countitem(30133) >= 1) { delitem 30133,1; }
+										if(countitem(30134) >= 1) { delitem 30134,1; }
+										if(countitem(30139) >= 1) { delitem 30139,1; }
+										if(countitem(30137) >= 1) { delitem 30137,1; }
+										if(countitem(1114) >= 1)  { delitem 1114,1;  }
+										if(countitem(30127) >= 1) { delitem 30127,1; }
+										if(countitem(30138) >= 1) { delitem 30138,1; }
+										delitem 7013,1;
+										mes "Troca bem sucedida.";
+										close;
+
+									madara1:
+										if(getequipcardid(EQI_HEAD_MID,0) == 30090) { getitem2 30101,1,1,0,0,30090,0,0,0; equip 30101; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30091) { getitem2 30102,1,1,0,0,30091,0,0,0; equip 30102; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30092) { getitem2 30103,1,1,0,0,30092,0,0,0; equip 30103; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30093) { getitem2 30104,1,1,0,0,30135,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30097) { getitem2 30104,1,1,0,0,30136,0,0,0; equip 30104; }
+										if(countitem(30105) >= 1) { delitem 30105,1; }
+										if(countitem(30106) >= 1) { delitem 30106,1; }
+										if(countitem(30107) >= 1) { delitem 30107,1; }
+										if(countitem(30108) >= 1) { delitem 30108,1; }
+										if(countitem(30109) >= 1) { delitem 30109,1; }
+										if(countitem(30110) >= 1) { delitem 30110,1; }
+										if(countitem(30111) >= 1) { delitem 30111,1; }
+										if(countitem(30112) >= 1) { delitem 30112,1; }
+										if(countitem(30113) >= 1) { delitem 30113,1; }
+										if(countitem(30114) >= 1) { delitem 30114,1; }
+										if(countitem(30115) >= 1) { delitem 30115,1; }
+										if(countitem(30116) >= 1) { delitem 30116,1; }
+										if(countitem(30117) >= 1) { delitem 30117,1; }
+										if(countitem(30118) >= 1) { delitem 30118,1; }
+										if(countitem(30119) >= 1) { delitem 30119,1; }
+										if(countitem(30120) >= 1) { delitem 30120,1; }
+										if(countitem(30121) >= 1) { delitem 30121,1; }
+										if(countitem(30122) >= 1) { delitem 30122,1; }
+										if(countitem(30123) >= 1) { delitem 30123,1; }
+										if(countitem(30124) >= 1) { delitem 30124,1; }
+										if(countitem(30125) >= 1) { delitem 30125,1; }
+										if(countitem(1233) >= 1)  { delitem 1233,1;  }
+										if(countitem(30126) >= 1) { delitem 30126,1; }
+										if(countitem(30130) >= 1) { delitem 30130,1; }
+										if(countitem(30131) >= 1) { delitem 30131,1; }
+										if(countitem(1236) >= 1)  { delitem 1236,1;  }
+										if(countitem(30132) >= 1) { delitem 30132,1; }
+										if(countitem(30133) >= 1) { delitem 30133,1; }
+										if(countitem(30134) >= 1) { delitem 30134,1; }
+										if(countitem(30139) >= 1) { delitem 30139,1; }
+										if(countitem(30137) >= 1) { delitem 30137,1; }
+										if(countitem(1114) >= 1)  { delitem 1114,1;  }
+										if(countitem(30127) >= 1) { delitem 30127,1; }
+										if(countitem(30138) >= 1) { delitem 30138,1; }
+										delitem 7013,1;
+										mes "Troca bem sucedida.";
+										close;
+
+trocasha:
+next;
+if(countitem(7013) < 1 ) { mes "[Professor Uchiha]"; mes "Você não tem o item de Troca de Hidden!"; close;  }
+if(countitem(30101) >= 1) { mes "[Professor Uchiha]"; mes "Não consigo realizar a troca se você ainda não tem o Mangekyou, verme!"; close; }
+if(countitem(30102) >= 1) { mes "[Professor Uchiha]"; mes "Não consigo realizar a troca se você ainda não tem o Mangekyou, verme!"; close; }
+if(countitem(30103) >= 1) { mes "[Professor Uchiha]"; mes "Não consigo realizar a troca se você ainda não tem o Mangekyou, verme!"; close; }
+if(countitem(30104) == 0) { mes "[Professor Uchiha]"; mes "Verme inútil! Você não tem o poder Mangekyou do grande e nobre clã Uchiha!"; close; }
+mes "[Professor Uchiha]";
+mes "Excelente! Permanecer no clã Uchiha é a melhor escolha da sua vida!";
+next;
+mes "[Professor Uchiha]";
+mes "Atenção para as opções!";
+next;
+mes .@menu$;
+mes "Escolha qual Mangekyou você quer:";
+menu "- Mangekyou Itachi",itachi,"- Mangekyou Sasuke",sasuke,"- Mangekyou Obito",obito,"- Mangekyou Madara",madara;
+								
+									itachi:
+										next;
+										mes "Troca realizada!";
+										if(getequipcardid(EQI_HEAD_MID,0) == 30095) { delitem 30104,1; getitem2 30104,1,1,0,0,30094,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30096) { delitem 30104,1; getitem2 30104,1,1,0,0,30094,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30135) { delitem 30104,1; getitem2 30104,1,1,0,0,30094,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30099) { delitem 30104,1; getitem2 30104,1,1,0,0,30098,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30100) { delitem 30104,1; getitem2 30104,1,1,0,0,30098,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30136) { delitem 30104,1; getitem2 30104,1,1,0,0,30098,0,0,0; equip 30104; }
+										delitem 7013,1;
+										close;
+									sasuke:
+										next;
+										mes "Troca realizada!";
+										if(getequipcardid(EQI_HEAD_MID,0) == 30094) { delitem 30104,1; getitem2 30104,1,1,0,0,30095,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30096) { delitem 30104,1; getitem2 30104,1,1,0,0,30095,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30135) { delitem 30104,1; getitem2 30104,1,1,0,0,30095,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30098) { delitem 30104,1; getitem2 30104,1,1,0,0,30099,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30100) { delitem 30104,1; getitem2 30104,1,1,0,0,30099,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30136) { delitem 30104,1; getitem2 30104,1,1,0,0,30099,0,0,0; equip 30104; }
+										delitem 7013,1;
+										close;
+									obito:
+										next;
+										mes "Troca realizada!";
+										if(getequipcardid(EQI_HEAD_MID,0) == 30095) { delitem 30104,1; getitem2 30104,1,1,0,0,30096,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30094) { delitem 30104,1; getitem2 30104,1,1,0,0,30096,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30135) { delitem 30104,1; getitem2 30104,1,1,0,0,30096,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30099) { delitem 30104,1; getitem2 30104,1,1,0,0,30100,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30098) { delitem 30104,1; getitem2 30104,1,1,0,0,30100,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30136) { delitem 30104,1; getitem2 30104,1,1,0,0,30100,0,0,0; equip 30104; }
+										delitem 7013,1;
+										close;
+
+									madara:
+										next;
+										mes "Troca realizada!";
+										if(getequipcardid(EQI_HEAD_MID,0) == 30095) { delitem 30104,1; getitem2 30104,1,1,0,0,30135,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30096) { delitem 30104,1; getitem2 30104,1,1,0,0,30135,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30094) { delitem 30104,1; getitem2 30104,1,1,0,0,30135,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30099) { delitem 30104,1; getitem2 30104,1,1,0,0,30136,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30100) { delitem 30104,1; getitem2 30104,1,1,0,0,30136,0,0,0; equip 30104; }
+										if(getequipcardid(EQI_HEAD_MID,0) == 30098) { delitem 30104,1; getitem2 30104,1,1,0,0,30136,0,0,0; equip 30104; }
+										delitem 7013,1;
+										close;
+
+naotroca:
+next;
+mes "[Professor Uchiha]";
+mes "Estarei aqui se precisar.";
+close;
+}
+
+bibli_02,66,39,3	duplicate(profuchiha)	Professor Uchiha#2	952
+bibli_03,66,39,3	duplicate(profuchiha)	Professor Uchiha#3	952
+bibli_04,66,39,3	duplicate(profuchiha)	Professor Uchiha#4	952

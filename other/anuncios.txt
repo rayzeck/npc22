@@ -1,0 +1,18 @@
+-	script	Anuncios	-1,{
+
+OnMinute01:
+OnMinute20:
+OnMinute38:
+OnMinute54:
+
+	setarray .News$[0],	// Random Mensagens
+		"[Naruto MMORPG Online] : Para abrir o World Map Naruto MMORPG Online utilize Ctrl + ' ",
+		"[Naruto MMORPG Online] : O servidor é completamente gratuito. Sua doação somente incentiva à auxiliar na host para redução de lag!",
+		"[Naruto MMORPG Online] : Já pegou seu VIP de 7 dias? Fale com a administração. Só poderá pegar na sua primeira conta!",
+		"[Naruto MMORPG Online] : Participe do nosso Discord Oficial: -----",
+		"[Naruto MMORPG Online] : Curta-nos na página do facebook. www.facebook.com/narutommorpgonline",
+		"[Naruto MMORPG Online] : Dúvidas? Digite @dicas";
+		
+	announce .News$[ rand( getarraysize( .News$ ) ) ],0; // Anuncio.
+	end;
+}

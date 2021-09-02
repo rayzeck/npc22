@@ -1,0 +1,4 @@
+kirigakure,260,79,5	script	Túmulo	72,{
+mes "Aqui jaz Grim Reaper, lendário shinobi da Vila Oculta da Névoa. Que as histórias de suas batalhas e conquistas ecoem por toda eternidade.";
+close;
+}

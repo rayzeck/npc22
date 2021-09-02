@@ -1,0 +1,201 @@
+salakage,23,21,5	script	Jounin Shiken	642,{
+
+	mes set(.@n$,"[Jounin Shiken]");
+	mes "Bem-vindo shinobi "+strcharinfo(0)+",";
+	if(getgmlevel() >=80){
+	set .@menu$,select("- Ligar Evento","- Entrar","- Infos");
+	}
+	else {
+	set .@menu$,select("","- Entrar","- Infos");
+	}
+	switch(.@menu$){
+
+	case 01:
+	mes .@n$;
+	mes "Olá [STAFF]"+strcharinfo(0)+".";
+	mes "quer ligar o Jounin Shiken agora?";
+	if(select("Sim:Não")==2)close();
+	mes "Ok, ligando o Shiken.";
+	donpcevent "Jounin Shiken::OnEvento";
+	close2();
+	warp "ama_in01",158,24;
+	end();
+
+	case 02:
+	if($jshiken == 1 && Class == 7 && BaseLevel >= 801 || $jshiken == 1 && Class == 8 && BaseLevel >= 801 || $jshiken == 1 && Class == 9 && BaseLevel >= 801 || $jshiken == 1 && Class == 10 && BaseLevel >= 801 ) {
+	mes .@n$;
+	mes "O Shiken irá iniciar, boa sorte.";
+	close2();
+	warp "ama_in01",158,24;
+	}
+	mes .@n$;
+	mes "Não está no horário do Shiken ou você não está apto a inscrever-se.";
+	close();
+
+	case 03:
+	mes .@n$;
+	mes "O Shiken acontece todas às Quartas-Feiras, 21:00.";
+	next;
+	mes .@n$;
+	mes "Requisitos:";
+	mes "Ser Chunin; nível igual ou superior a 801.";
+	next;
+	mes .@n$;
+	mes "A Primeira fase será de sobrevivencia em um labirinto.";
+	mes "Os Chunnins que sobreviverem e acharem a saída, irão para a Segunda fase.";
+	next;
+	mes .@n$;
+	mes "No entanto, o organizador do Shiken pode exigir que vocês sejam rápidos.";
+	mes "E, em qualquer circunstância, pode limitar o número de participantes que irão a segunda fase.";
+	next; 
+	mes .@n$;
+	mes "A Segunda fase será decidida de acordo com o número de sobreviventes.";
+	mes "Até mais...";
+	close();
+	}
+
+
+OnEvento:
+announce "[Jounin Shiken] ATENÇÃO! Os Kages convocam os Chunnin interessados à inscrição do JS!",bc_all;
+set $jshiken,1;
+sleep 5000;
+initnpctimer;//5 minutos
+announce "[Jounin Shiken] Vocês tem 5 minutos para se inscreverem no Jounin Shiken na Sala do Kage",bc_all;
+end();
+
+OnTimer60000:
+announce "[Jounin Shiken] Vocês tem 4 minutos para se inscreverem no Jounin Shiken na Sala do Kage",bc_all;
+end();
+
+OnTimer120000:
+announce "[Jounin Shiken] Vocês tem 3 minutos para se inscreverem no Jounin Shiken na Sala do Kage",bc_all;
+end();
+
+OnTimer180000:
+announce "[Jounin Shiken] Vocês tem 2 minutos para se inscreverem no Jounin Shiken na Sala do Kage",bc_all;
+end();
+
+OnTimer240000:
+announce "[Jounin Shiken] Vocês tem 1 minuto para se inscreverem no Jounin Shiken na Sala do Kage",bc_all;
+end();
+
+OnTimer300000:
+announce "[Jounin Shiken] O Jounin Shiken vai começar, boa sorte aos participantes!",bc_all;
+set $jshiken,0;
+end();
+}
+
+
+//============================================================================================//
+
+
+salakage2,23,21,5	script	Jounin Shiken#2::jshiken	642,{
+
+	mes set(.@n$,"[Jounin Shiken]");
+	mes "Bem-vindo shinobi "+strcharinfo(0)+",";
+	set .@menu$,select("- Entrar","- Infos");
+	switch(.@menu$){
+
+	case 01:
+	if($jshiken == 1 && Class == 7 && BaseLevel >= 801 || $jshiken == 1 && Class == 8 && BaseLevel >= 801 || $jshiken == 1 && Class == 9 && BaseLevel >= 801 || $jshiken == 1 && Class == 10 && BaseLevel >= 801 ) {
+	mes .@n$;
+	mes "O Shiken irá iniciar, boa sorte.";
+	close2();
+	warp "ama_in01",158,24;
+	}
+	mes .@n$;
+	mes "Não está no horário do Shiken ou você não está apto a inscrever-se.";
+	close();
+
+	case 02:
+	mes .@n$;
+	mes "O Shiken acontece todas às Quartas-Feiras, 21:00.";
+	next;
+	mes .@n$;
+	mes "Requisitos:";
+	mes "Ser Chunin; nível igual ou superior a 801.";
+	next;
+	mes .@n$;
+	mes "A Primeira fase será de sobrevivencia em um labirinto.";
+	mes "Os Chunnins que sobreviverem e acharem a saída, irão para a Segunda fase.";
+	next;
+	mes .@n$;
+	mes "No entanto, o organizador do Shiken pode exigir que vocês sejam rápidos.";
+	mes "E, em qualquer circunstância, pode limitar o número de participantes que irão a segunda fase.";
+	next; 
+	mes .@n$;
+	mes "A Segunda fase será decidida de acordo com o número de sobreviventes.";
+	mes "Até mais...";
+	close();
+	}
+}
+
+
+salakage3,23,21,5	duplicate(jshiken)	Jounin Shiken#3	642
+salakage4,23,21,5	duplicate(jshiken)	Jounin Shiken#4	642
+
+
+//============================================================================================//
+
+ama_in01,163,30,5	script	Auxiliar de Shiken	46,{
+
+	mes set(.@n$,"[Jounin Shiken]");
+	mes "Olá "+strcharinfo(0)+".";
+	if(getgmlevel() >=80){
+	set .@menu$,select("- Ligar Evento","- Entrar");
+	}
+	else {
+	set .@menu$,select("","- Entrar");
+	}
+	switch(.@menu$){
+		case 01:
+		mes .@n$;
+		mes "Olá [STAFF]"+strcharinfo(0)+".";
+		mes "quer ligar o Jounin Shiken agora?";
+		if(select("Sim:Não")==2)close();
+		mes "Ok, ligando o Shiken.";
+		donpcevent "Auxiliar de Shiken::OnEvento";
+		close2();
+		warp "ama_dun01",234,144;
+		end();
+
+		case 02:
+		if($jshiken2 == 1){
+		mes .@n$;
+		mes "O Shiken começou, boa sorte.";
+		close2();
+		warp "ama_dun01",228,6;
+		}
+		mes .@n$;
+		mes "Não foi liberado o acesso até o momento.";
+		close();
+	}
+
+
+
+OnEvento:
+announce "[Jounin Shiken] ATENÇÃO! Os portões para o labirinto foram abertos!",bc_all;
+set $jshiken2,1;
+sleep 5000;
+initnpctimer;//1 minuto
+announce "[Jounin Shiken] Vocês tem 1 minuto para entrarem no Labirinto.",bc_map;
+end();
+
+
+OnTimer60000:
+announce "[Jounin Shiken] Os portões foram fechados,boa sorte a todos participantes.",bc_all;
+set $jshiken2,0;
+end();
+}	
+
+
+ama_in01,165,27,5	script	Aviso JS	837,{
+mes "[Jounin Shiken]";
+mes "Conheça o Labirinto de Amatsu antes de encarar o desafio.";
+close;
+}
+
+
+ama_dun01,0,0,0,0	monster	Nukenin	Rank D	1245,5,0,0,0
+ama_dun01,0,0,0,0	monster	Nukenin Rank E	1244,30,0,0,0
+

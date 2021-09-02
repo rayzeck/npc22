@@ -1,0 +1,260 @@
+dimension,188,183,5	script	Mestre Otsutsuki	935,{
+mes "[Mestre]";
+mes "Bem-vindo a dimensão dos deuses. Eu sou o responsável por forjar Armaduras Divinas.";
+next;
+mes "[Mestre]";
+mes "Ao forjar uma armadura comigo, você tem:";
+mes "50% chance de forjar uma Armadura Rara.";
+mes "40% chance de forjar uma Armadura Épica.";
+mes "19% chance de forjar uma Armadura Lendária.";
+mes "1% chance de forjar uma Armadura Divina.";
+next;
+mes "[Mestre]";
+mes "A cada forja, vou solicitar:";
+mes "- 10 Segredo Shinobi";
+mes "- 5 Caixas Misteriosas";
+mes "- 3 Pergaminhos Reversos";
+mes "- 2 Minérios Divinos";
+mes "- 2 Fragmentos de Fuin no Shoo";
+mes "- 10.000.000 zenys";
+next;
+mes "[Mestre]";
+mes "Deseja forjar um item?";
+menu "Sim, vamos começar.",-,"Agora não.",saida;
+next;
+if (countitem(754) >= 3 && countitem(756) >= 10 && countitem(734) >= 5 && countitem(8002) >= 2 && countitem(781) >= 2 && Zeny >= 10000000) goto forja;
+mes "[Mestre]";
+mes "Você não tem todos componentes para a forja.";
+close;
+
+forja:
+next;
+mes "[Mestre]";
+mes "Vamos lá então, boa sorte.";
+
+set .@a,rand(1,1000);
+	if (.@a > 875) { goto kuramarara; } //12%
+	if (.@a <= 875) && (.@a >750) { goto gokurara;} //12%
+	if (.@a <= 750) && (.@a >625) { goto akimichiraro;} //12%
+	if (.@a <= 625) && (.@a >500) { goto juubiraro; } //12%
+	if (.@a <= 500) && (.@a >400) { goto kuramaepica; } //10%
+	if (.@a <= 400) && (.@a >300) { goto gokuepica; } //10%
+	if (.@a <= 300) && (.@a >200) { goto akimichiepico; } //10%
+	if (.@a <= 200) && (.@a >100) { goto juubiepico; } //10%
+	if (.@a <= 100) && (.@a >75) { goto kuramalendaria; } //5%
+	if (.@a <= 75) && (.@a >50) { goto gokulendaria; } //5%
+	if (.@a <= 50) && (.@a >25) { goto akimichilendario; } //5%
+	if (.@a <= 25) && (.@a >4) { goto juubilendario; } //5%
+	if (.@a == 4) { goto kuramadivina; } //1%
+	if (.@a == 3) { goto gokudivina; } //1%
+	if (.@a == 2) { goto akimichidivino; } //1%
+	if (.@a == 1) { goto juubidivino; } //1%
+
+	kuramarara:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31207,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	gokurara:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31211,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	akimichiraro:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31215,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	juubiraro:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31219,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	kuramaepica:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31208,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	gokuepica:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31212,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	akimichiepico:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31216,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	juubiepico:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31220,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		close;
+
+	kuramalendaria:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31209,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Kurama Lendária!",bc_all;
+		close;
+
+	gokulendaria:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31213,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Son Goku Lendária!",bc_all;
+		close;
+
+	akimichilendario:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31217,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colete Akimichi Lendário!",bc_all;
+		close;
+
+	juubilendario:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31221,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Manto Juubi Lendário!",bc_all;
+		close;
+
+	kuramadivina:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31210,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Kurama Divina!",bc_all;
+		close;
+
+	gokudivina:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31214,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Son Goku Divina!",bc_all;
+		close;
+
+	akimichidivino:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31218,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colete Akimichi Divino!",bc_all;
+		close;
+
+	juubidivino:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31222,1;
+		delitem 754,3;
+		delitem 756,10;
+		delitem 734,5;
+		delitem 8002,2;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Manto Juubi Divino!",bc_all;
+		close;
+
+	saida:
+	next;
+	mes "[Mestre]";
+	mes "Estarei aqui se mudar de ideia.";
+	close;
+
+	}
+}

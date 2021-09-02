@@ -1,0 +1,10 @@
+in_hunter,97,23,4	script	BaseNevoa	60,{
+mes "Vou invocar a Base da Névoa, e vc deve destruí-la.";
+close2;
+monster "ra_san05",267,267,"Base da Nevoa",3016,1,"BaseNevoa::OnMobSan";
+end;
+
+OnMobSan:
+			announce "O shinobi "+strcharinfo(0)+" destruiu a base da Névoa! É DIVINO!",0;
+			end;
+}

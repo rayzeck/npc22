@@ -1,0 +1,403 @@
+konoha3,215,146,3	script	Jardineira	91,{
+
+	if(countitem(30000) || countitem(30001) || countitem(30002) || countitem(30003) || countitem(30004) || countitem(30005)) {
+	mes "[Jardineira]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Sou a aldeã responsável por cuidar da vegetação de nossa aldeia.";
+	mes 
+	next;
+	mes "[Jardineira]";
+	mes "Eu sempre tive pavor de combates. Fui péssima na Academia Ninja.";
+	mes "Então eu procuro ajudar a vila de outra forma.";
+	next;
+	mes "[Jardineira]";
+	mes "Aliás, eu preciso renovar nosso estoque de plantas.";
+	mes "Poderia me fazer um favor?";
+	next;
+	if( select("Claro!:Talvez mais tarde...") == 2 )
+	{
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Que Ótimo!";
+	mes "Eu preciso de alguns exemplares de outras regiões. São esses:";
+	next;
+	switch(select("Planta da Névoa:Planta da Suna:Nenhum"))
+	{
+	case 1:
+		mes "[Plantas da Névoa]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(750);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(750) >= 30)
+		{
+			delitem 750,30;
+			set $konoha_ryous, $konoha_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Konoha! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 2:
+		mes "[Plantas da Suna]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(749);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(749) >= 30)
+		{
+			delitem 749,30;
+			set $konoha_ryous, $konoha_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Konoha! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 3:
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Volte quando você tiver todos eles!";
+	close;
+	}
+
+	mes "[Jardineira]";
+	mes "Você não é de nossa vila. SEGURANÇA!";
+	close;
+}
+
+
+sunagakure,289,258,3	script	Jardineira#2	91,{
+
+	if(countitem(30010) || countitem(30011) || countitem(30012) || countitem(30013) || countitem(30014) || countitem(30015)) {
+	mes "[Jardineira]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Sou a aldeã responsável por cuidar da vegetação de nossa aldeia.";
+	mes 
+	next;
+	mes "[Jardineira]";
+	mes "Eu sempre tive pavor de combates. Fui péssima na Academia Ninja.";
+	mes "Então eu procuro ajudar a vila de outra forma.";
+	next;
+	mes "[Jardineira]";
+	mes "Aliás, eu preciso renovar nosso estoque de plantas.";
+	mes "Poderia me fazer um favor?";
+	next;
+	if( select("Claro!:Talvez mais tarde...") == 2 )
+	{
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Que Ótimo!";
+	mes "Eu preciso de alguns exemplares de outras regiões. São esses:";
+	next;
+	switch(select("Planta da Névoa:Planta de Konoha:Nenhum"))
+	{
+	case 1:
+		mes "[Plantas da Névoa]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(750);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(750) >= 30)
+		{
+			delitem 750,30;
+			set $areia_ryous, $areia_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Suna! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 2:
+		mes "[Plantas da Konoha]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(748);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(748) >= 30)
+		{
+			delitem 748,30;
+			set $areia_ryous, $areia_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Suna! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 3:
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Volte quando você tiver todos eles!";
+	close;
+	}
+
+	mes "[Jardineira]";
+	mes "Você não é de nossa vila. SEGURANÇA!";
+	close;
+}
+
+
+kirigakure,269,158,3	script	Jardineira#3	91,{
+
+	if(countitem(30020) || countitem(30021) || countitem(30022) || countitem(30023) || countitem(30024) || countitem(30025)) {
+	mes "[Jardineira]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Sou a aldeã responsável por cuidar da vegetação de nossa aldeia.";
+	mes 
+	next;
+	mes "[Jardineira]";
+	mes "Eu sempre tive pavor de combates. Fui péssima na Academia Ninja.";
+	mes "Então eu procuro ajudar a vila de outra forma.";
+	next;
+	mes "[Jardineira]";
+	mes "Aliás, eu preciso renovar nosso estoque de plantas.";
+	mes "Poderia me fazer um favor?";
+	next;
+	if( select("Claro!:Talvez mais tarde...") == 2 )
+	{
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Que ótimo!";
+	mes "Eu preciso de alguns exemplares de outras regiões. São esses:";
+	next;
+	switch(select("Planta da Suna:Planta de Konoha:Nenhum"))
+	{
+	case 1:
+		mes "[Plantas da Suna]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(749);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(749) >= 30)
+		{
+			delitem 749,30;
+			set $nevoa_ryous, $nevoa_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Névoa! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 2:
+		mes "[Plantas da Konoha]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(748);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(748) >= 30)
+		{
+			delitem 748,30;
+			set $nevoa_ryous, $nevoa_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Névoa! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 3:
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Volte quando você tiver todos eles!";
+	close;
+	}
+
+	mes "[Jardineira]";
+	mes "Você não é de nossa vila. SEGURANÇA!";
+	close;
+}
+
+
+//kumogakure,166,75,5	script	Jardineira#4	91,{
+
+	if(countitem(30030) || countitem(30031) || countitem(30032) || countitem(30033) || countitem(30034) || countitem(30035)) {
+	mes "[Jardineira]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Sou a aldeã responsável por cuidar da vegetação de nossa aldeia.";
+	mes 
+	next;
+	mes "[Jardineira]";
+	mes "Eu sempre tive pavor de combates. Fui péssima na Academia Ninja.";
+	mes "Então eu procuro ajudar a vila de outra forma.";
+	next;
+	mes "[Jardineira]";
+	mes "Aliás, eu preciso renovar nosso estoque de plantas.";
+	mes "Poderia me fazer um favor?";
+	next;
+	if( select("Claro!:Talvez mais tarde...") == 2 )
+	{
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Que ótimo!";
+	mes "Eu preciso de alguns exemplares de outras regiões. São esses:";
+	next;
+	switch(select("Planta da Suna:Planta de Konoha:Planta da Névoa:Nenhum"))
+	{
+	case 1:
+		mes "[Plantas da Suna]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(749);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(749) >= 30)
+		{
+			delitem 749,30;
+			set $nuvem_ryous, $nuvem_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 2:
+		mes "[Plantas da Konoha]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(748);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(748) >= 30)
+		{
+			delitem 748,30;
+			set $nuvem_ryous, $nuvem_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 3:
+		mes "[Plantas da Névoa]";
+		mes "Requerimento:";
+		mes "30x "+getitemname(750);
+		next;
+		mes "[Jardineira]";
+		mes "Você possui esses exemplares?";
+		next;
+		if( select("Sim!:Não.") == 2 )
+		{
+			mes "[Jardineira]";
+			mes "Traga-me os exemplares, por favor!";
+			close;
+		}
+		if(countitem(750) >= 30)
+		{
+			delitem 750,30;
+			set $nuvem_ryous, $nuvem_ryous + 30;
+			Zeny = Zeny + 1000000;
+			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			mes "[Jardineira]";
+			mes "Muito Obrigado!";
+			close;
+		}
+		break;
+	case 4:
+		mes "[Jardineira]";
+		mes "Tudo bem, me procure quando tiver tempo livre.";
+		close;
+	}
+	mes "[Jardineira]";
+	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Volte quando você tiver todos eles!";
+	close;
+	}
+
+	mes "[Jardineira]";
+	mes "Você não é de nossa vila. SEGURANÇA!";
+	close;
+}

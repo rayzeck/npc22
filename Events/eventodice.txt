@@ -1,0 +1,13 @@
+treinamento,98,130,4	script	Dice	60,{
+
+mes "Olá caro shinobi "+strcharinfo(0)+", você quer participar do evento de /dice?";
+next;
+mes "É um evento muito interessante, o STAFF joga um dado no /dice para você";
+next;
+mes "Caso você esteja com sorte, poderá ser um dos três vencedores";
+next;
+mes "Após chegar no mapa, sente-se e espere sua vez!";
+close2;                
+warp "pvp_n_2-4",56,78;    
+end;                   
+} 

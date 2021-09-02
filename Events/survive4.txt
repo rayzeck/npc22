@@ -1,0 +1,10 @@
+in_hunter,97,18,4	script	BaseSuna	60,{
+mes "Vou invocar a Base da Suna, e vc deve destruí-la.";
+close2;
+monster "ra_san05",32,32,"Base da Suna",3014,1,"BaseSuna::OnMobIchi";
+end;
+
+	OnMobIchi:
+			announce "O shinobi "+strcharinfo(0)+" quebrou a base da Suna! É um herói!",0;
+			end;
+}

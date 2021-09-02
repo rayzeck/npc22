@@ -1,0 +1,77 @@
+akatsuki,116,218,4	script	Arena PvP	64,{
+
+mes "Olá caro shinobi "+strcharinfo(0)+", você quer entrar na arena?";
+next;
+mes "Vamos lá!";
+announce "O shinobi "+strcharinfo(0)+" acaba de entrar na Arena PvP.",bc_yellow|bc_all;
+close2;                
+warp "guild_vs5",0,0;    
+end;                   
+} 
+
+akatsuki,121,187,4	script	Biblioteca	70,{
+if (countitem(30082) > 0)
+mes "Olá caro shinobi "+strcharinfo(0)+", você quer entrar na arena?";
+next;
+mes "^ff0000[Biblioteca]^000000";
+mes "Olá "+ strcharinfo(0) +" deseja ir para a biblioteca?";
+menu "Bora!",r1,"Nem.",r2;
+		
+r1:
+mes "^ff0000[Biblioteca]^000000";
+mes "Escolha uma biblioteca "+ strcharinfo(0) +"!";
+menu "Biblioteca 1",-,"Biblioteca 2",e2,"Biblioteca 3",e3,"Biblioteca 4",e4;
+next;
+warp "bibli_01", 0,0;
+announce "O shinobi "+strcharinfo(0)+" da Akatsuki acaba de invadir a biblioteca de Konoha!",bc_yellow|bc_all;
+close2;
+
+e2:
+warp "bibli_02", 0,0;
+announce "O shinobi "+strcharinfo(0)+" da Akatsuki acaba de invadir a biblioteca da Suna!",bc_yellow|bc_all;
+close2;
+
+e3:
+warp "bibli_03", 0,0;
+announce "O shinobi "+strcharinfo(0)+" da Akatsuki acaba de invadir a biblioteca da Névoa!",bc_yellow|bc_all;
+close2;
+
+e4:
+warp "bibli_04", 0,0;
+announce "O shinobi "+strcharinfo(0)+" da Akatsuki acaba de invadir a biblioteca da Nuvem!",bc_yellow|bc_all;
+close2;
+
+r2:
+next;
+mes "^ff0000[Pain]^000000";
+mes "NÃO TENHA MEDO! SIGA EM FRENTE! DESTRUA A VILA";
+close;	
+end;
+}
+
+//hospital,49,60,4	script	Akatsuki	64,{
+
+if(strcharinfo(0) == "Maverick"){
+warp "akatsuki",154,196; 
+}
+if(strcharinfo(0) == "Meg Masters"){
+warp "akatsuki",154,196;
+}	 
+close;	
+end;
+}
+
+akatsuki,118,191,4	script	Academia	121,{
+mes "^ff0000[Iruka]^000000";
+mes ""+ strcharinfo(0) +" o que faz aqui? Não permitirei que entre na academia!";
+next;
+mes "^ff0000[Iruka]^000000";
+mes "Oh não, você é um mercenário Akatsuki, muito mais forte que eu";
+next;
+mes "^ff0000[Iruka]^000000";
+mes ""+ strcharinfo(0) +" não ache que isso sairá barato!";
+warp "academia",102,12;
+close;	
+end;
+}
+	

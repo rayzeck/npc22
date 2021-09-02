@@ -1,0 +1,8 @@
+sec_in02,147,178,5	script	DebugKuchi#12	99,{
+mes "Desbugando...";
+set kuchiyose4,0;
+set kuchiyose5,1;
+completequest 50105; 
+erasequest 50105;
+close;
+}

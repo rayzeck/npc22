@@ -1,0 +1,7 @@
+function	script	RANK_ALL	{
+if(reputation2 >= 2000 ) { bonus bAllStats,2; }
+if(reputation2 >= 3000 ) { bonus bAllStats,2; }
+if(reputation2 >= 5000 ) { bonus bAllStats,2; }
+if(reputation2 >= 10000 ) { bonus bAllStats,4; }
+end;
+}

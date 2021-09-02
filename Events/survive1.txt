@@ -1,0 +1,58 @@
+-	script	Survivezada	-1,{
+
+\\OnTue2100:
+\\gvgon "ra_san05";
+\\pvpon "ra_san05";
+\\announce "[RESTA UM] Qual será a vila mais poderosa?",0;
+\\sleep 2000;
+\\announce "[RESTA UM] Protejam suas bases, monstem sua estratégia",0;
+\\sleep 2000;
+\\announce "[RESTA UM] A que restar por último, vence!",0;
+\\sleep 2000;
+\\announce "[RESTA UM] O teleportador está no Campo de Treinamento",0;
+
+\\monster "ra_san05",32,267,"Base da Akatsuki",3023,1,"Survivezada::OnMobJuu";
+\\end;
+
+	OnMobJuu:
+			announce "O shinobi "+strcharinfo(0)+" quebrou a base da Akatsuki! É um absurdo!",0;
+			end;
+
+		}
+
+treinamento,73,155,3	script	Resta UM	60,{
+
+mes "^ff0000[Controlador de Bases]^000000";
+mes "Olá "+ strcharinfo(0) +", pronto para a batalha?";
+menu "Sim!",r1,"Não.",r2;
+		
+r1:
+mes "^ff0000[Controlador de Bases]^000000";
+mes "Escolha uma entrada, "+ strcharinfo(0) +"!";
+menu "Entrada 1.",-,"Entrada 2.",e2,"Entrada 3.",e3,"Entrada 4.",e4,"Centro.",centro;
+next;
+warp "ra_san05", 8,150;
+close2;
+
+e2:
+warp "ra_san05", 150,290;
+close2;
+
+e3:
+warp "ra_san05", 289,150;
+close2;
+
+e4:
+warp "ra_san05", 150,7;
+close2;
+
+centro:
+warp "ra_san05", 152,150;
+close2;
+	
+r2:
+next;
+mes "^ff0000[Controlador de Bases]^000000";
+mes "Melhore...";
+close;	
+}

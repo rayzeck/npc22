@@ -1,0 +1,31 @@
+prontera,155,155,4	script	ResetBijuu	99,{
+mes "Resetando as Bijuu...";
+set $Ichibi_akatsuki, 0;
+set $Ichibi_konoha, 0;
+set $Ichibi_kiri, 0;
+set $Nibi_akatsuki, 0;
+set $Nibi_konoha, 0;
+set $Nibi_kiri, 0;
+set $sanbi_akatsuki, 0;
+set $sanbi_konoha, 0;
+set $sanbi_kiri, 0;
+set $yonbi_akatsuki, 0;
+set $yonbi_konoha, 0;
+set $yonbi_kiri, 0;
+set $Gobi_akatsuki, 0;
+set $Gobi_konoha, 0;
+set $Gobi_kiri, 0;
+set $Rokubi_akatsuki, 0;
+set $Rokubi_kiri, 0;
+set $Rokubi_konoha, 0;
+set $Shichibi_akatsuki, 0;
+set $Shichibi_konoha, 0;
+set $Shichibi_kiri, 0;
+set $Hachibi_akatsuki, 0;
+set $Hachibi_konoha, 0;
+set $Hachibi_kiri, 0;
+set $Kyuubi_akatsuki, 0;
+set $Kyuubi_konoha, 0;
+set $Kyuubi_kiri, 0;
+close;
+}

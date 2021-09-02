@@ -1,0 +1,8 @@
+sec_in02,147,178,5	script	DebugKuchi#3	99,{
+mes "Desbugando...";
+completequest 50201; 
+erasequest 50201;
+completequest 50001; 
+erasequest 50001;
+close;
+}

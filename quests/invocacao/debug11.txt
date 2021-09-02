@@ -1,0 +1,5 @@
+sec_in02,147,178,5	script	DebugKuchi#4	99,{
+mes "Desbugando...";
+skill 2504,2,3;
+close;
+}

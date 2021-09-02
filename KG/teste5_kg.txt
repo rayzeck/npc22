@@ -1,0 +1,164 @@
+prontera,157,184,5	script	Testando KG	4_f_valkyrie,{
+
+
+
+	.@npc$ = "[" + strnpcinfo(1) + "]";
+
+	
+
+	.@questid = 40001;
+
+	.@item1 = 900;
+
+	.@item2 = 902;
+
+	.@itemqnt1 = 1;
+
+	.@itemqnt2 = 1;
+
+	if(pegoukg == 5) {
+
+		mes .@npc$;
+
+		mes "Você já chegou no nivel máximo dos Hyuuga.";
+
+		close;
+	
+	}
+
+	if(pegoukg == 4) {
+
+			mes .@npc$;
+
+			mes "Você novamente? Em busca de mais poder?";
+
+			if(select("- Sim:- Não estou interessado") == 2) close;
+			
+			next;
+
+			mes .@npc$;
+
+			mes "Para aprimorar seu Kekkei Genkai eu preciso de:";
+
+			mes "30 itens da KG e 30.000.000 de Zeny.";
+
+			if(select("- Aqui está:- Não estou interessado") == 2) close;
+			
+			next;
+
+	if(countitem(.@item2) >= 30 && Zeny >= 30000000) {
+			
+			set pegoukg,5; 
+			announce " "+strcharinfo(0)+" Acaba de aprimorar seu Byakugan!",bc_blue|bc_all; 
+			if(countitem(30106)) { delitem 30106,1; getitem2 30106,1,1,0,0,30097,0,0,0; equip 30106; }
+			if(countitem(30120)) { delitem 30120,1; getitem2 30120,1,1,0,0,30097,0,0,0; equip 30120; }
+			delitem .@item2,30;
+			Zeny = Zeny - 30000000;
+			mes .@npc$;
+			mes "Parabéns, você acabou de aprimorar seu poder Hyuuga.";
+
+			close;
+
+		}
+
+		mes .@npc$;
+
+		mes "Você não tem todos os itens ainda.";
+
+		close;
+
+	}
+
+		
+	if(checkquest(.@questid) == 1) {
+
+		if(countitem(.@item1) >= .@itemqnt1 && countitem(.@item2) >= .@itemqnt2 && Zeny >= 30000000) {
+
+			set pegoukg,4; 
+			set expkg,0; 
+			announce " "+strcharinfo(0)+" Acaba de melhorar seu Byakugan para o nível 4!",bc_blue|bc_all; 
+			if(countitem(30106)) { delitem 30106,1; getitem2 30106,1,1,0,0,30093,0,0,0; equip 30106; }
+			if(countitem(30120)) { delitem 30120,1; getitem2 30120,1,1,0,0,30093,0,0,0; equip 30120; }
+			delitem .@item1,.@itemqnt1;
+			delitem .@item2,.@itemqnt2;
+			Zeny = Zeny - 30000000;
+			completequest .@questid;
+			erasequest .@questid;
+			mes .@npc$;
+			mes "Parabéns, você acabou de liberar seu poder Hyuuga.";
+
+			close;
+
+		}
+
+		mes .@npc$;
+
+		mes "Você não tem todos os itens ainda.";
+
+		close;
+
+	}
+
+	
+
+	if(countitem(30106) || countitem(30120) && expkg >= 5000000) {
+
+		mes .@npc$;
+
+		mes "Esses olhos, cheios de vida, me lembram de quando eu era jovem...Hahaha! mas enfim, veio atras de respostas não é mesmo?";
+
+		next;
+
+		mes .@npc$;
+
+		mes "Realmente nosso clã é repleto de segredos, mas apenas membros dignos podem conhece-los.";
+
+		next;
+
+		mes .@npc$;
+
+		mes "Sera voce digno de saber nossos segredos?";
+
+		if(select("- Sim, estou pronto:- Não estou pronto ainda") == 2) { next; mes .@npc$; mes "Certo, estarei aqui quando estiver preparado."; close; }
+
+			next;
+
+			mes .@npc$;
+
+			mes "Para continuar o treinamento você precisa pagar 30.000.000 Zeny.";
+
+			mes "Gostaria de continuar o treinamento?";
+
+			if(select("- Sim, gostaria:- Não estou interessado") == 2) close;
+
+					next;
+
+					mes .@npc$;
+
+					mes "Certo, vejo a determinação em seu olhar, vamos começar o treinamento.";
+
+					next;
+
+					mes .@npc$;
+
+					mes "Para iniciar me traga os seguintes itens:";
+
+					mes "1 Kit Cirurgico";
+
+					mes "1 Olho Hyuuga Derrotado";
+
+					mes "30.000.000 Zeny";
+
+					setquest .@questid;
+
+					close;
+
+	}
+
+	mes .@npc$;
+
+	mes "Você não é Hyuuga ou não está pronto para evolui-lo.";
+
+	close;
+
+}

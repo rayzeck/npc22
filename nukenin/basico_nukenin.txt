@@ -1,0 +1,829 @@
+monk_in,99,58,5	script	Ancião Nukenin	847,{
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Veja só, um forasteiro...";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Eu sou o ancião nukenin, o mais velho e atual lider dessa aldeia.";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Você parece confuso, vou te explicar o que é um nukenin";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Um nukenin é um ninja renegado, um shinobi que fugiu de sua vila por qualquer motivo";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Os nukenins são pessoas solitárias pois não pertencem a nenhuma vila";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Os nukenins mais famosos são os temiveis Akatsuki!";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Nukenins não possuem nenhum privilegio, são apenas pessoas que querem vingança contra sua vila ou apenas quer ter uma vida solitária";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Bom, você andou bastante pra chegar até aqui, e parece bem interessado...";
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Gostaria de entregar sua bandana e virar um nukenin "+strcharinfo(0)+"?";
+menu "Sim!",sim,"Agora não...",nao;
+
+sim:
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Que boa noticia, mas antes de virar um nukenin me diga sua vila de origem...";
+menu "Konoha",konoha,"Névoa",nevoa,"Suna",suna,"Nuvem",nuvem;
+
+konoha:
+next;
+if(!getcharid(2)){
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Vejo que ja está sem vila, ótimo";
+}else{
+mes "Você está em uma vila, por favor saia dela antes de se tornar um nukenin.";
+close;
+}
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Ok, vamos fazer de você um nukenin!";
+if (countitem(19008) < 1) goto bandana;
+savepoint "prt_monk",139,200;
+if (genin == 1) set Rank_B, 1;
+if (chunin == 1) set Rank_A, 1;
+if (jounin == 1) set Rank_S, 1;
+delitem 19008,1;
+getitem 19081,1;
+announce "O Shinobi " + strcharinfo(0) + " acaba de virar um nukenin de Konoha!!",0;
+close;
+
+nevoa:
+next;
+if(!getcharid(2)){
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Vejo que ja está sem vila, ótimo";
+}else{
+mes "Você está em uma vila, por favor saia dela antes de se tornar um nukenin.";
+close;
+}
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Ok, vamos fazer de você um nukenin!";
+if (countitem(19001) < 1) goto bandana;
+savepoint "prt_monk",139,200;
+if (genin == 1) {set Rank_B, 1;}
+if (chunin == 1) {set Rank_A, 1;}
+if (jounin == 1) {set Rank_S, 1;}
+delitem 19001,1;
+getitem 19078,1;
+announce "O Shinobi " + strcharinfo(0) + " acaba de virar um nukenin da Névoa!!",0;
+close;
+
+suna:
+next;
+if(!getcharid(2)){
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Vejo que ja está sem vila, ótimo";
+}else{
+mes "Você está em uma vila, por favor saia dela antes de se tornar um nukenin.";
+close;
+}
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Ok, vamos fazer de você um nukenin!";
+if (countitem(19006) < 1) goto bandana;
+savepoint "prt_monk",139,200;
+if (genin == 1) set Rank_B, 1;
+if (chunin == 1) set Rank_A, 1;
+if (jounin == 1) set Rank_S, 1;
+delitem 19006,1;
+getitem 19079,1;
+announce "O Shinobi " + strcharinfo(0) + " acaba de virar um nukenin da Suna!!",0;
+close;
+
+nuvem:
+next;
+if(!getcharid(2)){
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Vejo que ja está sem vila, ótimo";
+}else{
+mes "Você está em uma vila, por favor saia dela antes de se tornar um nukenin.";
+close;
+}
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Ok, vamos fazer de você um nukenin!";
+if (countitem(30030) < 1) goto bandana;
+if (countitem(30031) < 1) goto bandana;
+if (countitem(30032) < 1) goto bandana;
+if (countitem(30033) < 1) goto bandana;
+if (countitem(30034) < 1) goto bandana;
+savepoint "prt_monk",139,200;
+if (genin == 1) set Rank_B, 1;
+if (chunin == 1) set Rank_A, 1;
+if (jounin == 1) set Rank_S, 1;
+delitem 30030,1;
+delitem 30031,1;
+delitem 30032,1;
+delitem 30033,1;
+delitem 30034,1;
+getitem 19079,1;
+announce "O Shinobi " + strcharinfo(0) + " acaba de virar um nukenin da Nuvem!",0;
+close;
+
+bandana:
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Opa, ou você não é dessa vila ou você não desequipou sua bandana!";
+close;
+
+nao:
+next;
+mes "[^FFA500Ancião Nukenin^000000]";
+mes "Tudo bem, uma dica... fica esperto com os nukenins, não é de costume deles ser amigáveis.";
+close;
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////NPCS NUKENIN QUEST////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+
+force_1-1,40,26,3	script	Shinobi Misterioso#10	412,{
+
+//menu "- ",L_sim,"Não sei do que esta falando",L_nao;
+//mes "";
+//fazer não dar outra bandana ao relogar
+//lou_in02 241 172
+//lou_in02 54 179
+
+//if(jounin != 1) {mes "Você é muito fraquinho pra falar comigo"; close;}
+if (quest_nukenin != 0) {mes "[^DC143CShinobi Misterioso^000000]"; mes "Não tenho nada pra falar com você"; close;}
+
+mes "[^DC143CShinobi Misterioso^000000]";
+mes "Eu vejo em você a escuridão meu jovem. Você possui um certo rancor estou certo?";
+menu "- Como você sabe!?",L_sim,"- Não sei do que esta falando",L_nao;
+
+L_sim:
+next;
+mes "[^DC143CShinobi Misterioso^000000]";
+mes "Você possui os mesmos olhos que eu quando tinha a sua idade, quer se livrar desse odio, desse rancor. Quer viver sem se importar com as regras taxadas por esse mundo não é? Sinto em você o desejo pela paz interior meu jovem...";
+menu "- Como posso fazer isso",L_sim2,"- Você precisa de um médico...",L_nao;
+
+L_sim2:
+next;
+mes "[^DC143CShinobi Misterioso^000000]";
+//mes "Primeiro você deve abandonar tudo o que você tem, então antes de tudo me entregue a sua bandana. Quando for a hora certa eu a devolverei para você";
+mes "Primeiro você deve saber que terá que entregar tudo, sua vida como você a conhece nunca mais será a mesma, será perseguido, será caçado, e será odiado, tem certeza que quer seguir esse caminho?";
+//menu "- Entregar Bandana",L_sim3,"- Jamais, estou indo embora",L_nao;
+menu "- Tenho certeza, quero me tornar um renegado.",L_sim3,"- Jamais, estou indo embora",L_nao;
+
+L_sim3:
+next;
+//if(countitem(19001) == 1) {delitem 19001,1;}
+//if(countitem(19006) == 1) {delitem 19006,1;}
+//if(countitem(19008) == 1) {delitem 19008,1;}
+//if(countitem(19040) == 1) {delitem 19040,1;}
+//
+//if(countitem(19073) == 1) {delitem 19073,1;}
+//if(countitem(19074) == 1) {delitem 19074,1;}
+//if(countitem(19076) == 1) {delitem 19076,1;}
+//if(countitem(19004) == 1) {delitem 19004,1;}
+//
+//if(countitem(19034) == 1) {delitem 19034,1;}
+//if(countitem(19018) == 1) {delitem 19018,1;}
+//if(countitem(19019) == 1) {delitem 19019,1;}
+//if(countitem(19165) == 1) {delitem 19165,1;}
+//
+//if(countitem(19025) == 1) {delitem 19025,1;}
+//if(countitem(19096) == 1) {delitem 19096,1;}
+//if(countitem(19097) == 1) {delitem 19097,1;}
+//if(countitem(19098) == 1) {delitem 19098,1;}
+//
+//if(countitem(19168) == 1) {delitem 19168,1;}
+//if(countitem(19169) == 1) {delitem 19169,1;}
+//if(countitem(19170) == 1) {delitem 19170,1;}
+//if(countitem(19095) == 1) {delitem 19095,1;}
+//
+//if(countitem(19030) == 1) {delitem 19030,1;}
+//if(countitem(19156) == 1) {delitem 19156,1;}
+//if(countitem(19016) == 1) {delitem 19016,1;}
+//if(countitem(19127) == 1) {delitem 19127,1;}
+mes "[^DC143CShinobi Misterioso^000000]";
+mes "Vejo que esta determinado a ser livre então eu vou te ajudar. No deserto vive um amigo meu, o Strope, ele irá te guiar para o próximo passo.";
+warp "moc_fild01",200,185;
+dispbottom "Você recebeu nível para encarar a dificuldade dessa sua nova vida!";
+atcommand "@blvl 500";
+atcommand "@vit 1000";
+atcommand "@str 1000";
+atcommand "@dex 1000";
+atcommand "@speed 80";
+atcommand "@heal";
+close;
+
+L_nao:
+close;
+
+}
+
+moc_fild01,200,189,5	script	Strope	449,{
+
+set quest_nukenin,1;
+mes "[^DC143CStrope^000000]";
+mes "Para ter chegado até mim com certeza encontrou aquele velho maluco por ai";
+next;
+mes "[^DC143CStrope^000000]";
+mes "Tudo bem... Vou te ajudar, mas primeiro me ajude com meu trabalho, sou dono do ^DC143CBar Esquecido^000000";
+next;
+mes "[^DC143CStrope^000000]";
+mes "um bar para nukenins, mas não se preocupe, prezamos pela paz. É proibido lutar dentro do meu bar. E então, vai me ajudar?";
+menu "- Sim, vamos lá",L_sim,"- Agora não",L_nao;
+
+L_sim:
+next;
+mes "[^DC143CStrope^000000]";
+mes "Hmm, então irá trabalhar até que eu perceba que não será apenas um baderneiro por ai.";
+next;
+mes "[^DC143CStrope^000000]";
+mes "Vá e colete 50 ^DC143Cantídotos^000000 para mim.";
+menu "- Eu já peguei",L_sim2,"- Ok, irei pegar",L_nao;
+
+L_sim2:
+next;
+if(countitem(1301) < 50) {mes "[^DC143CStrope^000000]"; mes "Você ainda não pegou os antídotos que pedi"; close;}
+mes "[^DC143CStrope^000000]";
+mes "Já? Muito bom, vejo que tem bastante determinação em ser livre dessas crenças que o mundo shinobi impõem.";
+next;
+mes "[^DC143CStrope^000000]";
+mes "Agora ache o meu bar neste mapa, com essa moeda você poderá abrir a porta";
+next;
+mes "[^DC143CStrope^000000]";
+mes "Não é dificil encontrá-lo. Vou te teletransportar para o lado da entrada!";
+next;
+mes "Quando chegar lá, não esqueça de falar com a minha bartender!";
+next;
+getitem 1320,1;
+atcommand "@blvl -999";
+atcommand "@reset";
+atcommand "@heal";
+warp "moc_fild06",370,240;
+//[entrega uma chave] [ Bar Esquecido: Um buraco no mapa que só é visível de 20 em 20 minutos em intervalos de 20 minutos, estilo gato tora]
+
+L_nao:
+close;
+
+}
+
+moc_fild06,373,240,4	script	Bar Esquecido	111,1,1,{
+
+if (quest_nukenin < 1) {mes "Não estou pronto pra vir aqui"; close;}
+if (countitem(1320) >= 1) goto descer;
+mes "O que é isso? deve ser apenas uma miragem...";
+close;
+
+descer:
+mes "Você vê uma passagem.";
+next;
+mes "Hm.. Talvez este é o bar que o Strope mencionou...";
+next;
+mes "Qual será sua ação?";
+menu "Usar a moeda",corda,"Se afastar",afastar;
+
+corda:
+//delitem 7218,1;
+next;
+mes "Funcionou! Vamos entrar...";
+next;
+warp "lou_in02",231,172;
+close;
+
+afastar:
+close;
+
+}
+
+lou_in02,235,176,5	script	Bartender	102,{
+
+mes "[^DC143CBartender^000000]";
+mes "Olá, aqui é o Bar Esquecido em que posso ajudar? ";
+menu "- O moço lá de fora pediu pra eu trazer isso",L_sim,"- Estou de passagem",L_nao;
+
+L_sim:
+next;
+if(countitem(1301) < 50) {mes "[^DC143CBartender^000000]"; mes "Tem algo faltando ai não? Você não tem as carnes que preciso."; close;}
+mes "[^DC143CBartender^000000]";
+mes "Oh meu Deus!! Quanto antídoto, é isso que precisavamos.";
+next;
+mes "[^DC143CBartender^000000]";
+mes "Então você vai trabalhar aqui com a gente para sempre. Hm! Vá até a cozinha e entregue ao homem que está lá.";
+next;
+mes "[^DC143C"+strcharinfo(0)+"^000000]";
+mes "É o que eu pretendo!";
+close;
+
+L_nao:
+close;
+
+}
+
+lou_in02,255,163,5	script	Nukenin	118,{
+
+if (quest_nukenin == 3) && (limpeza_nukenin < 10) {mes "[^DC143CHaku^000000]"; mes "Aquilo lá não é limpeza... Trabalhe direito, trabalhe com a alma. Ainda tem sujeira naquele lugar."; close;}
+if (quest_nukenin == 3) && (limpeza_nukenin == 10) goto parte2;
+if (quest_nukenin > 3) {mes "[^DC143CHaku^000000]"; mes "Não tenho nada pra falar com você"; close;}
+
+mes "[^DC143CHaku^000000]";
+if(countitem(1301) < 50) {mes "[^DC143CHaku^000000]"; mes "Ah, estou esperando alguém..."; close;}
+mes "finalmente alguém teve a brilhante ideia de trazer antídoto para este lugar.";
+next;
+mes "[^DC143CHaku^000000]";
+mes "Oh você deve ser o pequeno que o chefe comentou, sinta-se em casa, meu jovem.";
+menu "O que mais eu posso fazer por aqui?",L_sim,"- Ok, vou indo",L_nao;
+
+L_sim:
+next;
+mes "[^DC143CHaku^000000]";
+mes "Você devia encontrar o chefe e decidir seu próximo passo nesse mundo. Encontre sua paz!";
+delitem 1301,50;
+set quest_nukenin,3;
+next;
+warp "lou_in02",210,50;
+
+L_nao:
+close;
+
+parte2:
+set quest_nukenin,4;
+mes "[^DC143CCozinheiro^000000]";
+mes "Nossa! Você limpou tudo mesmo, muito obrigado. O mestre está te esperando na sala dele, vou leva-lo até ele";
+set limpeza_nukenin,0;
+set limpeza_nukenin1,0;
+set limpeza_nukenin2,0;
+set limpeza_nukenin3,0;
+set limpeza_nukenin4,0;
+set limpeza_nukenin5,0;
+set limpeza_nukenin6,0;
+set limpeza_nukenin7,0;
+set limpeza_nukenin8,0;
+set limpeza_nukenin9,0;
+set limpeza_nukenin10,0;
+next;
+warp "lou_in02",210,50;
+
+}
+
+lou_in02,252,176,0	warp	nuk1	1,1,lou_in02,37,189
+lou_in02,34,189,0	warp	nuk2	1,1,lou_in02,250,174
+lou_in02,81,190,0	warp	nuk3	1,1,lou_in02,203,94
+lou_in02,200,93,0	warp	nuk4	1,1,lou_in02,78,190
+s_atelier,166,72,0	warp	nuk5	1,1,e_tower,78,105
+e_tower,81,79,0	warp	nuk6	1,1,yuno_fild08,52,330
+lou_in02,229,171,0	warp	nuk7	1,1,moc_fild06,371,240
+
+
+lou_in02,210,47,1	script	Chefe#1	70,{
+mes "[^DC143CChefe^000000]";
+mes "Fiquei sabendo que você se deu muito bem com meus empregados ein!? Hehe, mas eu sei que não é isso que veio fazer aqui.";
+next;
+mes "[^DC143CChefe^000000]";
+mes "Você quer ser livre não é? Aquele velho maluco já fez a sua cabeça não tem mais jeito, vou te ajudar.";
+menu "- Sério!? Por Favor. Quero ser livre.",L_sim;
+
+L_sim:
+next;
+mes "[^DC143CChefe^000000]";
+mes "Ok, eu entendi seu lado mas antes preciso lhe explicar algumas coisas sobre ser um nukenin.";
+menu "Ok, escutarei atentamente senhor!!",L_sim2;
+
+L_sim2:
+next;
+mes "[^DC143CChefe^000000]";
+mes "Os nukenins são ^DC143Ccaçados^000000 no mundo shinobi, se não for forte o suficiente morrerá facilmente.";
+next;
+mes "[^DC143CChefe^000000]";
+mes "Só de já estar sem vila já sofre perigo.";
+next;
+mes "[^DC143CChefe^000000]";
+mes "Se eu fosse você iria me decidir neste instante, caso queira já irei começar seu treinamento. E então o que deseja?";
+menu "- Eu quero ser um nukenin, me treine senhor",L_sim3,"- Não, eu desisto, quero voltar pra minha vila",L_nao;
+
+L_sim3:
+next;
+mes "[^DC143CChefe^000000]";
+mes "Vamos lá então, um amigo meu, o Tsutomu, vive em um esconderijo nas montanhas, com este fragmento ele começará seu treinamento de imediato.";
+next;
+mes "[^DC143CChefe^000000]";
+mes "Boa sorte e tome cuidado, pois está sem proteção.";
+next;
+mes "[^DC143CChefe^000000]";
+mes "Vá, agora!";
+getitem 700,1;
+set quest_nukenin,5;
+warp "e_tower",76,102;
+savepoint "lou_in02",237,167;
+set quest_nukenin,5;
+close;
+
+L_nao:
+set quest_nukenin,0;
+mes "[^DC143CChefe^000000]";
+mes "Você desistiu de se tornar nukenin, a quest foi removida de seu personagem";
+close;
+}
+
+
+yuno_fild08,50,333,4	script	Buraco#20	111,1,1,{
+
+if (quest_nukenin < 5) {end;}
+if (countitem(7218) >= 1) goto descer;
+mes "Você vê um buraco fundo no chão, isso é perigoso, melhor se afastar";
+close;
+
+descer:
+mes "Você vê um buraco fundo no chão, isso é perigoso";
+next;
+mes "Hm.. e se eu usar essa corda pra descer?";
+next;
+mes "Qual será sua ação?";
+menu "Tentar descer com a corda",corda,"Se afastar",afastar;
+
+corda:
+delitem 7218,1;
+mes "Essa corda não parece muito segura... mas vamos em frente";
+next;
+warp "e_tower",79,80;
+close;
+
+afastar:
+close;
+
+}
+
+e_tower,76,105,5	script	Tsutomu	827,{
+if (quest_nukenin == 6) {goto L_sim3;}
+if (quest_nukenin < 5) {mes "[^DC143CTsutomu^000000]"; mes "Não tenho nada pra falar com você"; close;}
+mes "[^DC143CTsutomu^000000]";
+mes "Saia daqui.";
+menu "Eu tenho um fragmento de Cristal Negro",L_sim,"Mas eu só... ok.",L_nao;
+
+L_sim:
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Hahaha você veio treinar!? Treinar!? Hahahahaha que piada é essa garoto?";
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Você não tem força nenhuma, carta de recomendação? Deixa eu ver essa porcaria...";
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Hmm... Não quero, vai embora garoto, não vou te treinar...";
+menu "- Como assim!? Eu tenho a carta!",L_nao2,"- Posso fazer isso sozinho então.",L_sim2;
+
+L_nao2:
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Hahahaha. Você vai sofrer muito nesse mundo ainda, garoto.";
+next;
+mes "Jutsu de teletransporte!";
+npctalk "Jutsu de teletransporte!";
+next;
+atcommand "@effect 36";
+atcommand "@effect 39";
+next;
+warp "s_atelier",175,62;
+
+L_sim2:
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Agora sim... Sua determinação me animou, vejo que esta se tornando mais independente. Muito bem, vamos começar seu treinamento garoto!!";
+next;
+mes "[^DC143CTsutomu^000000]";
+mes "Seu treinamento será feito por outra pessoa, entendido?";
+next;
+set quest_nukenin,6;
+menu "- Sim!",L_sim3;
+
+L_sim3:
+//if(countitem(1102) < 2) {mes "[^DC143CTsutomu^000000]"; mes "O que esta esperando moleque, consiga logo as ervas reais..."; close;}
+//if(countitem(1103) < 2) {mes "[^DC143CTsutomu^000000]"; mes "O que esta esperando moleque, consiga logo as ervas agoniadas..."; close;}
+//if(countitem(1104) < 2) {mes "[^DC143CTsutomu^000000]"; mes "O que esta esperando moleque, consiga logo as ervas angelicais..."; close;}
+//if(countitem(1105) < 2) {mes "[^DC143CTsutomu^000000]"; mes "O que esta esperando moleque, consiga logo as ervas compostas..."; close;}
+//delitem 1102,2;
+//delitem 1103,2;
+//delitem 1104,2;
+//delitem 1105,2;
+set quest_nukenin,7;
+mes "[^DC143CTsutomu^000000]";
+mes "Hmm, Boa garoto, espere um momento...";
+next;
+mes "Jutsu de teletransporte!";
+npctalk "Jutsu de teletransporte!";
+next;
+atcommand "@effect 36";
+atcommand "@effect 39";
+next;
+warp "s_atelier",175,62;
+
+L_nao:
+close;
+
+}
+
+
+
+s_atelier,175,61,5	script	Saki	456,{
+
+if (quest_nukenin == 9) {mes "[^DC143CSaki^000000]"; mes "O que está fazendo aqui? Você precisa falar com o Riki!"; next; warp "prt_in",250,15;}
+if (quest_nukenin == 8) {mes "[^DC143CSaki^000000]"; mes "O que está fazendo aqui? Volte para o calabouço!"; next; warp "tha_t04",139,136;}
+//if (quest_nukenin != 7) {mes "[^DC143CSaki^000000]"; mes "Não tenho nada pra falar com você"; close;}
+
+mes "[^DC143CSaki^000000]";
+mes "Pelas caracteristicas, eu já sei quem é você.";
+menu "Sim, eu quero me tornar um nukenin.",L_sim;
+
+L_sim:
+next;
+mes "[^DC143CSaki^000000]";
+mes "Disso eu já sei, mas o que isso tem a ver com o fato de ter vindo aqui?";
+menu "- O dono do Bar Esquecido me mandou aqui",L_sim2;
+
+L_sim2:
+next;
+mes "[^DC143CSaki^000000]";
+mes "Foi lá onde tudo começou. E acho que o final está sendo muito triste";
+next;
+mes "[^DC143CSaki^000000]";
+mes "Eu vivo sozinho nesse mundo e sempre escondido. Longe de tudo. Tem certeza que ainda quer ser um nukenin?";
+menu "- Eu não me importo com você.",L_sim3;
+
+L_sim3:
+next;
+mes "[^DC143CSaki^000000]";
+mes "Hahahaha, sua ignorância chega a me irritar, mas tudo bem, a maioria dos shinobis vem até mim com esse mesmo jeito.";
+next;
+mes "[^DC143CSaki^000000]";
+mes "Vou lhe enviar para o meu sensei deste lugar";
+next;
+mes "[^DC143CSaki^000000]";
+mes "Eu vejo algo diferente em você";
+next;
+set quest_nukenin,8;
+warp "prt_in",227,45;
+
+}
+
+//tha_t04,0,0,0,0	monster	Guarda	1028,30,1,1,0
+//prt_fild00,0,0,0,0	monster	Erva Real	1614,2,900000,900000,0
+//ra_fild03,0,0,0,0	monster	Erva Agoniada	1615,2,900000,900000,0
+//yuno_fild11,0,0,0,0	monster	Erva Angélica	1616,2,900000,900000,0
+//ama_fild01,0,0,0,0	monster	Erva Composta	1617,2,900000,900000,0
+
+tha_t04,139,128,4	script	Buraco#21	111,1,1,{
+
+if (countitem(1106) >= 1) goto descer;
+mes "Hm, parece ser a saída, porém preciso de uma chave";
+close;
+
+descer:
+mes "É a saída!";
+next;
+mes "Posso usar a chave para sair daqui";
+next;
+mes "Qual será sua ação?";
+menu "Saír do calabouço",corda,"Se afastar",afastar;
+
+corda:
+delitem 1106,1;
+mes "Enfim, livre";
+next;
+set quest_nukenin_saida,1;
+warp "moc_pryd02",99,101;
+close;
+
+afastar:
+close;
+
+}
+
+moc_pryd02,9,195,4	script	Saída#21	45,1,1,{
+
+warp "moc_pryd02",99,101;
+end;
+
+}
+
+moc_pryd02,8,8,4	script	Saída#22	45,1,1,{
+
+warp "moc_pryd02",99,101;
+end;
+
+}
+
+moc_pryd02,191,8,4	script	Saída#23	45,1,1,{
+
+warp "moc_pryd02",99,101;
+end;
+
+}
+
+moc_pryd02,190,189,4	script	Saída#24	45,1,1,{
+
+warp "moc_pryd02",99,101;
+end;
+
+}
+
+moc_pryd02,51,90,4	script	Saída#25	45,1,1,{
+
+warp "prt_in",250,15;
+end;
+
+}
+
+prt_in,227,45,5	script	Riki	765,{
+
+if (nukenin == 1) {mes "[^DC143CRiki^000000]"; mes "Não tenho nada pra falar com você"; close;}
+if (quest_nukenin == 9) {goto L_sim3;}
+if (quest_nukenin != 8) {mes "[^DC143CRiki^000000]"; mes "Não tenho nada pra falar com você"; close;}
+
+mes "[^DC143CRiki^000000]";
+mes "Olá, meu jovem, não acredito que ele realmente enviou você aqui";
+menu "Você já sabe de mim?",L_sim;
+
+L_sim:
+next;
+mes "[^DC143CRiki^000000]";
+mes "Hahaha, de fato. E consigo perceber que está livre de correntes.";
+next;
+mes "[^DC143CRiki^000000]";
+mes "Neste momento já fiz um corte em sua bandana, não há como voltar atrás.";
+menu "O que tenho que fazer?",L_sim3;
+
+//L_sim2:
+//next;
+//mes "[^DC143CRiki^000000]";
+//mes "Você precisa me provar que não possui mais nenhum sentimento pela sua vila,";
+//next;
+//mes "[^DC143CRiki^000000]";
+//mes "Tome cuidado e boa sorte.";
+//set quest_nukenin,9;
+//set quest_nukenin_saida,0;
+//close;
+
+L_sim3:
+//if (reputation > -5) {mes "[^DC143CRiki^000000]"; mes "Vá e quebre as correntes do seu coração..."; warp "lou_in02",237,167; close;}
+next;
+mes "[^DC143CRiki^000000]";
+mes "Você não precisa fazer mais nada. Você fez bem, agora está livre para voar, seja um bom nukenin e boa sorte na jornada!";
+next;
+mes "Você será teletransportado para o portal da academia!";
+if(countitem(30000) == 1) {delitem 30000,1;}
+if(countitem(30001) == 1) {delitem 30001,1;}
+if(countitem(30002) == 1) {delitem 30002,1;}
+if(countitem(30003) == 1) {delitem 30003,1;}
+if(countitem(30004) == 1) {delitem 30004,1;}
+if(countitem(30005) == 1) {delitem 30005,1;}
+
+if(countitem(30010) == 1) {delitem 30010,1;}
+if(countitem(30011) == 1) {delitem 30011,1;}
+if(countitem(30012) == 1) {delitem 30012,1;}
+if(countitem(30013) == 1) {delitem 30013,1;}
+if(countitem(30014) == 1) {delitem 30014,1;}
+if(countitem(30015) == 1) {delitem 30015,1;}
+
+if(countitem(30020) == 1) {delitem 30020,1;}
+if(countitem(30021) == 1) {delitem 30021,1;}
+if(countitem(30022) == 1) {delitem 30022,1;}
+if(countitem(30023) == 1) {delitem 30023,1;}
+if(countitem(30024) == 1) {delitem 30024,1;}
+if(countitem(30025) == 1) {delitem 30025,1;}
+
+if(countitem(30030) == 1) {delitem 30030,1;}
+if(countitem(30031) == 1) {delitem 30031,1;}
+if(countitem(30032) == 1) {delitem 30032,1;}
+if(countitem(30033) == 1) {delitem 30033,1;}
+if(countitem(30034) == 1) {delitem 30034,1;}
+if(countitem(30035) == 1) {delitem 30035,1;}
+
+if (#nevoa == 1) {getitem 31226,1;}
+if (#nuvem == 1) {getitem 31226,1;}
+if (#konoha == 1) {getitem 31226,1;}
+if (#suna == 1) {getitem 31226,1;}
+getitem 31226,1;
+equip 31226;
+atcommand "@job 4019";
+set nukenin,1;
+next;
+announce ""+strcharinfo(0)+" agora é um nukenin e está sendo procurado, caso o encontrem, matem-no.",bc_blue|bc_all;
+warp "prt_in",89,63;
+
+}
+
+
+prt_in,222,48,4	script	Saída#26	45,1,1,{
+
+warp "s_atelier",175,64;
+end;
+
+}
+
+//lou_in02,46,185,4	script	Sujeira#1	111,1,1,{
+//if (quest_nukenin != 3) {end;}
+//if (limpeza_nukenin1 == 1) {end;}
+//mes "Que sujeira, melhor limpar";
+//set limpeza_nukenin,limpeza_nukenin + 1;
+//set limpeza_nukenin1,1;
+//close;
+//
+//}
+
+//lou_in02,37,182,4	script	Sujeira#2	111,1,1,{
+//if (quest_nukenin != 3) {end;}
+//if (limpeza_nukenin2 == 1) {end;}
+//mes "Que sujeira, melhor limpar";
+//set limpeza_nukenin,limpeza_nukenin + 1;
+//set limpeza_nukenin2,1;
+//close;
+// 
+//}
+
+//lou_in02,39,175,4	script	Sujeira#3	111,1,1,{
+//if (quest_nukenin != 3) {end;}
+//if (limpeza_nukenin3 == 1) {end;}
+//mes "Que sujeira, melhor limpar";
+//set limpeza_nukenin,limpeza_nukenin + 1;
+//set limpeza_nukenin3,1;
+//close;
+//
+//}
+
+//lou_in02,46,175,4	script	Sujeira#4	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin4 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin4,1;
+close;
+
+}
+
+//lou_in02,54,185,4	script	Sujeira#5	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin5 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin5,1;
+close;
+
+}
+
+//lou_in02,60,185,4	script	Sujeira#6	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin6 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin6,1;
+close;
+
+}
+
+//lou_in02,59,177,4	script	Sujeira#7	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin7 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin7,1;
+close;
+
+}
+
+//lou_in02,70,176,4	script	Sujeira#8	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin8 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin8,1;
+close;
+
+}
+
+//lou_in02,73,181,4	script	Sujeira#9	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin9 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin9,1;
+close;
+
+}
+
+//lou_in02,80,175,4	script	Sujeira#10	111,1,1,{
+if (quest_nukenin != 3) {end;}
+if (limpeza_nukenin10 == 1) {end;}
+mes "Que sujeira, melhor limpar";
+set limpeza_nukenin,limpeza_nukenin + 1;
+set limpeza_nukenin10,1;
+close;
+
+}
+
+

@@ -1,0 +1,454 @@
+dimension,188,179,5	script	Aprendiz Otsutsuki	935,{
+mes "[Aprendiz]";
+mes "Bem-vindo a dimensão dos deuses. Eu sou o responsável por forjar os itens épicos.";
+next;
+mes "[Aprendiz]";
+mes "Os itens épicos são o segundo nível do nosso poder, e o mestre me deixou responsável pela forja.";
+next;
+mes "[Aprendiz]";
+mes "Para isso, vou pedir:";
+mes "- 1 Item da Fase 1";
+mes "- 25 Oridecon";
+mes "- 10 Pergaminhos Reversos";
+mes "- 10 Minérios Divinos";
+mes "- 2 Fragmentos de Fuin no Shoo";
+mes "- 20.000.000 zenys";
+next;
+mes "[Aprendiz]";
+mes "Deseja forjar um item épico?";
+menu "Sim, vamos começar.",-,"Agora não.",saida;
+next;
+if (countitem(754) >= 10 && countitem(7015) >= 25 && countitem(8002) >= 10 && countitem(781) >= 2 && Zeny >= 20000000) goto forja;
+mes "[Aprendiz]";
+mes "Você não tem todos componentes para a forja ainda.";
+close;
+
+forja:
+next;
+mes "[Aprendiz]";
+mes "Escolha com atenção o item, não fazemos trocas!";
+next;
+mes "[Aprendiz]";
+mes "Escolha o equipamento que você quer forjar.";
+menu "Nenhum.",saida,"Colar da Força Ninja.",colarforca,"Colar da Sagacidade.",colarsagaz,"Colar Sensorial.",colarsensorial,"Colar da Imortalidade.",colarimortal,"Colar da Velocidade.",colarvelocidade,"Colar da Ilusão.",colarilusao,"Colar da Restauração.",colarrest,"Sandálias do Ninja Aprendiz.",sand1,"Sandálias do Ninja Ancião.",sand2,"Sandálias da Desteridade.",sand3,"Sandálias da Eternidade.",sand4,"Sandálias da Utopia.",sand5,"Sandálias da Celeridade.",sand6,"Sandálias do Ninja Médico.",sand7,"Pergaminho da Força Bruta.",perg1,"Pergaminho da Inteligência.",perg2,"Pergaminho da Vida.",perg3,"Pergaminho da Sorte.",perg4,"Pergaminho da Cura.",perg5,"Capa Bélica.",capa1,"Capa dos Reis.",capa2,"Capa do Realizador.",capa3,"Capa da Malevolência.",capa4,"Capa da Bondade.",capa5,"Capa da Agilidade.",capa6,"Capa da Destreza.",capa7,"Armadura Aprendiz.",armor1,"Armadura de Espinhos.",armor2,"Armadura Refletora",armor3;
+
+	colarforca:
+		if (countitem(31223) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31224,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31223,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Força Ninja Épico!",bc_all;
+		close;
+
+	colarsagaz:
+		if (countitem(31227) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31228,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31227,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Sagacidade Épico!",bc_all;
+		close;
+
+	colarsensorial:
+		if (countitem(31231) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31232,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31231,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar Sensorial Épico!",bc_all;
+		close;
+
+	colarimortal:
+		if (countitem(31235) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31236,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31235,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Imortalidade Épico!",bc_all;
+		close;
+
+	colarvelocidade:
+		if (countitem(31239) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31240,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31239,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Velocidade Épico!",bc_all;
+		close;
+
+	colarilusao:
+		if (countitem(31243) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31244,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31243,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Ilusão Épico!",bc_all;
+		close;
+
+	colarrest:
+		if (countitem(31247) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31248,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31247,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Colar da Restauração Épico!",bc_all;
+		close;
+
+	sand1:
+		if (countitem(31251) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31252,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31251,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias do Ninja Mestre Épica!",bc_all;
+		close;
+
+	sand2:
+		if (countitem(31255) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31256,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31255,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias do Ninja Ancião Épica!",bc_all;
+		close;
+
+	sand3:
+		if (countitem(31259) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31260,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31259,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias da Desteridade Épica!",bc_all;
+		close;
+
+	sand4:
+		if (countitem(31263) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31264,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31263,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias da Eternidade Épica!",bc_all;
+		close;
+
+	sand5:
+		if (countitem(31267) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31268,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31267,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias da Utopia Épica!",bc_all;
+		close;
+
+	sand6:
+		if (countitem(31271) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31272,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31271,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias da Celeridade Épica!",bc_all;
+		close;
+
+	sand7:
+		if (countitem(31275) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31276,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31275,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou as Sandálias do Ninja Médico Épica!",bc_all;
+		close;
+
+	perg1:
+		if (countitem(31279) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31280,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31279,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Pergaminho da Força Bruta Épico!",bc_all;
+		close;
+
+	perg2:
+		if (countitem(31283) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31284,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31283,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Pergaminho da Inteligência Épico!",bc_all;
+		close;
+
+	perg3:
+		if (countitem(31287) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31288,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31287,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Pergaminho da Vida Épico!",bc_all;
+		close;
+
+	perg4:
+		if (countitem(31291) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31292,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31291,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Pergaminho da Sorte Épico!",bc_all;
+		close;
+
+	perg5:
+		if (countitem(31295) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31296,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31295,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou um Pergaminho da Cura Épico!",bc_all;
+		close;
+
+	capa1:
+		if (countitem(31299) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31300,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31299,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa Bélica Épica!",bc_all;
+		close;
+
+	capa2:
+		if (countitem(31303) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31304,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31303,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa dos Reis Épica!",bc_all;
+		close;
+
+	capa3:
+		if (countitem(31307) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31308,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31307,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa do Realizador Épica!",bc_all;
+		close;
+
+	capa4:
+		if (countitem(31311) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31312,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31311,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa da Malevolência Épica!",bc_all;
+		close;
+
+	capa5:
+		if (countitem(31315) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31316,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31315,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa da Bondade Épica!",bc_all;
+		close;
+
+	capa6:
+		if (countitem(31319) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31320,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31319,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa da Agilidade Épica!",bc_all;
+		close;
+
+	capa7:
+		if (countitem(31323) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31324,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31323,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Capa da Destreza Épica!",bc_all;
+		close;
+
+	armor1:
+		if (countitem(31327) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31328,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31327,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Armadura Mestre Épica!",bc_all;
+		close;
+
+	armor2:
+		if (countitem(31331) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31332,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31331,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Armadura de Espinhos Épica!",bc_all;
+		close;
+
+	armor3:
+		if (countitem(31335) == 0) goto saida2;
+		mes "[Aprendiz]";
+		mes "Parabéns shinobi!";
+		getitem 31336,1;
+		delitem 754,10;
+		delitem 7015,25;
+		delitem 31335,1;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -20000000;
+		announce "Incrível! "+strcharinfo(0)+" forjou uma Armadura Refletora Épica!",bc_all;
+		close;
+
+	saida:
+	next;
+	mes "[Aprendiz]";
+	mes "Estarei aqui se mudar de ideia.";
+	close;
+
+	saida2:
+	next;
+	mes "[Aprendiz]";
+	mes "Você ainda não tem o item da Fase 1. Fale com o Mestre.";
+	close;
+
+	}
+}

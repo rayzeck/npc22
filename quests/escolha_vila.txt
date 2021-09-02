@@ -1,0 +1,412 @@
+force_1-1,28,32,5	script	Katsuyu#1	1031,{
+npctalk "Oi. "+strcharinfo(0)+", você está ferido?";
+atcommand "@effect 7";
+sleep 800;
+npctalk "Eu vou te curar.";
+close;
+}
+
+force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
+
+	if(#konoha == 1) goto ja_e_de_konoha;
+	if(#suna == 1) goto ja_e_de_outra;
+	if(#nevoa == 1) goto ja_e_de_outra;
+	if(#nuvem == 1) goto ja_e_de_outra;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Seja bem vindo!";
+	next;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Eu sou Tsunade, Naruto MMORPG Online e representante de uma das nações.";
+	next;
+	voltandomenu:
+	switch( select( "Detalhes da nação.:Juntar-se a nação do fogo." ) ){
+		case 1:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Claro, sou da nação do fogo, em que sua capital é a poderosa Vila da Folha conhecida como konohagakure no sato";
+			npctalk "Sou a representante da nação do fogo, sua capital é a poderosa Vila da Folha conhecida como Konohagakure no Sato";
+			next;
+			atcommand "@effect 49";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";	
+			mes "Nossa vila tem vários clãs e ninjas distintos, você bem que poderia vir morar em nossa vila, mas ae a decisão não é minha, mas sim sua.";
+			next;
+			goto voltandomenu;
+		case 2:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Será um grande prazer ter você em nossa vila";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Antes que faça sua mudança, preciso que você faça seu registro no livro da vila.";
+			next;
+			if( select( "Tudo bem eu assino.:Estou meio com receio, deixe me pensar mais sobre o assunto." ) == 1 ){
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "A claro lembrei de umas coisas, nossa vila é boa, mas existem ninjas que preferem mudar de vila, e isso é possível.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mas pela burocracia existente a troca é complicada.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mais uma coisa, há algo que presamos em nossa vila, a educação entre as pessoas, por tanto respeite seus professores, senpais, amigos e acima de tudo obedeça e acate as normas e regras de seu Naruto MMORPG Online, no caso eu, HeHe";
+				next;
+				if( select( "Entendido Naruto MMORPG Online sama:Estou meio em dúvida." ) == 1 ){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Hum ok, assine aqui seu nome de maneira legivel e sem gracinhas.";
+					next;
+					input .@name$;
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Então,esse é seu nome ^3131FF" + .@name$ + "^000000...";
+					next;
+					if(.@name$ == strcharinfo(0)){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Uhrg... agora é a minha parte, mais papelada para eu resolver e assinar,enfim desejo que tenha uma ótima vida em Konoha";
+					npctalk "Tenha uma ótima vida na vila, meu querido.";
+					next;
+						set #konoha,1;
+						mes "[^3131FFNaruto MMORPG Online^000000]";
+						mes "Bem Vindo a ^3131FFVila Oculta da Folha^000000!";
+						next;
+						mes "[^3131FFNaruto MMORPG Online^000000]";
+						mes "Qualquer dúvida procure-me na minha sala.";
+						next;
+						mes "[^3131FFNaruto MMORPG Online^000000]";
+						mes "Ah, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
+						close2;
+						warp "prt_in",92,66;
+						savepoint "prt_in",92,66;
+						end;
+					}
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes " ^3131FF"+.@name$+"^000000, Este não é  o seu nome.";
+					break;	
+				}
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Tudo bem, para todos casos estarei aqui.";
+				break;
+			}
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Tudo bem, para todos casos estarei aqui.";
+			break;
+	}
+	close2;
+	end;
+	
+	ja_e_de_outra:
+		mes "^008000[ Naruto MMORPG Online ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de outra vila, tenho mais o que fazer.";
+		close;
+	
+	ja_e_de_konoha:
+		mes "^008000[ Naruto MMORPG Online ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de Konoha, Vá para a academia estudar, nada de matar aula isso é errado!";
+		close2;
+		warp "prt_in",92,66;
+		savepoint "prt_in",92,66;
+		end;
+	
+	OnInit:
+	waitingroom "Konoha",0;
+}
+
+force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
+	
+	if(#konoha == 1) goto ja_e_de_outra;
+	if(#suna == 1) goto ja_e_de_suna;
+	if(#nevoa == 1) goto ja_e_de_outra;
+	if(#nuvem == 1) goto ja_e_de_outra;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Seja bem vindo!";
+	next;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Eu sou Gaara, Kazekage e representante de uma das nações.";
+	next;
+	voltandomenu:
+	switch( select( "Detalhes da nação.:Gostaria de me juntar à sua nação." ) ){
+		case 1:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Claro, sou da nação do Vento, em que sua capital é a poderosa Vila da Areia conhecida como Sunagakure no sato";
+			npctalk "Sou da nação do Vento, em que sua capital é a poderosa Vila da Areia conhecida como Sunagakure no sato";
+			atcommand "@effect 79";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Nossa vila tem vários clãs e ninjas distintos, você bem que poderia vir morar em nossa vila, mas essa decisão não é minha...";
+			next;
+			goto voltandomenu;
+		case 2:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Será um grande prazer, ter você em nossa vila";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Antes que faça sua mudança, preciso que você faça seu registro no livro da vila.";
+			next;
+			if( select( "Tudo bem eu assino.:Estou meio com receio, deixe me pensar mais sobre o assunto." ) == 1 ){
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "A claro lembrei de umas coisas, nossa vila é boa, mas existem ninjas que preferem mudar de vila e isso é possível.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mas pela burocracia existente a troca é complicada.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mais uma coisa, há algo que presamos em nossa vila, a educação entre as pessoas, por tanto respeite seus professores, senpais, amigos e acima de tudo obedeça e acate as normas e regras de seu Kazekage, no caso eu.";
+				next;
+				if( select( "Entendido Kazekage sama:Estou meio em dúvida." ) == 1 ){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Hum ok, assine aqui seu nome de maneira legivel e sem gracinhas.";
+					next;
+					input .@name$;
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Então,esse é seu nome ^3131FF" + .@name$ + "^000000...";
+					next;
+					if(.@name$ == strcharinfo(0)){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Ok...deixe-me registra-lo, enfim desejo que tenha uma ótima vida na Suna";
+					next;
+							set #suna,1;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Bem Vindo a ^3131FFVila Oculta da Areia^000000!";
+							next;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Dúvidas me procure";
+							next;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Ah, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
+							close2;
+							warp "prt_in",92,66;
+							savepoint "prt_in",92,66;
+							end;
+					}
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes " ^3131FF"+.@name$+"^000000, Este não é  o seu nome.";
+					break;		
+				}
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Tudo bem, para todos casos estarei aqui.";
+				break;
+			}
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Tudo bem, para todos casos estarei aqui.";
+			break;
+	}
+	close2;
+	end;
+	
+	ja_e_de_outra:
+		mes "^008000[ Kazekage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de outra vila.";
+		close;
+	
+	ja_e_de_suna:
+		mes "^008000[ Kazekage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Suna, Vá para a academia estudar, nada de matar aula isso é errado!";
+		close2;
+		warp "prt_in",92,66;
+		savepoint "prt_in",92,66;
+		end;
+	
+	OnInit:
+	waitingroom "Suna",0;
+}
+
+reuniao,61,36,5	script	Mizukage#1	4_f_babayaga,{
+
+	if(#konoha == 1) goto ja_e_de_outra;
+	if(#suna == 1) goto ja_e_de_outra;
+	if(#nevoa == 1) goto ja_e_de_nevoa;
+	if(#nuvem == 1) goto ja_e_de_outra;
+	mes "[Mizukage]";
+	mes "Seja bem vindo!";
+	next;
+	mes "[Mizukage]";
+	mes "Eu sou Mei Terumi, Mizukage e representante de uma das nações.";
+	next;
+	voltandomenu:
+	switch( select( "Detalhes da nação.:Gostaria de me juntar à sua nação." ) ){
+		case 1:
+			mes "[Mizukage]";
+			mes "Com prazer, sou da nação da água, em que sua capital é a poderosa Vila da Névoa conhecida como Kirigakure no sato";
+			next;
+			mes "[Mizukage]";
+			mes "Nossa vila tem vários clãs e ninjas distintos,seria maravilho ter você em nossa vila, mas vou deixar em suas mãos está escolha.";
+			next;
+			goto voltandomenu;
+		case 2:
+			mes "[Mizukage]";
+			mes "Será um grande prazer ter você em nossa vila";
+			next;
+			mes "[Mizukage]";
+			mes "Antes que faça sua mudança, preciso do seu registro no livro da vila.";
+			next;
+			if( select( "Tudo bem eu assino.:Estou meio com receio." ) == 1 ){
+				mes "[Mizukage]";
+				mes "Nossa vila é boa, mas existem ninjas que preferem mudar de vila e isso é possível.";
+				next;
+				mes "[Mizukage]";
+				mes "Mas pela burocracia existente a troca acaba sendo complicada.";
+				next;
+				mes "[Mizukage]";
+				mes "Mais uma coisa, há algo que presamos em nossa vila, a educação entre as pessoas, por tanto respeite seus professores, senpais, amigos e acima de tudo obedeça e acate as normas e regras de sua Mizukage, esta linda garota que vos fala.";
+				next;
+				if( select( "Entendido Mizukage sama:Estou meio em dúvida." ) == 1 ){
+					mes "[Mizukage]";
+					mes "Uhu, vamos lá, agora assine aqui seu nome de forma legivel cuidado para não errar fofura, Pois não quero ficar estressada.";
+					next;
+					input .@name$;
+					mes "[Mizukage]";
+					mes "Então,esse é seu nome ^3131FF" + .@name$ + "^000000! Aiii, que nome lindo";
+					next;
+					if(.@name$ == strcharinfo(0)){
+					mes "[Mizukage]";
+					mes "Vou registra-lo,";
+					next;
+					mes "[Mizukage]";
+					mes "crack...";
+					next;
+					mes "[Mizukage]";
+					mes "Mizukage quebra a unha e com raiva destroi a mesa";
+					next;
+					mes "[Mizukage]";
+					mes "Ops...Desculpa,Desejo boas Vindas ao novo morador da Vila da Névoa";
+					next;
+							set #nevoa,1;
+							mes "[Mizukage]";
+							mes "Bem Vindo a ^3131FFVila Oculta da Névoa^000000!";
+							next;
+							mes "[Mizukage]";
+							mes "Em dúvida me procure doçura.";
+							next;
+							mes "[Mizukage]";
+							mes "Já ia me esquecendo, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
+							close2;
+							warp "prt_in",92,66;
+							savepoint "prt_in",92,66;
+							end;
+					}
+					mes "[Mizukage]";
+					mes " ^3131FF"+.@name$+"^000000, Este não o seu nome, não me faça jogar ácido na sua cara.";
+					break;		
+				}
+				mes "[Mizukage]";
+				mes "Tudo bem, para todos casos estarei aqui.";
+				break;
+			}
+			mes "[Mizukage]";
+			mes "Tudo bem, para todos casos estarei aqui.";
+			break;
+	}
+	close2;
+	end;
+	
+	ja_e_de_outra:
+		mes "^008000[ Mizukage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de outra vila, não tente me enganar.";
+		close;
+	
+	ja_e_de_nevoa:
+		mes "^008000[ Mizukage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Névoa, Vá para a academia estudar, nada de matar aula isso é errado!";
+		close2;
+		warp "prt_in",92,66;
+		savepoint "prt_in",92,66;
+		end;
+	
+	OnInit:
+	waitingroom "Mizukage",0;
+}
+
+force_1-1,31,26,5	script	Raikage#1	870,{
+
+	if(#konoha == 1) goto ja_e_de_outra;
+	if(#suna == 1) goto ja_e_de_outra;
+	if(#nevoa == 1) goto ja_e_de_outra;
+	if(#nuvem == 1) goto ja_e_de_nuvem;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Seja bem vindo!";
+	next;
+	mes "[^3131FFNaruto MMORPG Online^000000]";
+	mes "Olá! Eu sou Kira A, Raikage e representante de uma das nações.";
+	next;
+	voltandomenu:
+	switch( select( "Detalhes da nação.:Gostaria de me juntar à sua nação." ) ){
+		case 1:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Com prazer, sou da nação da relâmpago, em que sua capital é a poderosa Vila da Nuvem conhecida como kumogakure no sato";
+			npctalk "Sou da nação da relâmpago, em que sua capital é a poderosa Vila da Nuvem conhecida como kumogakure no sato";
+			atcommand "@effect 29";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Nossa vila tem vários clãs e ninjas distintos, seria ótimo ter você em nossa vila, espero que não sejá mais um bastardo como o que tive de esmagar por recusar minha oferta.";
+			next;
+			goto voltandomenu;
+		case 2:
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Yoshy, Mais um ninja poderoso";
+			next;
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Antes que faça sua mudança, preciso que você faça seu registro no livro da vila.";
+			next;
+			if( select( "Tudo bem eu assino.:Estou meio com receio." ) == 1 ){
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Nossa vila é boa, mas existem ninjas que preferem mudar de vila e isso é possível.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mas pela burocracia existente a troca acaba sendo complicada.";
+				next;
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Mais uma coisa, há algo que presamos em nossa vila, a educação entre as pessoas, por tanto respeite seus professores, senpais, amigos e acima de tudo obedeça e acate as normas e regras de seu Raikage,eu mesmo se não te quebro no meio.";
+				next;
+				if( select( "Entendido Raikage sama:Estou meio em dúvida." ) == 1 ){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Uhu,vamos lá agora assine aqui seu nome de forma legivel, erros  não serão aceitos.";
+					next;
+					input .@name$;
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Então,esse é seu nome ^3131FF" +.@name$+ "^000000! bom nome";
+					next;
+					if(.@name$ == strcharinfo(0)){
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes "Deixe-me registrar você.";
+					next;
+							set #nuvem,1;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Bem Vindo a ^3131FFVila Oculta da Nuvem^000000!";
+							next;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Dúvidas me procure Yoshy.";
+							next;
+							mes "[^3131FFNaruto MMORPG Online^000000]";
+							mes "Já ia me esquecendo, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
+							close2;
+							warp "prt_in",92,66;
+							savepoint "prt_in",92,66;
+							end;
+					}
+					mes "[^3131FFNaruto MMORPG Online^000000]";
+					mes " ^3131FF"+.@name$+"^000000, Este não o seu nome, Baka.";
+					break;
+				}
+				mes "[^3131FFNaruto MMORPG Online^000000]";
+				mes "Tudo bem, para todos casos estarei aqui.";
+				break;
+			}
+			mes "[^3131FFNaruto MMORPG Online^000000]";
+			mes "Tudo bem, para todos casos estarei aqui.";
+			break;
+	}
+	close2;
+	end;
+	
+	ja_e_de_outra:
+		mes "^008000[ Raikage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de outra vila, não me importune.";
+		close;
+	
+	ja_e_de_nuvem:
+		mes "^008000[ Raikage ]^000000";
+		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Nuvem, Vá para a academia estudar, nada de matar aula, se pegar vocÊ matando aula te esmago";
+		close2;
+		warp "prt_in",92,66;
+		savepoint "prt_in",92,66;
+		end;
+	
+	OnInit:
+	waitingroom "Kumo",0;
+}

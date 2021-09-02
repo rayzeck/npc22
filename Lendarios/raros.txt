@@ -1,0 +1,419 @@
+dimension,188,183,5	script	Mestre Otsutsuki	932,{
+mes "[Mestre]";
+mes "Bem-vindo a dimensão dos deuses. Eu sou o responsável por forjar os itens raros.";
+next;
+mes "[Mestre]";
+mes "Os itens raros são o primeiro nível do nosso poder. Você pode aprimorar seus equipamentos com meus discípulos depois, por um custo.";
+next;
+mes "[Mestre]";
+mes "Para o nível inicial, vou pedir:";
+mes "- 25 Segredo Shinobi";
+mes "- 10 Pergaminhos Reversos";
+mes "- 10 Minérios Divinos";
+mes "- 5 Caixas Misteriosas";
+mes "- 2 Fragmentos de Fuin no Shoo";
+mes "- 10.000.000 zenys";
+next;
+mes "[Mestre]";
+mes "Deseja forjar um item?";
+menu "Sim, vamos começar.",-,"Agora não.",saida;
+next;
+if (countitem(754) >= 10 && countitem(756) >= 25 && countitem(734) >= 5 && countitem(8002) >= 10 && countitem(781) >= 2 && Zeny >= 10000000) goto forja;
+mes "[Mestre]";
+mes "Você não tem todos componentes para a forja ainda.";
+close;
+
+forja:
+next;
+mes "[Mestre]";
+mes "Escolha com atenção o item, não fazemos trocas!";
+next;
+mes "[Mestre]";
+mes "Escolha o equipamento que você quer forjar.";
+menu "Nenhum.",saida,"Colar da Força Ninja.",colarforca,"Colar da Sagacidade.",colarsagaz,"Colar Sensorial.",colarsensorial,"Colar da Imortalidade.",colarimortal,"Colar da Velocidade.",colarvelocidade,"Colar da Ilusão.",colarilusao,"Colar da Restauração.",colarrest,"Sandálias do Ninja Mestre.",sand1,"Sandálias do Ninja Ancião.",sand2,"Sandálias da Desteridade.",sand3,"Sandálias da Eternidade.",sand4,"Sandálias da Utopia.",sand5,"Sandálias da Celeridade.",sand6,"Sandálias do Ninja Médico.",sand7,"Pergaminho da Força Bruta.",perg1,"Pergaminho da Inteligência.",perg2,"Pergaminho da Vida.",perg3,"Pergaminho da Sorte.",perg4,"Pergaminho da Cura.",perg5,"Capa Bélica.",capa1,"Capa dos Reis.",capa2,"Capa do Realizador.",capa3,"Capa da Malevolência.",capa4,"Capa da Bondade.",capa5,"Capa da Agilidade.",capa6,"Capa da Destreza.",capa7,"Armadura Mestre.",armor1,"Armadura de Espinhos.",armor2,"Armadura Refletora",armor3;
+
+	colarforca:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31223,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Força Ninja!",bc_all;
+		close;
+
+	colarsagaz:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31227,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Sagacidade!",bc_all;
+		close;
+
+	colarsensorial:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31231,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar Sensorial!",bc_all;
+		close;
+
+	colarimortal:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31235,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Imortalidade!",bc_all;
+		close;
+
+	colarvelocidade:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31239,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Velocidade!",bc_all;
+		close;
+
+	colarilusao:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31243,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Ilusão!",bc_all;
+		close;
+
+	colarrest:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31247,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Colar da Restauração!",bc_all;
+		close;
+
+	sand1:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31251,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias do Ninja Mestre!",bc_all;
+		close;
+
+	sand2:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31255,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias do Ninja Ancião!",bc_all;
+		close;
+
+	sand3:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31259,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias da Desteridade!",bc_all;
+		close;
+
+	sand4:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31263,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias da Eternidade!",bc_all;
+		close;
+
+	sand5:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31267,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias da Utopia!",bc_all;
+		close;
+
+	sand6:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31271,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias da Celeridade!",bc_all;
+		close;
+
+	sand7:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31275,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou as Sandálias do Ninja Médico!",bc_all;
+		close;
+
+	perg1:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31279,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Pergaminho da Força Bruta!",bc_all;
+		close;
+
+	perg2:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31283,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Pergaminho da Inteligência!",bc_all;
+		close;
+
+	perg3:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31287,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Pergaminho da Vida!",bc_all;
+		close;
+
+	perg4:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31291,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Pergaminho da Sorte!",bc_all;
+		close;
+
+	perg5:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31295,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou um Pergaminho da Cura!",bc_all;
+		close;
+
+	capa1:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31299,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa Bélica!",bc_all;
+		close;
+
+	capa2:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31303,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa dos Reis!",bc_all;
+		close;
+
+	capa3:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31307,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa dos Realizador!",bc_all;
+		close;
+
+	capa4:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31311,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa da Malevolência!",bc_all;
+		close;
+
+	capa5:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31315,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa da Bondade!",bc_all;
+		close;
+
+	capa6:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31319,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa da Agilidade!",bc_all;
+		close;
+
+	capa7:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31323,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Capa da Destreza!",bc_all;
+		close;
+
+	armor1:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31327,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Mestre!",bc_all;
+		close;
+
+	armor2:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31331,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura de Espinhos!",bc_all;
+		close;
+
+	armor3:
+		mes "[Mestre]";
+		mes "Parabéns shinobi!";
+		getitem 31335,1;
+		delitem 754,10;
+		delitem 756,25;
+		delitem 734,5;
+		delitem 8002,10;
+		delitem 781,2;
+		set Zeny, Zeny -10000000;
+		announce "O jogador "+strcharinfo(0)+" forjou uma Armadura Refletora!",bc_all;
+		close;
+
+	saida:
+	next;
+	mes "[Mestre]";
+	mes "Estarei aqui se mudar de ideia.";
+	close;
+
+	}
+}

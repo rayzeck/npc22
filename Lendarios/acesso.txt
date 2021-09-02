@@ -1,0 +1,426 @@
+//////////////////////////////////////////////
+// Quest DIMENSÃO DIVINA - Feito por Fox //
+// Servidor: Naruto MMORPG Online! //////////
+//////////////////////////////////////////////
+
+treinamento,109,172,5	script	Chunin Misterioso#5	685,{
+
+if(findkuzan == 4) {
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Deseja se teleportar para a Dimensão Divina, meu amigo?";
+menu "Sim!",-,"Não.",nao;
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "KAMUI!";
+specialeffect2 596;
+close2;				
+warp "dimension",188,199;				
+end;
+
+nao:
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Quando precisar fale comigo!";
+close;
+}
+
+
+if(findkuzan == 3) {
+mes "^ff0000[Baru]^000000";
+mes "Não é possível...você conseguiu?";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "Conheci aquele chamado Kuzan, ele me emprestou o poder que você estava falando.";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Muito bem meu amigo! Chegue mais perto, me empreste o poder desse chakra acumulado que Kuzan conjurou...";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Você se aproxima e faz o Selo do Boi para conceder o poder para Baru.**";
+specialeffect2 704;
+next;
+mes "*** Expansão de Chakra! ***";
+specialeffect2 885;
+specialeffect2 881;
+specialeffect2 880;
+next;
+mes "^ff0000[Baru]^000000";
+mes "Esse poder...SIM, ERA DISSO QUE EU PRECISAVA! Agora eu posso me apresentar de verdade para você!";
+announce "O shinobi "+strcharinfo(0)+" completou a quest: Dimensão Divina.",0;
+set findkuzan,4;
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Meu nome é Uchiha Baru, e vou terminar o trabalho que meu ancestral não conseguiu finalizar! Vou reunir novamente o clã Uchiha e dominar a Vila da Folha!";
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Não se preocupe, tenho uma dívida com você. Sua vida será poupada! Ou até mesmo você pode virar meu aliado, quem sabe...";
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Agora, vou te mostrar o meu novo poder: Kamui!";
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Toda vez que você precisar visitar minha dimensão para adquirir poder, fale comigo novamente!";
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "Vamos lá?";
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "MANGEKYOU SHARINGAN!";
+specialeffect2 705;
+next;
+mes "^ff0000[Uchiha Baru]^000000";
+mes "KAMUI!";
+specialeffect2 596;
+next;
+close2;				
+warp "dimension",188,199;				
+end;
+}
+
+
+
+if(findkuzan == 2) {  mes "^ff0000[Baru]^000000";  mes "Lembre-se, Kuzan fica no mapa Rank B do País da Água, no final do labirinto!";  close; }
+if(findkuzan == 1) {  mes "^ff0000[Baru]^000000";  mes "Lembre-se, Kuzan fica no mapa Rank B do País da Água, no final do labirinto!";  close; }
+if(Class < 4008 || Class > 4011) {  mes "^ff0000[Chunin Misterioso]^000000";  mes "Tenho uma missão para você, mas é necessário ser do nível elite Jounin!";  close; }
+
+mes "^ff0000[Chunin Misterioso]^000000";
+mes "Yo, "+strcharinfo(0)+"! Que honra te conhecer, já ouvi muito falar de você nos campos de batalha!";
+next;
+mes "^ff0000[Chunin Misterioso]^000000";
+mes "Meu nome é Baru, sou um Chunin da Folha, mas no momento estou viajando o mundo em busca de...novas experiências, vamos dizer assim!";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Veja, todos os shinobis aqui já perceberam que existe um limite para nosso poder nesse mundo, estamos todos frustrados, concorda?";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "É...acredito que já estou em um alto nível, não há mais poder para procurar aqui.";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "^ff0000*** Você fica pensativo e observa Baru...essa pessoa não parece ser confiável***^000000";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Consigo ver no seu rosto, você é realmente o gênio que me falaram!";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Escute...e se todos estiverem vendo a situação de forma errada? Se não há mais poder nesse mundo, porque então não buscamos em OUTRO MUNDO?";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "*** É...ele é realmente doido!***";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "Outro mundo? Nunca ouvi falar de alguma coisa assim.";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Existe um jutsu...um que é capaz de controlar o espaço-tempo de uma maneira ainda desconhecida para o mundo shinobi. Viagem entre dimensões! Imagine as possibilidades, tantas descobertas que ainda podemos fazer!";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Eu tenho uma parte do poder necessário para isso, eu posso te levar ao topo do mundo ninja! Mas vou precisar da sua ajuda para conseguir poder primeiro, o que você acha?";
+menu "Não tenho nada a perder,vamos lá!",-,"Você é totalmente maluco...tô fora!",saida;
+next;
+mes "^ff0000[Baru]^000000";
+mes "Perfeito! Tenho certeza que seremos ótimos parceiros!";
+dispbottom "Você iniciou a quest: Dimensão Divina.";
+specialeffect2 514;
+specialeffect2 395;
+next;
+mes "^ff0000[Baru]^000000";
+mes "Como eu te disse anteriormente, tenho apenas metade do poder necessário para conjurar o jutsu. Porém nas minhas viagens, conheci uma pessoa que pode nos ajudar.";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Ele é um ancião, exilado pela Vila da Névoa por ter conhecimento demais.";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "Exilado pela Vila da Névoa? Não é exatamente uma vila pacífica, porque não o mataram?";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Eles não podem. Para fazer isso seria necessário mover um exército contra ele, um recurso que nenhuma vila pode perder nestes tempos de guerra.";
+next;
+mes "^ff0000[Baru]^000000";
+mes "Ele tem um conhecimento de chakra incrível, tenho certeza que ele é a chave para nosso sucesso!";
+next;
+mes "^ff0000[Baru]^000000";
+mes "O nome dele é Kuzan, ele fica em uma ponte no mapa Rank B do País da Água, no final do labirinto. Assim que você adquirir o poder dele, volte a me encontrar!";
+set findkuzan,1;
+close;
+
+saida:
+next;
+mes "^ff0000[Baru]^000000";
+mes "Aguardarei seu retorno!";
+close;
+}
+
+mjolnir_04,129,208,5	script	Ancião#97	932,{
+
+if(findkuzan >= 3) {  mes "^ff0000[Kuzan]^000000";  mes "Boa sorte na sua caminhada, shinobi!";  close; }
+
+if(findkuzan == 2) {
+mes "^ff0000[Kuzan]^000000";
+mes "E então jovem shinobi, você já trouxe tudo que eu pedi?";
+if (shinobiheroi == 1 && countitem(754) >= 5 && countitem(756) >= 50) goto questheroi;
+if (shinobilusao == 1 && countitem(754) >= 5 && countitem(756) >= 40) goto questilusao;
+if (shinobibrutal == 1 && countitem(754) >= 5 && countitem(756) >= 45) goto questbrutal;
+if (shinobisagaz == 1 && countitem(754) >= 5 && countitem(756) >= 40) goto questsagaz;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Parece que você ainda não tem tudo, volte quando coletar os itens!";
+close;
+
+questheroi:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos fazer a contagem...";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Parabéns! Você completou a missão, vou conjurar meu jutsu e te mostrar meu poder!";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos, faça o sinal do Selo do Boi comigo!";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Selo do Boi **";
+specialeffect2 704;
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Você começa a sentir seu chakra se multiplicar...que poder incrível!";
+specialeffect2 885;
+specialeffect2 881;
+specialeffect2 880;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Use o poder com sabedoria! E lembre-se, só dura alguns minutos!";
+delitem 754,5;
+delitem 756,50;
+set findkuzan,3;
+close;
+
+questilusao:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos fazer a contagem...";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Parabéns! Você completou a missão, vou conjurar meu jutsu e te mostrar meu poder!";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos, faça o sinal do Selo do Boi comigo!";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Selo do Boi **";
+specialeffect2 704;
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Você começa a sentir seu chakra se multiplicar...que poder incrível!";
+specialeffect2 885;
+specialeffect2 881;
+specialeffect2 880;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Use o poder com sabedoria! E lembre-se, só dura alguns minutos!";
+delitem 754,5;
+delitem 756,40;
+set findkuzan,3;
+close;
+
+questbrutal:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos fazer a contagem...";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Parabéns! Você completou a missão, vou conjurar meu jutsu e te mostrar meu poder!";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos, faça o sinal do Selo do Boi comigo!";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Selo do Boi **";
+specialeffect2 704;
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Você começa a sentir seu chakra se multiplicar...que poder incrível!";
+specialeffect2 885;
+specialeffect2 881;
+specialeffect2 880;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Use o poder com sabedoria! E lembre-se, só dura alguns minutos!";
+delitem 754,5;
+delitem 756,45;
+set findkuzan,3;
+close;
+
+questsagaz:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos fazer a contagem...";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Parabéns! Você completou a missão, vou conjurar meu jutsu e te mostrar meu poder!";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vamos, faça o sinal do Selo do Boi comigo!";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Selo do Boi **";
+specialeffect2 704;
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "** Você começa a sentir seu chakra se multiplicar...que poder incrível!";
+specialeffect2 885;
+specialeffect2 881;
+specialeffect2 880;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Use o poder com sabedoria! E lembre-se, só dura alguns minutos!";
+delitem 754,5;
+delitem 756,40;
+set findkuzan,3;
+close;
+}
+
+
+if(findkuzan == 1) {
+
+mes "^ff0000[Ancião]^000000";
+mes "Consegui sentir seu chakra enquanto você subia essas montanhas, você é um jovem de extremo talento!";
+next;
+mes "^ff0000[Ancião]^000000";
+mes "Então shinobi, o que você procura nessas terras do País da Água?";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "Procuro um homem chamado Kuzan, me disseram que ele é detentor de um poder inigualável!";
+next;
+mes "^ff0000[Ancião]^000000";
+mes "Oh...entendo. Esse homem que você procura não existe mais.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Veja, eu sou Kuzan. Mas da última vez que aceitei alguém como aprendiz, coisas ruins aconteceram no mundo ninja.";
+next;
+mes "^ff0000["+strcharinfo(0)+"]^000000";
+mes "Pode ter certeza que será diferente dessa vez, te deixarei orgulhoso!";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Então me diga, qual é o seu objetivo?";
+next;
+mes "^ff0000**ATENÇÃO!**^000000 Sua decisão aqui pode mudar o rumo dessa e de futuras quests do Naruto MMORPG Online. Construa a personalidade do seu personagem de acordo com sua preferência!";
+menu "Meu objetivo é levar minha vila para a glória!",heroi,"^ff0000*Mentir*^000000 Eu só penso no bem do mundo ninja!",enganador,"Eu vou me tornar o DEUS do mundo shinobi!",arrogante,"Levar conhecimento para a humanidade!",sagaz;
+next;
+
+heroi:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "De fato, percebi que você é um Herói! Não é exatamente o caminho que eu seguiria, a política das nossas vilas podem nos trair a qualquer momento.";
+dispbottom "10 Pontos de Heroísmo adquiridos!";
+set shinobiheroi,1;
+set heroismo, heroismo+10;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Respeito sua decisão. Eu vou te mostrar qual é o meu poder, porém apenas uma vez.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Meu poder é a Expansão de Chakra, consigo multiplicar por 10x o chakra do meu aliado, porém essa habilidade só dura alguns minutos.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Seja qual for seu objetivo com isso, o jutsu não dura muito tempo, então deve ser feito de forma rápida.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vou precisar que você colete:";
+mes "50x Segredo Shinobi.";
+mes "5x Pergaminho Reverso.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Preciso desses componentes para conjurar o jutsu! Estarei aguardando seu retorno.";
+set findkuzan,2;
+close;
+
+enganador:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Impressionante! É difícil achar um shinobi com um coração tão bom hoje em dia.";
+dispbottom "10 Pontos de Ilusionismo adquiridos!";
+set shinobilusao,1;
+set ilusionismo, ilusionismo+10;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Respeito sua decisão. Eu vou te mostrar qual é o meu poder, porém apenas uma vez.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Meu poder é a Expansão de Chakra, consigo multiplicar por 10x o chakra do meu aliado, porém essa habilidade só dura alguns minutos.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Seja qual for seu objetivo com isso, o jutsu não dura muito tempo, então deve ser feito de forma rápida.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vou precisar que você colete:";
+mes "40x Segredo Shinobi.";
+mes "5x Pergaminho Reverso.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Preciso desses componentes para conjurar o jutsu! Estarei aguardando seu retorno.";
+set findkuzan,2;
+close;
+
+arrogante:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Que arrogância espantosa! Espero que eu já tenha saído desse mundo quando você atingir seu objetivo...não é como se eu me importasse com mais ninguém mesmo.";
+dispbottom "10 Pontos de Brutalidade adquiridos!";
+set shinobibrutal,1;
+set brutalidade, brutalidade+10;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Respeito sua decisão. Eu vou te mostrar qual é o meu poder, porém apenas uma vez.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Meu poder é a Expansão de Chakra, consigo multiplicar por 10x o chakra do meu aliado, porém essa habilidade só dura alguns minutos.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Seja qual for seu objetivo com isso, o jutsu não dura muito tempo, então deve ser feito de forma rápida.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vou precisar que você colete:";
+mes "45x Segredo Shinobi.";
+mes "5x Pergaminho Reverso.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Preciso desses componentes para conjurar o jutsu! Estarei aguardando seu retorno.";
+set findkuzan,2;
+close;
+
+sagaz:
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Conhecimento! Esse é um caminho que eu segui minha vida toda, não tenho dúvidas que você não vai se arrepender.";
+dispbottom "10 Pontos de Sagacidade adquiridos!";
+set shinobisagaz,1;
+set sagacidade, sagacidade+10;
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Respeito sua decisão. Eu vou te mostrar qual é o meu poder, porém apenas uma vez.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Meu poder é a Expansão de Chakra, consigo multiplicar por 10x o chakra do meu aliado, porém essa habilidade só dura alguns minutos.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Seja qual for seu objetivo com isso, o jutsu não dura muito tempo, então deve ser feito de forma rápida.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Vou precisar que você colete:";
+mes "40x Segredo Shinobi.";
+mes "5x Pergaminho Reverso.";
+next;
+mes "^ff0000[Kuzan]^000000";
+mes "Preciso desses componentes para conjurar o jutsu! Estarei aguardando seu retorno.";
+set findkuzan,2;
+close;
+}
+
+mes "^ff0000[Ancião]^000000";
+mes "Ho ho, que surpresa, uma visita! Para um velho exilado igual a mim, é difícil receber uma hoje em dia...";
+close;
+}
+
+
+
+

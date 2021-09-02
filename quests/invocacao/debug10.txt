@@ -1,0 +1,7 @@
+sec_in02,147,178,5	script	DebugKuchi#3	99,{
+mes "Desbugando...";
+skill 2501,0,3;
+skill 2504,0,3;
+set kuchiyose5,1;
+set kuchiyose3,0;
+}

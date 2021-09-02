@@ -1,0 +1,30 @@
+in_hunter,110,106,4	script	Ligar	835,{
+
+mes "Deseja ativar algum evento?";
+menu "Ativar Evento",r1,"Nada",r2;
+		
+r1:
+mes "Escolha um evento";
+menu "Dice.",-,"Kekkai.",e2,"Aprendiz.",e3,"Morto.",e4;
+next;
+mes "oi";
+close2;
+
+e2:
+warp "treinamento", 80,128; 
+close2;
+
+e3:
+warp "pvp_n_1-2", 101,100;
+close2;
+
+e4:
+warp "quiz_02", 250,377;
+close2;
+
+r2:
+next;
+mes "Tá, tchau";
+close;	
+end;
+}

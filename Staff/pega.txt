@@ -1,0 +1,181 @@
+//==================Pega-Pega================
+//===========Baseado no do eAthena===========
+//=============Feito por: Calango============
+//Adicione as linhas nos seguintes arquivos:
+//
+//[mob_db2.txt]: //Pega-Pega
+//1136,PORING,Pega-Pega,Pega-Pega,99,999999999999,99999999999,32175,16445,1,880,9999,10,20,1,85,78,35,130,60,10,12,2,2,60,0x37B5,200,1020,1020,288,16087,10000,1008,500,730,1000,1000,4000,1015,9700,1223,500,1236,150,1014,5000,2288,300,985,2900,984,2100,0,0,0,0,4121,1
+//
+//[mob_avail.txt]: //Pega-Pega
+//1136,1002
+//
+//[mob_skilldb2.txt]: //Pega-Pega
+//1136,Pega-Pega@AL_DECAGI,chase,30,10,2000,0,60000,no,target,always,0,,,,,,5
+//1136,Pega-Pega@HT_FREEZINGTRAP,idle,121,5,500,0,300000,yes,around2,always,0,,,,,,29
+//1136,Pega-Pega@HT_CLAYMORETRAP,idle,123,5,500,0,300000,yes,around2,always,0,,,,,,9
+//1136,Pega-Pega@HT_SKIDTRAP,idle,115,5,2000,0,60000,yes,around2,always,0,,,,,,
+//
+-	script	announce_nvz	-1,{
+//=============A baixo configure os horários dos Eventos:
+OnTue0800:	OnTue1500:	OnTue0100:
+OnThu0800:	OnThu1500:	OnThu0100:
+OnSat0800:	OnSat1500:	OnSat0100:
+//=============Aqui em baixo, é se caso quiser mudar uma global (besteira).
+announce "O Evento Pega-Pega começa em três minutos!",0;
+disablenpc "Pega Pega";
+enablenpc "Pega-Pega";
+killmonsterall "quiz_01";
+sleep 55000;
+announce "O Evento Pega-Pega começa em dois minutos!",0;
+sleep 60000;
+announce "O Evento Pega-Pega começa em um minuto!",0;
+sleep 30000;
+mapannounce "quiz_01","O Evento começa em 30 segundos!",0;
+sleep 25000;
+announce "Você tem 5 segundos!",0;
+sleep 1000;
+announce "Você tem 4 segundos!",0;
+sleep 1000;
+announce "Você tem 3 segundos!",0;
+sleep 1000;
+announce "Você tem 2 segundos!",0;
+sleep 1000;
+announce "Você tem 1 segundo!",0;
+sleep 1000;
+announce "o Evento Pega-Pega começou!! Boa sorte a todos!!",0,0x00FF00;
+disablenpc "Pega-Pega";
+enablenpc "Pega Pega";
+//===========Aqui é q auntidade de monstros que teram no Evento, para tirar um monstro tire a // da frente!
+monster "quiz_01",42,369,"Enma",1057,1;
+sleep 10000;
+monster "quiz_01",42,369,"Enma",1057,1;
+sleep 10000;
+monster "quiz_01",42,369,"Enma",1057,1;
+sleep 10000;
+//monster "quiz_01",42,369,"Pega-Pega",1057,1;
+initnpctimer;
+end;
+
+OnTimer5000:
+if ( getmapusers("quiz_01") == 0 )
+{
+killmonsterall "quiz_01";
+announce "o Evento Pega-Pega acabou! Obrigado a todos que participaram!",0;
+disablenpc "Recompensa";
+stopnpctimer;
+end;
+}
+else if ( getmapusers("quiz_01") > 1 )
+{
+mapannounce "quiz_01",getmapusers("quiz_01") + " jogadores seguem no Evento!",0,0x00FF00;;
+initnpctimer;
+end;
+}
+initnpctimer;
+end;
+
+OnPCDieEvent:
+getmapxy .@mapnvz$,.@xnvz,.@ynvz,0;
+if ( .@mapnvz$ == "quiz_01") {
+sleep2 1;
+warp "prontera",156,223;
+atcommand "@alive "+ strcharinfo(0);
+dispbottom "Você perdeu.. =/";
+}
+sleep2 1000;
+if ( .@mapnvz$ == "quiz_01" && getmapusers("quiz_01") == 1 ) {
+killmonsterall "quiz_01";
+mapannounce "quiz_01","Parabéns! Você ganhou, fale com o NPC Recompensa e pegue seu prêmio!",0;
+enablenpc "Recompensa";
+stopnpctimer;
+end;
+}
+end;
+}
+
+//====== Npc recompensa============
+quiz_01,42,369,3	script	Recompensa	72,{
+if (sex == 1) {
+announce "O jogador " + strcharinfo (0) + " ganhou o Evento Pega-Pega!",0;
+}
+else {
+announce "A jogadora " + strcharinfo (0) + " ganhou o Evento Pega-Pega!",0;
+};
+//==== Na linah de baixo, configure o prêmio do npc: getitem id_do_premio, quantidade;
+getitem 730,3;
+getitem 7017,1;
+warp "treinamento",86,130;
+sleep2 250;
+disablenpc "Recompensa";
+end;
+}
+
+//========Script de quando não tiver no horário do Evento:
+prontera,142,176,3	script	Pega Pega	115,{
+	show "[Pega-Pega]";
+	show "Estamos fechados no momento!!";
+	close;
+}
+//========Script do horário do Evento:
+prontera,142,176,3	script	Pega-Pega	116,{
+event:
+mes "[^0000FFEvento Pega-Pega^000000]";
+mes "Deseja entrar no Evento Pega-Pega???";
+next;
+if (checkriding() || countitem(662) > 0) {
+    mes "[Pega-Pega]";
+    mes "Você não pode entrar montado em um peco-peco ou carregando poções!";
+    close;
+}
+switch(select("Sim","Não")) {
+case 1:
+sc_end SC_ALL;
+sc_start SC_DECREASEAGI,300000,10;
+percentheal 100,100;
+warp "quiz_01",42,369;
+end;
+break;
+case 2:
+mes "[^0000FFEvento Pega-Pega^000000]";
+mes "Esta bem, quando quiser volte a falar comigo!";
+close;
+break;
+NO:
+mes "[^0000FFTeste^000000]";
+mes "Teste";
+close;
+}
+OnInit:
+disablenpc "Teste";
+disablenpc "Recompensa";
+end;
+}
+quiz_02,161,348,3	script	Pega-Pega#evt	1120,2,2,{
+end;
+
+npcspeed 100;
+
+OnTouch:
+if (getmapusers("quiz_02") == 1) goto FIM;
+misceffect 220;
+warp "prontera",156,193;
+end;
+
+OnTimer500:
+npcwalkto 160+rand(40),347+rand(40);
+setnpctimer 0;
+
+OnInit:
+initnpctimer;
+end;
+
+quiz_01	mapflag	nowarp
+quiz_01	mapflag	nowarpto
+quiz_01	mapflag	nosave	SavePoint
+quiz_01	mapflag	nobranch
+quiz_01	mapflag	noicewall
+quiz_01	mapflag	nomemo
+quiz_01	mapflag	noreturn
+quiz_01	mapflag	noteleport
+quiz_01	mapflag	nopenalty
+quiz_01	mapflag	noskill

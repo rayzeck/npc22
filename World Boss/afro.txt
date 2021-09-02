@@ -1,0 +1,36 @@
+-	script	matarlixo	-1,{
+
+OnTouch:
+
+if(strcharinfo(0) == $perdedor$) { 
+nuke 
+}
+
+}
+
+geffen,132,55,5	script	Matar	100,{
+
+if(getgroupid() < 10) {mes "Apenas GMs podem usar este npc"; close;}
+
+
+mes "Digite o nome exatamente como ele é";
+menu "Defunto",defunto,"Close",fechar;
+
+
+defunto:
+next;
+mes "Atual morto registrado: "+$perdedor$+"";
+mes "Deseja alterá-lo ?";
+if(select("- Sim:- Não") == 2) { close; }
+next;
+mes "Digite o nick exato do novo:";
+input @perdedor$;
+set $perdedor$, @perdedor$;
+next;
+mes "Novo mortinho registrado: "+$perdedor$+"";
+close;
+
+fechar:
+close;
+
+}
