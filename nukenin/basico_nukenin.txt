@@ -708,8 +708,12 @@ if(countitem(30033) == 1) {delitem 30033,1;}
 if(countitem(30034) == 1) {delitem 30034,1;}
 if(countitem(30035) == 1) {delitem 30035,1;}
 
-getitem 31226,1;
-equip 31226;
+if (#nevoa == 1) {getitem 31224,1;}
+if (#nuvem == 1) {getitem 31224,1;}
+if (#konoha == 1) {getitem 31224,1;}
+if (#suna == 1) {getitem 31224,1;}
+getitem 31224,1;
+equip 31224;
 atcommand "@job 4019";
 set nukenin,1;
 next;
