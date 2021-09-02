@@ -1,4 +1,5 @@
 -	script	Anti Bot	-1,{
+//
 OnNPCKillEvent:
 //	if(getgmlevel() == 99) {mes "Bem-vindo"; close;}
 	set @kill,@kill+1;
