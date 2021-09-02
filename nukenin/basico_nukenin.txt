@@ -316,7 +316,7 @@ mes "[^DC143CBartender^000000]";
 mes "Oh meu Deus!! Quanto antídoto, é isso que precisavamos.";
 next;
 mes "[^DC143CBartender^000000]";
-mes "Então você vai trabalhar aqui com a gente para sempre. Hm! Vá até a cozinha e entregue ao homem que está lá.";
+mes "Então você vai trabalhar aqui com a gente para sempre. Hm! Vá até mais à frente e entregue ao Nukenin que está lá.";
 next;
 mes "[^DC143C"+strcharinfo(0)+"^000000]";
 mes "É o que eu pretendo!";
