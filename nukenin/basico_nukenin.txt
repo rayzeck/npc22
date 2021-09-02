@@ -708,10 +708,6 @@ if(countitem(30033) == 1) {delitem 30033,1;}
 if(countitem(30034) == 1) {delitem 30034,1;}
 if(countitem(30035) == 1) {delitem 30035,1;}
 
-if (#nevoa == 1) { mes "Você é da névoa. Tire print e mostre para um administrador."; close;}
-if (#nuvem == 1) { mes "Você é da nuvem. Tire print e mostre para um administrador."; close;}
-if (#konoha == 1) { mes "Você é de konoha. Tire print e mostre para um administrador."; close;}
-if (#suna == 1) { mes "Você é da suna. Tire print e mostre para um administrador."; close;}
 getitem 31226,1;
 equip 31226;
 atcommand "@job 4019";
