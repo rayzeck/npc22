@@ -150,67 +150,41 @@ close;
 	OnZabuzaDie:
 		instance_announce instance_id(),"Zabuza Momochi: Não pode ser! Perdi para esse bando de pirralhos!",0;
 		hideoffnpc ""+instance_npcname("Tazuna#2")+"";
-		sleep2 2000;
-		instance_announce instance_id(),"Tazuna: Atenção líder do grupo, aguarde os outros shinobis pegarem a premiação!",0;
-		sleep2 2000;
-		instance_announce instance_id(),"Tazuna: Vocês tem 45 segundos antes da raid ser destruída!",0;
-		sleep2 35000;
-		instance_announce instance_id(),"Tazuna: Vocês tem 10 segundos antes da raid ser destruída!",0;
-		sleep2 10000;
-		instance_destroy;
-		end;
+	if( getcharid(1) ) {
+		getpartymember( getcharid(1),2 );
+		getpartymember( getcharid(1),1 );
+		.@map_killer$ = strcharinfo(3);
+		.@chance = rand(10);
+		for( .@i = 0; .@i < $@partymembercount; .@i++ )
+			if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
+				if( !getmapxy( .@map$, .@x, .@y, 0, rid2name( $@partymemberaid[ .@i ] ) ) && .@map$ == .@map_killer$ ) {
+					getitem 19084, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
+//				getitem 732, 2, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
+					if( !.@chance )
+						getitem 19084, 1, $@partymemberaid[ .@i ];// put ID gold coin
+				}
+	}
+	end;
 }
-
 1@ponte,325,364,4	script	Tazuna#2	1_M_LIBRARYMASTER,{
 
-		if(getcharid(0) != getpartyleader(getcharid(1),2)) {
-
-		mes "Parabéns por completar a missão, aqui está sua premiação!";
-		query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 150 WHERE `char_id` = '"+getcharid(0)+"'");
-		dispbottom "Você ganhou 150 pontos de missão.";
-		next;
-		mes "Até a próxima aventura!";
-		getitem 734,1;
-		set questmade2, GetTime(8);
-		set raidon,0;
-		close2;
-		warp "SavePoint",0,0;
-	}
-
-	getpartymember getcharid(1),1;
-	getpartymember getcharid(1),2;
-	for(.@i = 0; .@i < $@partymembercount; .@i++) {
-		if($@partymembercount > 5) {
-			mes "Seu Grupo é muito grande. Reduza a quantidade de membros. Só é permitido 5 pessoas.";
-			instance_destroy;
-			close;
-		}
-	}
-	mes "^ff0000[Tazuna]^000000";
-	mes "Atenção líder, você deve ser o último a confirmar a saída comigo! Aguarde os membros do seu grupo pegarem a premiação...";
-	instance_announce instance_id(),"Tazuna: Atenção shinobis, vocês devem pegar a premiação antes do líder!",0;
-	next;
-	mes "^ff0000[Tazuna]^000000";
-	mes "Verificou se todos pegaram a premiação, líder?";
-	menu "Não.",saida,"Sim.",sim;
-
-	sim:
-	close2;
-	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 150 WHERE `char_id` = '"+getcharid(0)+"'");
-	dispbottom "Você ganhou 150 pontos de missão.";
-	getitem 734,1;
+	if (countitem(19085) == 1) {
+	mes "Safada!."; 
 	set questmade2, GetTime(8);
-	set raidon,1;	
-	announce "O Grupo ["+getpartyname(getcharid(1))+"] acaba de completar a Raid Grande Ponte.",bc_all;	
-	instance_destroy;
-	end;
-
-	saida:
-	next;
-	mes "^ff0000[Tazuna]^000000";
-	mes "Aguarde todos jogadores pegarem o prêmio!";
+	set raidon,1; 
+	delitem 19085,1;
+	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 150 WHERE `char_id` = '"+getcharid(0)+"'"); 
+	getitem 734,1; 
+	dispbottom "150 Pontos de Missão adquiridos."; 
+	warp "SavePoint",0,0; 
 	close;
+	instance_destroy; 
+	close;
+	}
+	end;
 }
+
+
 1@ponte,326,64,0	warp	warpponte	1,1,1@ponte,40,363
 1@ponte	mapflag	partylock
 1@ponte	mapflag	nomemo
