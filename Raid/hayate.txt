@@ -12,7 +12,7 @@ mes "Você pode resetar sua raid novamente amanhã!";
 close;
 }
 
-if(vip_status(1)) {
+//if(vip_status(1)) {
 mes "^ff0000[Hayate]^000000";
 mes "Olá "+ strcharinfo(0) +", você tem direito a 1 Reset da Raid do Torneio Chunin. Gostaria de utilizar ele agora?";
 menu "- Sim.",r1,"- Não.",r2;
@@ -196,7 +196,6 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 	warp "SavePoint",0,0; 
 	close;
 	instance_destroy; 
-	
 	end;
 }
 
