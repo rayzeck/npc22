@@ -185,18 +185,18 @@ exame,103,117,4	script	Uchiha Sasuke#5	3593,{
 
 exame,91,9,4	script	Hayate#2	4_m_across,{	
 
-	//if (countitem(19084) == 1) {
+	if (countitem(19084) == 1) {
 	mes "Safada!."; 
 	set questmade3, GetTime(8);
 	set raidon,0; 
-	//delitem 19084,1; 
-	close;
+	delitem 19084,1;
 	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 200 WHERE `char_id` = '"+getcharid(0)+"'"); 
 	getitem 732,2; 
 	dispbottom "200 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
 	instance_destroy; 
-	
+	close;
+	}
 	end;
 }
 
