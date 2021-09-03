@@ -187,7 +187,7 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 
 	//if (countitem(19084) == 1) {
 	mes "Safada!."; 
-	set questmade3, GetTime(8); 
+	set questmade3, GetTime(8);
 	set raidon,0; 
 	//delitem 19084,1; 
 	close;
