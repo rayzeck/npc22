@@ -11,7 +11,7 @@ payon,179,111,5	script	Schichuu Shibari	1_m_innkeeper,{
 	.@SkillId = 85;
 	.@idquest = 6070;
 
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -191,7 +191,7 @@ payon,183,105,5	script	Raiton Corrente Eletrica	1_m_innkeeper,{
 	.@SkillId = 2214;
 	.@idquest = 6071;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -371,7 +371,7 @@ payon,190,106,5	script	Chidori Nagashi	1_m_innkeeper,{
 	.@SkillId = 541;
 	.@idquest = 6072;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
