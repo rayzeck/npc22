@@ -185,8 +185,7 @@ exame,103,117,4	script	Uchiha Sasuke#5	3593,{
 
 exame,91,9,4	script	Hayate#2	4_m_across,{	
 
-	//if (countitem(19084) == 1) { 
-	//}
+	if (countitem(19084) == 1) {
 	mes "Obrigado por esse item."; 
 	set questmade3, GetTime(8); 
 	set raidon,0; delitem 19084,1; 
@@ -196,7 +195,7 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 	warp "SavePoint",0,0; 
 	instance_destroy; 
 	close;
-	
+	}
 	end;
 }
 
