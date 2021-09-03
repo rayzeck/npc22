@@ -136,19 +136,19 @@ OnTimer1000:
 		case 2:
 				set .mobcount,15; //Total de mobs 2º round
 				mapannounce "pvp_n_1-5","[2º Round]: Vocês tem 10 minutos para eliminar os mobs e ir para o próximo round!",bc_map;
-				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Branco",1250,.mobcount,"#akt_time::OnMobsCount";
+				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Branco",1244,.mobcount,"#akt_time::OnMobsCount";
 				break;
 		case 3:
 				set .mobcount,1; //Total de mobs 3º round
 				mapannounce "pvp_n_1-5","[3º Round]: Vocês tem 10 minutos para eliminar o lider dos zetsus brancos e ir para o round final!",bc_map;
-				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Negro",1251,.mobcount,"#akt_time::OnMobsCount";
+				areamonster "pvp_n_1-5",91,107,107,91,"Zetsu Negro",1244,.mobcount,"#akt_time::OnMobsCount";
 				break;
 		case 4:
 				set .mobcount,3; //Total de mobs 4º round
 				mapannounce "pvp_n_1-5","[4º Round]: Vocês tem 10 minutos para eliminar os 3 membros da akatsuki!",bc_map;
-				monster "pvp_n_1-5",91,107,"Pain",1596,1,"#akt_time::OnMobsCount";
-				monster "pvp_n_1-5",91,107,"Nagato",1098,1,"#akt_time::OnMobsCount";
-				monster "pvp_n_1-5",91,107,"Konan",1252,1,"#akt_time::OnMobsCount";
+				monster "pvp_n_1-5",91,107,"Itachi",3576,1,"#akt_time::OnMobsCount";
+				monster "pvp_n_1-5",91,107,"Nagato",3598,1,"#akt_time::OnMobsCount";
+				monster "pvp_n_1-5",91,107,"Konan",3581,1,"#akt_time::OnMobsCount";
 				break;
 	}
 	end;
