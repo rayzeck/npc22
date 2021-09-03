@@ -13,7 +13,7 @@ OnPCUseSkillEvent:
 DESLIGALOGO:	
 	setlook LOOK_HEAD_MID,@visu;
 	atcommand "@undisguise";
-	DelTimer "FOME_SHARSKILL2::DESLIGALOGO";
+	DelTimer "YGOR::DESLIGALOGO";
 	end;
 
 }
