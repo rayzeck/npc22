@@ -8,15 +8,6 @@ OnPCUseSkillEvent:
 		end;
 	}
 
--	script	YGOR	-1,{
-	
-DESLIGALOGO:	
-	setlook LOOK_HEAD_MID,@visu;
-	atcommand "@undisguise";
-	DelTimer "YGOR::DESLIGALOGO";
-	end;
-
-}
 
 // ====================== Susanoo ======================
 
@@ -187,4 +178,11 @@ OnHPSELOSKILL22:
 		end;
 }
 
+-	script	YGOR	-1,{
+	
+DESLIGALOGO:	
+	atcommand "@undisguise";
+	DelTimer "YGOR::DESLIGALOGO";
+	end;
 
+}
