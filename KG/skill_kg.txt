@@ -3,8 +3,9 @@
 OnPCUseSkillEvent:
 
 	if(lskillid == 901) {		
-		atcommand "@disguise Juubi";
-		sleep2 1000;
+		atcommand "@disguise Kyuubi";
+		sc_start SC_ATKPOTION,15000,4000;
+		sleep2 30000;
 		atcommand "@undisguise";
 		end;
 	}
