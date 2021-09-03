@@ -11,7 +11,7 @@ payon,181,155,5	script	Yosai	4_m_thaiongbak,{
 	.@SkillId = 268;
 	.@idquest = 6100;
 	
-if(Class < 4008 || Class > 4011) {  mes .@npc$;  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes .@npc$;  mes "Você precisa ser Jounin.";  close; }
 if(resis_avan != 1) {  mes .@npc$; mes "Você precisa estudar Resistência Avançada antes de aprender essa habilidade."; close;}
 
 if(getskilllv(.@SkillId) > 0){

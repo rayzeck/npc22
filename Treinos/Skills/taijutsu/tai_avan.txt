@@ -11,7 +11,7 @@ payon,189,179,5	script	Chakra Hoshutsu	1_m_pastor,{
 	.@SkillId = 267;
 	.@idquest = 6000;
 
-if(Class > 4008 && Class < 4011 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -22,7 +22,7 @@ if(getskilllv(.@SkillId) > 0){
 	if(select("- Nada não, só papo furado:- Não gostei desse jutsu, quero remover") == 1) { close; }
 	close2;
 	skill .@SkillId,0,3;
-	set skill_avancado,skill_avancado -1;
+	set skill_avancada,skill_avancada -1;
 	end;
 }
 
@@ -45,7 +45,7 @@ if(getskilllv(.@SkillId) > 0){
 				set tai_item_avan1_3$,0;
 				completequest .@idquest; 
 				erasequest .@idquest;
-				set skill_avancado,skill_avancado -1;
+				set skill_avancada,skill_avancada -1;
 				mes "Quest Removida com Sucesso";
 				close;
 			}
@@ -82,7 +82,7 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if(skill_avancado >= 2 || ChakraHoshutsu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
+if(skill_avancada >= 2 || ChakraHoshutsu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
 	
 //-------------------------------------------
 // Menu
@@ -169,7 +169,7 @@ if(skill_avancado >= 2 || ChakraHoshutsu >= 1) { mes .@npc$; mes "Você já aprend
 					next;
 					mes .@npc$;
 					mes "Os itens sorteados são: 30 "+tai_item_avan1_1$+", 30 "+tai_item_avan1_2$+", 30 "+tai_item_avan1_3$+".";
-					set skill_avancado,skill_avancado +1;
+					set skill_avancada,skill_avancada +1;
 					setquest .@idquest;
 					close;
 		
@@ -190,7 +190,7 @@ payon,192,176,5	script	Daichiwari	1_m_pastor,{
 	.@SkillId = 2323;
 	.@idquest = 6001;
 
-if(Class < 4008 || Class > 4011) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -201,7 +201,7 @@ if(getskilllv(.@SkillId) > 0){
 	if(select("- Nada não, só papo furado:- Não gostei desse jutsu, quero remover") == 1) { close; }
 	close2;
 	skill .@SkillId,0,3;
-	set skill_avancado,skill_avancado -1;
+	set skill_avancada,skill_avancada -1;
 	end;
 }
 
@@ -224,7 +224,7 @@ if(getskilllv(.@SkillId) > 0){
 				set tai_item_avan2_3$,0;
 				completequest .@idquest; 
 				erasequest .@idquest;
-				set skill_avancado,skill_avancado -1;
+				set skill_avancada,skill_avancada -1;
 				mes "Quest Removida com Sucesso";
 				close;
 			}
@@ -261,7 +261,7 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if(skill_avancado >= 2 || Daichiwari >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
+if(skill_avancada >= 2 || Daichiwari >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
 
 //-------------------------------------------
 // Menu
@@ -348,7 +348,7 @@ if(skill_avancado >= 2 || Daichiwari >= 1) { mes .@npc$; mes "Você já aprendeu d
 					next;
 					mes .@npc$;
 					mes "Os itens sorteados são: 30 "+tai_item_avan2_1$+", 30 "+tai_item_avan2_2$+", 30 "+tai_item_avan2_3$+".";
-					set skill_avancado,skill_avancado +1;
+					set skill_avancada,skill_avancada +1;
 					setquest .@idquest;
 					close;
 		
@@ -369,7 +369,7 @@ payon,201,175,5	script	Kurosukatto	1_m_pastor,{
 	.@SkillId = 253;
 	.@idquest = 6002;
 
-if(Class < 4008 || Class > 4011) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -380,7 +380,7 @@ if(getskilllv(.@SkillId) > 0){
 	if(select("- Nada não, só papo furado:- Não gostei desse jutsu, quero remover") == 1) { close; }
 	close2;
 	skill .@SkillId,0,3;
-	set skill_avancado,skill_avancado -1;
+	set skill_avancada,skill_avancada -1;
 	end;
 }
 
@@ -403,7 +403,7 @@ if(getskilllv(.@SkillId) > 0){
 				set tai_item_avan3_3$,0;
 				completequest .@idquest; 
 				erasequest .@idquest;
-				set skill_avancado,skill_avancado -1;
+				set skill_avancada,skill_avancada -1;
 				mes "Quest Removida com Sucesso";
 				close;
 			}
@@ -440,7 +440,7 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if(skill_avancado >= 2 || Kurosukatto >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
+if(skill_avancada >= 2 || Kurosukatto >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
 
 //-------------------------------------------
 // Menu
@@ -527,7 +527,7 @@ if(skill_avancado >= 2 || Kurosukatto >= 1) { mes .@npc$; mes "Você já aprendeu 
 					next;
 					mes .@npc$;
 					mes "Os itens sorteados são: 30 "+tai_item_avan3_1$+", 30 "+tai_item_avan3_2$+", 30 "+tai_item_avan3_3$+".";
-					set skill_avancado,skill_avancado +1;
+					set skill_avancada,skill_avancada +1;
 					setquest .@idquest;
 					close;
 		
@@ -547,7 +547,7 @@ payon,200,185,5	script	Konoha Renpuu	1_m_pastor,{
 	.@SkillId = 415;
 	.@idquest = 6003;
 
-if(Class < 4008 || Class > 4011) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -558,7 +558,7 @@ if(getskilllv(.@SkillId) > 0){
 	if(select("- Nada não, só papo furado:- Não gostei desse jutsu, quero remover") == 1) { close; }
 	close2;
 	skill .@SkillId,0,3;
-	set skill_avancado,skill_avancado -1;
+	set skill_avancada,skill_avancada -1;
 	end;
 }
 
@@ -581,7 +581,7 @@ if(getskilllv(.@SkillId) > 0){
 				set tai_item_avan4_3$,0;
 				completequest .@idquest; 
 				erasequest .@idquest;
-				set skill_avancado,skill_avancado -1;
+				set skill_avancada,skill_avancada -1;
 				mes "Quest Removida com Sucesso";
 				close;
 			}
@@ -618,7 +618,7 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if(skill_avancado >= 2 || KonohaRenpuu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
+if(skill_avancada >= 2 || KonohaRenpuu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
 
 //-------------------------------------------
 // Menu
@@ -705,7 +705,7 @@ if(skill_avancado >= 2 || KonohaRenpuu >= 1) { mes .@npc$; mes "Você já aprendeu
 					next;
 					mes .@npc$;
 					mes "Os itens sorteados são: 30 "+tai_item_avan4_1$+", 30 "+tai_item_avan4_2$+", 30 "+tai_item_avan4_3$+".";
-					set skill_avancado,skill_avancado +1;
+					set skill_avancada,skill_avancada +1;
 					setquest .@idquest;
 					close;
 		
@@ -1076,7 +1076,7 @@ payon,186,182,5	script	Chakura Bakuhatsu	1_m_pastor,{
 	.@SkillId = 2017;
 	.@idquest = 6006;
 
-if(Class < 4008 || Class > 4011) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -1087,7 +1087,7 @@ if(getskilllv(.@SkillId) > 0){
 	if(select("- Nada não, só papo furado:- Não gostei desse jutsu, quero remover") == 1) { close; }
 	close2;
 	skill .@SkillId,0,3;
-	set skill_avancado,skill_avancado -1;
+	set skill_avancada,skill_avancada -1;
 	end;
 }
 
@@ -1110,7 +1110,7 @@ if(getskilllv(.@SkillId) > 0){
 				set tai_item_avan7_3$,0;
 				completequest .@idquest; 
 				erasequest .@idquest;
-				set skill_avancado,skill_avancado -1;
+				set skill_avancada,skill_avancada -1;
 				mes "Quest Removida com Sucesso";
 				close;
 			}
@@ -1147,7 +1147,7 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if(skill_avancado >= 2 || ChakuraBakuhatsu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
+if(skill_avancada >= 2 || ChakuraBakuhatsu >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Taijutsus avançados, esse é o limite"; close;}
 	
 //-------------------------------------------
 // Menu
@@ -1234,7 +1234,7 @@ if(skill_avancado >= 2 || ChakuraBakuhatsu >= 1) { mes .@npc$; mes "Você já apre
 					next;
 					mes .@npc$;
 					mes "Os itens sorteados são: 30 "+tai_item_avan7_1$+", 30 "+tai_item_avan7_2$+", 30 "+tai_item_avan7_3$+".";
-					set skill_avancado,skill_avancado +1;
+					set skill_avancada,skill_avancada +1;
 					setquest .@idquest;
 					close;
 		

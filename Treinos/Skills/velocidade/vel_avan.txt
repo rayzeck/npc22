@@ -11,7 +11,7 @@ payon,172,178,5	script	Forma Eterea	1_f_02,{
 	.@SkillId = 2290;
 	.@idquest = 6031;
 
-if(Class < 4008 || Class > 4011) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -190,7 +190,7 @@ payon,174,178,5	script	Hiraishin no Jutsu	1_f_02,{
 	.@SkillId = 264;
 	.@idquest = 6032;
 
-if(Class < 4008 || Class > 4011) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -370,7 +370,7 @@ payon,176,178,5	script	Salto Relampago	1_f_02,{
 	.@SkillId = 2335;
 	.@idquest = 6033;
 
-if(Class < 4008 || Class > 4011) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -549,7 +549,7 @@ payon,178,178,5	script	Dai Shunshin	1_f_02,{
 	.@SkillId = 529;
 	.@idquest = 6034;
 
-if(Class < 4008 || Class > 4011) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;

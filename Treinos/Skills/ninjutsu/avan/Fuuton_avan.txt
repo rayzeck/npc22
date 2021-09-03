@@ -11,7 +11,7 @@ payon,186,136,5	script	Fuuton Atsugai	1_m_04,{
 	.@SkillId = 469;
 	.@idquest = 6090;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
