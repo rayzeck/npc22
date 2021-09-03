@@ -35,6 +35,7 @@ close;
 inicio:
 if(questmade3 == GetTime(8)) {
 if(vip_status(1)) goto reset;
+set questmade33, GetTime(8);
 mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
 close;
 
@@ -194,6 +195,7 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 	getitem 732,2; 
 	dispbottom "200 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
+	close;
 	instance_destroy; 
 	close;
 	}
