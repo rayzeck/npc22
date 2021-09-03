@@ -11,7 +11,7 @@ payon,189,179,5	script	Chakra Hoshutsu	1_m_pastor,{
 	.@SkillId = 267;
 	.@idquest = 6000;
 
-if(Class < 4008 || Class > 4011) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class > 4008 && Class < 4011 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
