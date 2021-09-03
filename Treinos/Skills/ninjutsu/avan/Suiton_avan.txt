@@ -11,7 +11,7 @@ payon,210,121,5	script	Suiton Suishouha	1_m_hof,{
 	.@SkillId = 89;
 	.@idquest = 6060;
 	
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -192,7 +192,7 @@ payon,221,116,5	script	Suiton Goshokuzame	1_m_hof,{
 	.@SkillId = 539;
 	.@idquest = 6061;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -373,7 +373,7 @@ payon,213,108,5	script	Suiton Zero Absoluto	1_m_hof,{
 	.@SkillId = 2203;
 	.@idquest = 6062;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;

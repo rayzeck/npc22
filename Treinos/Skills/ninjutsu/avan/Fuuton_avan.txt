@@ -11,7 +11,7 @@ payon,186,136,5	script	Fuuton Atsugai	1_m_04,{
 	.@SkillId = 469;
 	.@idquest = 6090;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -192,7 +192,7 @@ payon,191,136,5	script	Fuuton Mugen Sajin Daitoppa	1_m_04,{
 	.@SkillId = 394;
 	.@idquest = 6091;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -373,7 +373,7 @@ payon,196,136,5	script	Fuuton Vento Cortante	1_m_04,{
 	.@SkillId = 2005;
 	.@idquest = 6092;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;

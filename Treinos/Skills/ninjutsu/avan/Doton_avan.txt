@@ -11,7 +11,7 @@ payon,161,133,5	script	Doton Gandan Kyuu	1_m_bard,{
 	.@SkillId = 666;
 	.@idquest = 6080;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -192,7 +192,7 @@ payon,159,125,5	script	Doton Abalo Sismico	1_m_bard,{
 	.@SkillId = 2216;
 	.@idquest = 6081;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -372,7 +372,7 @@ payon,151,125,5	script	Doton Terremoto	1_m_bard,{
 	.@SkillId = 653;
 	.@idquest = 6082;
 	
-if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008) {  mes "[Ninjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;

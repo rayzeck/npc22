@@ -80,8 +80,8 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 
-if (Class > 4007 && Class < 4012 || Class == 4019) { mes "Você precisa ser nível máximo."; close; }
-if(Class < 4008 || Class < 4009 || Class < 4011) { mes "Você precisa ser Jounin.";  close; }
+if (BaseLevel >= 700 && Class > 4007) { mes "Você precisa ser nível máximo."; close; }
+if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 if(fuuin_avan != 1) { mes .@npc$; mes "Você precisa estudar Fuuinjutsu avançado antes de aprender esse Fuuinjutsu"; close;}
 if(skill_avancada >= 2 || ShikiFujin >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Fuuinjutsu avançados, esse é o limite"; close;}
 
@@ -191,7 +191,8 @@ payon,271,140,5	script	Gaia Fuuin	70,{
 	.@SkillId = 113;
 	.@idquest = 6011;
 
-		if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
+if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -370,7 +371,8 @@ payon,269,152,5	script	Enfraquecer Oponente	70,{
 	.@SkillId = 78;
 	.@idquest = 6012;
 
-		if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
+if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -549,7 +551,8 @@ payon,249,136,5	script	Kaupe	70,{
 	.@SkillId = 464;
 	.@idquest = 6013;
 
-		if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
+if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -799,7 +802,8 @@ if(getskilllv(.@SkillId) > 0){
 		close;
 	}
 	
-		if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
+if (BaseLevel < 999 || Class < 4008 { mes "Você precisa ser nível máximo."; close; }
+if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 if(fuuin_avan != 1) { mes .@npc$; mes "Você precisa estudar Fuuinjutsu avançado antes de aprender esse Fuuinjutsu"; close;}
 if(skill_avancada >= 2 || ProtegerTerreno >= 1) { mes .@npc$; mes "Você já aprendeu duas skills Fuuinjutsu avançados, esse é o limite"; close;}
 
