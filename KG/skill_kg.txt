@@ -1,6 +1,27 @@
 -	script	Skills_KG	-1,{
 
 OnPCUseSkillEvent:
+
+
+
+
+
+	if(lskillid == 901) {		
+		atcommand "@disguise Juubi";
+		AddTimer 5000, "YGOR::DESLIGALOGO";
+		end;
+	}
+
+-	script	YGOR	-1,{
+	
+DESLIGALOGO:	
+	setlook LOOK_HEAD_MID,@visu;
+	atcommand "@undisguise";
+	DelTimer "FOME_SHARSKILL2::DESLIGALOGO";
+	end;
+
+}
+
 // ====================== Susanoo ======================
 
 	if(lskillid == 157) {
