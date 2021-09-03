@@ -11,7 +11,7 @@ payon,189,179,5	script	Chakra Hoshutsu	1_m_pastor,{
 	.@SkillId = 267;
 	.@idquest = 6000;
 
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -190,7 +190,7 @@ payon,192,176,5	script	Daichiwari	1_m_pastor,{
 	.@SkillId = 2323;
 	.@idquest = 6001;
 
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -369,7 +369,7 @@ payon,201,175,5	script	Kurosukatto	1_m_pastor,{
 	.@SkillId = 253;
 	.@idquest = 6002;
 
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -547,7 +547,7 @@ payon,200,185,5	script	Konoha Renpuu	1_m_pastor,{
 	.@SkillId = 415;
 	.@idquest = 6003;
 
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;
@@ -1075,8 +1075,7 @@ payon,186,182,5	script	Chakura Bakuhatsu	1_m_pastor,{
 	.@NomeSkill = "ChakuraBakuhatsu";
 	.@SkillId = 2017;
 	.@idquest = 6006;
-
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
 	mes .@npc$;

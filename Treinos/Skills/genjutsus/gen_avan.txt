@@ -11,7 +11,7 @@ payon,244,159,5	script	Bakuhatsu Kemuri	4_f_zondagirl,{
 	.@SkillId = 667;
 	.@idquest = 6040;
 	
-if(Class > 4007 && Class < 4012 || Class == 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(gen_avan != 1) { mes .@npc$; mes "Você precisa estudar Genjutsu avançado antes de aprender esse Genjutsu"; close;}
 
@@ -192,7 +192,7 @@ payon,250,161,5	script	Yubi no Gen	4_f_zondagirl,{
 	.@SkillId = 659;
 	.@idquest = 6041;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(gen_avan != 1) { mes .@npc$; mes "Você precisa estudar Genjutsu avançado antes de aprender esse Genjutsu"; close;}
 
@@ -373,7 +373,7 @@ payon,256,163,5	script	Miro no Gen	4_f_zondagirl,{
 	.@SkillId = 311;
 	.@idquest = 6042;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(gen_avan != 1) { mes .@npc$; mes "Você precisa estudar Genjutsu avançado antes de aprender esse Genjutsu"; close;}
 
@@ -554,7 +554,7 @@ payon,262,161,5	script	Konohi Kemuri	4_f_zondagirl,{
 	.@SkillId = 663;
 	.@idquest = 6043;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(gen_avan != 1) { mes .@npc$; mes "Você precisa estudar Genjutsu avançado antes de aprender esse Genjutsu"; close;}
 
@@ -734,7 +734,7 @@ payon,269,161,5	script	Neru no Gen	4_f_zondagirl,{
 	.@SkillId = 2455;
 	.@idquest = 6044;
 	
-if(Class < 4008 || Class > 4011) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
+if(Class < 4008 || Class > 4011 || Class != 4019) {  mes "[Genjutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(gen_avan != 1) { mes .@npc$; mes "Você precisa estudar Genjutsu avançado antes de aprender esse Genjutsu"; close;}
 
