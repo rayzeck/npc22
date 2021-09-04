@@ -370,7 +370,7 @@ payon,176,178,5	script	Salto Relampago	1_f_02,{
 	.@SkillId = 2335;
 	.@idquest = 6033;
 if(BaseLevel < 999){ 
-	mes .@npc$; 
+	mes "[Velocidade Avançado]"; 
 	mes "Você não atingiu nível o suficiente para isto!"; 
 	close;
 }
