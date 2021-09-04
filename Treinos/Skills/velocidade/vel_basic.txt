@@ -65,6 +65,14 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2011; }
 		if(#nevoa == 1) {  setquest 3011; }
 		if(#nuvem == 1) {  setquest 4011; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1011;
+			}else {
+				setquest 3011;
+			}
+		}
 		next;
 		mes "[Velocidade Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -149,6 +157,14 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2012; }
 		if(#nevoa == 1) {  setquest 3012; }
 		if(#nuvem == 1) {  setquest 4012; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1012;
+			}else {
+				setquest 3012;
+			}
+		}
 		next;
 		mes "[Velocidade Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -235,6 +251,14 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2014; }
 		if(#nevoa == 1) { setquest 3014; }
 		if(#nuvem == 1) { setquest 4014; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1014;
+			}else {
+				setquest 3014;
+			}
+		}
 		next;
 		mes "[Velocidade Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -320,6 +344,14 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2013; }
 		if(#nevoa == 1) { setquest 3013; }
 		if(#nuvem == 1) { setquest 4013; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1013;
+			}else {
+				setquest 3013;
+			}
+		}
 		next;
 		mes "[Velocidade Básico]";
 		mes "Vá e faça seu treinamento.";

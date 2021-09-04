@@ -65,6 +65,14 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2100; }
 		if(#nevoa == 1) { setquest 3100; }
 		if(#nuvem == 1) { setquest 4100; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1100;
+			}else {
+				setquest 3100;
+			}
+		}
 		next;
 		mes "[Resistência Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -166,6 +174,14 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2101; }
 		if(#nevoa == 1) { setquest 3101; }
 		if(#nuvem == 1) { setquest 4101; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1101;
+			}else {
+				setquest 3101;
+			}
+		}
 		next;
 		mes "[Resistência Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -267,6 +283,14 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2102; }
 		if(#nevoa == 1) { setquest 3102; }
 		if(#nuvem == 1) { setquest 4102; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1102;
+			}else {
+				setquest 3102;
+			}
+		}
 		next;
 		mes "[Resistência Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -368,6 +392,14 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2103; }
 		if(#nevoa == 1) { setquest 3103; }
 		if(#nuvem == 1) { setquest 4103; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1103;
+			}else {
+				setquest 3103;
+			}
+		}
 		next;
 		mes "[Resistência Básico]";
 		mes "Vá e faça seu treinamento.";

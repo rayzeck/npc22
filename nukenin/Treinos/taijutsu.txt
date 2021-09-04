@@ -64,6 +64,14 @@ lhz_dun02,18,236,5	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2002; }
 		if(#nevoa == 1) { setquest 3002; }
 		if(#nuvem == 1) { setquest 4002; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1002;
+			}else {
+				setquest 3002;
+			}
+		}
 		next;
 		mes "[Taijutsu Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -148,6 +156,14 @@ lhz_dun02,18,236,5	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2003; }
 		if(#nevoa == 1) { setquest 3003; }
 		if(#nuvem == 1) { setquest 4003; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1003;
+			}else {
+				setquest 3003;
+			}
+		}
 		next;
 		mes "[Taijutsu Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -232,6 +248,14 @@ lhz_dun02,18,236,5	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2004; }
 		if(#nevoa == 1) { setquest 3004; }
 		if(#nuvem == 1) { setquest 4004; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1004;
+			}else {
+				setquest 3004;
+			}
+		}
 		next;
 		mes "[Taijutsu Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -317,6 +341,14 @@ lhz_dun02,18,236,5	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2005; }
 		if(#nevoa == 1) { setquest 3005; }
 		if(#nuvem == 1) { setquest 4005; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1005;
+			}else {
+				setquest 3005;
+			}
+		}
 		next;
 		mes "[Taijutsu Básico]";
 		mes "Vá e faça seu treinamento.";

@@ -66,6 +66,14 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2021; }
 		if(#nevoa == 1) { setquest 3021; }
 		if(#nuvem == 1) { setquest 4021; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1021;
+			}else {
+				setquest 3021;
+			}
+		}
 		next;
 		mes "[Medicina Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -167,6 +175,14 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2022; }
 		if(#nevoa == 1) { setquest 3022; }
 		if(#nuvem == 1) { setquest 4022; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1022;
+			}else {
+				setquest 3022;
+			}
+		}
 		next;
 		mes "[Medicina Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -270,6 +286,14 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2023; }
 		if(#nevoa == 1) { setquest 3023; }
 		if(#nuvem == 1) { setquest 4023; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1023;
+			}else {
+				setquest 3023;
+			}
+		}
 		next;
 		mes "[Medicina Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -371,6 +395,14 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2024; }
 		if(#nevoa == 1) { setquest 3024; }
 		if(#nuvem == 1) { setquest 4024; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1024;
+			}else {
+				setquest 3024;
+			}
+		}
 		next;
 		mes "[Medicina Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -473,6 +505,14 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2025; }
 		if(#nevoa == 1) { setquest 3025; }
 		if(#nuvem == 1) { setquest 4025; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1025;
+			}else {
+				setquest 3025;
+			}
+		}
 		next;
 		mes "[Medicina Básico]";
 		mes "Vá e faça seu treinamento.";

@@ -463,10 +463,14 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2081; }
 		if(#nevoa == 1) { setquest 3081; }
 		if(#nuvem == 1) { setquest 4081; }
-		if(nukenin == 1) {setquest 1081; }
-		if(nukenin == 1) {setquest 2081; }
-		if(nukenin == 1) {setquest 3081; }
-		if(nukenin == 1) {setquest 4081; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1081;
+			}else {
+				setquest 3081;
+			}
+		}
 		next;
 		mes "[Doton Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -551,10 +555,14 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2082; }
 		if(#nevoa == 1) { setquest 3082; }
 		if(#nuvem == 1) { setquest 4082; }
-		if(nukenin == 1) {setquest 1081; }
-		if(nukenin == 1) {setquest 2081; }
-		if(nukenin == 1) {setquest 3081; }
-		if(nukenin == 1) {setquest 4081; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1082;
+			}else {
+				setquest 3082;
+			}
+		}
 		next;
 		mes "[Doton Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -639,10 +647,14 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2083; }
 		if(#nevoa == 1) { setquest 3083; }
 		if(#nuvem == 1) { setquest 4083; }
-		if(nukenin == 1) {setquest 1081; }
-		if(nukenin == 1) {setquest 2081; }
-		if(nukenin == 1) {setquest 3081; }
-		if(nukenin == 1) {setquest 4081; }
+		if(nukenin == 1){
+			.@rand = rand(50);
+			if(.@rand <= 50){
+				setquest 1083;
+			}else {
+				setquest 3083;
+			}
+		}
 		next;
 		mes "[Doton Básico]";
 		mes "Vá e faça seu treinamento.";
