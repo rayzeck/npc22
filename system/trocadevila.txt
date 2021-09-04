@@ -5,7 +5,7 @@ if(quest_basic_inicio != 6) { mes "[Troca de Vila]"; mes "Termine o Tutorial"; c
 if(countitem(30060) || countitem(30061) || countitem(30062) || countitem(30063) ||
    countitem(30065) || countitem(30066) || countitem(30067) || countitem(30068) || countitem(30069) || countitem(30070) || countitem(30071) || countitem(30072) ||
    countitem(30082) || countitem(30083) || countitem(30084) || countitem(30085) ||
-   countitem(30086) || countitem(30081) || countitem(31224) {
+   countitem(30086) || countitem(30081) || countitem(31224)) {
 
 mes "[Troca de Vila]";
 mes "Você precisa entregar seu cargo antes de trocar de vila.";
