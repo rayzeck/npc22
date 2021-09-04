@@ -85,7 +85,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 					set #konoha,1;
 					savepoint "hospital",55,62;
 					delitem 1320,1;
-					atcommand "@job 1";
+					atcommand "#job "+strcharinfo(0)+" 1";
 					goto escolhabandana1;
 				break;
 				case 2:
