@@ -1,4 +1,4 @@
-lhz_dun02,23,238,5	script	Velocidade Básico::velbas	1_f_02,{
+lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 
 	mes "[Velocidade Básico]";
 	mes "Olá "+strcharinfo(0)+", sou professor de velocidade escolha qual habilidade você gostaria de aprender.";
