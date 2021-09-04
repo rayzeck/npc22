@@ -97,4 +97,4 @@ akatsuki,148,174,5	script	Médico#aka	742,{
 	}
 	end ;
 
-}lou_in02,249,165,5    duplicate(Médico#aka)    Médico Nuke    742;
+}lou_in02,249,165,5    duplicate(Médico#aka)	Médico Nuke	742
