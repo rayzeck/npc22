@@ -1,7 +1,7 @@
 hospital,58,51,5	script	Médica#h1-1	739,{
 
 
-
+//
 	set .@t, 1;	// Delay Seconds.
 
 	setarray .@buffs1[0], 0;	// SC_ID buffs.
