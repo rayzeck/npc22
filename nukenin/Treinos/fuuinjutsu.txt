@@ -65,7 +65,7 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#nevoa == 1) { setquest 3031; }
 		if(#nuvem == 1) { setquest 4031; }
 		if(nukenin == 1){
-			.@rand = rand(50);
+			.@rand = rand(100);
 			if(.@rand <= 50){
 				setquest 1031;
 			}else {

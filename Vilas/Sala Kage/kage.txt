@@ -669,7 +669,8 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 			case 2:
 			next;
 			mes "["+strnpcinfo(3)+"]";
-			if (BaseLevel >= 400 && @d >= 10 ) {
+			// @d Padrão é 10			\/
+			if (BaseLevel >= 400 && @d >= 1 ) {
 				for(.@i = 12000; .@i < 12024; .@i++)
 					if(checkquest(.@i) >= 1) { 
 						mes "Olá "+strcharinfo(0); 
@@ -714,7 +715,11 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 			case 3:		
 			next;
 			mes "["+strnpcinfo(3)+"]";
-			if (BaseLevel >= 500 && @c >= 25 ) {
+			//
+			//
+			//
+			// Padrão do @c é 25 		\/
+			if (BaseLevel >= 500 && @c >= 1 ) {
 				for(.@i = 13000; .@i < 13021; .@i++)
 					if(checkquest(.@i) >= 1) {
 						mes "Olá "+strcharinfo(0); 
@@ -759,7 +764,11 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 			case 4:
 			next;
 			mes "["+strnpcinfo(3)+"]";
-			if (BaseLevel >= 700 && @b >= 50 ) {
+			//
+			//
+			//
+			// Padrão @b é 50			\/
+			if (BaseLevel >= 700 && @b >= 1 ) {
 				for(.@i = 14000; .@i < 14020; .@i++)
 					if(checkquest(.@i) >= 1) {
 						mes "Olá "+strcharinfo(0); 
@@ -804,7 +813,11 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 			case 5:
 			next;
 			mes "["+strnpcinfo(3)+"]";
-			if (BaseLevel >= 999 && @a >= 100 ) {
+			//
+			//
+			//
+			// Padrão @a é 100			\/
+			if (BaseLevel >= 999 && @a >= 1 ) {
 				for(.@i = 15000; .@i < 15008; .@i++)
 					if(checkquest(.@i) >= 1) { 
 						mes "Olá "+strcharinfo(0); 
