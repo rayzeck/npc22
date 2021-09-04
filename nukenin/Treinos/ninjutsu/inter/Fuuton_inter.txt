@@ -1,4 +1,4 @@
-lhz_dun02,17,219,5	script	Fuuton Intermediario	1_m_04,{
+lhz_dun02,18,221,5	script	Fuuton Intermediario	1_m_04,{
 
 if(elementofuuton != 1) { mes "[Fuuton Intermediário]"; mes "Esse elemento não é de sua natureza"; close;}
 

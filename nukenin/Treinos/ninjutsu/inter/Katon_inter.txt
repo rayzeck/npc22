@@ -401,7 +401,7 @@ OnInit:
 //
 //
 
-lhz_dun02,28,219,5	script	Katon Básico	1_m_jobguider,{
+lhz_dun02,28,233,5	script	Katon Básico	1_m_jobguider,{
 
 if(elementokaton != 1) { mes "[Katon Básico]"; mes "Esse elemento não é de sua natureza"; close;}
 
