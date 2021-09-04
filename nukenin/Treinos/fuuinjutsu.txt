@@ -1,4 +1,4 @@
-lhz_dun02,28,237,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
+lhz_dun02,28,236,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 
 	mes "[Fuuinjutsu Básico]";
 	mes "Olá "+strcharinfo(0)+", sou professor de fuuinjutsu escolha qual habilidade você gostaria de aprender.";
@@ -1022,7 +1022,7 @@ lhz_dun02,23,212,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 	}
 	}
 	mes "[Fuuinjutsu Intermediário]"; 
-	mes "Você precisa ter nível 500 ou superior."; 
+	mes "	"; 
 	close;
 OnInit:
 	waitingroom "[Fuuinjutsu Intermediario]",0;

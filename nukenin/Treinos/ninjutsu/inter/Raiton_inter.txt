@@ -488,7 +488,7 @@ OnInit:
 		
 }
 
-lhz_dun02,28,216,5	script	Raiton Básico	1_m_innkeeper,{
+lhz_dun02,31,238,5	script	Raiton Básico	1_m_innkeeper,{
 
 if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua natureza"; close;}
 

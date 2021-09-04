@@ -488,7 +488,7 @@ OnInit:
 		
 }
 
-lhz_dun02,33,217,5	script	Fuuton Básico	1_m_04,{
+lhz_dun02,33,236,5	script	Fuuton Básico	1_m_04,{
 
 if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua natureza"; close;}
 

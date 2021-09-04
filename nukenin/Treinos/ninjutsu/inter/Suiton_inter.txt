@@ -393,7 +393,7 @@ OnInit:
 		
 }
 
-lhz_dun02,33,220,5	script	Suiton Básico	1_m_hof,{
+lhz_dun02,21,238,5	script	Suiton Básico	1_m_hof,{
 
 if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua natureza"; close;}
 
