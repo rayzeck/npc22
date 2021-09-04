@@ -11,11 +11,7 @@ payon,189,179,5	script	Chakra Hoshutsu	1_m_pastor,{
 	.@SkillId = 267;
 	.@idquest = 6000;
 
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
 if(Class < 4008) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
@@ -195,11 +191,7 @@ payon,192,176,5	script	Daichiwari	1_m_pastor,{
 	.@SkillId = 2323;
 	.@idquest = 6001;
 
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
 if(Class < 4008) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
@@ -379,11 +371,7 @@ payon,201,175,5	script	Kurosukatto	1_m_pastor,{
 	.@SkillId = 253;
 	.@idquest = 6002;
 
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
 if(Class < 4008) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
@@ -562,11 +550,7 @@ payon,200,185,5	script	Konoha Renpuu	1_m_pastor,{
 	.@SkillId = 415;
 	.@idquest = 6003;
 
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
 if(Class < 4008) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 	
 if(getskilllv(.@SkillId) > 0){
@@ -1096,11 +1080,7 @@ payon,186,182,5	script	Chakura Bakuhatsu	1_m_pastor,{
 	.@SkillId = 2017;
 	.@idquest = 6006;
 
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}	
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }	
 if(Class < 4008) {  mes "[Taijutsu Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){

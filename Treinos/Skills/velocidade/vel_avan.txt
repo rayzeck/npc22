@@ -549,11 +549,7 @@ payon,178,178,5	script	Dai Shunshin	1_f_02,{
 	.@SkillId = 529;
 	.@idquest = 6034;
 	
-if(BaseLevel < 999){ 
-	mes .@npc$; 
-	mes "Você não atingiu nível o suficiente para isto!"; 
-	close;
-}
+if (BaseLevel < 999 || Class < 4008) { mes "Você precisa ser nível máximo."; close; }
 if(Class < 4008) {  mes "[Velocidade Avançado]";  mes "Você precisa ser Jounin.";  close; }
 
 if(getskilllv(.@SkillId) > 0){
