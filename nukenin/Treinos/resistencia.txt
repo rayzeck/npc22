@@ -12,7 +12,7 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(checkquest(4100) == 1) goto 1_go;
 		if(Kaminohogo == 1) goto 1_delete;
 		if(skill_basica >= 9) { mes "[Resistência Básico]"; mes "Você já aprendeu todas skills básicos, esse é o limite"; close; }
-//		if(resis_basico != 1) {  mes .@npc$; mes "Você precisa estudar Resistência Básica antes de aprender essa habilidade."; close;}
+		if(resis_basico != 1) {  mes .@npc$; mes "Você precisa estudar Resistência Básica antes de aprender essa habilidade."; close;}
 		
 		//========================================================================
 		//	MENU
