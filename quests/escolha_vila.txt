@@ -73,6 +73,7 @@ force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
 						mes "[^3131FFNaruto MMORPG Online^000000]";
 						mes "Ah, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
 						close2;
+						atcommand "@reset";
 						warp "prt_in",92,66;
 						savepoint "prt_in",92,66;
 						end;
@@ -101,6 +102,7 @@ force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
 		mes "^008000[ Naruto MMORPG Online ]^000000";
 		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é de Konoha, Vá para a academia estudar, nada de matar aula isso é errado!";
 		close2;
+		atcommand "@reset";
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
@@ -173,6 +175,7 @@ force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
 							mes "[^3131FFNaruto MMORPG Online^000000]";
 							mes "Ah, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
 							close2;
+							atcommand "@reset";
 							warp "prt_in",92,66;
 							savepoint "prt_in",92,66;
 							end;
@@ -201,6 +204,7 @@ force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
 		mes "^008000[ Kazekage ]^000000";
 		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Suna, Vá para a academia estudar, nada de matar aula isso é errado!";
 		close2;
+		atcommand "@reset";
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
@@ -280,6 +284,7 @@ reuniao,61,36,5	script	Mizukage#1	4_f_babayaga,{
 							mes "[Mizukage]";
 							mes "Já ia me esquecendo, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
 							close2;
+							atcommand "@reset";
 							warp "prt_in",92,66;
 							savepoint "prt_in",92,66;
 							end;
@@ -308,6 +313,7 @@ reuniao,61,36,5	script	Mizukage#1	4_f_babayaga,{
 		mes "^008000[ Mizukage ]^000000";
 		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Névoa, Vá para a academia estudar, nada de matar aula isso é errado!";
 		close2;
+		atcommand "@reset";
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
@@ -380,6 +386,7 @@ force_1-1,31,26,5	script	Raikage#1	870,{
 							mes "[^3131FFNaruto MMORPG Online^000000]";
 							mes "Já ia me esquecendo, como todo ninja você precisa passar pela academia, você agora é um estudante e deverá se formar na academia e se tornar genin.";
 							close2;
+							atcommand "@reset";
 							warp "prt_in",92,66;
 							savepoint "prt_in",92,66;
 							end;
@@ -408,6 +415,7 @@ force_1-1,31,26,5	script	Raikage#1	870,{
 		mes "^008000[ Raikage ]^000000";
 		mes "Olá!^3131FF" + strcharinfo( 0 ) + "^000000! Vejo que você já é da Nuvem, Vá para a academia estudar, nada de matar aula, se pegar vocÊ matando aula te esmago";
 		close2;
+		atcommand "@reset";
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
