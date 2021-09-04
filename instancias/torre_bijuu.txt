@@ -1,4 +1,4 @@
-dali02,63,129,0	script	Torre Bijuu	406,{
+dali02,110,94,0	script	Torre Bijuu	406,{
 
 	set .@party_id,getcharid(1);
 	set .@md_name$,"Torre Bijuu";
