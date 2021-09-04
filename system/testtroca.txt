@@ -69,9 +69,9 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 		//Bandana Nukenin
 		if(countitem(31226) == 1){ delitem 31226,1; }
 		//Setando Vila
-		if(#suna)   {  set #suna,0;  set #konoha,1; savepoint "hospital",55,62; if (Class == 2) {atcommand "@job 1";} if (Class == 8) {atcommand "@job 7";} if (Class == 4009) {atcommand "@job 4008";}  goto escolhabandana1; }
-		if(#nevoa)  {  set #nevoa,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 3) {atcommand "@job 1";} if (Class == 9) {atcommand "@job 7";} if (Class == 4010) {atcommand "@job 4008";}  goto escolhabandana1; }
-		if(#nuvem)  {  set #nuvem,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 4) {atcommand "@job 1";} if (Class == 10) {atcommand "@job 7";} if (Class == 4011) {atcommand "@job 4008";} goto escolhabandana1; }
+		if(#suna)   {  set #suna,0;  set #konoha,1; savepoint "hospital",55,62; if (Class == 2) {atcommand "#job "+strcharinfo(0)+" 1";} if (Class == 8) {atcommand "#job "+strcharinfo(0)+" 7";} if (Class == 4009) {atcommand "#job "+strcharinfo(0)+" 4008";}  goto escolhabandana1; }
+		if(#nevoa)  {  set #nevoa,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 3) {atcommand "#job "+strcharinfo(0)+" 1";} if (Class == 9) {atcommand "#job "+strcharinfo(0)+" 7";} if (Class == 4010) {atcommand "#job "+strcharinfo(0)+" 4008";}  goto escolhabandana1; }
+		if(#nuvem)  {  set #nuvem,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 4) {atcommand "#job "+strcharinfo(0)+" 1";} if (Class == 10) {atcommand "#job "+strcharinfo(0)+" 7";} if (Class == 4011) {atcommand "#job "+strcharinfo(0)+" 4008";} goto escolhabandana1; }
 		if(nukenin){
 			mes "[Troca de Vila]";
 			mes "Você é um Nukenin,";
@@ -191,9 +191,9 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 		//Bandana Nukenin
 		if(countitem(31226) == 1){ delitem 31226,1; }
 		//Setando Vila
-		if(#konoha) {  set #konoha,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 1) {atcommand "@job 2";} if (Class == 7) {atcommand "@job 8";} if (Class == 4008) {atcommand "@job 4009";} goto escolhabandana2; }
-		if(#nevoa)  {  set #nevoa,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 3) {atcommand "@job 2";} if (Class == 9)  {atcommand "@job 8";} if (Class == 4010) {atcommand "@job 4009";} goto escolhabandana2; }
-		if(#nuvem)  {  set #nuvem,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 4) {atcommand "@job 2";} if (Class == 10) {atcommand "@job 8";} if (Class == 4011) {atcommand "@job 4009";} goto escolhabandana2; }
+		if(#konoha) {  set #konoha,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 1) {atcommand "#job "+strcharinfo(0)+" 2";} if (Class == 7) {atcommand "#job "+strcharinfo(0)+" 8";} if (Class == 4008) {atcommand "#job "+strcharinfo(0)+" 4009";} goto escolhabandana2; }
+		if(#nevoa)  {  set #nevoa,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 3) {atcommand "#job "+strcharinfo(0)+" 2";} if (Class == 9)  {atcommand "#job "+strcharinfo(0)+" 8";} if (Class == 4010) {atcommand "#job "+strcharinfo(0)+" 4009";} goto escolhabandana2; }
+		if(#nuvem)  {  set #nuvem,0; set #suna,1; savepoint "hospital2",55,62; if (Class == 4) {atcommand "#job "+strcharinfo(0)+" 2";} if (Class == 10) {atcommand "#job "+strcharinfo(0)+" 8";} if (Class == 4011) {atcommand "#job "+strcharinfo(0)+" 4009";} goto escolhabandana2; }
 		if(nukenin){
 			mes "[Troca de Vila]";
 			mes "Você é um Nukenin,";
@@ -207,7 +207,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 					set #suna,1;
 					savepoint "hospita2",55,62;
 					delitem 1320,1;
-					atcommand "@job 2";
+					atcommand "#job "+strcharinfo(0)+" 2";
 					goto escolhabandana2;
 				break;
 				case 2:
@@ -313,9 +313,9 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 		//Bandana Nukenin
 		if(countitem(31226) == 1){ delitem 31226,1; }
 		//Setando Vila
-		if(#suna)   {  set #suna,0;  set #nevoa,1; savepoint "hospital3",55,62; if (Class == 2) {atcommand "@job 3";} if (Class == 8) {atcommand "@job 9";} if (Class == 4009) {atcommand "@job 4010";}  goto escolhabandana3; }
-		if(#konoha)  {  set #konoha,0; set #nevoa,1; savepoint "hospital3",55,62; if (Class == 1) {atcommand "@job 3";} if (Class == 7) {atcommand "@job 9";} if (Class == 4008) {atcommand "@job 4010";}  goto escolhabandana3; }
-		if(#nuvem)  {  set #nuvem,0; set #nevoa,1; savepoint "hospital3",55,62; if (Class == 4) {atcommand "@job 3";} if (Class == 10) {atcommand "@job 9";} if (Class == 4011) {atcommand "@job 4010";} goto escolhabandana3; }
+		if(#suna)   {  set #suna,0;  set #nevoa,1; savepoint "hospital3",55,62; if (Class == 2) {atcommand "#job "+strcharinfo(0)+" 3"} if (Class == 8) {atcommand "#job "+strcharinfo(0)+" 9";} if (Class == 4009) {atcommand "#job "+strcharinfo(0)+" 4010";}  goto escolhabandana3; }
+		if(#konoha)  {  set #konoha,0; set #nevoa,1; savepoint "hospital3",55,62; if (Class == 1) {atcommand "#job "+strcharinfo(0)+" 3"} if (Class == 7) {atcommand "#job "+strcharinfo(0)+" 9";} if (Class == 4008) {atcommand "#job "+strcharinfo(0)+" 4010";}  goto escolhabandana3; }
+		if(#nuvem)  {  set #nuvem,0; set #nevoa,1; savepoint "hospital3",55,62; if (Class == 4) {atcommand "#job "+strcharinfo(0)+" 3"} if (Class == 10) {atcommand "#job "+strcharinfo(0)+" 9";} if (Class == 4011) {atcommand "#job "+strcharinfo(0)+" 4010";} goto escolhabandana3; }
 		if(nukenin){
 			mes "[Troca de Vila]";
 			mes "Você é um Nukenin,";
@@ -329,7 +329,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 					set #nevoa,1;
 					savepoint "hospital3",55,62;
 					delitem 1320,1;
-					atcommand "@job 3";
+					atcommand "#job "+strcharinfo(0)+" 3";
 					goto escolhabandana3;
 				break;
 				case 2:
@@ -435,9 +435,9 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 		//Bandana Nukenin
 		if(countitem(31226) == 1){ delitem 31226,1; }
 		//Setando Vila
-		if(#suna)   {  set #suna,0;  set #nuvem,1; savepoint "hospital4",55,62; if (Class == 2) {atcommand "@job 4";} if (Class == 8) {atcommand "@job 10";} if (Class == 4009) {atcommand "@job 4011";}  goto escolhabandana4; }
-		if(#nevoa)  {  set #nevoa,0; set #nuvem,1; savepoint "hospital4",55,62; if (Class == 3) {atcommand "@job 4";} if (Class == 9) {atcommand "@job 10";} if (Class == 4010) {atcommand "@job 4011";}  goto escolhabandana4; }
-		if(#konoha)  {  set #konoha,0; set #nuvem,1; savepoint "hospital4",55,62; if (Class == 1) {atcommand "@job 4";} if (Class == 7) {atcommand "@job 10";} if (Class == 4008) {atcommand "@job 4011";} goto escolhabandana4; }
+		if(#suna)   {  set #suna,0;  set #nuvem,1; savepoint "hospital4",55,62; if (Class == 2) {atcommand "#job "+strcharinfo(0)+" 4";} if (Class == 8) {atcommand "#job "+strcharinfo(0)+" 10";} if (Class == 4009) {atcommand "#job "+strcharinfo(0)+" 4011";}  goto escolhabandana4; }
+		if(#nevoa)  {  set #nevoa,0; set #nuvem,1; savepoint "hospital4",55,62; if (Class == 3) {atcommand "#job "+strcharinfo(0)+" 4";} if (Class == 9) {atcommand "#job "+strcharinfo(0)+" 10";} if (Class == 4010) {atcommand "#job "+strcharinfo(0)+" 4011";}  goto escolhabandana4; }
+		if(#konoha)  {  set #konoha,0; set #nuvem,1; savepoint "hospital4",55,62; if (Class == 1) {atcommand "#job "+strcharinfo(0)+" 4";} if (Class == 7) {atcommand "#job "+strcharinfo(0)+" 10";} if (Class == 4008) {atcommand "#job "+strcharinfo(0)+" 4011";} goto escolhabandana4; }
 		if(nukenin){
 			mes "[Troca de Vila]";
 			mes "Você é um Nukenin,";
@@ -450,7 +450,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 					set #nukenin,0;
 					set #nuvem,1;
 					delitem 1320,1;
-					atcommand "@job 4";
+					atcommand "#job "+strcharinfo(0)+" 4";
 					savepoint "hospita4",55,62;
 					goto escolhabandana4;
 				break;
@@ -565,7 +565,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 				set nukenin,1;
 				savepoint "lou_in02",242,167;
 				if(Class == 1 || Class == 7 || Class == 4008){
-					atcommand "@job 4019";
+					atcommand "#job "+strcharinfo(0)+" 4019";
 				}
 				mes "[Troca de Vila]";
 				mes "Você sera retirado do servidor para operação ser concluída.";
@@ -579,7 +579,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 				set nukenin,1;
 				savepoint "lou_in02",242,167;
 				if(Class == 2 || Class == 8 || Class == 4009){
-					atcommand "@job 4019";
+					atcommand "#job "+strcharinfo(0)+" 4019";
 				}
 				mes "[Troca de Vila]";
 				mes "Você sera retirado do servidor para operação ser concluída.";
@@ -593,7 +593,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 				set nukenin,1;
 				savepoint "lou_in02",242,167;
 				if(Class == 3 || Class == 9 || Class == 4010){
-					atcommand "@job 4019";
+					atcommand "#job "+strcharinfo(0)+" 4019";
 				}
 				mes "[Troca de Vila]";
 				mes "Você sera retirado do servidor para operação ser concluída.";
@@ -607,7 +607,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 				set nukenin,1;
 				savepoint "lou_in02",242,167;
 				if(Class == 4 || Class == 10 || Class == 4011){
-					atcommand "@job 4019";
+					atcommand "#job "+strcharinfo(0)+" 4019";
 				}
 				mes "[Troca de Vila]";
 				mes "Você sera retirado do servidor para operação ser concluída.";
