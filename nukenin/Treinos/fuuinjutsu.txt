@@ -1022,7 +1022,7 @@ lhz_dun02,33,217,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 	}
 	}
 	mes "[Fuuinjutsu Intermediário]"; 
-	mes "	"; 
+	mes "Você precisa ter nível 500 ou superior!"; 
 	close;
 OnInit:
 	waitingroom "[Fuuinjutsu Intermediario]",0;

@@ -5,7 +5,7 @@ if(quest_basic_inicio != 6) { mes "[Troca de Vila]"; mes "Termine o Tutorial"; c
 if(countitem(30060) || countitem(30061) || countitem(30062) || countitem(30063) ||
    countitem(30065) || countitem(30066) || countitem(30067) || countitem(30068) || countitem(30069) || countitem(30070) || countitem(30071) || countitem(30072) ||
    countitem(30082) || countitem(30083) || countitem(30084) || countitem(30085) ||
-   countitem(30086)) {
+   countitem(30086) || countitem(30081) || countitem(31224) {
 
 mes "[Troca de Vila]";
 mes "Você precisa entregar seu cargo antes de trocar de vila.";
@@ -21,7 +21,7 @@ close;
 
 }
 
-if(#konoha || #suna || #nevoa || #nuvem) { goto trocagratis; }
+if(#konoha || #suna || #nevoa || #nuvem || #nukenin) { goto trocagratis; }
 
 if(countitem(7006) < 1){
 mes "[Troca de Vila]";
@@ -33,7 +33,7 @@ close;
 trocagratis:
 mes "[Troca de Vila]";
 mes "Escolha qual a vilas você gostaria de ir.";
-switch(select("- Konoha:- Suna:- Névoa:- Nuvem")) {
+switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 	case 1:
 		next;
 		mes "[Troca de Vila]";
@@ -41,37 +41,90 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem")) {
 		if(select("- Sim:- Não") == 2) close;
 	
 		if(#konoha) { mes "[Troca de Vila]"; mes "Sua conta já é dessa vila"; close; }
-		
+		//Bandanas Konoha
 		if(countitem(30000) == 1) { delitem 30000,1; }
 		if(countitem(30001) == 1) { delitem 30001,1; }
 		if(countitem(30002) == 1) { delitem 30002,1; }
 		if(countitem(30003) == 1) { delitem 30003,1; }
 		if(countitem(30004) == 1) { delitem 30004,1; }
 		if(countitem(30005) == 1) { delitem 30005,1; }
-	
+		//Bandanas Suna
 		if(countitem(30010) == 1) { delitem 30010,1; }
 		if(countitem(30011) == 1) { delitem 30011,1; }
 		if(countitem(30012) == 1) { delitem 30012,1; }
 		if(countitem(30013) == 1) { delitem 30013,1; }
 		if(countitem(30014) == 1) { delitem 30014,1; }
 		if(countitem(30015) == 1) { delitem 30015,1; }
-	
+		//Bandanas Névoa
 		if(countitem(30020) == 1) { delitem 30020,1; }
 		if(countitem(30021) == 1) { delitem 30021,1; }
 		if(countitem(30022) == 1) { delitem 30022,1; }
 		if(countitem(30023) == 1) { delitem 30023,1; }
 		if(countitem(30024) == 1) { delitem 30024,1; }
 		if(countitem(30025) == 1) { delitem 30025,1; }
-	
+		//Bandanas Nuvem
 		if(countitem(30030) == 1) { delitem 30030,1; }
 		if(countitem(30031) == 1) { delitem 30031,1; }
 		if(countitem(30032) == 1) { delitem 30032,1; }
 		if(countitem(30033) == 1) { delitem 30033,1; }
 		if(countitem(30034) == 1) { delitem 30034,1; }
 		if(countitem(30035) == 1) { delitem 30035,1; }
-		if(#suna)   {  set #suna,0;  set #konoha,1; savepoint "hospital",55,62; if (Class == 2) {atcommand "@job 1";} if (Class == 8) {atcommand "@job 7";} if (Class == 4009) {atcommand "@job 4008";}  goto escolhabandana1; }
-		if(#nevoa)  {  set #nevoa,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 3) {atcommand "@job 1";} if (Class == 9) {atcommand "@job 7";} if (Class == 4010) {atcommand "@job 4008";}  goto escolhabandana1; }
-		if(#nuvem)  {  set #nuvem,0; set #konoha,1; savepoint "hospital",55,62; if (Class == 4) {atcommand "@job 1";} if (Class == 10) {atcommand "@job 7";} if (Class == 4011) {atcommand "@job 4008";} goto escolhabandana1; }
+		//Bandana Nukenin
+		if(countitem(31226) == 1){ delitem 31226,1; }
+		//Setando Vila
+		if(#suna){
+			set #suna,0;
+			set #konoha,1;
+			savepoint "hospital",55,62;
+			if (Class == 2){
+				atcommand "@job 1";
+			} 
+			if (Class == 8){
+				atcommand "@job 7";
+			} 
+			if(Class == 4009){
+				atcommand "@job 4008";
+			} 
+			goto escolhabandana1;
+		}
+		if(#nevoa){
+			set #nevoa,0;
+			set #konoha,1;
+			savepoint "hospital",55,62;
+			if(Class == 3){
+				atcommand "@job 1";
+			} 
+			if(Class == 9){
+				atcommand "@job 7";
+			} 
+			if(Class == 4010){
+				atcommand "@job 4008";
+			}
+			goto escolhabandana1;
+		}
+		if(#nuvem){
+			set #nuvem,0;
+			set #konoha,1;
+			savepoint "hospital",55,62;
+			if(Class == 4){
+				atcommand "@job 1";
+			}
+			if(Class == 10){
+				atcommand "@job 7";
+			} 
+			if(Class == 4011){
+				atcommand "@job 4008";
+			}
+			goto escolhabandana1;
+			}
+		if(#nukenin){
+			set #nukenin,0;
+			set #konoha,1;
+			savepoint "hospital",55,62;
+			if(Class == 4019){
+				atcommand "job 1";
+			}
+		}
 		
 		escolhabandana1:
 		next;
