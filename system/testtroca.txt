@@ -528,7 +528,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 			
 			if(#nukenin)  { mes "[Troca de Vila]"; mes "Sua conta já é dessa vila"; close; }
 			
-			i//Bandanas Konoha
+			//Bandanas Konoha
 			if(countitem(30000) == 1) { delitem 30000,1; }
 			if(countitem(30001) == 1) { delitem 30001,1; }
 			if(countitem(30002) == 1) { delitem 30002,1; }
