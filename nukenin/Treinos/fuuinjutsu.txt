@@ -450,7 +450,7 @@ OnInit:
 lhz_dun02,23,212,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 
 //	if(Class == 7 || Class == 8 || Class == 9 || Class == 10 || Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
-	if(BaseLevel > 600) {	
+	if(BaseLevel >= 500) {	
 	mes "[Fuuinjutsu Intermediário]";
 	mes "Olá "+strcharinfo(0)+", sou professor de Fuuinjutsu escolha qual habilidade você gostaria de aprender.";
 	switch( select( "- Benção:- Espirito Ninja:- Fuuka Houin:- Pericia Ninja:- Kanchi Taipu:- Regen no Jutsu" ) ){
@@ -1022,7 +1022,7 @@ lhz_dun02,23,212,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 	}
 	}
 	mes "[Fuuinjutsu Intermediário]"; 
-	mes "Você precisa ter nível 600 ou superior."; 
+	mes "Você precisa ter nível 500 ou superior."; 
 	close;
 OnInit:
 	waitingroom "[Fuuinjutsu Intermediario]",0;
