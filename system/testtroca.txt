@@ -34,7 +34,7 @@ close;
 trocagratis:
 mes "[Troca de Vila]";
 mes "Escolha qual a vilas você gostaria de ir.";
-switch(select("- Konoha:- Suna:- Névoa:- Nuvem")) {
+switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 	case 1:
 		next;
 		mes "[Troca de Vila]";
