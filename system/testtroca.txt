@@ -81,7 +81,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 			next;
 			switch(select("Sim: Não")){
 				case 1:
-					set #nukenin,0;
+					set nukenin,0;
 					set #konoha,1;
 					savepoint "hospital",55,62;
 					delitem 1320,1;
@@ -203,9 +203,9 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 			next;
 			switch(select("Sim: Não")){
 				case 1:
-					set #nukenin,0;
+					set nukenin,0;
 					set #suna,1;
-					savepoint "hospita2",55,62;
+					savepoint "hospital2",55,62;
 					delitem 1320,1;
 					atcommand "#job "+strcharinfo(0)+" 2";
 					goto escolhabandana2;
@@ -325,7 +325,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 			next;
 			switch(select("Sim: Não")){
 				case 1:
-					set #nukenin,0;
+					set nukenin,0;
 					set #nevoa,1;
 					savepoint "hospital3",55,62;
 					delitem 1320,1;
@@ -447,7 +447,7 @@ switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
 			next;
 			switch(select("Sim: Não")){
 				case 1:
-					set #nukenin,0;
+					set nukenin,0;
 					set #nuvem,1;
 					delitem 1320,1;
 					atcommand "#job "+strcharinfo(0)+" 4";
