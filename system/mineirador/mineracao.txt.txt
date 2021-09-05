@@ -64,6 +64,6 @@
 }
 
 //Duplique nos locais que gostaria que tivesse a pedra.
-prontera,150,175,4	duplicate(pedra_main)	#RAG-prt01	25104
-prontera,151,177,4	duplicate(pedra_main)	#RAG-prt02	25104
-prontera,153,174,4	duplicate(pedra_main)	#RAG-prt03	25104
+prontera,150,175,4	duplicate(pedra_main)	#RAG-prt01	1010
+prontera,151,177,4	duplicate(pedra_main)	#RAG-prt02	1010
+prontera,153,174,4	duplicate(pedra_main)	#RAG-prt03	1010
