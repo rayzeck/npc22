@@ -13,8 +13,8 @@ if(countitem(6006)) {
 	if(resis_basico == 1) {mes "Você não pode treinar Genjutsu sendo tanker!"; close;}
 	if (resis_intermediario == 1) {mes "Você não pode treinar Genjutsu sendo tanker!"; close;}
 	if (resis_avan == 1) {mes "Você não pode treinar Genjutsu sendo tanker!"; close;}
-	if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
-	if(Class < 4008 || Class < 4009 || Class < 4011) { mes "Você precisa ser Jounin.";  close; }
+	if (BaseLevel < 700) { mes "Você precisa ser nível máximo."; close; }
+	if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 	mes "Olá jovem, vejo que você é um treinador de genjutsu. Gostaria de evoluir ele ainda mais para se tornar um mestre genjutsu avançado?";
 	if(select("- Sim:- Não") == 2) { close; }
 		set gen_avan,1;

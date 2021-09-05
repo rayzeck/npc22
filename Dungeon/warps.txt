@@ -1,0 +1,91 @@
+// ==================================================================================================================================
+// ==================================================================================================================================
+// =	Feito Por: ThordenZ																											=
+// ==================================================================================================================================	
+// =	Contato: thzinlol@gmail.com																									=
+// ==================================================================================================================================
+// =  									  		___________																			=
+// =									  		|         |       /¨¨¨¨\															=
+// =									  		|___   ___|      /      \                                                           =
+// =									       	   |   |        |   /\   |                                                          =
+// =	 									 	   |   |        |   \/   |                                                          =
+// =											  _|   |_        \      /                                                           =
+// =											  |_____|		  \____/															=            
+// ==================================================================================================================================
+// ==================================================================================================================================
+
+
+// Entrada da Dungeon
+mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
+	
+	disguise 734;
+	
+	// Variaveis
+	set .@npcName$, "^FF0000[Vigia de Konoha]^000000";
+	
+	// Inicio Script
+	mes .@npcName$;
+	mes "Hey! O que você está fazendo aqui?";
+	mes "O Hokage me mandou vigiar esta entrada para que tenhamos o controle de quem entra ou sai.";
+	mes "E devo vigiar o Orochimaru...";
+	next;
+	mes .@npcName$;
+	mes "Mas ja fazem dias que eu não vejo o Orochimaru,";
+	mes "você pode investigar para mim?";
+	switch(select("- Sim:- Não")){
+		case 1:
+			next;
+			mes .@npcName$;
+			mes "Ok,";
+			mes "mas para entrar você deve ter a ^0000FFChave de Acesso do Laboratório^000000.";
+			menu "Eu tenho a Chave de Acesso.", H_Chave, "Como eu consigo a chave?", S_Chave;
+			
+			// Possui a Chave de Acesso
+			H_Chave:
+				if(countitem(19087)>=1){
+					mes .@npcName$;
+					mes "Você possui a chave, então conseguirá entrar!";
+					mes "Mas tenha muito cuidado, o Orochimaru tem muitos guardas pessoais";
+					mes "que são muito bem treinados!";
+					mes "Se você morrer terá que conseguir uma nova ^0000FFChave de Acesso do Laboratório^000000!";
+					next;
+					mes .@npcName$;
+					mes "Você Deseja entrar agora?";
+					switch(select("- Sim:- Não")){
+						case 1:
+							mes .@npcName$;
+							mes "Tudo bem,";
+							mes "Boa sorte jovem ninja!";
+							undisguise;
+							warp "iz_dun00",192,139;
+						break;
+						case 2:
+							mes .@npcName$;
+							mes "Ok, quando se sentir pronto é só falar comigo!";
+						break;
+					}
+				} else{
+					mes .@npcName$;
+					mes "Você ainda não possui a Chave de Acesso do Laboratório!";
+				}
+				close;
+			// Como achar a chave
+			S_Chave:
+				mes .@npcName$;
+				mes "Para adquirir a pedra é necessário matar Genin!";
+				mes "Esses genin são os únicos que possuem a chave, pois Orochimaru sempre tenta recrutar um genin para fazer seus experimentos.";
+				next;
+				close;
+		break;
+		case 2:
+			next;
+			mes .@npcName$;
+			mes "Ok,";
+			mes "Então saia daqui antes que eu te prenda!";
+			close;
+		break;
+	}
+	
+	
+	end;
+}
