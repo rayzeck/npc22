@@ -19,7 +19,7 @@
 mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 	
 	//disguise 734;
-	setnpcdisplay "Entrada Suspeita",796;
+	setnpcdisplay "Entrada Suspeita",734;
 	
 	// Variaveis
 	set .@npcName$, "^FF0000[Vigia de Konoha]^000000";
