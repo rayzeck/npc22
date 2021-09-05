@@ -19,7 +19,7 @@
 	// Possiveis recompensas. (aleatório)
 	switch(rand(8))
 	{
-		default: set @reward,0; break; 	//valor de falha (não adicionar id aqui)
+		default: set @reward,0; break; 	//valor de falha (não adicionar ID)
 		case 1:	set @reward,501; break; //recompensa 1
 		case 2:	set @reward,501; break; //recompensa 2
 		case 3:	set @reward,501; break; //recompensa 3
