@@ -7,8 +7,8 @@ if(countitem(6011)) {
 
 	if (limite_avan == 1) {mes "Você já chegou a um treinamento avançado, esse é o limite."; close;}
 	if (vel_avan == 1) {mes "Já não há mais nada que posso lhe ensinar."; close;}
-	if (BaseLevel < 700 || Class < 4019) { mes "Você precisa ser nível máximo."; close; }
-	if(Class < 4008 || Class < 4009 || Class < 4011) { mes "Você precisa ser Jounin.";  close; }
+	if (BaseLevel < 700) { mes "Você precisa ser nível máximo."; close; }
+	if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 	mes "Olá jovem, vejo que você é um treinador de velocidade. Gostaria de evoluir ele ainda mais para se tornar um mestre velocidade avançado?";
 	if(select("- Sim:- Não") == 2) { close; }
 		set vel_avan,1;
