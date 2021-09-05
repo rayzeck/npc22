@@ -3,7 +3,7 @@
 	// === configurações básicas
 	set @tempo_main,1;	//tempo que irá nascer aleatóriamente no mapa (em milisegundos). (padrão: 20min = 60000ms)
 	set @Tempo,20; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrão 20 segundos.)
-	set @equip,6010;	//equipamento necessário
+	set @equip,1201;	//equipamento necessário
 	set @item,582; 		//item de recompensa.
 	
 	//Checks
