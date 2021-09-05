@@ -18,7 +18,7 @@
 // Entrada da Dungeon
 mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 	
-	atcommand "@disguise 734";
+	disguise 734;
 	
 	// Variaveis
 	set .@npcName$, "^FF0000[Vigia de Konoha]^000000";
