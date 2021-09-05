@@ -44,10 +44,11 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 			// Possui a Chave de Acesso
 			H_Chave:
 				if(countitem(19087)>=1){
+					next;
 					mes .@npcName$;
 					mes "Você possui a chave, então conseguirá entrar!";
-					mes "Mas tenha muito cuidado, o Orochimaru tem muitos guardas pessoais";
-					mes "que são muito bem treinados!";
+					mes "Mas tenha muito cuidado, o Orochimaru tem muitos guardas pessoais que são muito bem treinados!";
+					next;
 					mes "Se você morrer terá que conseguir uma nova ^0000FFChave de Acesso do Laboratório^000000!";
 					next;
 					mes .@npcName$;
