@@ -57,7 +57,7 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 							mes .@npcName$;
 							mes "Tudo bem,";
 							mes "Boa sorte jovem ninja!";
-							undisguise;
+							setnpcdisplay "Entrada Suspeita",550;
 							warp "iz_dun00",192,139;
 						break;
 						case 2:
@@ -69,6 +69,7 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 					mes .@npcName$;
 					mes "Você ainda não possui a Chave de Acesso do Laboratório!";
 				}
+				setnpcdisplay "Entrada Suspeita",550;
 				close;
 			// Como achar a chave
 			S_Chave:
@@ -76,6 +77,7 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 				mes "Para adquirir a pedra é necessário matar Genin!";
 				mes "Esses genin são os únicos que possuem a chave, pois Orochimaru sempre tenta recrutar um genin para fazer seus experimentos.";
 				next;
+				setnpcdisplay "Entrada Suspeita",550;
 				close;
 		break;
 		case 2:
@@ -83,6 +85,7 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 			mes .@npcName$;
 			mes "Ok,";
 			mes "Então saia daqui antes que eu te prenda!";
+			setnpcdisplay "Entrada Suspeita",550;
 			close;
 		break;
 	}
