@@ -61,6 +61,7 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 							mes "Boa sorte jovem ninja!";
 							setnpcdisplay "Entrada Suspeita",550;
 							warp "iz_dun00",192,139;
+							delitem 19087,1;
 						break;
 						case 2:
 							next;
