@@ -70,8 +70,10 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 						break;
 					}
 				} else{
+					next;
 					mes .@npcName$;
 					mes "Você ainda não possui a Chave de Acesso do Laboratório!";
+					break;
 				}
 				setnpcdisplay "Entrada Suspeita",550;
 				close;
