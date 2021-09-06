@@ -14,8 +14,9 @@
 // ==================================================================================================================================
 // ==================================================================================================================================
 
-
+//
 // Entrada da Dungeon
+//
 mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 	
 	//disguise 734;
@@ -100,3 +101,133 @@ mjolnir_08,140,375,5	script	Entrada Suspeita	550,{
 	setnpcdisplay "Entrada Suspeita",550;
 	end;
 }
+
+//
+//  Quest para item necessário para ir ao Segundo Andar
+//
+iz_dun00,199,147,5	script	Cientista	402,{
+	set .@npcName$, "^FF0000[Cientista]^000000";
+	
+	mes .@npcName$;
+	mes "Hey, você!";
+	mes "O que está fazendo aqui dentro?";
+	next;
+	switch(select("É... é... estou aqui para investigar.:Não é da sua conta!")){
+		case 1:
+			mes .@npcName$;
+			mes "Então te mandaram aqui para investigar...";
+			mes "Hmm...";
+			mes "Fica tranquilo, por que eu estava esperando por alguém para me ajudar.";
+			next;
+			mes .@npcName$;
+			mes "Eu sou um dos Cientistas do Orochimaru,";
+			mes "tentei realizar testes em alguns prisioneiros dele e as coisas meio que...";
+			mes "saiu do controle, e alguns deles perderam o controle e atacam todos que tentam passar perto deles.";
+			mes "Um grupo deles roubou minha carta de acesso, agora estou preso aqui.";
+			next;
+			mes .@npcName$;
+			mes "Você poderia me ajudar a encontrar a carta de acesso...";
+			next;
+			menu "Ok, eu vou te ajudar.",K_Acess, "Desculpa, mas não posso te ajudar!",E_Quest,"Eu já consegu a Carta de Acesso.",H_Key;
+			K_Acess:
+				mes .@npcName$;
+				mes "Que ótimo!";
+				mes "Eu não sei quem do grupo roubou minha carta de acesso, mas mate eles, um deles te dará a carta.";
+				mes "Mas tenha muito cuidado, pois eu fiz experimento com um deles que se tornou incontrolavel e ele é muito forte!";
+				close;
+			E_Quest:
+				mes .@npcName$;
+				mes "Ok, então boa sorte andando por aqui!";
+				mes "Você vai precisar...";
+				mes "Ha ha Ha";
+				close;
+			H_Key:
+				mes .@npcName$;
+				mes "Eita!";
+				mes "Deixe me ver então!";
+				//ID do item por enquanto é o Jubileu!
+				if(countitem(699)>=1){
+					mes .@npcName$;
+					mes "Você realmente conseguiu!";
+					mes "Obrigado, tome aqui esse Selo.";
+					mes "Com ele você pode entrar por uma passagem secreta, que foi esquecida no tempo!";
+					delitem 699,1;
+					// ID do Osso, item provisório.
+					getitem 554,1;
+					mes "Mas não é só com ele que você consegue passar!";
+					mes "Você precisa fabricar um Amuleto com Selo que encaixe certo na passagem.";
+					close;
+				} else{
+					mes .@npcName$;
+					mes "Você não está com minha carta!";
+					mes "Eu sou uma piada pra você?";
+					next;
+					switch(select("Sim:Não, me desculpe")){
+						case 1:
+							mes .@npcName$;
+							mes "Guardas!";
+							atcommand "@monster 1313 1";
+							atcommand "@monster 1419 1";
+							atcommand "@monster 1153 1";
+							close;
+						break;
+						case 2:
+							mes .@npcName$;
+							mes "Então procure mais!";
+							close;
+						break;
+					}
+				}
+				
+				close;
+		break;
+		case 2:
+			mes .@npcName$;
+			mes "Se não é da minha conta então você terá q enfrentar meus experimentos!";
+			mes "Adeus Ninja ignorante!";
+			atcommand "@monster 1313 1";
+			atcommand "@monster 1419 1";
+			atcommand "@monster 1153 1";
+		break;
+	}
+	end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
