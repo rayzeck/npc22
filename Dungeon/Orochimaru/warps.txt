@@ -163,6 +163,12 @@ iz_dun00,199,147,5	script	Cientista	402,{
 					mes "Apenas com ele, você não consegue passar!";
 					sleep 2000;
 					mes "Você precisa fabricar um Amuleto com Selo que encaixe certo na passagem, e depois sim usar a Chave.";
+					next;
+					mes .@npcName$;
+					mes "E para fazer o Amuleto você precisa de^0000FF 10 Ferros^000000 e de^0000FF 1 Fragmento do Minério Roxo^000000.";
+					mes "Para fazer o Selo, você vai precisar de^0000FF 20 Selos Rasgados^000000.";
+					next;
+					mes "Lembrando que para mexer com cada coisa você precisa estar com a Job correta!";
 					close;
 				} else{
 					next;
@@ -186,7 +192,6 @@ iz_dun00,199,147,5	script	Cientista	402,{
 						break;
 					}
 				}
-				
 				close;
 		break;
 		case 2:
