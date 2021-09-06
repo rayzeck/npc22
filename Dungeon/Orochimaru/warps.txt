@@ -122,18 +122,21 @@ iz_dun00,199,147,5	script	Cientista	402,{
 			mes .@npcName$;
 			mes "Eu sou um dos Cientistas do Orochimaru,";
 			mes "tentei realizar testes em alguns prisioneiros dele e as coisas meio que...";
+			sleep 2000;
 			mes "saiu do controle, e alguns deles perderam o controle e atacam todos que tentam passar perto deles.";
 			mes "Um grupo deles roubou minha carta de acesso, agora estou preso aqui.";
 			next;
 			mes .@npcName$;
 			mes "Você poderia me ajudar a encontrar a carta de acesso...";
 			next;
-			menu "Ok, eu vou te ajudar.",K_Acess, "Desculpa, mas não posso te ajudar!",E_Quest,"Eu já consegu a Carta de Acesso.",H_Key;
+			menu "Ok, eu vou te ajudar.",K_Acess, "Desculpa, mas não posso te ajudar!",E_Quest,"Eu já consegui a Carta de Acesso.",H_Key;
 			K_Acess:
 				mes .@npcName$;
 				mes "Que ótimo!";
-				mes "Eu não sei quem do grupo roubou minha carta de acesso, mas mate eles, um deles te dará a carta.";
-				mes "Mas tenha muito cuidado, pois eu fiz experimento com um deles que se tornou incontrolavel e ele é muito forte!";
+				sleep 2000;
+				mes "Eu não sei quem do grupo roubou minha carta de acesso, mas mate eles, pois um deles te dará a minha carta.";
+				next;
+				mes "Mas tenha muito cuidado, pois eu fiz experimento com um deles que se tornou incontrolável e ele é muito mais forte que todos os outros!";
 				close;
 			E_Quest:
 				mes .@npcName$;
@@ -147,17 +150,22 @@ iz_dun00,199,147,5	script	Cientista	402,{
 				mes "Deixe me ver então!";
 				//ID do item por enquanto é o Jubileu!
 				if(countitem(699)>=1){
+					next;
 					mes .@npcName$;
 					mes "Você realmente conseguiu!";
 					mes "Obrigado, tome aqui esse Selo.";
-					mes "Com ele você pode entrar por uma passagem secreta, que foi esquecida no tempo!";
 					delitem 699,1;
 					// ID do Osso, item provisório.
 					getitem 554,1;
-					mes "Mas não é só com ele que você consegue passar!";
-					mes "Você precisa fabricar um Amuleto com Selo que encaixe certo na passagem.";
+					next;
+					mes "Com ele você pode entrar por uma passagem secreta, que foi esquecida no tempo...";
+					sleep 2000;					
+					mes "Apenas com ele, você não consegue passar!";
+					sleep 2000;
+					mes "Você precisa fabricar um Amuleto com Selo que encaixe certo na passagem, e depois sim usar a Chave.";
 					close;
 				} else{
+					next;
 					mes .@npcName$;
 					mes "Você não está com minha carta!";
 					mes "Eu sou uma piada pra você?";
@@ -167,7 +175,7 @@ iz_dun00,199,147,5	script	Cientista	402,{
 							mes .@npcName$;
 							mes "Guardas!";
 							atcommand "@monster 1313 1";
-							atcommand "@monster 1419 1";
+							atcommand "@monster 1449 1";
 							atcommand "@monster 1153 1";
 							close;
 						break;
@@ -186,7 +194,7 @@ iz_dun00,199,147,5	script	Cientista	402,{
 			mes "Se não é da minha conta então você terá q enfrentar meus experimentos!";
 			mes "Adeus Ninja ignorante!";
 			atcommand "@monster 1313 1";
-			atcommand "@monster 1419 1";
+			atcommand "@monster 1449 1";
 			atcommand "@monster 1153 1";
 		break;
 	}
