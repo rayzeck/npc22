@@ -198,3 +198,4 @@ kirigakure,213,44,5	duplicate(portos)	Viajante Ninja#h2-2	59
 kumogakure,148,26,5	duplicate(portos)	Viajante Ninja#h2-3	59
 sunagakure,206,70,5	duplicate(portos)	Viajante Ninja#h2-4	59
 akatsuki,225,124,5	duplicate(portos)	Viajante Ninja#h2-5	59
+lou_in02,58,182,5	duplicate(portos)	Viajante Ninja#h2-5	59
