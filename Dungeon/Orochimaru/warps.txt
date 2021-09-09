@@ -231,7 +231,7 @@ iz_dun00,39,47,5	script	Portão::trap	406,{
 	
 	if(countitem(19093)>=1){
 		setnpcdisplay "Portão",45;
-		warp "bra_dun01",53,137;
+		warp "tha_t09",53,137;
 		setnpcdisplay "Portão",406;
 		end;
 	} else{
