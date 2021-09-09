@@ -251,9 +251,10 @@ iz_dun00,39,47,5	script	Portão::trap	406,{
 		npctalk "Você não possui o Amuleto Selado!";
 		end;
 	}
-
 }
-
+//
+// Segunda Entrada Trap
+//
 iz_dun00,352,341,5	duplicate(trap)	Portão	406
 
 
