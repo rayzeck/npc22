@@ -14,6 +14,14 @@
 // ==================================================================================================================================
 // ==================================================================================================================================
 
+
+// Item Usados
+// 19087 - Chave de Acesso
+// 19091 - carta de acesso
+// 19092 - Selo
+// 19093 - Amuleto com Selo
+
+
 //
 // Entrada da Dungeon
 //
@@ -148,15 +156,15 @@ iz_dun00,199,147,5	script	Cientista	402,{
 				mes .@npcName$;
 				mes "Eita!";
 				mes "Deixe me ver então!";
-				//ID do item por enquanto é o Jubileu!
-				if(countitem(699)>=1){
+				// Com carta de acesso
+				if(countitem(19091)>=1){
 					next;
 					mes .@npcName$;
 					mes "Você realmente conseguiu!";
 					mes "Obrigado, tome aqui esse Selo.";
-					delitem 699,1;
+					delitem 19091,1;
 					// ID do Osso, item provisório.
-					getitem 554,1;
+					getitem 19092,1;
 					next;
 					mes "Com ele você pode entrar por uma passagem secreta, que foi esquecida no tempo...";
 					sleep 2000;					
@@ -233,10 +241,7 @@ iz_dun00,39,47,5	script	Portão::trap	406,{
 
 }
 
-// 19091 - carta de acesso
-// 19092 - Selo
-// 19093 - Amuleto com Selo
-prontera,352,341,5	duplicate(trap)	Portão	406
+iz_dun00,352,341,5	duplicate(trap)	Portão	406
 
 
 
