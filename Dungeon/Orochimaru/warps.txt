@@ -243,6 +243,8 @@ iz_dun00,39,47,5	script	Portão::trap	406,{
 	set .@npcName, "^0000FF[Portão]^000000";
 	
 	if(countitem(19093)>=1){
+		progressbar "^0000FF",2;
+		delitem 19093, 1;
 		warp "tha_t09",53,137;
 		end;
 	} else{
