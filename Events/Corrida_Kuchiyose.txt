@@ -77,7 +77,8 @@ if( $accessPrace == 0) {
 			next;
 			mes "[Corrida Kuchiyose]";
 			mes "Corrida Kuchiyose já acabou.";
-			achievementcomplete(110000);
+			achievementcomplete(110001);
+			achievementcomplete(240020);
 			close;
 		
 		case 2:
