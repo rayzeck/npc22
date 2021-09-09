@@ -144,8 +144,6 @@ exame,0,0,0	script	torneioinstance	-1,{
 			if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
 				if( !getmapxy( .@map$, .@x, .@y, 0, rid2name( $@partymemberaid[ .@i ] ) ) && .@map$ == .@map_killer$ ) {
 					getitem 19084, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
-		set questmade3, GetTime(8);
-		set raidon,0;
 //				getitem 732, 2, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
 					if( !.@chance )
 						getitem 19084, 1, $@partymemberaid[ .@i ];// put ID gold coin
