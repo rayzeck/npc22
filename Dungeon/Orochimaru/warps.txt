@@ -207,18 +207,36 @@ iz_dun00,199,147,5	script	Cientista	402,{
 }
 
 
+//
+//
+//
+//
+// Entrada Trap 01
+//
+iz_dun00,168,172,5	script	Portão::main	406,{
 
 
+}
 
+iz_dun00,39,47,5	script	Portão::trap	406,{
+	set .@npcName, "^0000FF[Portão]^000000";
+	
+	if(countitem(19093)>=1){
+		setnpcdisplay "Portão",45;
+		warp "bra_dun01",53,137;
+		setnpcdisplay "Portão",406;
+		end;
+	} else{
+		npctalk "Você não possui o Amuleto Selado!";
+		end;
+	}
 
+}
 
-
-
-
-
-
-
-
+// 19091 - carta de acesso
+// 19092 - Selo
+// 19093 - Amuleto com Selo
+prontera,352,341,5	duplicate(trap)	Portão	406
 
 
 

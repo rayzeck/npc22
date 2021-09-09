@@ -20,3 +20,8 @@ iz_dun00,0,0,0,0	monster	Dragão Mutante		1449,75,0,0,0
 iz_dun00,0,0,0,0	monster	Slaughter		1153,75,0,0,0
 // Boss 1º Andar
 iz_dun00,0,0,0,0	monster	Kimera		2531,1,10800000,0,0
+
+// Andar Trap
+bra_dun01,0,0,0,0	monster	Mobster		1313,100,0,0,0
+bra_dun01,0,0,0,0	monster	Dragão Mutante		1449,100,0,0,0
+bra_dun01,0,0,0,0	monster	Slaughter		1153,100,0,0,0
