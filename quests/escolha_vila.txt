@@ -108,8 +108,8 @@ force_1-1,26,31,5	script	Hokage#1	4w_f_kafra2,{
 		end;
 }
 
-//force_1-1,21,26,5	script	Kazekage#1	4_m_2ndprin1,{
-	
+/*force_1-1,21,26,5	script	Kazekage#1	4_m_2ndprin1,{
+
 	if(#konoha == 1) goto ja_e_de_outra;
 	if(#suna == 1) goto ja_e_de_suna;
 	if(#nevoa == 1) goto ja_e_de_outra;
@@ -206,7 +206,7 @@ force_1-1,26,31,5	script	Hokage#1	4w_f_kafra2,{
 		savepoint "prt_in",92,66;
 		end;
 	
-}
+}*/
 
 force_1-1,22,31,5	script	Mizukage#1	4_f_babayaga,{
 
