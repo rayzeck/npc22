@@ -390,9 +390,6 @@ if(elementokaton != 1) { mes "[Katon Intermediário]"; mes "Esse elemento não é d
 	mes "[Katon Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Katon Intermediário]",0;
-		
 }
 
 //
@@ -673,6 +670,4 @@ if(elementokaton != 1) { mes "[Katon Básico]"; mes "Esse elemento não é de sua n
 		3_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Katon Básico]",0;
 }

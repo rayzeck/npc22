@@ -760,6 +760,4 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		3_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Fuuton Básico]",0;
 }
