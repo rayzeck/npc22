@@ -1,4 +1,4 @@
-prontera,147,190,5	script	Pakkun	936,1,5,{
+konoha3,109,232,5	script	Pakkun	936,1,5,{
 	set .@gm_level, 99; // Necessary GM Level
 	set .@npc_name$, "Pakkun";
 	
