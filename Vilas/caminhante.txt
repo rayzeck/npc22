@@ -12,7 +12,7 @@
 //Envie: andar para npc: Poring Reporter
 //=====================================================
 ///////////////////////////////////////////////////////
-prontera,147,190,5	script	Poring Reporter	936,1,5,{
+prontera,147,190,5	script	Pakkun	936,1,5,{
 	set .@gm_level, 99; // Necessary GM Level
 	set .@npc_name$, "Pakkun";
 	
@@ -24,7 +24,7 @@ prontera,147,190,5	script	Poring Reporter	936,1,5,{
 
 	npcstop;
 	if (.walking != 0)
-		npctalk "Stopped walking. Tell me to \"walk\".", "", bc_self;
+		npctalk "Parei de andar. Você quer que eu ande? Apenas me diga!".", "", bc_self;
 	set .walking, 0;
 	mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 	mes "Hello, master! What are the news today?";
