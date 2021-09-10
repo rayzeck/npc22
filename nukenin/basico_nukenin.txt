@@ -3,7 +3,7 @@ mes "[^FFA500Ancião Nukenin^000000]";
 mes "Veja só, um forasteiro...";
 next;
 mes "[^FFA500Ancião Nukenin^000000]";
-mes "Eu sou o ancião nukenin, o mais velho e atual lider dessa aldeia."; //teste
+mes "Eu sou o ancião nukenin, o mais velho e atual lider dessa aldeia."; // cu cu cu
 next;
 mes "[^FFA500Ancião Nukenin^000000]";
 mes "Você parece confuso, vou te explicar o que é um nukenin";
