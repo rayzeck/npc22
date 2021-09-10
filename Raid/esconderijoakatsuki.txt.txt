@@ -192,7 +192,7 @@ OnMobsCount:
 					
 					for(set .@i,0; .@i<getarraysize($aktAID); set .@i,.@i+1)
 					{ query_sql "UPDATE `login` SET `aktcnt`=`aktcnt`+1 WHERE `account_id`="+$aktAID[.@i]+""; }					
-					getitem 901,1;
+					getitem 901,1; //definir premio
 					sleep 5000;
 					set $AKT_STATUS,0;	
 					mapwarp "pvp_n_1-5","prontera",160,178;
