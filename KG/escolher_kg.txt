@@ -1774,10 +1774,6 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 					mes "Habilidade Hidden removida com sucesso.";
 					close;
 	}
-
-	OnInit:
-	waitingroom "Habilidades Hidden",0;
-
 }
 
 bibli_02,62,43,3	duplicate(hiddens)	Habilidades Hidden#2	402
