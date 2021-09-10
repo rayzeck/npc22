@@ -314,7 +314,7 @@ force_1-1,22,31,5	script	Mizukage#1	4_f_babayaga,{
 		end;
 }
 
-force_1-1,31,26,5	script	Raikage#1	870,{
+/*force_1-1,31,26,5	script	Raikage#1	870,{
 
 	if(#konoha == 1) goto ja_e_de_outra;
 	if(#suna == 1) goto ja_e_de_outra;
@@ -411,4 +411,4 @@ force_1-1,31,26,5	script	Raikage#1	870,{
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
-}
+}*/
