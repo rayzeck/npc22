@@ -9,21 +9,12 @@
 //=====================================================
 // Name: Poring Reporter
 //
-// Description:
-// A poring reporter will spread the news about your
-// server walking randomly throughout Prontera.
-//
-// Instructions:
-// Toggle walking by whispering to NPC!
-// (To whisper the NPC, simply send a private message
-// in Ragnarok to "npc:Poring Reporter")
-// Say "walk" and it'll start walking.
-// Anything else and it'll stop as soon as possible.
+//Envie: andar para npc: Poring Reporter
 //=====================================================
 ///////////////////////////////////////////////////////
-prontera,147,190,5	script	Poring Reporter	909,{
+prontera,147,190,5	script	Poring Reporter	936,{
 	set .@gm_level, 99; // Necessary GM Level
-	set .@npc_name$, "Poring Reporter";
+	set .@npc_name$, "Pakkun";
 	
 	function NewsList;
 	
@@ -95,7 +86,7 @@ prontera,147,190,5	script	Poring Reporter	909,{
 		if (getgmlevel() < .@gm_level)
 			end;
 		
-		if (@whispervar0$ == "walk") {
+		if (@whispervar0$ == "andar") {
 			set .walking, 1;
 		} else {
 			set .walking, 0;
