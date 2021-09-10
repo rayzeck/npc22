@@ -483,8 +483,6 @@ if(elementoraiton != 1) { mes "[Raiton Intermediário]"; mes "Esse elemento não é
 	mes "[Raiton Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Raiton Intermediário]",0;
 		
 }
 
@@ -760,6 +758,4 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		3_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Raiton Básico]",0;
 }

@@ -483,8 +483,6 @@ if(elementofuuton != 1) { mes "[Fuuton Intermediário]"; mes "Esse elemento não é
 	mes "[Fuuton Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Fuuton Intermediário]",0;
 		
 }
 

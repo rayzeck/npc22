@@ -388,9 +388,6 @@ if(elementosuiton != 1) { mes "[Suiton Intermediário]"; mes "Esse elemento não é
 	mes "[Suiton Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Suiton Intermediário]",0;
-		
 }
 
 //
@@ -671,6 +668,4 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		3_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Suiton Básico]",0;
 }
