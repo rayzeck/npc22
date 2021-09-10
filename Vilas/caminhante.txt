@@ -35,7 +35,7 @@ prontera,147,190,5	script	Poring Reporter	909,{
 	if (.walking != 0)
 		npctalk "Stopped walking. Tell me to \"walk\".", "", bc_self;
 	set .walking, 0;
-	clear;
+		clear;
 	mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 	mes "Hello, master! What are the news today?";
 	menu "Show news",ShowNews, "Remove news",RemoveNews, "Register news",RegisterNews;
