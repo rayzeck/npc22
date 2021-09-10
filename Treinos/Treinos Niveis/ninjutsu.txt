@@ -60,13 +60,14 @@ if(countitem(6000)) {
 	set treinos_basicos, treinos_basicos +1;
 	close;
 
+/*
 OnInit:
 	waitingroom "",0;
 OnTimer1000:
-	setarray .@RoomDisplay$,"Aprender Ninjutsu","Evoluir Ninjutsu";
+	setarray .@RoomDisplay$,"Aprender Fuuinjutsu","Evoluir Fuuinjutsu";
 	delwaitingroom;
 	waitingroom .@RoomDisplay$[rand(0,1)],0;
-	initnpctimer;
+	initnpctimer;*/
 
 }
 
