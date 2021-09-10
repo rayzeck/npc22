@@ -7,7 +7,7 @@ npctalk "Eu vou te curar.";
 close;
 }
 
-force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
+force_1-1,26,31,5	script	Hokage#1	4w_f_kafra2,{
 
 	if(#konoha == 1) goto ja_e_de_konoha;
 	if(#suna == 1) goto ja_e_de_outra;
@@ -106,12 +106,9 @@ force_1-1,26,31,5	script	Naruto MMORPG Online#1	4w_f_kafra2,{
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
-	
-	OnInit:
-	waitingroom "Konoha",0;
 }
 
-force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
+//force_1-1,21,26,5	script	Kazekage#1	4_m_2ndprin1,{
 	
 	if(#konoha == 1) goto ja_e_de_outra;
 	if(#suna == 1) goto ja_e_de_suna;
@@ -209,8 +206,6 @@ force_1-1,21,26,5	script	Naruto MMORPG Online#1	4_m_2ndprin1,{
 		savepoint "prt_in",92,66;
 		end;
 	
-	OnInit:
-	waitingroom "Suna",0;
 }
 
 force_1-1,22,31,5	script	Mizukage#1	4_f_babayaga,{
@@ -416,7 +411,4 @@ force_1-1,31,26,5	script	Raikage#1	870,{
 		warp "prt_in",92,66;
 		savepoint "prt_in",92,66;
 		end;
-	
-	OnInit:
-	waitingroom "Kumo",0;
 }
