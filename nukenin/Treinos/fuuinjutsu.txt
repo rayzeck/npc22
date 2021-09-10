@@ -480,8 +480,6 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Fuuinjutsu Basico]",0;
 }
 
 
@@ -1064,6 +1062,4 @@ lhz_dun02,33,217,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior!"; 
 	close;
-OnInit:
-	waitingroom "[Fuuinjutsu Intermediario]",0;
 }

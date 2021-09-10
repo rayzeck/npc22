@@ -441,8 +441,6 @@ lhz_dun02,23,236,5	script	Resistência Básico	4_m_chnsoldier,{
 		4_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Resistência Básico]",0;
 }
 
 lhz_dun02,28,219,5	script	Resistência Intermediario	4_m_chnsoldier,{
@@ -936,7 +934,5 @@ lhz_dun02,28,219,5	script	Resistência Intermediario	4_m_chnsoldier,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Resistência Intermediário]",0;
 		
 }

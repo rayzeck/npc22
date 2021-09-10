@@ -554,8 +554,6 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Medicina Básico]",0;
 }
 
 lhz_dun02,28,221,5	script	Medicina Intermediario	1_m_smith,{
@@ -953,7 +951,5 @@ lhz_dun02,28,221,5	script	Medicina Intermediario	1_m_smith,{
 	mes "[Medicina Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Medicina Intermediário]",0;
 		
 }

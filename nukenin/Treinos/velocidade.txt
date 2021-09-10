@@ -740,7 +740,5 @@ lhz_dun02,33,219,5	script	Velocidade Intermediario	1_f_02,{
 	mes "[Velocidade Intermediário]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Velocidade Intermediário]",0;
-		
+	
 }

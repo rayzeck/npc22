@@ -678,8 +678,6 @@ lhz_dun02,28,217,5	script	Genjutsu Intermediario	4_m_thaiongbak,{
 	mes "[Fuuinjutsu Intermediario]"; 
 	mes "Você precisa ter nível 500 ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Genjutsu Intermediário]",0;
 		
 }
 
@@ -1154,6 +1152,4 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Genjutsu Básico]",0;
 }
