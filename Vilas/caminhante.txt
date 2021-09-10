@@ -35,13 +35,13 @@ prontera,147,190,5	script	Poring Reporter	909,{
 	if (.walking != 0)
 		npctalk "Stopped walking. Tell me to \"walk\".", "", bc_self;
 	set .walking, 0;
-		clear;
+	clear;
 	mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 	mes "Hello, master! What are the news today?";
 	menu "Show news",ShowNews, "Remove news",RemoveNews, "Register news",RegisterNews;
 	
 	ShowNews:
-		clear;
+	clear;
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		if (getarraysize(.news$) > 0) {
 			mes "These are the news:";
@@ -53,12 +53,12 @@ prontera,147,190,5	script	Poring Reporter	909,{
 		goto Begin;
 
 	RemoveNews:
-		clear;
+	clear;
 		
 		NewsList;
 		mes "Enter the number of the new you want to remove:";
 		input .@remove;
-		clear;
+	clear;
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		mes "Do you want to remove \"" + .news$[.@remove-1] + "\"?";
 		if (select("Yes:No") == 1) {
@@ -71,7 +71,7 @@ prontera,147,190,5	script	Poring Reporter	909,{
 		goto Begin;
 		
 	RegisterNews:
-		clear;
+	clear;
 		
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		mes "What should I spread throughout Prontera?";
@@ -85,7 +85,7 @@ prontera,147,190,5	script	Poring Reporter	909,{
 			goto RegisterNews;
 
 		set .news$[getarraysize(.news$)], .@new$;
-		clear;
+	clear;
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		mes "Okay!~";
 		next;
