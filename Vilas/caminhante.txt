@@ -12,7 +12,7 @@
 //Envie: andar para npc: Poring Reporter
 //=====================================================
 ///////////////////////////////////////////////////////
-prontera,147,190,5	script	Poring Reporter	936,{
+prontera,147,190,5	script	Poring Reporter	936,1,5,{
 	set .@gm_level, 99; // Necessary GM Level
 	set .@npc_name$, "Pakkun";
 	
