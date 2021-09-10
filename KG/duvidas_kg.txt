@@ -530,8 +530,6 @@ next;
 mes "Para avançar um treino para o nível ^ff0000Avançado^000000, é necessário se graduar para Jounin.";
 close;
 
-OnInit:
-waitingroom "Dúvidas?",0;
 }
 
 bibli_02,59,43,3	duplicate(profkg)	Professora Kekkei Genkais#2	895
