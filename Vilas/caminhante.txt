@@ -24,7 +24,7 @@ prontera,147,190,5	script	Pakkun	936,1,5,{
 
 	npcstop;
 	if (.walking != 0)
-		npctalk "Parei de andar. Você quer que eu ande? "Apenas me diga!".", "", bc_self;
+		npctalk "Parei de caminhar. Me peça para \"andar\".", "", bc_self;
 	set .walking, 0;
 	mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 	mes "Hello, master! What are the news today?";
