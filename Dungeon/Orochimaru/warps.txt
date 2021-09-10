@@ -130,7 +130,6 @@ iz_dun00,199,147,5	script	Cientista	402,{
 			mes .@npcName$;
 			mes "Eu sou um dos Cientistas do Orochimaru,";
 			mes "tentei realizar testes em alguns prisioneiros dele e as coisas meio que...";
-			sleep 2000;
 			mes "saiu do controle, e alguns deles perderam o controle e atacam todos que tentam passar perto deles.";
 			mes "Um grupo deles roubou minha carta de acesso, agora estou preso aqui.";
 			next;
@@ -141,7 +140,6 @@ iz_dun00,199,147,5	script	Cientista	402,{
 			K_Acess:
 				mes .@npcName$;
 				mes "Que ótimo!";
-				sleep 2000;
 				mes "Eu não sei quem do grupo roubou minha carta de acesso, mas mate eles, pois um deles te dará a minha carta.";
 				next;
 				mes "Mas tenha muito cuidado, pois eu fiz experimento com um deles que se tornou incontrolável e ele é muito mais forte que todos os outros!";
@@ -167,9 +165,7 @@ iz_dun00,199,147,5	script	Cientista	402,{
 					getitem 19092,1;
 					next;
 					mes "Com ele você pode entrar por uma passagem secreta, que foi esquecida no tempo...";
-					sleep 2000;					
 					mes "Apenas com ele, você não consegue passar!";
-					sleep 2000;
 					mes "Você precisa fabricar um Amuleto com Selo que encaixe certo na passagem, e depois sim usar a Chave.";
 					next;
 					mes .@npcName$;
