@@ -130,6 +130,8 @@ iz_dun00,199,147,5	script	Cientista	402,{
 			mes .@npcName$;
 			mes "Eu sou um dos Cientistas do Orochimaru,";
 			mes "tentei realizar testes em alguns prisioneiros dele e as coisas meio que...";
+			next;
+			mes .@npcName$;
 			mes "saiu do controle, e alguns deles perderam o controle e atacam todos que tentam passar perto deles.";
 			mes "Um grupo deles roubou minha carta de acesso, agora estou preso aqui.";
 			next;
