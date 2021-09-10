@@ -9,3 +9,6 @@ treinamento,80,122,5	script	Cassino#55	762,{
 	warp "spl_in01",172,189;
 	close2;
 }
+
+
+// Testando Ray e gay
