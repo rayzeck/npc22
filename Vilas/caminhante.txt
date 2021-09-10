@@ -79,10 +79,10 @@ konoha3,109,232,5	script	Pakkun	936,1,5,{
 		}
 		
 		while (.walking == 1) {
-			set .@posxmin, 142;
-			set .@posxmax, 192;
-			set .@posymin, 189;
-			set .@posymax, 217;
+			set .@posxmin, 86;
+			set .@posxmax, 214;
+			set .@posymin, 193;
+			set .@posymax, 222;
 			npcwalkto rand(.@posxmin, .@posxmax), rand(.@posymin, .@posymax);
 			npctalk .news$[rand(getarraysize(.news$))];
 			sleep 5000;
