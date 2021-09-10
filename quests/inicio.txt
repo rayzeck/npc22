@@ -496,10 +496,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 	mes "Termine suas aulas para falar comigo.";
 	close;
 	
-	
-	
-OnInit:
-waitingroom "[Professor]",0;
+
 }
 
 
@@ -748,8 +745,6 @@ mes "Agora você precisa falar com o Mestre Elemental. ";
 if(quest_basic_inicio < 2) { set quest_basic_inicio,2; }
 close;
 
-OnInit:
-	waitingroom "[Treinamentos]",0;
 }
 
 prt_in,85,71,5	script	Mestre Elemental	48,{	
@@ -1056,8 +1051,6 @@ prt_in,85,71,5	script	Mestre Elemental	48,{
 	mes "Estou ocupado no momento com os testes.";
 	close;
 	
-OnInit:
-waitingroom "[Elemento]",0;
 }
 
 prt_in,84,69,5	script	Asuma Aburame 	65,{
@@ -1096,9 +1089,6 @@ prt_in,84,69,5	script	Asuma Aburame 	65,{
 	mes "^B0449E[ Asuma Aburame ]^000000";
 	mes "Entre no portal à esquerda para aprender seus jutsus.";
 	end;
-
-OnInit:
-	waitingroom "[Instrutor de Jutsu]",0;
 
 }
 
