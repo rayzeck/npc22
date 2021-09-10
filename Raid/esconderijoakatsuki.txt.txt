@@ -187,6 +187,7 @@ OnMobsCount:
 			case 4:
 					mapannounce "pvp_n_1-5","[4º Round]: Vocês mostraram que trabalho em equipe é a melhor maneira de concluir uma missão com sucesso!",bc_map;					
 					stopnpctimer;	
+					getitem 901,1;
 					set .round,0;
 					set $AKT_gID,0;
 					
