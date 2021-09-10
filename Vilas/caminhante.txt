@@ -1,17 +1,3 @@
-///////////////////////////////////////////////////////
-//  ___________               _____.__                
-//  \__    ___/__.__.________/ ____\__| ____    ____  
-//    |    | <   |  |\_  __ \   __\|  |/    \  / ___\ 
-//    |    |  \___  | |  | \/|  |  |  |   |  \/ /_/  >
-//    |____|  / ____| |__|   |__|  |__|___|  /\___  / 
-//            \/       Scripts             \//_____/  
-//
-//=====================================================
-// Name: Poring Reporter
-//
-//Envie: andar para npc: Poring Reporter
-//=====================================================
-///////////////////////////////////////////////////////
 prontera,147,190,5	script	Pakkun	936,1,5,{
 	set .@gm_level, 99; // Necessary GM Level
 	set .@npc_name$, "Pakkun";
@@ -24,19 +10,19 @@ prontera,147,190,5	script	Pakkun	936,1,5,{
 
 	npcstop;
 	if (.walking != 0)
-		npctalk "Parei de caminhar. Me peÃ§a para \"andar\".", "", bc_self;
+		npctalk "Parei de caminhar. Toda hora alguém me enche o \"saco\".", "", bc_self;
 	set .walking, 0;
 	mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
-	mes "Hello, master! What are the news today?";
-	menu "Show news",ShowNews, "Remove news",RemoveNews, "Register news",RegisterNews;
+	mes "Olá, mestre! Qual éa novidade de hoje?";
+	menu "Mostrar novidades",ShowNews, "Remover Novidades",RemoveNews, "Registrar Novidades",RegisterNews;
 	
 	ShowNews:
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		if (getarraysize(.news$) > 0) {
-			mes "These are the news:";
+			mes "Essas são as novidades:";
 			NewsList;
 		} else {
-			mes "There are no news.";
+			mes "Estamos sem novidades!";
 		}
 		next;
 		goto Begin;
@@ -44,10 +30,10 @@ prontera,147,190,5	script	Pakkun	936,1,5,{
 	RemoveNews:
 		
 		NewsList;
-		mes "Enter the number of the new you want to remove:";
+		mes "Coloque o número da novidade que quer remover:";
 		input .@remove;
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
-		mes "Do you want to remove \"" + .news$[.@remove-1] + "\"?";
+		mes "Quer remover \"" + .news$[.@remove-1] + "\"?";
 		if (select("Yes:No") == 1) {
 			.@arrsize = getarraysize(.news$);
 			for (.@i = .@remove-1; .@i < .@arrsize; .@i++) {
@@ -60,18 +46,18 @@ prontera,147,190,5	script	Pakkun	936,1,5,{
 	RegisterNews:
 		
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
-		mes "What should I spread throughout Prontera?";
+		mes "O que devo contar na Vila?";
 		input .@new$;
 		
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
 		mes "\"" + .@new$ + "\"";
-		mes "Is that right?";
+		mes "Isso está certo?";
 		if (select("Yes:No") == 2)
 			goto RegisterNews;
 
 		set .news$[getarraysize(.news$)], .@new$;
 		mes "[ ^f442a7"+ .@npc_name$ +"^000000 ]";
-		mes "Okay!~";
+		mes "Okay!";
 		next;
 		goto Begin;
 	
