@@ -1,8 +1,6 @@
 -	script	Remover_Zeny_Morrer	-1,{
 
 OnPCKillEvent:
-
-OnPCKillEvent:
 if( strcharinfo(3) == "hospital" ){
    set Zeny,Zeny + 1000000;
 }
