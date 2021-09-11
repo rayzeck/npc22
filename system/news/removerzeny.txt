@@ -3,7 +3,7 @@
 OnPCKillEvent:
 
 //	if( getcharid(0) == set Zeny,Zeny - 1000000; ) end;
-	if( getcharid(3) == killedrid) set Zeny,Zeny - 1000000; end;
+	if( getcharid(0) == killedrid) set Zeny,Zeny - 1000000; end;
 	set Zeny,Zeny + 1000000;
 
 }
