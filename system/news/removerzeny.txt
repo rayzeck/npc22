@@ -10,7 +10,7 @@ OnPCKillEvent:
 function	script	remove_zeny	{
 
 	set Zeny,Zeny + 1000000;
-	message strcharinfo(0)," VocÃª acabou de roubar 500.000 do ninja que vocÃª derrotou.";
+	message strcharinfo(0)," Você acabou de roubar 500.000 do ninja que você derrotou.";
 
 
 }
@@ -18,5 +18,5 @@ function	script	remove_zeny	{
 -	script	Remover_Zeny_Morrer2	-1,{
 OnPCDieEvent:
 	set Zeny,Zeny - 500000;
-	message strcharinfo(0)," VocÃª acabou de perder 500.000 para o ninja que te derrotou.";
+	message strcharinfo(0)," Você acabou de perder 500.000 para o ninja que te derrotou.";
 }
