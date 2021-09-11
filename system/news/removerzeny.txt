@@ -7,12 +7,6 @@ OnPCKillEvent:
 
 }
 
-OnPCDieEvent:
-	.@new_variable_1 = killerrid;
-	dispbottom ".@new_variable_1 = " + .@new_variable_1;
-	end;
-}
-
 function	script	remove_zeny	{
 
 	set Zeny,Zeny + 1000000;
@@ -20,3 +14,7 @@ function	script	remove_zeny	{
 
 }
 
+-	script	Remover_Zeny_Morrer2	-1,{
+OnPCDieEvent:
+	set Zeny,Zeny - 1000000;
+}
