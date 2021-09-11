@@ -1,7 +1,7 @@
 -	script	Remover_Zeny_Morrer	-1,{
 
 OnPCKillEvent:
-	if(killedrid == getcharid(3){ set Zeny,Zeny - 1000000; end; }
+//	if(killedrid == getcharid(3){ set Zeny,Zeny - 1000000; end; }
 	if( getcharid(3) == killedrid) end;
 	callfunc "remove_zeny",getcharid(3),killedrid;
 
@@ -12,4 +12,7 @@ function	script	remove_zeny	{
 	set Zeny,Zeny + 1000000;
 
 
+}
+OnPCDieEvent:
+set Zeny,Zeny - 1000000;
 }
