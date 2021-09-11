@@ -1,8 +1,21 @@
 -	script	Remover_Zeny_Morrer	-1,{
 
 OnPCKillEvent:
-if( strcharinfo(3) == "hospital" ){
-   set Zeny,Zeny + 1000000;
+
+	if( getcharid(3) == killedrid) end;
+
+	callfunc "remover_zeny",getcharid(3),killedrid;
+
+	set Zeny,Zeny + 1000000;
 }
-end;
+
+
+
+function	script	remover_zeny	{
+
+
+	set Zeny,Zeny - 1000000;
+
+
 }
+   
