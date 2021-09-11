@@ -3,20 +3,20 @@
 OnPCKillEvent:
 //	if(killedrid == getcharid(3){ set Zeny,Zeny - 1000000; end; }
 	if( getcharid(3) == killedrid) end;
-	callfunc "remove_zeny",getcharid(3),killedrid;
+	callfunc "adicionar_zeny",getcharid(3),killedrid;
 
 }
 
-function	script	remove_zeny	{
+function	script	adicionar_zeny	{
 
-	set Zeny,Zeny + 1000000;
-	message strcharinfo(0)," Você acabou de roubar 500.000 do ninja que você derrotou.";
+	set Zeny,Zeny + 50000;
+	message strcharinfo(0)," Você acabou de roubar 50.000 ryous do ninja que você derrotou.";
 
 
 }
 
 -	script	Remover_Zeny_Morrer2	-1,{
 OnPCDieEvent:
-	set Zeny,Zeny - 500000;
-	message strcharinfo(0)," Você acabou de perder 500.000 para o ninja que te derrotou.";
+	set Zeny,Zeny - 50000;
+	message strcharinfo(0)," Você acabou de perder 50.000 ryous para o ninja que te derrotou.";
 }

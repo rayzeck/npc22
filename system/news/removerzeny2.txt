@@ -1,5 +1,0 @@
-OnPCDieEvent:
-	.@new_variable_1 = killerrid;
-	dispbottom ".@new_variable_1 = " + .@new_variable_1;
-	end;
-}
