@@ -3,12 +3,12 @@
 OnPCKillEvent:
 //	if(killedrid == getcharid(3) { 
 	if( getcharid(3) == killedrid) set Zeny,Zeny - 1000000; end;
-	callfunc "remover_zeny",getcharid(3),killedrid;
+	callfunc "remove_zeny",getcharid(3),killedrid;
 
 	
 }
 
-function	script	remover_zeny	{
+function	script	remove_zeny	{
 
 
 	set Zeny,Zeny + 1000000;
