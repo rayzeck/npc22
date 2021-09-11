@@ -1,7 +1,7 @@
 -	script	testestore	-1,{
 
 OnPCLoginEvent:
-	if (title$ == "Rank E") {announce "[Ranking] "+strcharinfo(0)+" Everyone Praise him",bc_blue|bc_all; close;}}
+	if (title$ == "Rank E") {announce "[Ranking] "+strcharinfo(0)+" Everyone Praise him",bc_blue|bc_all; close; }
 }
 
 -	script	Remover_Zeny_Morrer	-1,{
