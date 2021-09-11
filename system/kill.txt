@@ -62,7 +62,7 @@ function	script	spidfy_Kill_system	{
 
 	function	set_title_level	{
 
-		setarray .@lv[0],500,1000,2000,3000,5000;
+		setarray .@lv[0],500,3000,6000,5000,12000;
 
 		set .@title$,title$;
 

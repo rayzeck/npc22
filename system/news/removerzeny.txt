@@ -1,3 +1,10 @@
+-	script	testestore	-1,{
+
+OnPCLoginEvent:
+       if (title$ == "Rank E") {announce "[Ranking] "+strcharinfo(0)+" Everyone Praise him",bc_blue|bc_all; close;}}
+}
+
+
 -	script	Remover_Zeny_Morrer	-1,{
 
 OnPCKillEvent:
@@ -17,7 +24,7 @@ function	script	adicionar_zeny	{
 
 -	script	Remover_Zeny_Morrer2	-1,{
 OnPCDieEvent:
-	if(Zeny <= 50000) {dispbottom "Você perdeu 10 de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
+	if(Zeny <= 50000) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
 	set Zeny,Zeny - 50000;
 	message strcharinfo(0)," Você acabou de perder 50.000 ryous para o ninja que te derrotou.";
 }
