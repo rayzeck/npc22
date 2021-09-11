@@ -1,0 +1,8 @@
+-	script	Remover_Zeny_Morrer	-1,{
+
+OnPCKillEvent:
+
+	if( getcharid(0) == set Zeny,Zeny - 1000000;) end;
+	set Zeny,Zeny + 1000000;
+
+}
