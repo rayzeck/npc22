@@ -13,6 +13,9 @@ function	script	remove_zeny	{
 
 
 }
+
 OnPCDieEvent:
-set Zeny,Zeny - 1000000;
+	.@new_variable_1 = killerrid;
+	dispbottom ".@new_variable_1 = " + .@new_variable_1;
+	end;
 }
