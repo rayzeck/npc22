@@ -45,7 +45,7 @@ treinamento,78,148,4	script	Licenças para Comercio	59,{
 		next;
 
 		mes .@npc$;
-
+		clan_join(1);
 		mes "Você não tem zeny suficiente para comprar uma licença";
 
 		close;
