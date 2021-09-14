@@ -1,7 +1,7 @@
 //
 //alugaritem
 //
--    script    exemplocomandorentitem -1,{
+-    script	exemplocomandorentitem -1,{
 OnInit:
     bindatcmd("alugar", strnpcinfo(3)+"::OnAtcommand");
     end;
