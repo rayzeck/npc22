@@ -14,7 +14,7 @@ OnAtcommand:
     .@card4 = atoi(.@atcmd_parameters$[5]);
     if (getitemname(.@itemid) != "null") {
         if (getiteminfo(.@itemid, 2) != IT_CARD) {
-            rentitem2 .@itemid, (24 * 60 * 60),1,.@refine,0,.@card1,.@card2,.@card3,.@card4;
+            rentitem2 .@itemid, (1 * 60 * 60),1,.@refine,0,.@card1,.@card2,.@card3,.@card4;
         }
         else {
             dispbottom .@atcmd_command$+" - você não pode alugar o item "+getitemname(.@itemid);
