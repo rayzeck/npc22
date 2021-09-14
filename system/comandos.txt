@@ -1,3 +1,31 @@
+//
+//alugaritem
+//
+-    script    exemplocomandorentitem -1,{
+OnInit:
+    bindatcmd("alugar", strnpcinfo(3)+"::OnAtcommand");
+    end;
+OnAtcommand:
+    .@itemid = atoi(.@atcmd_parameters$[0]);
+    .@refine = atoi(.@atcmd_parameters$[1]);
+    .@card1 = atoi(.@atcmd_parameters$[2]);
+    .@card2 = atoi(.@atcmd_parameters$[3]);
+    .@card3 = atoi(.@atcmd_parameters$[4]);
+    .@card4 = atoi(.@atcmd_parameters$[5]);
+    if (getitemname(.@itemid) != "null") {
+        if (getiteminfo(.@itemid, 2) != IT_CARD) {
+            rentitem2 .@itemid, (24 * 60 * 60),1,.@refine,0,.@card1,.@card2,.@card3,.@card4;
+        }
+        else {
+            dispbottom .@atcmd_command$+" - você não pode alugar o item "+getitemname(.@itemid);
+        }
+    }
+    else {
+        dispbottom .@atcmd_command$+" - item invalido #"+.@itemid;
+    }
+    end;
+}
+
 //------------------------------------------------------------
 //@dicas
 //------------------------------------------------------------

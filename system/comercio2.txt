@@ -1,7 +1,6 @@
 treinamento,90,141,4	script	Comerciantes#51	59,{
 
 mes "Shinobi, deseja viajar para a área de comércios?";
-cutin "cutin_teste",2;
 menu "Sim.",-,"Agora não.",nop;
 next;
 warp "louyang",217,40;
