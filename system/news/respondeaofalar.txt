@@ -1,0 +1,16 @@
+treinamento,118,122,3	script	Testes	76,{
+
+mes "digita no chat oq vc quer!";
+close;
+
+Lbuffs:
+npctalk "digitou buffs, entao toma buff!";
+sc_start(SC_BLESSING, 240000, 10); //
+end;
+
+//
+OnInit:
+        defpattern ﻿1, "buffs", "Lbuffs";
+        activatepset 1;
+        end;
+}
