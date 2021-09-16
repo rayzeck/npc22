@@ -27,6 +27,6 @@ tha_t09,0,0,0,0	monster	Dragão Mutante		1449,100,0,0,0
 tha_t09,0,0,0,0	monster	Slaughter		1153,100,0,0,0
 
 // 2? Andar
-bra_dun01,0,0,0,0	monster	Bijou		3450,100,0,0,0
-bra_dun01,0,0,0,0	monster	Corps		3451,100,0,0,0
-bra_dun01,0,0,0,0	monster	Shadow		2940,100,0,0,0
+//bra_dun01,0,0,0,0	monster	Bijou		3450,60,0,0,0
+//bra_dun01,0,0,0,0	monster	Corps		3451,60,0,0,0
+//bra_dun01,0,0,0,0	monster	Shadow		2940,60,0,0,0
