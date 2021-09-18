@@ -268,9 +268,13 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 	mes "Faz muito tempo que não vejo alguém nesse esconderijo.";
 	mes "Fomos designados para vigiar este local e guardar a passagem secreta que leva até ao Orochimaru.";
 	next;
+	mes .@npcName$;
 	mes "Já faz algum tempo que não vejo a outra cobaia, ele cansou de ficar aqui e decidiu ir procurar a passagem secreta sozinho, desde então nunca mais tive noticias dele.";
 	next;
+	mes .@npcName$;
 	mes "Infelizmente nunca achei a passagem, só o que sei é que precisa de 2 itens para abri-lá.";
+	next;
+	mes .@npcName$;
 	mes "Eu preciso da sua ajuda me traga um item desses monstros e eu darei para você uma parte da chave de acesso. A outra parte se você tiver sorte poderá encontrar com a outra cobaia";
 	
 	end;
