@@ -312,7 +312,7 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 
 // o NPC Morto Literal
 bra_dun01,211,123,5	script	Cobaia morto	585,{
-	
+	npctalk "Morto não fala!";
 }
 
 // O NPC de Missão
