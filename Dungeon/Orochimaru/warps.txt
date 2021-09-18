@@ -401,7 +401,7 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 		hideon "Portal";
 		end;
 }
-konoha3,191,53,0	script	Portal	45,2,2,{
+bra_dun01,199,35,0	script	Portal	45,2,2,{
 	warp "iz_dun02",339,330;
 	end;
 }
