@@ -384,11 +384,23 @@ bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 //
 //	portal para Terceiro Andar.
 //
-bra_dun01,199,35,5	script	Portão de Pedra	45,2,2,{
+bra_dun01,199,35,5	script	Portão de Pedra	406,{
+	
+	
 	// ID 634 - Bradium (Provisório)
-	if(countitem(634)>=1{
-		
+	if(countitem(634)>=1){
+		progressbar "^0000FF",2;
+		hideoff "Portal";
+		end;
 	} else{
-		
+		hideon "Portal";
+		end;
 	}
+	OnInit:
+		hideon "Portal";
+		end;
+}
+konoha3,191,53,0	script	Portal	45,2,2,{
+	warp "iz_dun02",339,330;
+	end;
 }
