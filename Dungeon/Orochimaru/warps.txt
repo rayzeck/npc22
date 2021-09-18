@@ -256,26 +256,12 @@ iz_dun00,39,47,5	script	Portão::trap	406,{
 iz_dun00,352,341,5	duplicate(trap)	Portão	406
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//	Segundo Andar
+//
+bra_dun01,44,212,5	script	Cobaia	455,{
+	
+}
 
 
 
