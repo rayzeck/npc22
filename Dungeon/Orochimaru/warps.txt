@@ -315,6 +315,7 @@ bra_dun01,211,123,5	script	Cobaia morto	585,{
 	if(pickup == 1){
 		progressbar "^0000FF",2;
 		getitem 655, 1;
+		set pickup, 0;
 		end;
 	}else{
 		npctalk "Morto não fala!";
