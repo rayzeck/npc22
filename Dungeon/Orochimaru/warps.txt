@@ -391,6 +391,7 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 		progressbar "^0000FF",2;
 		delitem 634,1;
 		hideoffnpc "Portal";
+		hideonnpc "Portão de Pedra";
 		sleep 3000;
 		hideonnpc "Portal";		
 		end;
