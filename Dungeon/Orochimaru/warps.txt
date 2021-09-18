@@ -345,12 +345,14 @@ bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 	}else{
 		mes .@npcName$;
 		mes "E ai, já conseguiu vingar a minha morte?";
+		next;
 		switch(select("Sim, já eliminei eles! :Ainda não.")){
 			case 1:
 				mes .@npcName$;
 				// ID 572 - Coração de Padra (provisório)
 				// ID 685 - Coração de Madeira (provisório)
 				mes "Mostre-me os corações deles!";
+				next;
 				if(countitem(572)>=1 && countitem(685)>=1){
 					mes .@npcName$;
 					mes "Você realmente me vingou!";
