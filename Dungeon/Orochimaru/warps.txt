@@ -260,7 +260,7 @@ iz_dun00,352,341,5	duplicate(trap)	Portão	406
 //	Segundo Andar
 //
 bra_dun01,44,212,5	script	Cobaia	455,{
-	
+	emotion ET_SURPRISE;
 }
 
 
