@@ -394,6 +394,7 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 		hideonnpc "Portão de Pedra";
 		sleep 2000;
 		hideonnpc "Portal";
+		sleep 1000;
 		hideoffnpc "Portão de Pedra";
 		end;
 	} else{
