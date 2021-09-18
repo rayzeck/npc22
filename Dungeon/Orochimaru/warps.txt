@@ -392,8 +392,9 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 		delitem 634,1;
 		hideoffnpc "Portal";
 		hideonnpc "Portão de Pedra";
-		sleep 3000;
-		hideonnpc "Portal";		
+		sleep 2000;
+		hideonnpc "Portal";
+		hideoffnpc "Portão de Pedra";
 		end;
 	} else{
 		npctalk "Você não possui a Chave!";
