@@ -310,5 +310,7 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 	end;
 }
 
-
+bra_dun01,211,123,5	script	Cobaia morto	585,{
+	
+}
 
