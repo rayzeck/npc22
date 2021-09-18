@@ -283,12 +283,12 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 		end;
 	} else{
 		mes .@npcName$;
-		mes "Você ja conseguiu os itens que eu lhe pedi?";
+		mes "Você já conseguiu os itens que eu lhe pedi?";
 		next;
-		select(switch("- Sim, eu consegui. :- Não, ainda não consegui.")){
+		switch(select("Sim, eu consegui. :Não, ainda não consegui.")){
 			case 1:
 				// ID 654 - Cubo de Gelo (Provisório)
-				if(countitem(654) >=1){
+				if(countitem(654) >= 1){
 					mes .@npcName$;
 					mes "Muito bem, tome aqui uma parte da Chave de Acesso.";
 					delitem 654, 1;
