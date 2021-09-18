@@ -393,6 +393,7 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 		hideoff "Portal";
 		end;
 	} else{
+		npctalk "Você não possui a Chave!";
 		hideon "Portal";
 		end;
 	}
