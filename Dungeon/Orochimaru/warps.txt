@@ -261,10 +261,10 @@ iz_dun00,352,341,5	duplicate(trap)	Portão	406
 //
 bra_dun01,44,212,5	script	Cobaia	455,{
 	
-	set .@npcName, "^0000FF[Cobaia]^000000";
+	set .@npcName$, "^0000FF[Cobaia]^000000";
 	
 	emotion ET_SURPRISE;
-	mes .@npcName;
+	mes .@npcName$;
 	mes "Faz muito tempo que não vejo alguém nesse esconderijo.";
 	mes "Fomos designados para vigiar este local e guardar a passagem secreta que leva até ao Orochimaru.";
 	next;
