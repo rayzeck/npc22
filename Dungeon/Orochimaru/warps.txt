@@ -263,7 +263,7 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 	
 	set .@npcName$, "^0000FF[Cobaia]^000000";
 	
-	set looked, 0;
+	//set looked, 0;
 	
 	if(looked == 0){
 		emotion ET_SURPRISE;
