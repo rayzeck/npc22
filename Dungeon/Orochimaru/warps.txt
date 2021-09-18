@@ -279,6 +279,8 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 		next;
 		mes .@npcName$;
 		mes "Eu preciso da sua ajuda me traga um item desses monstros e eu darei para você uma parte da chave de acesso. A outra parte se você tiver sorte poderá encontrar com a outra cobaia";
+		set looked, 1;
+		end;
 	} else{
 		mes .@npcName$;
 		mes "Você ja conseguiu os itens que eu lhe pedi?";
