@@ -387,16 +387,16 @@ bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 bra_dun01,199,35,5	script	Portão de Pedra	406,{
 	
 	OnInit:
-		hideon "Portal";
+		hideonnpc "Portal";
 		end;
 	// ID 634 - Bradium (Provisório)
 	if(countitem(634)>=1){
 		progressbar "^0000FF",2;
-		hideoff "Portal";
+		hideoffnpc "Portal";
 		end;
 	} else{
 		npctalk "Você não possui a Chave!";
-		hideon "Portal";
+		hideonnpc "Portal";
 		end;
 	}
 	
