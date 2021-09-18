@@ -312,25 +312,69 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 
 // o NPC Morto Literal
 bra_dun01,211,123,5	script	Cobaia morto	585,{
-	npctalk "Morto não fala!";
+	if(pickup == 1){}
+		progressbar 2;
+		getitem 655, 1;
+		end;
+}	else{
+		npctalk "Morto não fala!";
+		end;
+	}
 }
 
 // O NPC de Missão
 bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 	set .@npcName$, "^0000FF[Fantasma do Cobaia]^000000";
 	
-	mes .@npcName$;
-	mes "Malditos monstros...";
-	mes "Não sabia que o Orochimaru tinha isso neste esconderijo...";
-	mes "Heey você consegue me ver?";
-	next;
-	mes .@npcName$;
-	mes "Eu sou uma das cobaias que foram designadas para vigiar este local, mas eu cansei desta tarefa e decidi procurar a passagem que leva ate o Orochimaru por minha conta.";
-	next;
-	mes .@npcName$;
-	mes "Infelizmente encontrei duas criaturas muito fortes e quando me dei conta estava morto olhando meu próprio corpo.";
-	next;
-	mes "Preciso que você vingue a minha morte encontrando essas duas criaturas, assim que você fizer isso me traga uma prova que elas estão mortas, que eu lhe direi aonde esta uma das partes da chave de acesso.";
-	end;
+	if(looked2==0){
+		mes .@npcName$;
+		mes "Malditos monstros...";
+		mes "Não sabia que o Orochimaru tinha isso neste esconderijo...";
+		mes "Heey você consegue me ver?";
+		next;
+		mes .@npcName$;
+		mes "Eu sou uma das cobaias que foram designadas para vigiar este local, mas eu cansei desta tarefa e decidi procurar a passagem que leva ate o Orochimaru por minha conta.";
+		next;
+		mes .@npcName$;
+		mes "Infelizmente encontrei duas criaturas muito fortes e quando me dei conta estava morto olhando meu próprio corpo.";
+		next;
+		mes .@npcName$;
+		mes "Preciso que você vingue a minha morte encontrando essas duas criaturas, assim que você fizer isso me traga uma prova que elas estão mortas, que eu lhe direi aonde esta uma das partes da chave de acesso.";
+		set looked2, 1;
+		end;
+	}else{
+		mes .@npcName$;
+		mes "E ai, já conseguiu vingar a minha morte?";
+		switch(select("Sim, já eliminei eles! :Ainda não.")){
+			case 1:
+				mes .@npcName$;
+				// ID 572 - Coração de Padra (provisório)
+				// ID 685 - Coração de Madeira (provisório)
+				mes "Mostre-me os corações deles!";
+				if(countitem(572)>=1 && countitem(685)>=1{
+					mes .@npcName$;
+					mes "Você realmente me vingou!";
+					mes "Muito obrigado!";
+					mes "Agora lhe direi onde encontrar um parte da Chave de Acesso.";
+					next;
+					mes .@npcName$;
+					mes "Está no meu corpo, logo atrás de mim!";
+					mes "Pegue no meu bolso.";
+					set pickup, 1;
+					end;
+				} else{
+					mes .@npcName$;
+					mes "Você ainda não me vingou!";
+					mes "me vingue primeiro para que eu possa lhe dizer onde encontrar uma parte da chave de acesso.";
+					end;
+				}
+			break;
+			case 2:
+				mes .@npcName$;
+				mes "Ok, quando matar eles me traga o coração deles!";
+				end;
+			break;
+		}
+	}
 }
 
