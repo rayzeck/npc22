@@ -316,7 +316,7 @@ bra_dun01,211,123,5	script	Cobaia morto	585,{
 }
 
 // O NPC de Missão
-bra_dun01,209,123,5	script	Cobaia morto	593,{
+bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 	
 }
 
