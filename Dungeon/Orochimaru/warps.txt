@@ -381,3 +381,10 @@ bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 	}
 }
 
+//
+//	portal para Terceiro Andar.
+//
+bra_dun01,199,35,5	script	Portão de Pedra	406,{
+	
+	
+}
