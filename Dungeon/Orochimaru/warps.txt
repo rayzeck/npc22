@@ -389,7 +389,10 @@ bra_dun01,199,35,5	script	Portão de Pedra	406,{
 	// ID 634 - Bradium (Provisório)
 	if(countitem(634)>=1){
 		progressbar "^0000FF",2;
+		delitem 634,1;
 		hideoffnpc "Portal";
+		sleep 3000;
+		hideonnpc "Portal";		
 		end;
 	} else{
 		npctalk "Você não possui a Chave!";
