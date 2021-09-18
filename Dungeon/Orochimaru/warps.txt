@@ -260,7 +260,20 @@ iz_dun00,352,341,5	duplicate(trap)	Portão	406
 //	Segundo Andar
 //
 bra_dun01,44,212,5	script	Cobaia	455,{
+	
+	set .@npcName, "^0000FF[Cobaia]^000000";
+	
 	emotion ET_SURPRISE;
+	mes .@npcName;
+	mes "Faz muito tempo que não vejo alguém nesse esconderijo.";
+	mes "Fomos designados para vigiar este local e guardar a passagem secreta que leva até ao Orochimaru.";
+	next;
+	mes "Já faz algum tempo que não vejo a outra cobaia, ele cansou de ficar aqui e decidiu ir procurar a passagem secreta sozinho, desde então nunca mais tive noticias dele.";
+	next;
+	mes "Infelizmente nunca achei a passagem, só o que sei é que precisa de 2 itens para abri-lá.";
+	mes "Eu preciso da sua ajuda me traga um item desses monstros e eu darei para você uma parte da chave de acesso. A outra parte se você tiver sorte poderá encontrar com a outra cobaia";
+	
+	end;
 }
 
 
