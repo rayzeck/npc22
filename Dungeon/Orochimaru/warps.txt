@@ -351,7 +351,7 @@ bra_dun01,209,123,5	script	Fantasma do Cobaia	593,{
 				// ID 572 - Coração de Padra (provisório)
 				// ID 685 - Coração de Madeira (provisório)
 				mes "Mostre-me os corações deles!";
-				if(countitem(572)>=1 && countitem(685)>=1{
+				if(countitem(572)>=1 && countitem(685)>=1){
 					mes .@npcName$;
 					mes "Você realmente me vingou!";
 					mes "Muito obrigado!";
