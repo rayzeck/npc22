@@ -312,11 +312,11 @@ bra_dun01,44,212,5	script	Cobaia	455,{
 
 // o NPC Morto Literal
 bra_dun01,211,123,5	script	Cobaia morto	585,{
-	if(pickup == 1){}
+	if(pickup == 1){
 		progressbar 2;
 		getitem 655, 1;
 		end;
-}	else{
+	}else{
 		npctalk "Morto não fala!";
 		end;
 	}
