@@ -461,7 +461,9 @@ iz_dun02,335,328,5	script	Orochimaru	70,{
 				}
 			break;
 			case 2:
-			
+				mes .@npcName$;
+				mes "Ok, vá e tente mata-los para que eu possa ver se vocês são pareos para mim!";
+				close;
 			break;
 		}
 	}
