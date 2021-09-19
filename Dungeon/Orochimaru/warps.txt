@@ -417,7 +417,7 @@ bra_dun01,199,35,0	script	Portal	45,2,2,{
 //
 //	Terceiro Andar
 //
-iz_dun02,335,3218,5	script	Orochimaru	70,{
+iz_dun02,335,328,5	script	Orochimaru	70,{
 	set .@npcName$, "^0000FF[Orochimaru]^000000";
 	
 	mes .@npcName$;
