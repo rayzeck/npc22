@@ -475,3 +475,31 @@ iz_dun02,335,328,5	script	Orochimaru	70,{
 	}
 	end;
 }
+iz_dun02,235,197,5	script	Portão do Escritorio	406,{
+	
+	// ID 634 - Bradium (Provisório)
+	if(countitem(634)>=1){
+		progressbar "^0000FF",2;
+		delitem 634,1;
+		hideoffnpc "Escritorio";
+		hideonnpc "Portão do Escritorio";
+		sleep 2000;
+		hideonnpc "Escritorio";
+		sleep 1000;
+		hideoffnpc "Portão do Escritorio";
+		end;
+	} else{
+		npctalk "Você não possui a Chave!";
+		hideonnpc "Escritorio";
+		end;
+	}	
+}
+-	script	HidePortal2	-1,{
+	OnInit:
+		hideonnpc "Escritorio";
+		end;
+}
+iz_dun02,235,197,0	script	Escritorio	45,2,2,{
+	warp "tha_t01",339,330;
+	end;
+}
