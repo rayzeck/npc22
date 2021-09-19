@@ -478,9 +478,9 @@ iz_dun02,335,328,5	script	Orochimaru	70,{
 iz_dun02,235,197,5	script	Portão do Escritorio	406,{
 	
 	// ID 634 - Bradium (Provisório)
-	if(countitem(634)>=1){
+	if(countitem(552)>=1){
 		progressbar "^0000FF",2;
-		delitem 634,1;
+		delitem 552,1;
 		hideoffnpc "Escritorio";
 		hideonnpc "Portão do Escritorio";
 		sleep 2000;
