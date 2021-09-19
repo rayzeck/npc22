@@ -33,3 +33,9 @@ bra_dun01,0,0,0,0	monster	Shadow		2940,60,0,0,0
 // Boss Segundo Andar
 bra_dun01,0,0,0,0	monster	Amdarais		3150,1,10800000,0,0
 bra_dun01,0,0,0,0	monster	Ragged Golem		3473,1,10800000,0,0
+
+// Terceiro Andar
+iz_dun02,0,0,0,0	monster	Bakonawa		3273,1,10800000,0,0
+iz_dun02,0,0,0,0	monster	Tartarus		1719,1,10800000,0,0
+iz_dun02,0,0,0,0	monster	Pesadelo da Noite		1768,1,10800000,0,0
+iz_dun02,0,0,0,0	monster	Morocc		1917,1,10800000,0,0
