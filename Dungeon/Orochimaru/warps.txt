@@ -444,6 +444,7 @@ iz_dun02,335,328,5	script	Orochimaru	70,{
 			case 1:
 				mes .@npcName$;
 				mes "Deixe-me ver então.";
+				next;
 				if(countitem(664)>=1 && countitem(665)>=1 && countitem(655)>=1 && countitem(564)>=1){
 					mes .@npcName$;
 					mes "Oh, vocês realmente conseguiram!";
