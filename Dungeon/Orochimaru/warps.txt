@@ -453,6 +453,11 @@ iz_dun02,335,328,5	script	Orochimaru	70,{
 					mes .@npcName$;
 					mes "Pois bem, tome aqui como prometido!";
 					mes "Aguardo vocês em minha sala.";
+					delitem 664,1;
+					delitem 665,1;
+					delitem 655,1;
+					delitem 564,1;
+					getitem 552,1;
 					close;
 				} else{
 					mes .@npcName$;
