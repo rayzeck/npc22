@@ -418,9 +418,22 @@ bra_dun01,199,35,0	script	Portal	45,2,2,{
 //	Terceiro Andar
 //
 iz_dun02,335,328,5	script	Orochimaru	70,{
-	set .@npcName$, "^0000FF[Orochimaru]^000000";
+	set .@npcName$, "^FF0000[Orochimaru]^000000";
 	
 	mes .@npcName$;
+	mes "Ora ora ora o que temos aqui?!";
+	mes "Finalmente cobaias novas para testar a força das minhas criações.";
+	mes "Isso vai ser muito divertido.";
+	next;
+	mes .@npcName$;
+	mes "Eu sei que vocês tem me procurado, mas quero saber se possuem força suficiente para me derrotar, que tal um teste?";
+	next;
+	mes .@npcName$;
+	mes "Se vocês sobreviverem as minhas criações lhes darei a chance de me enfrentar no ultimo andar do meu esconderijo.";
+	next;
+	mes .@npcName$;
+	mes "Tragam para mim 4 itens, um de cada monstro deste lugar e darei acesso para a passagem secreta, onde estarei esperando vocês...";
+	close;
 	
 	end;
 }
