@@ -420,20 +420,50 @@ bra_dun01,199,35,0	script	Portal	45,2,2,{
 iz_dun02,335,328,5	script	Orochimaru	70,{
 	set .@npcName$, "^FF0000[Orochimaru]^000000";
 	
-	mes .@npcName$;
-	mes "Ora ora ora o que temos aqui?!";
-	mes "Finalmente cobaias novas para testar a força das minhas criações.";
-	mes "Isso vai ser muito divertido.";
-	next;
-	mes .@npcName$;
-	mes "Eu sei que vocês tem me procurado, mas quero saber se possuem força suficiente para me derrotar, que tal um teste?";
-	next;
-	mes .@npcName$;
-	mes "Se vocês sobreviverem as minhas criações lhes darei a chance de me enfrentar no ultimo andar do meu esconderijo.";
-	next;
-	mes .@npcName$;
-	mes "Tragam para mim 4 itens, um de cada monstro deste lugar e darei acesso para a passagem secreta, onde estarei esperando vocês...";
-	close;
-	
+	if(looked3 == 0){
+		mes .@npcName$;
+		mes "Ora ora ora o que temos aqui?!";
+		mes "Finalmente cobaias novas para testar a força das minhas criações.";
+		mes "Isso vai ser muito divertido!";
+		next;
+		mes .@npcName$;
+		mes "Eu sei que vocês tem me procurado, mas quero saber se possuem força suficiente para me derrotar, que tal um teste?";
+		next;
+		mes .@npcName$;
+		mes "Se vocês sobreviverem as minhas criações lhes darei a chance de me enfrentar no ultimo andar do meu esconderijo.";
+		next;
+		mes .@npcName$;
+		mes "Tragam para mim 4 itens, um de cada monstro deste lugar e darei acesso para a passagem secreta, onde estarei esperando vocês...";
+		set looked3, 1;
+		close;
+	}else{
+		mes .@npcName$;
+		mes "Vocês já conseguiram derrotar minhas criações?";
+		next;
+		switch(select("Sim, foi moleza!:Ainda não.")){
+			case 1:
+				mes .@npcName$;
+				mes "Deixe-me ver então.";
+				if(countitem(664)>=1 && countitem(665)>=1 && countitem(655)>=1 && countitem(564)>=1){
+					mes .@npcName$;
+					mes "Oh, vocês realmente conseguiram!";
+					mes "Eu não acreditei que vocês fossem pareos para minhas criações!";
+					next;
+					mes .@npcName$;
+					mes "Pois bem, tome aqui como prometido!";
+					mes "Aguardo vocês em minha sala.";
+					close;
+				} else{
+					mes .@npcName$;
+					mes "Vocês etão tentando me enganar?";
+					mes "É melhor terem muito cuidado, ou então eu os aprisiono, e farei muitos testes com vocês, assim como fiz com minhas criações!";
+					close;
+				}
+			break;
+			case 2:
+			
+			break;
+		}
+	}
 	end;
 }
