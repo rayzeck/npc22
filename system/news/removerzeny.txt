@@ -1,43 +1,4 @@
-
-
--	script	Remover_Zeny_Morrer	-1,{
-
-OnPCKillEvent:
-//	if(killedrid == getcharid(3){ set Zeny,Zeny - 1000000; end; }
-	if( getcharid(3) == killedrid) end;
-	callfunc "adicionar_zeny",getcharid(3),killedrid;
-
-}
-
-function	script	adicionar_zeny	{
-
-	if (title$ == "Rank E") {set Zeny,Zeny + 3500; message strcharinfo(0)," Você acabou de roubar 3.500 ryous do ninja que você derrotou."; }
-//	if (title$ == "Rank D") {set Zeny,Zeny + 5000; message strcharinfo(0)," Você acabou de roubar 5.000 ryous do ninja que você derrotou."; }
-//	if (title$ == "Rank C") {set Zeny,Zeny + 10000; message strcharinfo(0)," Você acabou de roubar 10.000 ryous do ninja que você derrotou."; }
-//	if (title$ == "Rank B") {set Zeny,Zeny + 15000; message strcharinfo(0)," Você acabou de roubar 15.000 ryous do ninja que você derrotou."; }
-//	if (title$ == "Rank A") {set Zeny,Zeny + 20000; message strcharinfo(0)," Você acabou de roubar 20.000 ryous do ninja que você derrotou."; }
-//	if (title$ == "Rank S") {set Zeny,Zeny + 25000; message strcharinfo(0)," Você acabou de roubar 25.000 ryous do ninja que você derrotou."; }
-
-
-}
-
--	script	Remover_Zeny_Morrer2	-1,{
-OnPCDieEvent:
-//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
-//	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
-	if (title$ == "Rank E" || Zeny < 2500) {
-        message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou.";
-        }
-//	if (title$ == "Rank D") {set Zeny,Zeny - 3000; message strcharinfo(0)," Você acabou de perder 3.000 ryous para o ninja que te derrotou."; }
-//	if (title$ == "Rank C") {set Zeny,Zeny - 5000; message strcharinfo(0)," Você acabou de perder 5.000 ryous para o ninja que te derrotou."; }
-//	if (title$ == "Rank B") {set Zeny,Zeny - 7500; message strcharinfo(0)," Você acabou de perder 7.500 ryous para o ninja que te derrotou."; }
-//	if (title$ == "Rank A") {set Zeny,Zeny - 10000; message strcharinfo(0)," Você acabou de perder 10.000 ryous para o ninja que te derrotou."; }
-//	if (title$ == "Rank S") {set Zeny,Zeny - 15000; message strcharinfo(0)," Você acabou de perder 15.000 ryous para o ninja que te derrotou."; }
-	
-	
-}
-
-- script DeathHandle -1,{
+-	script	DeathHandle	-1,{
 OnPCDieEvent:
 
 //Defina esta variável para passar para o próximo script
@@ -77,6 +38,44 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 ENDPOS:
 end;
+}
+
+
+-	script	Remover_Zeny_Morrer	-1,{
+
+OnPCKillEvent:
+//	if(killedrid == getcharid(3){ set Zeny,Zeny - 1000000; end; }
+	if( getcharid(3) == killedrid) end;
+	callfunc "adicionar_zeny",getcharid(3),killedrid;
+
+}
+
+function	script	adicionar_zeny	{
+
+	if (title$ == "Rank E") {set Zeny,Zeny + 3500; message strcharinfo(0)," Você acabou de roubar 3.500 ryous do ninja que você derrotou."; }
+//	if (title$ == "Rank D") {set Zeny,Zeny + 5000; message strcharinfo(0)," Você acabou de roubar 5.000 ryous do ninja que você derrotou."; }
+//	if (title$ == "Rank C") {set Zeny,Zeny + 10000; message strcharinfo(0)," Você acabou de roubar 10.000 ryous do ninja que você derrotou."; }
+//	if (title$ == "Rank B") {set Zeny,Zeny + 15000; message strcharinfo(0)," Você acabou de roubar 15.000 ryous do ninja que você derrotou."; }
+//	if (title$ == "Rank A") {set Zeny,Zeny + 20000; message strcharinfo(0)," Você acabou de roubar 20.000 ryous do ninja que você derrotou."; }
+//	if (title$ == "Rank S") {set Zeny,Zeny + 25000; message strcharinfo(0)," Você acabou de roubar 25.000 ryous do ninja que você derrotou."; }
+
+
+}
+
+-	script	Remover_Zeny_Morrer2	-1,{
+OnPCDieEvent:
+//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
+//	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
+	if (title$ == "Rank E" || Zeny < 2500) {
+        message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou.";
+        }
+//	if (title$ == "Rank D") {set Zeny,Zeny - 3000; message strcharinfo(0)," Você acabou de perder 3.000 ryous para o ninja que te derrotou."; }
+//	if (title$ == "Rank C") {set Zeny,Zeny - 5000; message strcharinfo(0)," Você acabou de perder 5.000 ryous para o ninja que te derrotou."; }
+//	if (title$ == "Rank B") {set Zeny,Zeny - 7500; message strcharinfo(0)," Você acabou de perder 7.500 ryous para o ninja que te derrotou."; }
+//	if (title$ == "Rank A") {set Zeny,Zeny - 10000; message strcharinfo(0)," Você acabou de perder 10.000 ryous para o ninja que te derrotou."; }
+//	if (title$ == "Rank S") {set Zeny,Zeny - 15000; message strcharinfo(0)," Você acabou de perder 15.000 ryous para o ninja que te derrotou."; }
+	
+	
 }
 
 /*-	script	testestore	-1,{
