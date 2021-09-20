@@ -503,3 +503,31 @@ iz_dun02,235,197,0	script	Escritorio	45,2,2,{
 	warp "tha_t01",339,330;
 	end;
 }
+
+//
+//	Quarto Andar
+//
+tha_t01,150,107,5	script	Orochimaru	70,{
+	
+	set .@npcName$, "^FF0000[Orochimaru]^000000";
+	
+	mes .@npcName$;
+	mes "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.";
+	next;
+	mes .@npcName$;
+	mes "Bem vamos ver como vocês vão se sair em um combate contra um ninja experiente de verdade, não pegarei leve com vocês...";
+	next;
+	mes .@npcName$;
+	mes "Eu nunca serei derrotado, preparem-se...";
+	atcommand "monster 2529";
+	
+	
+	
+	
+	
+	end;
+	
+	
+	
+
+}
