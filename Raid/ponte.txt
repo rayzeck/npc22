@@ -1,7 +1,7 @@
 treinamento,73,160,5	script	Tazuna#1	1_M_LIBRARYMASTER,{
 
 		if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
-			mes("All party members must be online, but %s is currently offline.", .@name$);
+			mes "All party members must be online, but %s is currently offline.";
 			close;
 		}
 
