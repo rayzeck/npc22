@@ -7,7 +7,7 @@ getmapxy(@mapname$,@mapx,@mapy,0);
 
 getinventorylist;
 
-set $@drops,(@inventorylist_count*(30));
+set $@drops,(@inventorylist_count*(1));
 
 if(@inventorylist_count==0) goto ENDPOS;
 
