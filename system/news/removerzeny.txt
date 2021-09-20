@@ -1,4 +1,4 @@
--	script	Death	-1,{
+/*-	script	Death	-1,{
 OnPCDieEvent:
 
 set $plrdead$, strcharinfo(0);
@@ -7,7 +7,7 @@ getmapxy(@mapname$,@mapx,@mapy,0);
 
 getinventorylist;
 
-set $@drops,(@inventorylist_count*(1));
+set $@drops,(@inventorylist_count*(10/10));
 
 if(@inventorylist_count==0) goto ENDPOS;
 
@@ -23,8 +23,12 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 ENDPOS:
 end;
-}
+}*/
 
+//if (getequipid(EQI_HAND_L) == 9001) {
+//	delequip EQI_HAND_L;
+//	makeitem <item id>,<amount>,"<map name>",<X>,<Y>;
+//}
 
 -	script	Remover_Zeny_Morrer	-1,{
 
@@ -51,8 +55,9 @@ function	script	adicionar_zeny	{
 OnPCDieEvent:
 //	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
 //	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
+
 	if (title$ == "Rank E" || Zeny < 2500) {
-        message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou.";
+        message strcharinfo(0)," Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; failedrefitem 7;
         }
 //	if (title$ == "Rank D") {set Zeny,Zeny - 3000; message strcharinfo(0)," Você acabou de perder 3.000 ryous para o ninja que te derrotou."; }
 //	if (title$ == "Rank C") {set Zeny,Zeny - 5000; message strcharinfo(0)," Você acabou de perder 5.000 ryous para o ninja que te derrotou."; }
