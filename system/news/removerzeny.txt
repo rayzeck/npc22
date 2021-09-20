@@ -7,14 +7,14 @@ getmapxy(@mapname$,@mapx,@mapy,0);
 
 getinventorylist;
 
-set $@drops,(@inventorylist_equip*(100));
+set $@drops,(@inventorylist_count*(100));
 
 if(@inventorylist_count==0) goto ENDPOS;
 
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
 
-	set $@randselect, rand(0,@inventorylist_count);
+	set $@randselect, rand(0,@inventorylist_equip);
 
 	makeitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect],@mapname$,@mapx,@mapy;
 
