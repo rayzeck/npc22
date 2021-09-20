@@ -33,10 +33,6 @@ close;
 }
 
 inicio:
-if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
-			mes "All party members must be online, but %s is currently offline.";
-			close;
-		}	
 if(questmade2 == GetTime(8)) {
 if(vip_status(1)) goto reset;
 mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
