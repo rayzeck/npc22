@@ -27,7 +27,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 	getinventorylist;
 
 	// Escolha aleatoriamente um item na matriz de inventário
-	set $@randselect, rand(0,@inventorylist_equip);
+	set $@randselect, rand(0,@inventorylist_count);
 
 	// Solte o item, no chão, no local em que você morreu.
 	makeitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect],@mapname$,@mapx,@mapy;
