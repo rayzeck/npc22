@@ -1,16 +1,5 @@
 treinamento,73,160,5	script	Tazuna#1	1_M_LIBRARYMASTER,{
 
-	getpartymember(.@party, 1);
-	.@party_count = $@partymembercount;
-	copyarray(.@party_cid[0], $@partymembercid[0], .@party_count);
-	copyarray(.@party_name$[0], $@partymembername$[0], .@party_count);
-
-	freeloop(true);
-	for (.@i = 0; .@i < .@party_count; ++.@i) {
-		.@name$ = .@party_name$[.@i];
-		.@cid = .@party_cid[.@i];
-		.@aid = charid2rid(.@cid);
-
 		if (.@aid < 1 || isloggedin?(.@aid, .@cid) == false) {
 			mesf("All party members must be online, but %s is currently offline.", .@name$);
 			freeloop(false);
