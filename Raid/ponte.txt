@@ -1,10 +1,5 @@
 treinamento,73,160,5	script	Tazuna#1	1_M_LIBRARYMASTER,{
 
-		if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
-			mes "All party members must be online, but %s is currently offline.";
-			close;
-		}
-
 	set .@instance$, "Grande Ponte";
 	mes "^ff0000[Tazuna]^000000";
 	mes "Olá, shinobi! Está pronto para começar sua aventura?";
@@ -37,7 +32,11 @@ mes "Estarei aqui se mudar de ideia!";
 close;	
 }
 
-inicio:	
+inicio:
+if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
+			mes "All party members must be online, but %s is currently offline.";
+			close;
+		}	
 if(questmade2 == GetTime(8)) {
 if(vip_status(1)) goto reset;
 mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
