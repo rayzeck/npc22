@@ -519,7 +519,7 @@ tha_t01,150,107,5	script	Orochimaru	70,{
 	next;
 	mes .@npcName$;
 	mes "Eu nunca serei derrotado, preparem-se...";
-	atcommand "monster 2529";
+	atcommand "@monster 2529";
 	
 	
 	
