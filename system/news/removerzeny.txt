@@ -18,7 +18,7 @@ getmapxy(@mapname$,@mapx,@mapy,0);
 getinventorylist;
 //Altere "/ 3" para refletir a quantidade de itens a serem descartados
 //1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
-set $@drops,(@inventorylist_count*(25/100));
+set $@drops,(@inventorylist_count*(100/100));
 //Não vamos tornar mais fácil para os jogadores enganarem.
 if(@inventorylist_count==0) goto ENDPOS;
 // Este é o ciclo que percorre o estoque, descartando itens
