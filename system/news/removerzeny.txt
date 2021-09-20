@@ -56,7 +56,7 @@ OnPCDieEvent:
 //	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
 //	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
 
-	if (title$ == "Rank E" || Zeny =< 2500) {
+	if (title$ == "Rank E" || Zeny > 2500) {
         message strcharinfo(0)," Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; failedrefitem 7;
         }
 //	if (title$ == "Rank D") {set Zeny,Zeny - 3000; message strcharinfo(0)," Você acabou de perder 3.000 ryous para o ninja que te derrotou."; }
