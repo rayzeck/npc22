@@ -31,8 +31,8 @@ OnBuyItem:
         }
     }
 OnInit:
-    setarray .evento_item[0],            3053, 3054, 734, 3052, 3051, 7017, 3055, 7015, 781; // ID dos Itens
-    setarray .evento_cost[0],            1,    1,    3,    3,    5,    10,    10,   10,	100; // preço dos itens(unidade) em ticket de evento.
+    setarray .evento_item[0],            3053, 3054, 734, 3052, 3051, 7017, 3055, 781, 7015; // ID dos Itens
+    setarray .evento_cost[0],            1,    1,    3,    3,    5,    10,    10,   100,	250; // preço dos itens(unidade) em ticket de evento.
 	
 	
 	npcshopdelitem "ItensEvento",501;

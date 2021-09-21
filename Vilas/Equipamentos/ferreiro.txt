@@ -21,9 +21,9 @@ ama_in01,19,31,4	script	Ferreiro::repa	826,{
 		if(select("- Sim:- Não") == 2) close;
 		if(Zeny >= 10000) {
 			atcommand	"@repairall";
-			set Zeny,Zeny-10000;
+			set Zeny,Zeny-50000000;
 			mes @npc$;
-			mes	"Items concertados.";
+			mes	"Itens consertados.";
 			mes	"Volte quando quiser.";
 			close;
 		}
@@ -69,43 +69,43 @@ ama_in01,19,31,4	script	Ferreiro::repa	826,{
 		.@nivel = ""+(getequiprefinerycnt(.@part)+1)+"";
 		if(getequiprefinerycnt(.@part) < 1){
 		.@chance = "100";
-		.@valor = "1000000";
+		.@valor = "10000000";
 		}
 		if(getequiprefinerycnt(.@part) == 1){
 		.@chance = "75";
-		.@valor = "2000000";
+		.@valor = "20000000";
 		}
 		if(getequiprefinerycnt(.@part) == 2){
 		.@chance = "60";
-		.@valor = "3000000";
+		.@valor = "30000000";
 		}
 		if(getequiprefinerycnt(.@part) == 3){
 		.@chance = "50";
-		.@valor = "4000000";
+		.@valor = "35000000";
 		}
 		if(getequiprefinerycnt(.@part) == 4){
 		.@chance = "45";
-		.@valor = "5000000";
+		.@valor = "40000000";
 		}
 		if(getequiprefinerycnt(.@part) == 5){
 		.@chance = "40";
-		.@valor = "5000000";
+		.@valor = "50000000";
 		}
 		if(getequiprefinerycnt(.@part) == 6){
 		.@chance = "30";
-		.@valor = "5000000";
+		.@valor = "55000000";
 		}
 		if(getequiprefinerycnt(.@part) == 7){
 		.@chance = "20";
-		.@valor = "5000000";
+		.@valor = "60000000";
 		}
 		if(getequiprefinerycnt(.@part) == 8){
 		.@chance = "6";
-		.@valor = "10000000";
+		.@valor = "65000000";
 		}
 		if(getequiprefinerycnt(.@part) == 9){
 		.@chance = "1";
-		.@valor = "10000000";
+		.@valor = "100000000";
 		}
 	
 		next;
