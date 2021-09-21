@@ -1,17 +1,17 @@
 prontera,228,306,4	script	 Torre Sangrenta	64,{
 
-mes "OlÃ¡ "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta?";
-switch(select("Sim:resetar:NÃ£o")) {
+mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta?";
+switch(select("Sim:resetar:Não")) {
 case 1:
 next;
-if(LIMITETORRE == GetTime(8)) {mes "^ff0000[Exame Chunin]^000000"; mes "Limite mÃ¡ximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
+if(LIMITETORRE == GetTime(8)) {mes "^ff0000[Exame Chunin]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
 if(getcharid(1) == $@torre_gID){warp "2@tower",388,182;  close;}
-if($@TORRE_STATUS == 1){ mes "^FF0000* JÃ¡ existe um grupo dentro do Torneio, espere eles saÃ­rem!"; close; }
+if($@TORRE_STATUS == 1){ mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
 .register_num = 10;
 getpartymember getcharid(1), 1;
 getpartymember getcharid(1), 2;
 if(getpartyleader(getcharid(1),2) != getcharid(0)){mes "Somente o lider do Grupo de iniciar o evento!"; close;}
-if($@partymembercount > .register_num ) {mes "Precisa estar em um grupo de atÃ© " + .register_num + " "; close;};
+if($@partymembercount > .register_num ) {mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
 set $@torre_gID,getcharid(1);
 set $@TORRE_STATUS,1;
 mes "Boa Sorte";
@@ -22,19 +22,19 @@ break;
 case 2:
 next;
 if(vip_status(1)){
-if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Hayate]^000000"; mes "VocÃª pode resetar sua raid novamente amanhÃ£!"; close;}
+if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Hayate]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
 set LIMITVIPTORRE, gettime(8);
 mes "Raid resetada com sucesso!";
 set LIMITETORRE,0;
 close;
 }
-mes "VocÃª nÃ£o Ã© um jogador Vip";
+mes "Você não é um jogador Vip";
 break;
 
 
 case 3:
 next;
-mes "Caso mude de ideia Ã© sÃ³ falar comigo novamente";
+mes "Caso mude de ideia é só falar comigo novamente";
 break;
 }
 close;
@@ -51,9 +51,9 @@ sleep2 5000;
 donpcevent "TEtorre::OnInicioEvnt";
 mapannounce "2@tower","[Torre Sangrenta]: Sejam todos bem vindos!",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: Nosso sistema Ã© composto por 5 rounds de 25 minutos",0;
+mapannounce "2@tower","[Torre Sangrenta]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: VocÃªs devem matar todos os monstros para avanÃ§ar",0;
+mapannounce "2@tower","[Torre Sangrenta]: Vocês devem matar todos os monstros para avançar",0;
 sleep2 5000;
 mapannounce "2@tower","[Torre Sangrenta]: A dificuldade varia de round para round",0;
 sleep2 5000;
@@ -70,14 +70,14 @@ sleep2 5000;
 mapannounce "2@tower","[Round 1]: Foram invocados 15 Bandidos",0;
 monster "2@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "2@tower","[Round 1]: Foram invocados 3 CapitÃ£o Anbu",0;
-monster "2@tower",354,217,"Torre CapitÃ£o Anbu",3706,3,"mobetorresangrenta::OnMobKilled";
+mapannounce "2@tower","[Round 1]: Foram invocados 3 Capitão Anbu",0;
+monster "2@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrenta::OnMobKilled";
 end;
 }
 
 function	script	torreround2	{
 set $@R2_torre,1;
-mapannounce "2@tower","[Round 1]: VocÃª finalizou o round 1, parabÃ©ns",0;
+mapannounce "2@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
 sleep2 5000;
 mapannounce "2@tower","[Round 2]: Foram invocados 15 Bandidos",0;
 monster "2@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
@@ -92,7 +92,7 @@ end;
 
 function	script	torreround3	{
 set $@R3_torre,1;
-mapannounce "2@tower","[Round 2]: VocÃª finalizou o round 2, parabÃ©ns",0;
+mapannounce "2@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
 sleep2 5000;
 mapannounce "2@tower","[Round 3]: Foram invocados 15 Bandidos",0;
 monster "2@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
@@ -107,7 +107,7 @@ end;
 
 function	script	torreround4	{
 set $@R4_torre,1;
-mapannounce "2@tower","[Round 3]: VocÃª finalizou o round 3, parabÃ©ns",0;
+mapannounce "2@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
 sleep2 5000;
 mapannounce "2@tower","[Round 4]: Foram invocados 20 Bandidos",0;
 monster "2@tower",367,213,"Torre Bandido",3707,20,"mobetorresangrenta::OnMobKilled";
@@ -122,7 +122,7 @@ end;
 
 function	script	torreround5	{
 set $@R5_torre,1;
-mapannounce "2@tower","[Round 4]: VocÃª finalizou o round 4, parabÃ©ns",0;
+mapannounce "2@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
 sleep2 5000;
 mapannounce "2@tower","[Round 5]: Foram invocados 25 Bandidos",0;
 monster "2@tower",367,213,"Torre Bandido",3707,25,"mobetorresangrenta::OnMobKilled";
@@ -141,9 +141,9 @@ end;
 
 function	script	torresaida	{
 stopnpctimer 0;
-mapannounce "2@tower","[Torre Sangrenta]: ParabÃ©ns, vocÃªs completaram o evento, por favor, vÃ¡ atÃ© o NPC",0;
+mapannounce "2@tower","[Torre Sangrenta]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: VocÃª tem 45 segundos para sair do evento.",0;
+mapannounce "2@tower","[Torre Sangrenta]: Você tem 45 segundos para sair do evento.",0;
 sleep2 45000;
 mapannounce "2@tower","[System]: Seu tempo acabou!",0;
 announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento Torre Sangrenta",bc_all;
@@ -177,9 +177,9 @@ if ($@mobtorredead == 51)&& ($@R5_torre == 1){set $@mobtorredead,0; set $@R5_tor
 
 
 2@tower,384,187,4	script	 TorreSangrenta	998,{
-if($@RF_torre < 1){npctalk "VocÃª ainda nÃ£o finalizou a Torre Sangrenta!";  end;}
+if($@RF_torre < 1){npctalk "Você ainda não finalizou a Torre Sangrenta!";  end;}
 query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 400 WHERE `char_id` = '"+getcharid(0)+"'");
-dispbottom "VocÃª ganhou 400 pontos de missÃ£o.";
+dispbottom "Você ganhou 400 pontos de missão.";
 set LIMITTORRE, gettime(8);
 getitem 734,1;
 warp "SavePoint",0,0;
@@ -197,7 +197,7 @@ end;
 
 
 
-// Tempo MÃ¡ximo da raid 1 hora
+// Tempo Máximo da raid 1 hora
 OnTimer3600000:
 //OnTimer10000:
 set $@mobtorredead,0;
