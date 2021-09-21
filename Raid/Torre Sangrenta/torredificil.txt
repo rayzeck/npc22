@@ -1,0 +1,236 @@
+prontera,225,305,4	script	 Torre Sangrenta Difícil	64,{
+
+mes "[Torre Sangrenta Difícil]";
+mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta Difícil?";
+switch(select("Sim, por favor.:Quero apenas resetar.:Não, obrigado.")) {
+case 1:
+next;
+if(LIMITEtorredificilDIFICIL == GetTime(8)) {mes "^ff0000[Torre Sangrenta Dificil]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
+if(getcharid(1) == $@torredificil_gID){warp "3@tower",388,182;  close;}
+if($@TORRE_STATUSDIFICIL == 1){ mes "[Torre Sangrenta Difícil]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
+.register_num = 10;
+getpartymember getcharid(1), 1;
+getpartymember getcharid(1), 2;
+if(getpartyleader(getcharid(1),2) != getcharid(0)){mes "Somente o lider do Grupo de iniciar o evento!"; close;}
+if($@partymembercount > .register_num ) {mes "[Torre Sangrenta Difícil]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
+set $@torredificil_gID,getcharid(1);
+set $@TORRE_STATUSDIFICIL,1;
+mes "Boa Sorte";
+warp "3@tower",388,182;
+callfunc "Systemtorre";
+break;
+
+case 2:
+next;
+if(vip_status(1)){
+if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Torre Sangrenta Difícil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
+set LIMITVIPTORREDIFICIL, gettime(8);
+mes "[Torre Sangrenta Difícil]";
+mes "Raid resetada com sucesso!";
+set LIMITEtorredificilDIFICIL,0;
+close;
+}
+mes "[Torre Sangrenta Difícil]";
+mes "Você não é um jogador VIP. Torne-se vip para usufruir desse benefício";
+break;
+
+
+case 3:
+next;
+mes "[Torre Sangrenta Difícil]";
+mes "Caso mude de ideia é só falar comigo novamente";
+break;
+}
+close;
+}
+
+function	script	Systemtorre	{
+killmonsterall "3@tower";	
+set $@mobtorredificildead,0;
+set $@D1_torre,0;
+set $@D2_torre,0;
+set $@D3_torre,0;
+set $@D4_torre,0;
+sleep2 5000;
+donpcevent "TEtorredificil::OnInicioEvnt";
+mapannounce "3@tower","[Torre Sangrenta Difícil]: Sejam todos bem vindos!",0;
+sleep2 5000;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
+sleep2 5000;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: Vocês devem matar todos os monstros para avançar",0;
+sleep2 5000;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: A dificuldade varia de round para round",0;
+sleep2 5000;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: : Boa sorte a todos",0;
+callfunc "torreround1";
+end;
+}
+
+function	script	torreround1	{
+set $@D1_torre,1;
+mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 5000;
+mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 10000;
+mapannounce "3@tower","[Round 1]: Foram invocados 3 Capitão Anbu",0;
+monster "3@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrenta::OnMobKilled";
+end;
+}
+
+function	script	torreround2	{
+set $@D2_torre,1;
+mapannounce "3@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
+sleep2 5000;
+mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 5000;
+mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 10000;
+mapannounce "3@tower","[Round 2]: Foram invocados 3 Nukenins Rank C",0;
+monster "3@tower",354,217,"Torre Nukenin C",3711,3,"mobetorresangrenta::OnMobKilled";
+end;
+}
+
+function	script	torreround3	{
+set $@D3_torre,1;
+mapannounce "3@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
+sleep2 5000;
+mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 5000;
+mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+sleep2 10000;
+mapannounce "3@tower","[Round 3]: Foram invocados 3 Nukenins Rank S",0;
+monster "3@tower",354,217,"Torre Nukenin S",3710,3,"mobetorresangrenta::OnMobKilled";
+end;
+}
+
+function	script	torreround4	{
+set $@D5_torre,1;
+mapannounce "3@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
+sleep2 5000;
+mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
+monster "3@tower",367,213,"Torre Bandido",3707,20,"mobetorresangrenta::OnMobKilled";
+sleep2 5000;
+mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
+monster "3@tower",354,217,"Torre Bandido",3707,20,"mobetorresangrenta::OnMobKilled";
+sleep2 10000;
+mapannounce "3@tower","[Round 4]: Foram invocados 1 Ichibi",0;
+monster "3@tower",354,217,"Torre Ichibi",3708,1,"mobetorresangrenta::OnMobKilled";
+end;
+}
+
+function	script	torreround5	{
+set $@D6_torre,1;
+mapannounce "3@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
+sleep2 5000;
+mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
+monster "3@tower",367,213,"Torre Bandido",3707,25,"mobetorresangrenta::OnMobKilled";
+sleep2 5000;
+mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
+monster "3@tower",354,217,"Torre Bandido",3707,25,"mobetorresangrenta::OnMobKilled";
+sleep2 10000;
+mapannounce "3@tower","[Round 5]: Foram invocados 1 Hachibi",0;
+monster "3@tower",354,217,"Torre Hachibi",3709,1,"mobetorresangrenta::OnMobKilled";
+end;
+}
+
+
+
+
+
+function	script	torresaida	{
+stopnpctimer 0;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
+sleep2 5000;
+mapannounce "3@tower","[Torre Sangrenta Difícil]: Você tem 45 segundos para sair do evento.",0;
+sleep2 45000;
+mapannounce "3@tower","[System]: Seu tempo acabou!",0;
+announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento Torre Sangrenta Difícil",bc_all;
+set $@mobtorredificildead,0;
+set $@D1_torre,0;
+set $@D2_torre,0;
+set $@D3_torre,0;
+set $@D5_torre,0;
+set $@D6_torre,0;
+set $@D4_torre,0;
+set $@TORRE_STATUSDIFICIL,0;
+set $@torredificil_gID,0;
+mapwarp "3@tower","eventos",45,78;
+end;
+
+
+
+}
+
+
+-	script	mobetorresangrenta	-1,{
+OnMobKilled:
+set $@mobtorredificildead,$@mobtorredificildead +1;
+mapannounce "3@tower","[System]: "+$@mobtorredificildead+" Capangas mortos",0;
+if ($@mobtorredificildead == 33)&& ($@D1_torre == 1){set $@mobtorredificildead,0; set $@D1_torre,0; callfunc "torreround2";}
+if ($@mobtorredificildead == 33)&& ($@D2_torre == 1){set $@mobtorredificildead,0; set $@D2_torre,0; callfunc "torreround3";}
+if ($@mobtorredificildead == 33)&& ($@D3_torre == 1){set $@mobtorredificildead,0; set $@D3_torre,0; callfunc "torreround4";}
+if ($@mobtorredificildead == 41)&& ($@D5_torre == 1){set $@mobtorredificildead,0; set $@D5_torre,0; callfunc "torreround5";}
+if ($@mobtorredificildead == 51)&& ($@D6_torre == 1){set $@mobtorredificildead,0; set $@D6_torre,0; set $@D4_torre,1; callfunc "torresaida";}
+}
+
+
+3@tower,384,187,4	script	 TorreSangrenta	998,{
+if($@D4_torre < 1){npctalk "Você ainda não finalizou a Torre Sangrenta Difícil!";  end;}
+query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 400 WHERE `char_id` = '"+getcharid(0)+"'");
+dispbottom "Você ganhou 400 pontos de missão.";
+set LIMITTORRE, gettime(8);
+getitem 734,1;
+warp "SavePoint",0,0;
+close;
+
+
+}
+
+
+-	script	TEtorredificil	-1,{
+OnInicioEvnt:
+stopnpctimer;
+initnpctimer;
+end;
+
+
+
+// Tempo Máximo da raid 1 hora
+OnTimer3600000:
+//OnTimer10000:
+set $@mobtorredificildead,0;
+set $@D1_torre,0;
+set $@D2_torre,0;
+set $@D3_torre,0;
+set $@D4_torre,0;
+set $@TORRE_STATUSDIFICIL,0;
+set $@torredificil_gID,0;
+stopnpctimer 0;
+mapannounce "3@tower","[System]: Seu tempo acabou!",0;
+killmonsterall "3@tower";	
+mapwarp "3@tower","SavePoint",0,0;
+end;
+
+}
+
+
+
+
+
+
+
+3@tower	mapflag	partylock
+3@tower	mapflag	nomemo
+3@tower	mapflag	nosave	SavePoint
+3@tower	mapflag	nowarp
+3@tower	mapflag	nowarpto
+3@tower	mapflag	noteleport
+3@tower	mapflag	nobranch
+3@tower	mapflag	noexp
+3@tower	mapflag nodrop

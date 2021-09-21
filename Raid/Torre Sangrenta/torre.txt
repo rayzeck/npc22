@@ -1,18 +1,18 @@
-prontera,228,306,4	script	 Torre Sangrenta	64,{
+prontera,228,306,4	script	 Torre Sangrenta Fácil	64,{
 
-mes "[Torre Sangrenta]";
-mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta?";
-switch(select("Sim, por favor:Quero Apenas Resetar:Não, obrigado")) {
+mes "[Torre Sangrenta Fácil]";
+mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta Fácil?";
+switch(select("Sim, por favor.:Quero apenas resetar.:Não, obrigado.")) {
 case 1:
 next;
-if(LIMITETORRE == GetTime(8)) {mes "^ff0000[Exame Chunin]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
+if(LIMITETORRE == GetTime(8)) {mes "^ff0000[Torre Sangrenta Fácil]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
 if(getcharid(1) == $@torre_gID){warp "2@tower",388,182;  close;}
-if($@TORRE_STATUS == 1){ mes "[Torre Sangrenta]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
+if($@TORRE_STATUS == 1){ mes "[Torre Sangrenta Fácil]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
 .register_num = 10;
 getpartymember getcharid(1), 1;
 getpartymember getcharid(1), 2;
 if(getpartyleader(getcharid(1),2) != getcharid(0)){mes "Somente o lider do Grupo de iniciar o evento!"; close;}
-if($@partymembercount > .register_num ) {mes "[Torre Sangrenta]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
+if($@partymembercount > .register_num ) {mes "[Torre Sangrenta Fácil]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
 set $@torre_gID,getcharid(1);
 set $@TORRE_STATUS,1;
 mes "Boa Sorte";
@@ -23,21 +23,21 @@ break;
 case 2:
 next;
 if(vip_status(1)){
-if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Torre Sangrenta]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
+if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Torre Sangrenta Fácil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
 set LIMITVIPTORRE, gettime(8);
-mes "[Torre Sangrenta]";
+mes "[Torre Sangrenta Fácil]";
 mes "Raid resetada com sucesso!";
 set LIMITETORRE,0;
 close;
 }
-mes "[Torre Sangrenta]";
-mes "Você não é um jogador Vip";
+mes "[Torre Sangrenta Fácil]";
+mes "Você não é um jogador VIP. Torne-se vip para usufruir desse benefício";
 break;
 
 
 case 3:
 next;
-mes "[Torre Sangrenta]";
+mes "[Torre Sangrenta Fácil]";
 mes "Caso mude de ideia é só falar comigo novamente";
 break;
 }
@@ -53,15 +53,15 @@ set $@R3_torre,0;
 set $@RF_torre,0;
 sleep2 5000;
 donpcevent "TEtorre::OnInicioEvnt";
-mapannounce "2@tower","[Torre Sangrenta]: Sejam todos bem vindos!",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: Sejam todos bem vindos!",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: Vocês devem matar todos os monstros para avançar",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: Vocês devem matar todos os monstros para avançar",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: A dificuldade varia de round para round",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: A dificuldade varia de round para round",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: : Boa sorte a todos",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: : Boa sorte a todos",0;
 callfunc "torreround1";
 end;
 }
@@ -145,12 +145,12 @@ end;
 
 function	script	torresaida	{
 stopnpctimer 0;
-mapannounce "2@tower","[Torre Sangrenta]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
 sleep2 5000;
-mapannounce "2@tower","[Torre Sangrenta]: Você tem 45 segundos para sair do evento.",0;
+mapannounce "2@tower","[Torre Sangrenta Fácil]: Você tem 45 segundos para sair do evento.",0;
 sleep2 45000;
 mapannounce "2@tower","[System]: Seu tempo acabou!",0;
-announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento Torre Sangrenta",bc_all;
+announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento Torre Sangrenta Fácil",bc_all;
 set $@mobtorredead,0;
 set $@R1_torre,0;
 set $@R2_torre,0;
@@ -181,7 +181,7 @@ if ($@mobtorredead == 51)&& ($@R5_torre == 1){set $@mobtorredead,0; set $@R5_tor
 
 
 2@tower,384,187,4	script	 TorreSangrenta	998,{
-if($@RF_torre < 1){npctalk "Você ainda não finalizou a Torre Sangrenta!";  end;}
+if($@RF_torre < 1){npctalk "Você ainda não finalizou a Torre Sangrenta Fácil!";  end;}
 query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 400 WHERE `char_id` = '"+getcharid(0)+"'");
 dispbottom "Você ganhou 400 pontos de missão.";
 set LIMITTORRE, gettime(8);
