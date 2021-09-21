@@ -1,17 +1,18 @@
 prontera,228,306,4	script	 Torre Sangrenta	64,{
 
+mes "[Torre Sangrenta]";
 mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta?";
-switch(select("Sim:resetar:Não")) {
+switch(select("Sim, por favor:Quero Apenas Resetar:Não, obrigado")) {
 case 1:
 next;
 if(LIMITETORRE == GetTime(8)) {mes "^ff0000[Exame Chunin]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
 if(getcharid(1) == $@torre_gID){warp "2@tower",388,182;  close;}
-if($@TORRE_STATUS == 1){ mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
+if($@TORRE_STATUS == 1){ mes "[Torre Sangrenta]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
 .register_num = 10;
 getpartymember getcharid(1), 1;
 getpartymember getcharid(1), 2;
 if(getpartyleader(getcharid(1),2) != getcharid(0)){mes "Somente o lider do Grupo de iniciar o evento!"; close;}
-if($@partymembercount > .register_num ) {mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
+if($@partymembercount > .register_num ) {mes "[Torre Sangrenta]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
 set $@torre_gID,getcharid(1);
 set $@TORRE_STATUS,1;
 mes "Boa Sorte";
@@ -22,18 +23,21 @@ break;
 case 2:
 next;
 if(vip_status(1)){
-if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Hayate]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
+if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Torre Sangrenta]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
 set LIMITVIPTORRE, gettime(8);
+mes "[Torre Sangrenta]";
 mes "Raid resetada com sucesso!";
 set LIMITETORRE,0;
 close;
 }
+mes "[Torre Sangrenta]";
 mes "Você não é um jogador Vip";
 break;
 
 
 case 3:
 next;
+mes "[Torre Sangrenta]";
 mes "Caso mude de ideia é só falar comigo novamente";
 break;
 }
