@@ -17,7 +17,7 @@ set $@torredificil_gID,getcharid(1);
 set $@TORRE_STATUSDIFICIL,1;
 mes "Boa Sorte";
 warp "3@tower",388,182;
-callfunc "Systemtorre";
+callfunc "Systemtorredificil";
 break;
 
 case 2:
@@ -44,7 +44,7 @@ break;
 close;
 }
 
-function	script	Systemtorre	{
+function	script	Systemtorredificil	{
 killmonsterall "3@tower";	
 set $@mobtorredificildead,0;
 set $@D1_torre,0;
@@ -62,11 +62,11 @@ sleep2 5000;
 mapannounce "3@tower","[Torre Sangrenta Difícil]: A dificuldade varia de round para round",0;
 sleep2 5000;
 mapannounce "3@tower","[Torre Sangrenta Difícil]: : Boa sorte a todos",0;
-callfunc "torreround1";
+callfunc "torrerounddificil1";
 end;
 }
 
-function	script	torreround1	{
+function	script	torrerounddificil1	{
 set $@D1_torre,1;
 mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
 monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
@@ -79,7 +79,7 @@ monster "3@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrentadificil
 end;
 }
 
-function	script	torreround2	{
+function	script	torrerounddificil2	{
 set $@D2_torre,1;
 mapannounce "3@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
 sleep2 5000;
@@ -94,7 +94,7 @@ monster "3@tower",354,217,"Torre Nukenin C",3711,3,"mobetorresangrentadificil::O
 end;
 }
 
-function	script	torreround3	{
+function	script	torrerounddificil3	{
 set $@D3_torre,1;
 mapannounce "3@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
 sleep2 5000;
@@ -109,7 +109,7 @@ monster "3@tower",354,217,"Torre Nukenin S",3710,3,"mobetorresangrentadificil::O
 end;
 }
 
-function	script	torreround4	{
+function	script	torrerounddificil4	{
 set $@D5_torre,1;
 mapannounce "3@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
 sleep2 5000;
@@ -124,7 +124,7 @@ monster "3@tower",354,217,"Torre Ichibi",3708,1,"mobetorresangrentadificil::OnMo
 end;
 }
 
-function	script	torreround5	{
+function	script	torrerounddificil5	{
 set $@D6_torre,1;
 mapannounce "3@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
 sleep2 5000;
@@ -143,7 +143,7 @@ end;
 
 
 
-function	script	torresaida	{
+function	script	torresaidadificil	{
 stopnpctimer 0;
 mapannounce "3@tower","[Torre Sangrenta Difícil]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
 sleep2 5000;
@@ -172,11 +172,11 @@ end;
 OnMobKilled:
 set $@mobtorredificildead,$@mobtorredificildead +1;
 mapannounce "3@tower","[System]: "+$@mobtorredificildead+" Capangas mortos",0;
-if ($@mobtorredificildead == 33)&& ($@D1_torre == 1){set $@mobtorredificildead,0; set $@D1_torre,0; callfunc "torreround2";}
-if ($@mobtorredificildead == 33)&& ($@D2_torre == 1){set $@mobtorredificildead,0; set $@D2_torre,0; callfunc "torreround3";}
-if ($@mobtorredificildead == 33)&& ($@D3_torre == 1){set $@mobtorredificildead,0; set $@D3_torre,0; callfunc "torreround4";}
-if ($@mobtorredificildead == 41)&& ($@D5_torre == 1){set $@mobtorredificildead,0; set $@D5_torre,0; callfunc "torreround5";}
-if ($@mobtorredificildead == 51)&& ($@D6_torre == 1){set $@mobtorredificildead,0; set $@D6_torre,0; set $@D4_torre,1; callfunc "torresaida";}
+if ($@mobtorredificildead == 33)&& ($@D1_torre == 1){set $@mobtorredificildead,0; set $@D1_torre,0; callfunc "torrerounddificil2";}
+if ($@mobtorredificildead == 33)&& ($@D2_torre == 1){set $@mobtorredificildead,0; set $@D2_torre,0; callfunc "torrerounddificil3";}
+if ($@mobtorredificildead == 33)&& ($@D3_torre == 1){set $@mobtorredificildead,0; set $@D3_torre,0; callfunc "torrerounddificil4";}
+if ($@mobtorredificildead == 41)&& ($@D5_torre == 1){set $@mobtorredificildead,0; set $@D5_torre,0; callfunc "torrerounddificil5";}
+if ($@mobtorredificildead == 51)&& ($@D6_torre == 1){set $@mobtorredificildead,0; set $@D6_torre,0; set $@D4_torre,1; callfunc "torresaidadificil";}
 }
 
 
