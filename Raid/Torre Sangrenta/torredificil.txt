@@ -1,141 +1,141 @@
-prontera,225,305,4	script	 Torre Sangrenta Difícil	64,{
+prontera,225,305,4	script	 predio Sangrenta Difícil	64,{
 
-mes "[Torre Sangrenta Difícil]";
-mes "Olá "+strcharinfo(0)+", gostaria de participar da Torre Sangrenta Difícil?";
+mes "[predio Sangrenta Fácil]";
+mes "Olá "+strcharinfo(0)+", gostaria de participar da predio Sangrenta Fácil?";
 switch(select("Sim, por favor.:Quero apenas resetar.:Não, obrigado.")) {
 case 1:
 next;
-if(LIMITEtorredificilDIFICIL == GetTime(8)) {mes "^ff0000[Torre Sangrenta Dificil]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
-if(getcharid(1) == $@torredificil_gID){warp "3@tower",388,182;  close;}
-if($@TORRE_STATUSDIFICIL == 1){ mes "[Torre Sangrenta Difícil]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
+if(LIMITEpredio == GetTime(8)) {mes "^ff0000[predio Sangrenta Fácil]^000000"; mes "Limite máximo de 1 vez por dia, caso for Vip, tem direito a 2 vezes";close;}
+if(getcharid(1) == $@predio_gID){warp "2@tower",388,182;  close;}
+if($@predio_STATUS == 1){ mes "[predio Sangrenta Fácil]"; mes "^FF0000* Já existe um grupo dentro do Torneio, espere eles saírem!"; close; }
 .register_num = 10;
 getpartymember getcharid(1), 1;
 getpartymember getcharid(1), 2;
 if(getpartyleader(getcharid(1),2) != getcharid(0)){mes "Somente o lider do Grupo de iniciar o evento!"; close;}
-if($@partymembercount > .register_num ) {mes "[Torre Sangrenta Difícil]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
-set $@torredificil_gID,getcharid(1);
-set $@TORRE_STATUSDIFICIL,1;
+if($@partymembercount > .register_num ) {mes "[predio Sangrenta Fácil]"; mes "Precisa estar em um grupo de até " + .register_num + " "; close;};
+set $@predio_gID,getcharid(1);
+set $@predio_STATUS,1;
 mes "Boa Sorte";
-warp "3@tower",388,182;
-callfunc "Systemtorredificil";
+warp "2@tower",388,182;
+callfunc "Systempredio";
 break;
 
 case 2:
 next;
 if(vip_status(1)){
-if(LIMITVIPTORREDIFICIL == gettime(8)) {mes "^ff0000[Torre Sangrenta Difícil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
-set LIMITVIPTORREDIFICIL, gettime(8);
-mes "[Torre Sangrenta Difícil]";
+if(LIMITVIPEpredio == gettime(8)) {mes "^ff0000[predio Sangrenta Fácil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
+set LIMITVIPpredio, gettime(8);
+mes "[predio Sangrenta Fácil]";
 mes "Raid resetada com sucesso!";
-set LIMITEtorredificilDIFICIL,0;
+set LIMITEpredio,0;
 close;
 }
-mes "[Torre Sangrenta Difícil]";
+mes "[predio Sangrenta Fácil]";
 mes "Você não é um jogador VIP. Torne-se vip para usufruir desse benefício";
 break;
 
 
 case 3:
 next;
-mes "[Torre Sangrenta Difícil]";
+mes "[predio Sangrenta Fácil]";
 mes "Caso mude de ideia é só falar comigo novamente";
 break;
 }
 close;
 }
 
-function	script	Systemtorredificil	{
-killmonsterall "3@tower";	
-set $@mobtorredificildead,0;
-set $@D1_torre,0;
-set $@D2_torre,0;
-set $@D3_torre,0;
-set $@D4_torre,0;
+function	script	Systempredio	{
+killmonsterall "2@tower";	
+set $@mobprediodead,0;
+set $@R1_predio,0;
+set $@R2_predio,0;
+set $@R3_predio,0;
+set $@RF_predio,0;
 sleep2 5000;
-donpcevent "TEtorredificil::OnInicioEvnt";
-mapannounce "3@tower","[Torre Sangrenta Difícil]: Sejam todos bem vindos!",0;
+donpcevent "TEpredio::OnInicioEvnt";
+mapannounce "2@tower","[predio Sangrenta Fácil]: Sejam todos bem vindos!",0;
 sleep2 5000;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
+mapannounce "2@tower","[predio Sangrenta Fácil]: Nosso sistema é composto por 5 rounds de 25 minutos",0;
 sleep2 5000;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: Vocês devem matar todos os monstros para avançar",0;
+mapannounce "2@tower","[predio Sangrenta Fácil]: Vocês devem matar todos os monstros para avançar",0;
 sleep2 5000;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: A dificuldade varia de round para round",0;
+mapannounce "2@tower","[predio Sangrenta Fácil]: A dificuldade varia de round para round",0;
 sleep2 5000;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: : Boa sorte a todos",0;
-callfunc "torrerounddificil1";
+mapannounce "2@tower","[predio Sangrenta Fácil]: : Boa sorte a todos",0;
+callfunc "predioround1";
 end;
 }
 
-function	script	torrerounddificil1	{
-set $@D1_torre,1;
-mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+function	script	predioround1	{
+set $@R1_predio,1;
+mapannounce "2@tower","[Round 1]: Foram invocados 15 Bandidos",0;
+monster "2@tower",367,213,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 5000;
-mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 1]: Foram invocados 15 Bandidos",0;
+monster "2@tower",354,217,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "3@tower","[Round 1]: Foram invocados 3 Capitão Anbu",0;
-monster "3@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 1]: Foram invocados 3 Capitão Anbu",0;
+monster "2@tower",354,217,"predio Capitão Anbu",3706,3,"mobeprediosangrenta::OnMobKilled";
 end;
 }
 
-function	script	torrerounddificil2	{
-set $@D2_torre,1;
-mapannounce "3@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
+function	script	predioround2	{
+set $@R2_predio,1;
+mapannounce "2@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
 sleep2 5000;
-mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 2]: Foram invocados 15 Bandidos",0;
+monster "2@tower",367,213,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 5000;
-mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 2]: Foram invocados 15 Bandidos",0;
+monster "2@tower",354,217,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "3@tower","[Round 2]: Foram invocados 3 Nukenins Rank C",0;
-monster "3@tower",354,217,"Torre Nukenin C",3711,3,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 2]: Foram invocados 3 Nukenins Rank C",0;
+monster "2@tower",354,217,"predio Nukenin C",3711,3,"mobeprediosangrenta::OnMobKilled";
 end;
 }
 
-function	script	torrerounddificil3	{
-set $@D3_torre,1;
-mapannounce "3@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
+function	script	predioround3	{
+set $@R3_predio,1;
+mapannounce "2@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
 sleep2 5000;
-mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 3]: Foram invocados 15 Bandidos",0;
+monster "2@tower",367,213,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 5000;
-mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 3]: Foram invocados 15 Bandidos",0;
+monster "2@tower",354,217,"predio Bandido",3707,15,"mobeprediosangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "3@tower","[Round 3]: Foram invocados 3 Nukenins Rank S",0;
-monster "3@tower",354,217,"Torre Nukenin S",3710,3,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 3]: Foram invocados 3 Nukenins Rank S",0;
+monster "2@tower",354,217,"predio Nukenin S",3710,3,"mobeprediosangrenta::OnMobKilled";
 end;
 }
 
-function	script	torrerounddificil4	{
-set $@D5_torre,1;
-mapannounce "3@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
+function	script	predioround4	{
+set $@R4_predio,1;
+mapannounce "2@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
 sleep2 5000;
-mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,20,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 4]: Foram invocados 20 Bandidos",0;
+monster "2@tower",367,213,"predio Bandido",3707,20,"mobeprediosangrenta::OnMobKilled";
 sleep2 5000;
-mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,20,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 4]: Foram invocados 20 Bandidos",0;
+monster "2@tower",354,217,"predio Bandido",3707,20,"mobeprediosangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "3@tower","[Round 4]: Foram invocados 1 Ichibi",0;
-monster "3@tower",354,217,"Torre Ichibi",3708,1,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 4]: Foram invocados 1 Ichibi",0;
+monster "2@tower",354,217,"predio Ichibi",3708,1,"mobeprediosangrenta::OnMobKilled";
 end;
 }
 
-function	script	torrerounddificil5	{
-set $@D6_torre,1;
-mapannounce "3@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
+function	script	predioround5	{
+set $@R5_predio,1;
+mapannounce "2@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
 sleep2 5000;
-mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,25,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 5]: Foram invocados 25 Bandidos",0;
+monster "2@tower",367,213,"predio Bandido",3707,25,"mobeprediosangrenta::OnMobKilled";
 sleep2 5000;
-mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,25,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 5]: Foram invocados 25 Bandidos",0;
+monster "2@tower",354,217,"predio Bandido",3707,25,"mobeprediosangrenta::OnMobKilled";
 sleep2 10000;
-mapannounce "3@tower","[Round 5]: Foram invocados 1 Hachibi",0;
-monster "3@tower",354,217,"Torre Hachibi",3709,1,"mobetorresangrentadificil::OnMobKilled";
+mapannounce "2@tower","[Round 5]: Foram invocados 1 Hachibi",0;
+monster "2@tower",354,217,"predio Hachibi",3709,1,"mobeprediosangrenta::OnMobKilled";
 end;
 }
 
@@ -143,24 +143,24 @@ end;
 
 
 
-function	script	torresaidadificil	{
+function	script	prediosaida	{
 stopnpctimer 0;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
+mapannounce "2@tower","[predio Sangrenta Fácil]: Parabéns, vocês completaram o evento, por favor, vá até o NPC",0;
 sleep2 5000;
-mapannounce "3@tower","[Torre Sangrenta Difícil]: Você tem 45 segundos para sair do evento.",0;
+mapannounce "2@tower","[predio Sangrenta Fácil]: Você tem 45 segundos para sair do evento.",0;
 sleep2 45000;
-mapannounce "3@tower","[System]: Seu tempo acabou!",0;
-announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento Torre Sangrenta Difícil",bc_all;
-set $@mobtorredificildead,0;
-set $@D1_torre,0;
-set $@D2_torre,0;
-set $@D3_torre,0;
-set $@D5_torre,0;
-set $@D6_torre,0;
-set $@D4_torre,0;
-set $@TORRE_STATUSDIFICIL,0;
-set $@torredificil_gID,0;
-mapwarp "3@tower","eventos",45,78;
+mapannounce "2@tower","[System]: Seu tempo acabou!",0;
+announce "O Grupo ["+getpartyname(getcharid(1))+"] Acabou de Finalizar o Evento predio Sangrenta Fácil",bc_all;
+set $@mobprediodead,0;
+set $@R1_predio,0;
+set $@R2_predio,0;
+set $@R3_predio,0;
+set $@R4_predio,0;
+set $@R5_predio,0;
+set $@RF_predio,0;
+set $@predio_STATUS,0;
+set $@predio_gID,0;
+mapwarp "2@tower","eventos",45,78;
 end;
 
 
@@ -168,23 +168,23 @@ end;
 }
 
 
--	script	mobetorresangrentadificil	-1,{
+-	script	mobeprediosangrenta	-1,{
 OnMobKilled:
-set $@mobtorredificildead,$@mobtorredificildead +1;
-mapannounce "3@tower","[System]: "+$@mobtorredificildead+" Capangas mortos",0;
-if ($@mobtorredificildead == 33)&& ($@D1_torre == 1){set $@mobtorredificildead,0; set $@D1_torre,0; callfunc "torrerounddificil2";}
-if ($@mobtorredificildead == 33)&& ($@D2_torre == 1){set $@mobtorredificildead,0; set $@D2_torre,0; callfunc "torrerounddificil3";}
-if ($@mobtorredificildead == 33)&& ($@D3_torre == 1){set $@mobtorredificildead,0; set $@D3_torre,0; callfunc "torrerounddificil4";}
-if ($@mobtorredificildead == 41)&& ($@D5_torre == 1){set $@mobtorredificildead,0; set $@D5_torre,0; callfunc "torrerounddificil5";}
-if ($@mobtorredificildead == 51)&& ($@D6_torre == 1){set $@mobtorredificildead,0; set $@D6_torre,0; set $@D4_torre,1; callfunc "torresaidadificil";}
+set $@mobprediodead,$@mobprediodead +1;
+mapannounce "2@tower","[System]: "+$@mobprediodead+" Capangas mortos",0;
+if ($@mobprediodead == 33)&& ($@R1_predio == 1){set $@mobprediodead,0; set $@R1_predio,0; callfunc "predioround2";}
+if ($@mobprediodead == 33)&& ($@R2_predio == 1){set $@mobprediodead,0; set $@R2_predio,0; callfunc "predioround3";}
+if ($@mobprediodead == 33)&& ($@R3_predio == 1){set $@mobprediodead,0; set $@R3_predio,0; callfunc "predioround4";}
+if ($@mobprediodead == 41)&& ($@R4_predio == 1){set $@mobprediodead,0; set $@R4_predio,0; callfunc "predioround5";}
+if ($@mobprediodead == 51)&& ($@R5_predio == 1){set $@mobprediodead,0; set $@R5_predio,0; set $@RF_predio,1; callfunc "prediosaida";}
 }
 
 
-3@tower,384,187,4	script	 TorreSangrenta	998,{
-if($@D4_torre < 1){npctalk "Você ainda não finalizou a Torre Sangrenta Difícil!";  end;}
+2@tower,384,187,4	script	 predioSangrenta	998,{
+if($@RF_predio < 1){npctalk "Você ainda não finalizou a predio Sangrenta Fácil!";  end;}
 query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 400 WHERE `char_id` = '"+getcharid(0)+"'");
 dispbottom "Você ganhou 400 pontos de missão.";
-set LIMITTORRE, gettime(8);
+set LIMITpredio, gettime(8);
 getitem 734,1;
 warp "SavePoint",0,0;
 close;
@@ -193,7 +193,7 @@ close;
 }
 
 
--	script	TEtorredificil	-1,{
+-	script	TEpredio	-1,{
 OnInicioEvnt:
 stopnpctimer;
 initnpctimer;
@@ -204,17 +204,17 @@ end;
 // Tempo Máximo da raid 1 hora
 OnTimer3600000:
 //OnTimer10000:
-set $@mobtorredificildead,0;
-set $@D1_torre,0;
-set $@D2_torre,0;
-set $@D3_torre,0;
-set $@D4_torre,0;
-set $@TORRE_STATUSDIFICIL,0;
-set $@torredificil_gID,0;
+set $@mobprediodead,0;
+set $@R1_predio,0;
+set $@R2_predio,0;
+set $@R3_predio,0;
+set $@RF_predio,0;
+set $@predio_STATUS,0;
+set $@predio_gID,0;
 stopnpctimer 0;
-mapannounce "3@tower","[System]: Seu tempo acabou!",0;
-killmonsterall "3@tower";	
-mapwarp "3@tower","SavePoint",0,0;
+mapannounce "2@tower","[System]: Seu tempo acabou!",0;
+killmonsterall "2@tower";	
+mapwarp "2@tower","SavePoint",0,0;
 end;
 
 }
@@ -225,12 +225,12 @@ end;
 
 
 
-3@tower	mapflag	partylock
-3@tower	mapflag	nomemo
-3@tower	mapflag	nosave	SavePoint
-3@tower	mapflag	nowarp
-3@tower	mapflag	nowarpto
-3@tower	mapflag	noteleport
-3@tower	mapflag	nobranch
-3@tower	mapflag	noexp
-3@tower	mapflag nodrop
+2@tower	mapflag	partylock
+2@tower	mapflag	nomemo
+2@tower	mapflag	nosave	SavePoint
+2@tower	mapflag	nowarp
+2@tower	mapflag	nowarpto
+2@tower	mapflag	noteleport
+2@tower	mapflag	nobranch
+2@tower	mapflag	noexp
+2@tower	mapflag nodrop
