@@ -23,7 +23,7 @@ break;
 case 2:
 next;
 if(vip_status(1)){
-if(LIMITVIPETORRE == gettime(8)) {mes "^ff0000[Torre Sangrenta Difícil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
+if(LIMITVIPTORREDIFICIL == gettime(8)) {mes "^ff0000[Torre Sangrenta Difícil]^000000"; mes "Você pode resetar sua raid novamente amanhã!"; close;}
 set LIMITVIPTORREDIFICIL, gettime(8);
 mes "[Torre Sangrenta Difícil]";
 mes "Raid resetada com sucesso!";
@@ -69,13 +69,13 @@ end;
 function	script	torreround1	{
 set $@D1_torre,1;
 mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 5000;
 mapannounce "3@tower","[Round 1]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 10000;
 mapannounce "3@tower","[Round 1]: Foram invocados 3 Capitão Anbu",0;
-monster "3@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Capitão Anbu",3706,3,"mobetorresangrentadificil::OnMobKilled";
 end;
 }
 
@@ -84,13 +84,13 @@ set $@D2_torre,1;
 mapannounce "3@tower","[Round 1]: Você finalizou o round 1, parabéns",0;
 sleep2 5000;
 mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 5000;
 mapannounce "3@tower","[Round 2]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 10000;
 mapannounce "3@tower","[Round 2]: Foram invocados 3 Nukenins Rank C",0;
-monster "3@tower",354,217,"Torre Nukenin C",3711,3,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Nukenin C",3711,3,"mobetorresangrentadificil::OnMobKilled";
 end;
 }
 
@@ -99,13 +99,13 @@ set $@D3_torre,1;
 mapannounce "3@tower","[Round 2]: Você finalizou o round 2, parabéns",0;
 sleep2 5000;
 mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",367,213,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 5000;
 mapannounce "3@tower","[Round 3]: Foram invocados 15 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Bandido",3707,15,"mobetorresangrentadificil::OnMobKilled";
 sleep2 10000;
 mapannounce "3@tower","[Round 3]: Foram invocados 3 Nukenins Rank S",0;
-monster "3@tower",354,217,"Torre Nukenin S",3710,3,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Nukenin S",3710,3,"mobetorresangrentadificil::OnMobKilled";
 end;
 }
 
@@ -114,13 +114,13 @@ set $@D5_torre,1;
 mapannounce "3@tower","[Round 3]: Você finalizou o round 3, parabéns",0;
 sleep2 5000;
 mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,20,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",367,213,"Torre Bandido",3707,20,"mobetorresangrentadificil::OnMobKilled";
 sleep2 5000;
 mapannounce "3@tower","[Round 4]: Foram invocados 20 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,20,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Bandido",3707,20,"mobetorresangrentadificil::OnMobKilled";
 sleep2 10000;
 mapannounce "3@tower","[Round 4]: Foram invocados 1 Ichibi",0;
-monster "3@tower",354,217,"Torre Ichibi",3708,1,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Ichibi",3708,1,"mobetorresangrentadificil::OnMobKilled";
 end;
 }
 
@@ -129,13 +129,13 @@ set $@D6_torre,1;
 mapannounce "3@tower","[Round 4]: Você finalizou o round 4, parabéns",0;
 sleep2 5000;
 mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
-monster "3@tower",367,213,"Torre Bandido",3707,25,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",367,213,"Torre Bandido",3707,25,"mobetorresangrentadificil::OnMobKilled";
 sleep2 5000;
 mapannounce "3@tower","[Round 5]: Foram invocados 25 Bandidos",0;
-monster "3@tower",354,217,"Torre Bandido",3707,25,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Bandido",3707,25,"mobetorresangrentadificil::OnMobKilled";
 sleep2 10000;
 mapannounce "3@tower","[Round 5]: Foram invocados 1 Hachibi",0;
-monster "3@tower",354,217,"Torre Hachibi",3709,1,"mobetorresangrenta::OnMobKilled";
+monster "3@tower",354,217,"Torre Hachibi",3709,1,"mobetorresangrentadificil::OnMobKilled";
 end;
 }
 
@@ -168,7 +168,7 @@ end;
 }
 
 
--	script	mobetorresangrenta	-1,{
+-	script	mobetorresangrentadificil	-1,{
 OnMobKilled:
 set $@mobtorredificildead,$@mobtorredificildead +1;
 mapannounce "3@tower","[System]: "+$@mobtorredificildead+" Capangas mortos",0;
