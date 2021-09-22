@@ -71,22 +71,22 @@ function	script	remover_zeny	{
 	set @quebrar, rand(7,9);
 	
 	if (title$ == "Rank E" && Zeny < 25000) {
-        message strcharinfo(0)," Você perdeu 10 à mais de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-10; breakequip @quebrar;
+        announce "Você perdeu 10 à mais de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-10; breakequip @quebrar;
         }
 	if (title$ == "Rank D" && Zeny < 50000) {
-        message strcharinfo(0)," Você perdeu mais 30 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-30; breakequip @quebrar;
+        announce "Você perdeu mais 30 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-30; breakequip @quebrar;
         }	
 	if (title$ == "Rank C" && Zeny < 100000) {
-        message strcharinfo(0)," Você perdeu mais 50 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-50; breakequip @quebrar;
+        announce "Você perdeu mais 50 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-50; breakequip @quebrar;
         }	
 	if (title$ == "Rank B" && Zeny < 200000) {
-        message strcharinfo(0)," Você perdeu mais 100 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-100; breakequip @quebrar;
+        announce "Você perdeu mais 100 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-100; breakequip @quebrar;
         }	
 	if (title$ == "Rank A" && Zeny < 300000) {
-        message strcharinfo(0)," Você perdeu mais 200 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-200; breakequip @quebrar;
+        announce "Você perdeu mais 200 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-200; breakequip @quebrar;
         }
 	if (title$ == "Rank S" && Zeny < 600000) {
-        message strcharinfo(0)," Você perdeu mais 300 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado."; set reputation2, reputation2-300; breakequip @quebrar;
+        announce "Você perdeu mais 300 pontos de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-300; breakequip @quebrar;
         }
 	if (title$ == "Rank E") {set Zeny,Zeny - 25000; announce "Você acabou de perder 25.000 ryous para o ninja que te derrotou.",#008000|bc_self; }
 	if (title$ == "Rank D") {set Zeny,Zeny - 50000; announce "Você acabou de perder 50.000 ryous para o ninja que te derrotou.",#008000|bc_self; }
