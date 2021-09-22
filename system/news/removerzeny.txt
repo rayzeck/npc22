@@ -55,19 +55,23 @@ function	script	adicionar_zeny	{
 OnPCDieEvent:
 if( getcharid(3) == killedrid) end;
 callfunc "remover_zeny",getcharid(3),killedrid;
+	if ( !killerrid ) // example -> drink poison bottle
+		dispbottom "You just suicide"; 
+	else if ( killerrid < 100000000 )
+		dispbottom "You have killed by a player -> "+ rid2name( killerrid );
+	else
+		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
 
 }
 
 function	script	remover_zeny	{
 
 	set @quebrar, rand(7,9);
-	if ( !killerrid ) // example -> drink poison bottle
-		dispbottom "You just suicide"; 
-		//dispbottom "You have killed by a player -> "+ rid2name( killerrid );
-	else
-		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
-	else if ( killerrid < 100000000 )
-		if (title$ == "Rank E" && Zeny < 25000) {
+	
+	//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
+//	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
+	
+	if (title$ == "Rank E" && Zeny < 25000) {
         message strcharinfo(0)," Você perdeu 10 à mais de reputação e um equipamento por não ter ryous à ser roubado"; set reputation2, reputation2-10; breakequip @quebrar;
         }
 	if (title$ == "Rank D" && Zeny < 50000) {
@@ -92,10 +96,7 @@ function	script	remover_zeny	{
 	if (title$ == "Rank A") {set Zeny,Zeny - 300000; message strcharinfo(0)," Você acabou de perder 300.000 ryous para o ninja que te derrotou."; }
 	if (title$ == "Rank S") {set Zeny,Zeny - 600000; message strcharinfo(0)," Você acabou de perder 600.000 ryous para o ninja que te derrotou."; }
 	
-	//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
-//	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
-	
-	
+	end;
 }
 
 /*-	script	testestore	-1,{
