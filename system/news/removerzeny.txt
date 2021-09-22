@@ -56,13 +56,13 @@ OnPCDieEvent:
 if( getcharid(3) == killedrid) end;
 	if ( !killerrid ) // poção
 		dispbottom "Você se suicidou."; 
-	else if ( killerrid < 100000000 ) goto L_Zeny;
+	else if ( killerrid < 100000000 ) goto removerzenyfuncao;
 	else
-		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
+		dispbottom "Você foi morto por um monstro ou por uma invocação -> "+ rid2name( killerrid ); end;
 
-	L_Zeny:
-	dispbottom "Teste";	
-	callfunc "remover_zeny",getcharid(3),killedrid;
+	removerzenyfuncao:
+	//Adicionar qualquer coisa que quiser antes do callfunc
+	callfunc "remover_zeny",getcharid(3),killedrid; //chamou a função abaixo
 	close;
 }
 
