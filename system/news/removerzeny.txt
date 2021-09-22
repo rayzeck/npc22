@@ -53,7 +53,14 @@ function	script	adicionar_zeny	{
 
 -	script	Remover_Zeny_Morrer2	-1,{
 OnPCDieEvent:
-//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
+if( getcharid(3) == killedrid) end;
+callfunc "remover_zeny",getcharid(3),killedrid;
+
+}
+
+function	script	remover_zeny	{
+	
+	//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
 //	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
 	set @quebrar, rand(7,9);
 	if (title$ == "Rank E" && Zeny < 25000) {
