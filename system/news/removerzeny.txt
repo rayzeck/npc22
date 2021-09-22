@@ -61,8 +61,8 @@ if( getcharid(3) == killedrid) end;
 		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
 
 	L_Zeny:
-	callfunc "remover_zeny",getcharid(3),killedrid;
 	dispbottom "Teste";	
+	callfunc "remover_zeny",getcharid(3),killedrid;
 	close;
 }
 
