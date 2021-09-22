@@ -57,7 +57,7 @@ if( getcharid(3) == killedrid)
 	if ( !killerrid ) // example -> drink poison bottle
 		dispbottom "You just suicide"; 
 	else if ( killerrid < 100000000 )
-		goto teste
+		goto teste;
 		dispbottom "You have killed by a player -> "+ rid2name( killerrid );
 	else
 		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
