@@ -53,19 +53,17 @@ function	script	adicionar_zeny	{
 
 -	script	Remover_Zeny_Morrer2	-1,{
 OnPCDieEvent:
-if( getcharid(3) == killedrid) 
+if( getcharid(3) == killedrid) end;
+callfunc "remover_zeny",getcharid(3),killedrid;
 	if ( !killerrid ) // example -> drink poison bottle
 		dispbottom "You just suicide"; 
-	else if ( killerrid < 100000000 )
-		goto teste;
-		dispbottom "You have killed by a player -> "+ rid2name( killerrid );
+	else if ( killerrid < 100000000 ) goto L_Zeny;
 	else
-		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid );
-	
-	teste:
-	callfunc "remover_zeny",getcharid(3),killedrid;
-	end;
+		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
 
+	L_Zeny:
+	mes "me desculpe você tem menos de 10 zenys, não posso continuar";	
+	close;
 }
 
 function	script	remover_zeny	{
