@@ -1,3 +1,24 @@
+1@tower,71,1,0	script	#Manager Mode1	844,{
+	callfunc "F_GM_NPC";
+	mes "Please enter the password.";
+	set .@i, callfunc("F_GM_NPC","dmc2008",1);
+	next;
+	if (.@i == 1) {
+		mes "This NPC manages the tower from the 1st to the 25th Level.";
+		mes "Please enter the Level number to open.";
+		mes "(i.g.: 1F->1, 25F->25)";
+		input .@input,1,25;
+		next;
+		if (.@input < 1 || .@input > 25)
+			mes "You can only enter a number from 1 to 25.";
+		else {
+			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
+			mes "*** Level "+ .@input + " is now being opened. ***";
+		}
+	}
+	close;
+}
+
 dali02,110,94,0	script	Torre Bijuu	406,{
 
 	set .@party_id,getcharid(1);
@@ -103,7 +124,7 @@ L_Enter:
 }
 
 // Original name: "#102Administrator Mode104"
-e_tower,1,1,2	script	#102Administrator Mode	844,{
+e_tower,1,1,2	script	#102Administrator Mode104	844,{
 	callfunc "F_GM_NPC";
 	mes "Please enter the password";
 	set .@i, callfunc("F_GM_NPC","dmc2008",1);
@@ -392,26 +413,6 @@ OnTimer120000:
 	end;
 }
 
-1@tower,71,1,0	script	#Manager Mode1	844,{
-	callfunc "F_GM_NPC";
-	mes "Please enter the password.";
-	set .@i, callfunc("F_GM_NPC","dmc2008",1);
-	next;
-	if (.@i == 1) {
-		mes "This NPC manages the tower from the 1st to the 25th Level.";
-		mes "Please enter the Level number to open.";
-		mes "(i.g.: 1F->1, 25F->25)";
-		input .@input,1,25;
-		next;
-		if (.@input < 1 || .@input > 25)
-			mes "You can only enter a number from 1 to 25.";
-		else {
-			donpcevent instance_npcname(.@input+"FGate102tower")+"::OnEnable";
-			mes "*** Level "+ .@input + " is now being opened. ***";
-		}
-	}
-	close;
-}
 
 // Levels 26-50
 //============================================================
