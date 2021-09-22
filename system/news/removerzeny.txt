@@ -66,7 +66,7 @@ function	script	remover_zeny	{
 	else if ( killerrid < 100000000 )
 		dispbottom "You have killed by a player -> "+ rid2name( killerrid );
 	else
-		dispbottom "You have killed by a monster/pet/homunculus/mercenary -> "+ rid2name( killerrid );
+		dispbottom "You have killed by a monster/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
 	
 	//	if(Zeny <= 2500) {dispbottom "Você perdeu 10 à mais de reputação por não ter ryous à ser roubado"; set reputation2, reputation2-10; }
 //	if (title$ == "Rank E" || Zeny >= 2500) {set Zeny,Zeny - 2500; message strcharinfo(0)," Você acabou de perder 2.500 ryous para o ninja que te derrotou."; }
