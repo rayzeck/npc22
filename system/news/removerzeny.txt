@@ -41,7 +41,7 @@ OnPCKillEvent:
 
 function	script	adicionar_zeny	{
 
-	if (title$ == "Rank E") {set Zeny,Zeny + 3500; message strcharinfo(0)," Você acabou de roubar 3.500 ryous do ninja que você derrotou."; announce "Você acabou de roubar 3.500 do ninja que você derrotou",bc_blue|bc_self; }
+	if (title$ == "Rank E") {set Zeny,Zeny + 3500; message strcharinfo(0)," Você acabou de roubar 3.500 ryous do ninja que você derrotou."; announce "Você acabou de roubar 3.500 do ninja que você derrotou",0x00FF00|bc_self; }
 	if (title$ == "Rank D") {set Zeny,Zeny + 20000; message strcharinfo(0)," Você acabou de roubar 20.000 ryous do ninja que você derrotou."; announce "Você acabou de roubar 20.000 do ninja que você derrotou",bc_blue|bc_self; }
 	if (title$ == "Rank C") {set Zeny,Zeny + 40000; message strcharinfo(0)," Você acabou de roubar 40.000 ryous do ninja que você derrotou."; announce "Você acabou de roubar 40.000 do ninja que você derrotou",bc_blue|bc_self; }
 	if (title$ == "Rank B") {set Zeny,Zeny + 70000; message strcharinfo(0)," Você acabou de roubar 70.000 ryous do ninja que você derrotou."; announce "Você acabou de roubar 70.000 do ninja que você derrotou",bc_blue|bc_self; }
@@ -88,7 +88,7 @@ function	script	remover_zeny	{
 	if (title$ == "Rank S" && Zeny < 600000) {
         message strcharinfo(0)," Você perdeu mais 300 pontos de reputação e um equipamento por não ter ryous à ser roubado"; set reputation2, reputation2-300; breakequip @quebrar;
         }
-	if (title$ == "Rank E") {set Zeny,Zeny - 25000; message strcharinfo(0)," Você acabou de perder 25.000 ryous para o ninja que te derrotou."; announce "Você acabou de perder 25.000 ryous para o ninja que te derrotou",bc_blue|bc_self; }
+	if (title$ == "Rank E") {set Zeny,Zeny - 25000; message strcharinfo(0)," Você acabou de perder 25.000 ryous para o ninja que te derrotou."; announce "Você acabou de perder 25.000 ryous para o ninja que te derrotou",0x00FF00|bc_self; }
 	if (title$ == "Rank D") {set Zeny,Zeny - 50000; message strcharinfo(0)," Você acabou de perder 50.000 ryous para o ninja que te derrotou."; announce "Você acabou de perder 50.000 ryous para o ninja que te derrotou",bc_blue|bc_self; }
 	if (title$ == "Rank C") {set Zeny,Zeny - 100000; message strcharinfo(0)," Você acabou de perder 100.000 ryous para o ninja que te derrotou."; announce "Você acabou de perder 100.000 ryous para o ninja que te derrotou",bc_blue|bc_self; }
 	if (title$ == "Rank B") {set Zeny,Zeny - 200000; message strcharinfo(0)," Você acabou de perder 200.000 ryous para o ninja que te derrotou."; announce "Você acabou de perder 200.000 ryous para o ninja que te derrotou",bc_blue|bc_self; }
