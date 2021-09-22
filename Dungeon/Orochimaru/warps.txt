@@ -507,7 +507,7 @@ iz_dun02,235,197,0	script	Escritorio	45,2,2,{
 //
 //	Quarto Andar
 //
-tha_t01,150,107,5	script	Orochimaru	70,{
+tha_t01,150,107,5	script	Orochimaru#4	70,{
 	
 	set .@npcName$, "^FF0000[Orochimaru]^000000";
 	
@@ -519,7 +519,7 @@ tha_t01,150,107,5	script	Orochimaru	70,{
 	next;
 	mes .@npcName$;
 	mes "Eu nunca serei derrotado, preparem-se...";
-	hideonnpc "Orochimaru";
+	hideonnpc "Orochimaru#4";
 	monster "tha_t01",144,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",154,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",150,107,"Orochimaru",3151,1;	
