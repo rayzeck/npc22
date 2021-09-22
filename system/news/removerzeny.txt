@@ -60,10 +60,11 @@ if( getcharid(3) == killedrid)
 		goto teste;
 		dispbottom "You have killed by a player -> "+ rid2name( killerrid );
 	else
-		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid ); end;
+		dispbottom "Você foi morto por um monstro/pet/homunculus/mercenary -> "+ rid2name( killerrid );
 	
 	teste:
 	callfunc "remover_zeny",getcharid(3),killedrid;
+	end;
 
 }
 
