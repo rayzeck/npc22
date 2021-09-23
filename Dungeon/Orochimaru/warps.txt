@@ -512,10 +512,10 @@ tha_t01,150,107,5	script	Orochimaru#4	70,{
 	hideonnpc "Orochimaru#4";
 	announce "[Orochimaru]",bc_blue|bc_map;
 	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_map;
-	sleep2 3000;
+	sleep2 5000;
 	announce "[Orochimaru]",bc_blue|bc_map;
 	announce "Bem vamos ver como vocês vão se sair em um combate contra um ninja experiente de verdade, não pegarei leve com vocês...",bc_blue|bc_map;
-	sleep2 3000;
+	sleep2 5000;
 	announce "[Orochimaru]",bc_blue|bc_map;
 	announce "Eu nunca serei derrotado, preparem-se...",bc_blue|bc_map;
 	sleep2 5000;
