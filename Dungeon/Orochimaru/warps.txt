@@ -521,7 +521,10 @@ tha_t01,150,107,5	script	Orochimaru#4	70,{
 	sleep2 5000;
 	monster "tha_t01",144,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",154,84,"Hakuja Sennin",2529,1;
-	monster "tha_t01",150,107,"Orochimaru",3151,1;	
+	monster "tha_t01",150,107,"Orochimaru",3151,1;
+	
+	sleep2 3600000;
+	hideoffnpc "Orochimaru#4";
 	
 	end;
 }
