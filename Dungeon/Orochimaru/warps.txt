@@ -519,9 +519,12 @@ tha_t01,150,107,5	script	Orochimaru#4	70,{
 	//next;
 	//mes .@npcName$;
 	//mes "Eu nunca serei derrotado, preparem-se...";
-	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_map;
-	
 	hideonnpc "Orochimaru#4";
+	announce "[Orochimaru]",bc_blue|bc_map;
+	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_map;
+	sleep 2000;
+	announce "Bem vamos ver como vocês vão se sair em um combate contra um ninja experiente de verdade, não pegarei leve com vocês...",bc_blue|bc_map;
+	announce "Eu nunca serei derrotado, preparem-se...",bc_blue|bc_map;
 	sleep 2000;
 	close2;
 	monster "tha_t01",144,84,"Hakuja Sennin",2529,1;
