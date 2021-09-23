@@ -519,7 +519,7 @@ tha_t01,150,107,5	script	Orochimaru#4	70,{
 	//next;
 	//mes .@npcName$;
 	//mes "Eu nunca serei derrotado, preparem-se...";
-	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_all;
+	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_map;
 	
 	hideonnpc "Orochimaru#4";
 	sleep 2000;
