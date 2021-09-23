@@ -521,6 +521,7 @@ tha_t01,150,107,5	script	Orochimaru#4	70,{
 	mes "Eu nunca serei derrotado, preparem-se...";
 	hideonnpc "Orochimaru#4";
 	sleep 2000;
+	close2;
 	monster "tha_t01",144,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",154,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",150,107,"Orochimaru",3151,1;	
