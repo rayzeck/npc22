@@ -64,7 +64,7 @@ function	script	setquestparty	{
 		mes "Olá sou o Kage da sua Vila, sou o responsável por designar as missões que serão responsáveis pela sua progressão no Mundo Ninja.";
 		next;
 		mes "["+strnpcinfo(3)+"]";
-		mes "Cada missão da uma certa quantidade de pontos que podem ser trocados pela sua Graduação. Com 600 pontos voce pode virar Chunin e com 2000 voce pode virar Jounin.";
+		mes "Cada missão da uma certa quantidade de pontos que podem ser trocados pela sua Graduação. Com 800 pontos voce pode virar Chunin e com 2500 voce pode virar Jounin.";
 		next;
 		mes "["+strnpcinfo(3)+"]";
 		mes "Irei envia-l"+(Sex?"o":"a")+" até a biblioteca para escolher seus treinamentos!";
@@ -488,14 +488,14 @@ function	script	setquestparty	{
 				close;
 		}
 		if(Class <= 4 )
-			set @price, 600;
+			set @price, 800;
 		else
-			set @price, 2000;
+			set @price, 2500;
 		if(@qp < @price) {
 			mes "Você não possui pontos suficientes, ainda faltam "+(@price-@qp)+" pontos, tente efetuar mais algumas missões...";
 			close;
 		}
-		if(@price == 600) {
+		if(@price == 800) {
 			set chunin, 1;
 			set genin, 0;
 		}else{
@@ -507,8 +507,8 @@ function	script	setquestparty	{
 		getexp -BaseExpAcomulada,0;
 		jobchange @next_job;
 		
-	if(chunin==1)	{announce "[Kage] "+strcharinfo(0)+" subiu de graduação e agora é Chunin em troca de 600 pontos!",bc_blue|bc_all; close;}
-	if(jounin==1)	{announce "[Kage] "+strcharinfo(0)+" subiu de graduação e agora é Jounin em troca de 2000 pontos!",bc_blue|bc_all; close;}
+	if(chunin==1)	{announce "[Kage] "+strcharinfo(0)+" subiu de graduação e agora é Chunin em troca de 800 pontos!",bc_blue|bc_all; close;}
+	if(jounin==1)	{announce "[Kage] "+strcharinfo(0)+" subiu de graduação e agora é Jounin em troca de 2500 pontos!",bc_blue|bc_all; close;}
 	
 	case 5:
 		switch(select("- Fuuin no Sho [20.000 Pontos]:- Autorização [3000 Pontos]:- Caixa Item Avançado [200 Pontos]")) {

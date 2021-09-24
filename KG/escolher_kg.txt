@@ -1,11 +1,11 @@
-bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
+bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 
 	.@menu$ = "[^5c5c5cPesquisador^000000]";
 
 //========================================================================
 //	MENU
 //========================================================================
-	if(Class == 0) { mes .@menu$; mes "Você precisa se tornar um Genin antés de escolher sua Habilidade Hidden"; close;}
+	if(Class == 0) { mes .@menu$; mes "Você precisa se tornar um Genin antés de escolher sua Kekkei Genkai"; close;}
 
 	mes .@menu$;
 	mes "Olá "+strcharinfo(0)+"-chan!";
@@ -13,18 +13,18 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 	mes .@menu$;
 	mes "Há vários anos que eu estou estudando sobre formas de aperfeiçoamento";
 	mes "Em outras palavras,";
-	mes "Estudando sobre Habilidaes Hiddens e outras formas de ganhar mais poder.";
+	mes "Estudando sobre Habilidaes Kekkeis e outras formas de ganhar mais poder.";
 	next;
 	mes .@menu$;
 	mes "Conte-me.";
 	mes "O que você gostaria de saber?";
-	switch(select("- Adquirir Habilidade Hidden:- Trocar Hidden:- Remover Hidden") ) {
+	switch(select("- Adquirir Kekkei Genkai:- Trocar Kekkei:- Remover Kekkei") ) {
 		next;
 		case 1:
-			if(despertarkg >= 1) { mes .@menu$; mes "Você ja é um usuário de Habilidade Hidden"; close; }
-			if(pegoukg >= 1) { mes .@menu$; mes "Você ja é um usuário de Habilidade Hidden"; close; }
+			if(despertarkg >= 1) { mes .@menu$; mes "Você ja é um usuário de Kekkei Genkai"; close; }
+			if(pegoukg >= 1) { mes .@menu$; mes "Você ja é um usuário de Kekkei Genkai"; close; }
 			mes .@menu$;
-			mes "Escolha sua Habilidade Hidden. Lembre-se que ao escolher você não poderá mais trocar.";
+			mes "Escolha sua Kekkei Genkai. Lembre-se que ao escolher você não poderá mais trocar.";
 			switch(select("- Uchiha:- Kugutsu:- Hyuuga:- Portões de Chakra:- Akimichi:- Nara:- Selo Céu:- Selo Terra:- Hyouton:- Mais Opções") ) {
 				case 1:
 					mes .@menu$;
@@ -339,26 +339,26 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 			}
 		case 2:
 			mes .@menu$;
-			mes "Você tem certeza que quer trocar sua Habilidade Hidden?";
+			mes "Você tem certeza que quer trocar sua Kekkei Genkai?";
 			if(select("- Sim:- Não") == 2) close;
 				next;
-				if(countitem(7013) < 1 ) { mes .@menu$; mes "Você precisa de 1x Ticket Troca de Hidden."; close; }
-				if(!getequipisequiped(EQI_HEAD_MID)) { mes .@menu$; mes "Você precisa estar com sua Hidden equipada."; close; }
+				if(countitem(7013) < 1 ) { mes .@menu$; mes "Você precisa de 1x Ticket Troca de Kekkei."; close; }
+				if(!getequipisequiped(EQI_HEAD_MID)) { mes .@menu$; mes "Você precisa estar com sua Kekkei equipada."; close; }
 				
 				set .@nivel,""+getequipcardid(EQI_HEAD_MID,0)+"";
 				set .@sharinganlv,.@nivel + 11;
 				mes .@menu$;
-				mes "Qual Habilidade Hidden você gostaria de pegar?";
+				mes "Qual Kekkei Genkai você gostaria de pegar?";
 					switch(select("- Uchiha:- Kugutsu:- Hyuuga:- Portões de Chakra:- Akimichi:- Nara:- Selo Céu:- Selo Terra:- Hyouton:- Mais Opções") ) {
 					
 						case 1:
 							next;
 							mes .@menu$;
-							mes "Procure o Professor Uchiha na biblioteca para a troca da sua Hidden!";
+							mes "Procure o Professor Uchiha na biblioteca para a troca da sua Kekkei!";
 							close;
  						
 						case 2:
-							if(countitem(30105) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30105) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30105,1,1,0,0,.@nivel,0,0,0; equip 30105; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30105,1,1,0,0,.@nivel,0,0,0; equip 30105; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30105,1,1,0,0,.@nivel,0,0,0; equip 30105; } 
@@ -402,7 +402,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 						
 						case 3:
-							if(countitem(30106) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30106) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30106,1,1,0,0,.@nivel,0,0,0; equip 30106; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30106,1,1,0,0,.@nivel,0,0,0; equip 30106; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30106,1,1,0,0,.@nivel,0,0,0; equip 30106; }
@@ -446,7 +446,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 						
 						case 4:
-							if(countitem(30107) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30107) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30107,1,1,0,0,.@nivel,0,0,0; equip 30107; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30107,1,1,0,0,.@nivel,0,0,0; equip 30107; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30107,1,1,0,0,.@nivel,0,0,0; equip 30107; } 
@@ -490,7 +490,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 							
 						case 5:
-							if(countitem(30108) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30108) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30108,1,1,0,0,.@nivel,0,0,0; equip 30108; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30108,1,1,0,0,.@nivel,0,0,0; equip 30108; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30108,1,1,0,0,.@nivel,0,0,0; equip 30108; } 
@@ -534,7 +534,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 							
 						case 6:
-							if(countitem(30109) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30109) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30109,1,1,0,0,.@nivel,0,0,0; equip 30109; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30109,1,1,0,0,.@nivel,0,0,0; equip 30109; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30109,1,1,0,0,.@nivel,0,0,0; equip 30109; } 
@@ -578,7 +578,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 							
 						case 7:
-							if(countitem(30110) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30110) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30110,1,1,0,0,.@nivel,0,0,0; equip 30110; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30110,1,1,0,0,.@nivel,0,0,0; equip 30110; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30110,1,1,0,0,.@nivel,0,0,0; equip 30110; } 
@@ -622,7 +622,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 						
 						case 8:
-							if(countitem(30111) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30111) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30111,1,1,0,0,.@nivel,0,0,0; equip 30111; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30111,1,1,0,0,.@nivel,0,0,0; equip 30111; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30111,1,1,0,0,.@nivel,0,0,0; equip 30111; } 
@@ -666,7 +666,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 							close;
 						
 						case 9:
-							if(countitem(30112) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+							if(countitem(30112) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 							if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30112,1,1,0,0,.@nivel,0,0,0; equip 30112; } 
 							if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30112,1,1,0,0,.@nivel,0,0,0; equip 30112; } 
 							if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30112,1,1,0,0,.@nivel,0,0,0; equip 30112; } 
@@ -712,7 +712,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 						case 10:
 							switch(select("- Mitsashi:- Kibaku Socho:- Aburame:- Jashin:- Tayuya:- Ibuse:- Byakugo:- Byakugan Punhos Gentis:- Kaguya:- Mais Opções") ) {
 								case 1:
-									if(countitem(30113) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30113) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30113,1,1,0,0,.@nivel,0,0,0; equip 30113; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30113,1,1,0,0,.@nivel,0,0,0; equip 30113; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30113,1,1,0,0,.@nivel,0,0,0; equip 30113; } 
@@ -756,7 +756,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 2:
-									if(countitem(30114) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30114) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30114,1,1,0,0,.@nivel,0,0,0; equip 30114; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30114,1,1,0,0,.@nivel,0,0,0; equip 30114; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30114,1,1,0,0,.@nivel,0,0,0; equip 30114; } 
@@ -800,7 +800,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 3:
-									if(countitem(30115) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30115) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30115,1,1,0,0,.@nivel,0,0,0; equip 30115; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30115,1,1,0,0,.@nivel,0,0,0; equip 30115; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30115,1,1,0,0,.@nivel,0,0,0; equip 30115; } 
@@ -844,7 +844,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 4:
-									if(countitem(30116) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30116) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30116,1,1,0,0,.@nivel,0,0,0; equip 30116; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30116,1,1,0,0,.@nivel,0,0,0; equip 30116; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30116,1,1,0,0,.@nivel,0,0,0; equip 30116; } 
@@ -888,7 +888,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 5:
-									if(countitem(30117) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30117) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30117,1,1,0,0,.@nivel,0,0,0; equip 30117; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30117,1,1,0,0,.@nivel,0,0,0; equip 30117; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30117,1,1,0,0,.@nivel,0,0,0; equip 30117; } 
@@ -932,7 +932,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 6:
-									if(countitem(30118) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30118) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30118,1,1,0,0,.@nivel,0,0,0; equip 30118; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30118,1,1,0,0,.@nivel,0,0,0; equip 30118; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30118,1,1,0,0,.@nivel,0,0,0; equip 30118; } 
@@ -976,7 +976,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 7:
-									if(countitem(30119) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30119) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30119,1,1,0,0,.@nivel,0,0,0; equip 30119; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30119,1,1,0,0,.@nivel,0,0,0; equip 30119; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30119,1,1,0,0,.@nivel,0,0,0; equip 30119; } 
@@ -1020,7 +1020,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 8:
-									if(countitem(30120) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30120) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30120,1,1,0,0,.@nivel,0,0,0; equip 30120; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30120,1,1,0,0,.@nivel,0,0,0; equip 30120; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30120,1,1,0,0,.@nivel,0,0,0; equip 30120; } 
@@ -1067,7 +1067,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 									close;
 									
 								case 9:
-									if(countitem(30121) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+									if(countitem(30121) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 									if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30121,1,1,0,0,.@nivel,0,0,0; equip 30121; } 
 									if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30121,1,1,0,0,.@nivel,0,0,0; equip 30121; } 
 									if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30121,1,1,0,0,.@nivel,0,0,0; equip 30121; } 
@@ -1113,7 +1113,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 								case 10:
 									switch(select("- Shakuton:- Jinton:- Ressonante:- Kidoumaru:- Manipulação Raiton:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Kasa no Senbon:- Arte Sábia:- Liberação Ying Yang")) {
 										case 1:
-											if(countitem(30122) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30122) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30122,1,1,0,0,.@nivel,0,0,0; equip 30122; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30122,1,1,0,0,.@nivel,0,0,0; equip 30122; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30122,1,1,0,0,.@nivel,0,0,0; equip 30122; } 
@@ -1157,7 +1157,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 											
 										case 2:
-											if(countitem(30123) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30123) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30123,1,1,0,0,.@nivel,0,0,0; equip 30123; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30123,1,1,0,0,.@nivel,0,0,0; equip 30123; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30123,1,1,0,0,.@nivel,0,0,0; equip 30123; } 
@@ -1200,7 +1200,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											mes "Troca bem sucedida.";
 											close;
 										case 3:
-											if(countitem(30124) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30124) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30124,1,1,0,0,.@nivel,0,0,0; equip 30124; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30124,1,1,0,0,.@nivel,0,0,0; equip 30124; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30124,1,1,0,0,.@nivel,0,0,0; equip 30124; } 
@@ -1244,7 +1244,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 											
 										case 4:
-											if(countitem(30125) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30125) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30125,1,1,0,0,.@nivel,0,0,0; getitem2 1233,1,1,0,0,.@nivel,0,0,0; equip 30125; equip 1233; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30125,1,1,0,0,.@nivel,0,0,0; getitem2 1233,1,1,0,0,.@nivel,0,0,0; equip 30125; equip 1233; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30125,1,1,0,0,.@nivel,0,0,0; getitem2 1233,1,1,0,0,.@nivel,0,0,0; equip 30125; equip 1233; } 
@@ -1287,7 +1287,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 											
 										case 5:
-											if(countitem(30126) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30126) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30126,1,1,0,0,.@nivel,0,0,0; equip 30126; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30126,1,1,0,0,.@nivel,0,0,0; equip 30126; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30126,1,1,0,0,.@nivel,0,0,0; equip 30126; } 
@@ -1331,7 +1331,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 											
 										case 6:
-											if(countitem(30130) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30130) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30130,1,1,0,0,.@nivel,0,0,0; equip 30130; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30130,1,1,0,0,.@nivel,0,0,0; equip 30130; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30130,1,1,0,0,.@nivel,0,0,0; equip 30130; } 
@@ -1374,7 +1374,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											mes "Troca bem sucedida.";
 											close;
 										case 7:
-											if(countitem(30131) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30131) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30131,1,1,0,0,.@nivel,0,0,0; getitem2 1236,1,1,0,0,.@nivel,0,0,0; equip 30131; equip 1236; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30131,1,1,0,0,.@nivel,0,0,0; getitem2 1236,1,1,0,0,.@nivel,0,0,0; equip 30131; equip 1236; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30131,1,1,0,0,.@nivel,0,0,0; getitem2 1236,1,1,0,0,.@nivel,0,0,0; equip 30131; equip 1236; } 
@@ -1416,7 +1416,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											mes "Troca bem sucedida.";
 											close;
 										case 8:
-											if(countitem(30132) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30132) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30132,1,1,0,0,.@nivel,0,0,0; equip 30132; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30132,1,1,0,0,.@nivel,0,0,0; equip 30132; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30132,1,1,0,0,.@nivel,0,0,0; equip 30132; } 
@@ -1460,7 +1460,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 9:
-											if(countitem(30133) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30133) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30133,1,1,0,0,.@nivel,0,0,0; equip 30133; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30133,1,1,0,0,.@nivel,0,0,0; equip 30133; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30133,1,1,0,0,.@nivel,0,0,0; equip 30133; } 
@@ -1504,7 +1504,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 10:
-											if(countitem(30134) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30134) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30134,1,1,0,0,.@nivel,0,0,0; equip 30134; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30134,1,1,0,0,.@nivel,0,0,0; equip 30134; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30134,1,1,0,0,.@nivel,0,0,0; equip 30134; } 
@@ -1548,7 +1548,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 11:
-											if(countitem(30139) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30139) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30139,1,1,0,0,.@nivel,0,0,0; equip 30139; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30139,1,1,0,0,.@nivel,0,0,0; equip 30139; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30139,1,1,0,0,.@nivel,0,0,0; equip 30139; } 
@@ -1592,7 +1592,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 12:
-											if(countitem(30137) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30137) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30137,1,1,0,0,.@nivel,0,0,0; getitem2 1114,1,1,0,0,.@nivel,0,0,0; equip 30137; equip 1114; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30137,1,1,0,0,.@nivel,0,0,0; getitem2 1114,1,1,0,0,.@nivel,0,0,0; equip 30137; equip 1114; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30137,1,1,0,0,.@nivel,0,0,0; getitem2 1114,1,1,0,0,.@nivel,0,0,0; equip 30137; equip 1114; } 
@@ -1635,7 +1635,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 13:
-											if(countitem(30127) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30127) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30127,1,1,0,0,.@nivel,0,0,0; equip 30127; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30127,1,1,0,0,.@nivel,0,0,0; equip 30127; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30127,1,1,0,0,.@nivel,0,0,0; equip 30127; } 
@@ -1679,7 +1679,7 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 											close;
 
 										case 14:
-											if(countitem(30138) >= 1) { mes "Você não pode trocar para sua mesma Habilidade Hidden."; close; }
+											if(countitem(30138) >= 1) { mes "Você não pode trocar para sua mesma Kekkei Genkai."; close; }
 											if(countitem(30101) >= 1) { delitem 30101,1; getitem2 30138,1,1,0,0,.@nivel,0,0,0; equip 30138; } 
 											if(countitem(30102) >= 1) { delitem 30102,1; getitem2 30138,1,1,0,0,.@nivel,0,0,0; equip 30138; } 
 											if(countitem(30103) >= 1) { delitem 30103,1; getitem2 30138,1,1,0,0,.@nivel,0,0,0; equip 30138; } 
@@ -1730,11 +1730,11 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 
 		case 3:
 			mes .@menu$;
-			mes "Você tem certeza que gostaria de remover sua Habilidade Hidden ?";
-			mes "Lembre-se que ao remover você perderá sua Hidden. Estará livre para poder escolher outra Hidden.";
+			mes "Você tem certeza que gostaria de remover sua Kekkei Genkai ?";
+			mes "Lembre-se que ao remover você perderá sua Kekkei. Estará livre para poder escolher outra Kekkei.";
 			if(select("- Sim:- Não") == 2) close;
 				next;
-				if(countitem(7007) < 1) { mes .@menu$; mes "Você precisa de 1x Ticket Removedor de Hidden."; close; }
+				if(countitem(7007) < 1) { mes .@menu$; mes "Você precisa de 1x Ticket Removedor de Kekkei."; close; }
 					if(countitem(30101) >= 1) { set pegoukg,0; set despertarkg,0; delitem 30101,1; } 
 					if(countitem(30102) >= 1) { set pegoukg,0; set despertarkg,0; delitem 30102,1; } 
 					if(countitem(30103) >= 1) { set pegoukg,0; set despertarkg,0; delitem 30103,1; } 
@@ -1771,11 +1771,11 @@ bibli_01,62,43,3	script	Habilidades Hidden::hiddens	402,{
 					if(countitem(30127) >= 1) { set pegoukg,0; set despertarkg,0; delitem 30127,1; }
 					if(countitem(30138) >= 1) { set pegoukg,0; set despertarkg,0; delitem 30138,1; }
 					delitem 7007,1;
-					mes "Habilidade Hidden removida com sucesso.";
+					mes "Kekkei Genkai removida com sucesso.";
 					close;
 	}
 }
 
-bibli_02,62,43,3	duplicate(hiddens)	Habilidades Hidden#2	402
-bibli_03,62,43,3	duplicate(hiddens)	Habilidades Hidden#3	402
-bibli_04,62,43,3	duplicate(hiddens)	Habilidades Hidden#4	402
+bibli_02,62,43,3	duplicate(Kekkeis)	Habilidades Kekkei#2	402
+bibli_03,62,43,3	duplicate(Kekkeis)	Habilidades Kekkei#3	402
+bibli_04,62,43,3	duplicate(Kekkeis)	Habilidades Kekkei#4	402
