@@ -195,7 +195,7 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 	dispbottom "200 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
 	close;
-	instance_destroy; 
+	instance_destroy .@instance$; 
 	close;
 	}
 	end;
