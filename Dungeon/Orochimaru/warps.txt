@@ -417,7 +417,7 @@ bra_dun01,199,35,0	script	Portal	45,2,2,{
 //
 //	Terceiro Andar
 //
-iz_dun02,335,328,5	script	Bushin do Orochimaru	70,{
+iz_dun02,335,328,5	script	Orochimaru#3	70,{
 	set .@npcName$, "^FF0000[Orochimaru]^000000";
 	
 	if(looked3 == 0){
@@ -507,27 +507,24 @@ iz_dun02,235,197,0	script	Escritorio	45,2,2,{
 //
 //	Quarto Andar
 //
-tha_t01,150,107,5	script	Orochimaru	70,{
-	
-	set .@npcName$, "^FF0000[Orochimaru]^000000";
-	
-	mes .@npcName$;
-	mes "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.";
-	next;
-	mes .@npcName$;
-	mes "Bem vamos ver como vocês vão se sair em um combate contra um ninja experiente de verdade, não pegarei leve com vocês...";
-	next;
-	mes .@npcName$;
-	mes "Eu nunca serei derrotado, preparem-se...";
-	hideonnpc "Orochimaru";
+tha_t01,150,107,5	script	Orochimaru#4	70,{
+
+	hideonnpc "Orochimaru#4";
+	announce "[Orochimaru]",bc_blue|bc_map;
+	announce "Mas que surpresa, não imaginava que vocês dariam conta das minhas melhores criações.",bc_blue|bc_map;
+	sleep2 5000;
+	announce "[Orochimaru]",bc_blue|bc_map;
+	announce "Bem vamos ver como vocês vão se sair em um combate contra um ninja experiente de verdade, não pegarei leve com vocês...",bc_blue|bc_map;
+	sleep2 5000;
+	announce "[Orochimaru]",bc_blue|bc_map;
+	announce "Eu nunca serei derrotado, preparem-se...",bc_blue|bc_map;
+	sleep2 5000;
 	monster "tha_t01",144,84,"Hakuja Sennin",2529,1;
 	monster "tha_t01",154,84,"Hakuja Sennin",2529,1;
-	monster "tha_t01",150,107,"Orochimaru",3151,1;	
+	monster "tha_t01",150,107,"Orochimaru",3151,1;
 	
+	sleep2 3600000;
+	hideoffnpc "Orochimaru#4";
 	
 	end;
-	
-	
-	
-
 }
