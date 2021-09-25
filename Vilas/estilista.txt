@@ -56,4 +56,4 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 kirigakure,221,173,3	duplicate(estil)	Estilista#2	756
 sunagakure,215,158,3	duplicate(estil)	Estilista#3	756
 kumogakure,96,123,3	duplicate(estil)	Estilista#6	756
-akatsuki,181,184,3	duplicate(estil)	Estilista#7	756
+lou_in02,61,182,3	duplicate(estil)	Estilista#7	756

@@ -69,7 +69,7 @@ mes "[Campo de Treinamento]";
 mes "Você não é membro dessa vila.";
 close;
 }
-akatsuki,187,208,5	script	Campo de Treinamento#5	843,{
+lou_in02,52,182,5	script	Campo de Treinamento#5	843,{
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
