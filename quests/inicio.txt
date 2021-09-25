@@ -453,7 +453,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		}
 	}
 	
-	if(quest_basic_inicio < 1) {
+	if(quest_basic_inicio == 1) {
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Olá "+strcharinfo(0)+" , sejá bem vindo a Academia Shinobi!";
 		mes "Eu sou o Aruotuora Azumi, depois de um semestre de aulas finalmente chegou a hora da prova vamos ver se você ira se tornar um genin!";
