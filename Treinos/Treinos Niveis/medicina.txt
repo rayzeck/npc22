@@ -13,7 +13,7 @@ if(countitem(6010)) {
 	if(gen_basico == 1) {mes "Você não pode treinar Medicina sendo genjutsu!"; close;}
 	if (gen_intermediario == 1) {mes "Você não pode treinar Medicina sendo genjutsu!"; close;}
 	if (gen_avan == 1) {mes "Você não pode treinar Medicina sendo genjutsu!"; close;}
-	if (BaseLevel < 700) { mes "Você precisa ser nível máximo."; close; }
+	if (BaseLevel < 998) { mes "Você precisa ser nível máximo."; close; }
 	if(Class < 4008) { mes "Você precisa ser Jounin.";  close; }
 	mes "Olá jovem, vejo que você é um treinador de medicina. Gostaria de evoluir ele ainda mais para se tornar um mestre medicina avançado?";
 	if(select("- Sim:- Não") == 2) { close; }
@@ -37,6 +37,7 @@ if(countitem(6004)) {
 	if (gen_intermediario == 1) {mes "Você não pode treinar Medicina sendo genjutsu!"; close;}
 	if (gen_avan == 1) {mes "Você não pode treinar Medicina sendo genjutsu!"; close;}
 	if(Class < 5) { mes "Você precisa ser Chunin ou superior.";  close; }
+	if(Class == 4019 && BaseLevel < 500){ mes "Você precisa ser Level 400 pra cima!"; close;}
 	
 	mes "Olá jovem, vejo que você é um treinador de medicina. Gostaria de evoluir ele ainda mais para se tornar um mestre medicina intermediário?";
 	if(select("- Sim:- Não") == 2) { close; }

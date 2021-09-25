@@ -38,6 +38,7 @@ if(countitem(6018)) {
 	if (gen_intermediario == 1) {mes "Você não pode treinar Resistência sendo genjutsu!"; close;}
 	if (gen_avan == 1) {mes "Você não pode treinar Resistência sendo genjutsu!"; close;}
 	if(Class < 5) { mes "Você precisa ser Chunin ou superior.";  close; }
+	if(Class == 4019 && BaseLevel < 500){ mes "Você precisa ser Level 400 pra cima!"; close;}
 	
 	mes "Olá jovem, vejo que você é um treinador de resistência. Gostaria de evoluir ele ainda mais para se tornar um mestre resistência intermediário?";
 	if(select("- Sim:- Não") == 2) { close; }
