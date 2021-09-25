@@ -65,16 +65,17 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2011; }
 		if(#nevoa == 1) {  setquest 3011; }
 		if(#nuvem == 1) {  setquest 4011; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1011;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2011;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3011;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4011;
+			} else {close;}
 		}
 		next;
 		mes "[Velocidade Básico]";
@@ -160,16 +161,17 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2012; }
 		if(#nevoa == 1) {  setquest 3012; }
 		if(#nuvem == 1) {  setquest 4012; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1012;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2012;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3012;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4012;
+			} else {close;}
 		}
 		next;
 		mes "[Velocidade Básico]";
@@ -259,14 +261,15 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#nuvem == 1) { setquest 4014; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1014;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2014;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3014;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4014;
+			} else {close;}
 		}
 		next;
 		mes "[Velocidade Básico]";
@@ -353,16 +356,17 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2013; }
 		if(#nevoa == 1) { setquest 3013; }
 		if(#nuvem == 1) { setquest 4013; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1013;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2013;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3013;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4013;
+			} else {close;}
 		}
 		next;
 		mes "[Velocidade Básico]";

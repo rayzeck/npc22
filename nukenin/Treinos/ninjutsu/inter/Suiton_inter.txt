@@ -466,14 +466,15 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4061; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
-				setquest 2061;
-			if(.@n == 2)
-				setquest 3061;
-			if(.@n == 3)
-				setquest 4061;
-			if(.@n == 4)
+			if(.@n == 1){
 				setquest 1061;
+			}else if(.@n == 2){
+				setquest 2061;
+			}else if(.@n == 3){
+				setquest 3061;
+			}else if(.@n == 4){
+				setquest 4061;
+			} else {close;}
 		}
 		next;
 		mes "[Suiton Básico]";
@@ -561,14 +562,15 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4062; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
-				setquest 2062;
-			if(.@n == 2)
-				setquest 3062;
-			if(.@n == 3)
-				setquest 4062;
-			if(.@n == 4)
+			if(.@n == 1){
 				setquest 1062;
+			}else if(.@n == 2){
+				setquest 2062;
+			}else if(.@n == 3){
+				setquest 3062;
+			}else if(.@n == 4){
+				setquest 4062;
+			} else {close;}
 		}
 		next;
 		mes "[Suiton Básico]";
@@ -656,14 +658,15 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4063; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
-				setquest 2063;
-			if(.@n == 2)
-				setquest 3063;
-			if(.@n == 3)
-				setquest 4063;
-			if(.@n == 4)
+			if(.@n == 1){
 				setquest 1063;
+			}else if(.@n == 2){
+				setquest 2063;
+			}else if(.@n == 3){
+				setquest 3063;
+			}else if(.@n == 4){
+				setquest 4063;
+			} else {close;}
 		}
 		next;
 		mes "[Suiton Básico]";

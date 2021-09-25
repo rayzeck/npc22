@@ -748,16 +748,17 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2041; }
 		if(#nevoa == 1) { setquest 3041; }
 		if(#nuvem == 1) { setquest 4041; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1041;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2041;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3041;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4041;
+			} else {close;}
 		}
 		next;
 		mes "[Genjutsu Básico]";
@@ -844,16 +845,17 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2042; }
 		if(#nevoa == 1) { setquest 3042; }
 		if(#nuvem == 1) { setquest 4042; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1042;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2042;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3042;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4042;
+			} else {close;}
 		}
 		next;
 		mes "[Genjutsu Básico]";
@@ -940,16 +942,17 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2043; }
 		if(#nevoa == 1) { setquest 3043; }
 		if(#nuvem == 1) { setquest 4043; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1043;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2043;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3043;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4043;
+			} else {close;}
 		}
 		next;
 		mes "[Genjutsu Básico]";
@@ -1036,16 +1039,17 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2044; }
 		if(#nevoa == 1) { setquest 3044; }
 		if(#nuvem == 1) { setquest 4044; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1044;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2044;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3044;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4044;
+			} else {close;}
 		}
 		next;
 		mes "[Genjutsu Básico]";
@@ -1132,16 +1136,17 @@ lhz_dun02,18,233,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2045; }
 		if(#nevoa == 1) { setquest 3045; }
 		if(#nuvem == 1) { setquest 4045; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1045;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2045;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3045;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4045;
+			} else {close;}
 		}
 		next;
 		mes "[Genjutsu Básico]";

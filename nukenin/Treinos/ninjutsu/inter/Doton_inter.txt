@@ -463,14 +463,15 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#nuvem == 1) { setquest 4081; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1081;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2081;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3081;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4081;
+			} else {close;}
 		}
 		next;
 		mes "[Doton Básico]";
@@ -558,14 +559,15 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#nuvem == 1) { setquest 4082; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1082;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2082;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3082;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4082;
+			} else {close;}
 		}
 		next;
 		mes "[Doton Básico]";
@@ -653,14 +655,15 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#nuvem == 1) { setquest 4083; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1083;
-			if(.@n == 2)
+			}else if(.@n == 2){
 				setquest 2083;
-			if(.@n == 3)
+			}else if(.@n == 3){
 				setquest 3083;
-			if(.@n == 4)
+			}else if(.@n == 4){
 				setquest 4083;
+			} else {close;}
 		}
 		next;
 		mes "[Doton Básico]";
