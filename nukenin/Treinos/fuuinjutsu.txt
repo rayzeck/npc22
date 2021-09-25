@@ -64,13 +64,16 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2031; }
 		if(#nevoa == 1) { setquest 3031; }
 		if(#nuvem == 1) { setquest 4031; }
-		if(nukenin == 1){
-			.@rand = rand(100);
-			if(.@rand <= 50){
+		if(nukenin == 1) { 
+			set .@n, rand(1,4);
+			if(.@n == 1)
 				setquest 1031;
-			}else {
+			if(.@n == 2)
+				setquest 2031;
+			if(.@n == 3)
 				setquest 3031;
-			}
+			if(.@n == 4)
+				setquest 4031;
 		}
 		next;
 		mes "[Fuuinjutsu Básico]";
@@ -163,13 +166,16 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1)  { setquest 2032; }
 		if(#nevoa == 1) { setquest 3032; }
 		if(#nuvem == 1) { setquest 4032; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) { 
+			set .@n, rand(1,4);
+			if(.@n == 1)
 				setquest 1032;
-			}else {
+			if(.@n == 2)
+				setquest 2032;
+			if(.@n == 3)
 				setquest 3032;
-			}
+			if(.@n == 4)
+				setquest 4032;
 		}
 		next;
 		mes "[Fuuinjutsu Básico]";
@@ -262,13 +268,16 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2033; }
 		if(#nevoa == 1) { setquest 3033; }
 		if(#nuvem == 1) { setquest 4033; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) { 
+			set .@n, rand(1,4);
+			if(.@n == 1)
 				setquest 1033;
-			}else {
+			if(.@n == 2)
+				setquest 2033;
+			if(.@n == 3)
 				setquest 3033;
-			}
+			if(.@n == 4)
+				setquest 4033;
 		}
 		next;
 		mes "[Fuuinjutsu Básico]";
@@ -354,13 +363,16 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2034; }
 		if(#nevoa == 1) { setquest 3034; }
 		if(#nuvem == 1) { setquest 4034; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) { 
+			set .@n, rand(1,4);
+			if(.@n == 1)
 				setquest 1034;
-			}else {
+			if(.@n == 2)
+				setquest 2034;
+			if(.@n == 3)
 				setquest 3034;
-			}
+			if(.@n == 4)
+				setquest 4034;
 		}
 		next;
 		mes "[Fuuinjutsu Básico]";
@@ -448,13 +460,16 @@ lhz_dun02,18,239,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2035; }
 		if(#nevoa == 1) { setquest 3035; }
 		if(#nuvem == 1) { setquest 4035; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) { 
+			set .@n, rand(1,4);
+			if(.@n == 1)
 				setquest 1035;
-			}else {
+			if(.@n == 2)
+				setquest 2035;
+			if(.@n == 3)
 				setquest 3035;
-			}
+			if(.@n == 4)
+				setquest 4035;
 		}
 		next;
 		mes "[Fuuinjutsu Básico]";
