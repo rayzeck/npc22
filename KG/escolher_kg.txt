@@ -109,7 +109,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 						set pegoukg,1;
 						close;
 				case 10:
-					switch(select("- Mitsashi:- Kibaku Socho:- Aburame:- Jashin:- Tayuya:- Ibuse:- Byakugo:- Byakugan Punhos Gentis:- Kaguya:- Mais Opções") ) {
+					switch(select("- Mitsashi:- Kibaku Socho:- Aburame:- Jashin:- Tayuya:- Byakugo:- Kaguya:- Mais Opções") ) {
 						case 1:
 							mes .@menu$;
 							mes "Você tem certeza que quer se juntar aos Mitsashi ?";
@@ -155,7 +155,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								equip 30117;
 								set pegoukg,1;
 								close;
-						case 6:
+						/*case 6:
 							mes .@menu$;
 							mes "Você tem certeza que quer se juntar aos Ibuse?";
 							if(select("- Sim:- Não") == 2) close;
@@ -163,8 +163,8 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								getitem2 30118,1,1,0,0,30090,0,0,0; 
 								equip 30118;
 								set pegoukg,1;
-								close;
-						case 7:
+								close;*/
+						case 6:
 							mes .@menu$;
 							mes "Você tem certeza que quer se juntar aos Senju?";
 							if(select("- Sim:- Não") == 2) close;
@@ -173,7 +173,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								equip 30119;
 								set pegoukg,1;
 								close;
-						case 8:
+						/*case 8:
 							mes .@menu$;
 							mes "Você tem certeza que quer se juntar aos Hyuuga?";
 							if(select("- Sim:- Não") == 2) close;
@@ -181,8 +181,8 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								getitem2 30120,1,1,0,0,30090,0,0,0; 
 								equip 30120;
 								set pegoukg,1;
-								close;
-						case 9:
+								close;*/
+						case 7:
 							mes .@menu$;
 							mes "Você tem certeza que quer se juntar aos Kaguya?";
 							if(select("- Sim:- Não") == 2) close;
@@ -191,7 +191,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								equip 30121;
 								set pegoukg,1;
 								close;
-						case 10:
+						case 8:
 							switch(select("- Shakuton:- Ressonante:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Senjutsu")) {
 								case 1:
 									mes .@menu$;
