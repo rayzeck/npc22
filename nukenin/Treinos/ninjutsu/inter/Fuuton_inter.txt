@@ -556,14 +556,18 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4091; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1091;
-			if(.@n == 2)
+			}
+			else if(.@n == 2){
 				setquest 2091;
-			if(.@n == 3)
+			}
+			}else if(.@n == 3){
 				setquest 3091;
-			if(.@n == 4)
+			}
+			}else if(.@n == 4){
 				setquest 4091;
+			} else {close;}
 		}
 		next;
 		mes "[Fuuton Básico]";
@@ -651,14 +655,18 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4092; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1092;
-			if(.@n == 2)
+			}
+			else if(.@n == 2){
 				setquest 2092;
-			if(.@n == 3)
+			}
+			}else if(.@n == 3){
 				setquest 3092;
-			if(.@n == 4)
+			}
+			}else if(.@n == 4){
 				setquest 4092;
+			} else {close;}
 		}
 		next;
 		mes "[Fuuton Básico]";
@@ -746,14 +754,18 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4093; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			if(.@n == 1)
+			if(.@n == 1){
 				setquest 1093;
-			if(.@n == 2)
+			}
+			else if(.@n == 2){
 				setquest 2093;
-			if(.@n == 3)
+			}
+			}else if(.@n == 3){
 				setquest 3093;
-			if(.@n == 4)
+			}
+			}else if(.@n == 4){
 				setquest 4093;
+			} else {close;}
 		}
 		next;
 		mes "[Fuuton Básico]";
