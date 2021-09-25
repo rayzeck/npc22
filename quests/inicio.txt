@@ -87,9 +87,10 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Parabéns apartir de hoje você deixa de ser um estudante para se tornar algo maior. Agora escolha o design da sua bandana:";
 		next;
-
+//	if(Class < 4008 || Class < 4009 || Class < 4011) { mes "Você precisa ser Jounin.";  close; }
+		
+	}
 		if(quest_basic_inicio == 5) {
-		if(Class == 4019) {set title$, "Rank E"; setquest 1000; set quest_basic_inicio,6; warp "bibli_01",62,40; savepoint "lou_in",238,166;}
 		if (#konoha == 1) {
 			savepoint "hospital",55,62;
 			switch(select("- Bandana Normal:- Bandana de Lado:- Bandana no Pescoço:- Bandana Yamato:- Bandana Kisame:- Bandana Kakashi")) {
@@ -450,7 +451,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		}
 	}
 	
-	if(quest_basic_inicio == 1) {
+	if(quest_basic_inicio < 1) {
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Olá "+strcharinfo(0)+" , sejá bem vindo a Academia Shinobi!";
 		mes "Eu sou o Aruotuora Azumi, depois de um semestre de aulas finalmente chegou a hora da prova vamos ver se você ira se tornar um genin!";
