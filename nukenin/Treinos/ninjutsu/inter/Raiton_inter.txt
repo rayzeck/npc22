@@ -650,10 +650,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2072; }
 		if(#nevoa == 1) { setquest 3072; }
 		if(#nuvem == 1) { setquest 4072; }
-		if(nukenin == 1) {setquest 1072; }
-		if(nukenin == 1) {setquest 2072; }
-		if(nukenin == 1) {setquest 3072; }
-		if(nukenin == 1) {setquest 4072; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			npctalk .@n;
+			if(.@n == 1)
+				setquest 1072;
+			if(.@n == 2)
+				setquest 2072;
+			if(.@n == 3)
+				setquest 3072;
+			if(.@n == 4)
+				setquest 4072;
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -738,10 +746,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2073; }
 		if(#nevoa == 1) { setquest 3073; }
 		if(#nuvem == 1) { setquest 4073; }
-		if(nukenin == 1) {setquest 1073; }
-		if(nukenin == 1) {setquest 2073; }
-		if(nukenin == 1) {setquest 3073; }
-		if(nukenin == 1) {setquest 4073; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			npctalk .@n;
+			if(.@n == 1)
+				setquest 1073;
+			if(.@n == 2)
+				setquest 2073;
+			if(.@n == 3)
+				setquest 3073;
+			if(.@n == 4)
+				setquest 4073;
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";
