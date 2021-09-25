@@ -1307,7 +1307,7 @@ academia,125,22,0	warp	treino#11	1,1,academia,79,148
 academia,79,145,0	warp	treino#12	1,1,prt_in,85,65
 ////////////////NUKENIN PORTAIS/////////////////////
 //lhz_dun02,39,212	warp	nuke#2		1,1,prt_in,85,65
-lhz_dun02,39,241	warp	nuke#3		1,1,prt_in,85,65
+//lhz_dun02,39,241	warp	nuke#3		1,1,prt_in,85,65
 //lou_in02,57,171		warp	nuke#2		1,1,lhz_dun02,26,227
 lou_in02,57,171	warp	nuke#3		1,1,lhz_dun02,26,227
 lhz_dun02,39,212	warp	nuke#3	1,1,lou_in02,57,174
