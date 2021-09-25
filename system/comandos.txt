@@ -3,7 +3,7 @@
 //------------------------------------------------------------
 -	script	atcmd_sample_new8989	-1,{
     OnInit:
-        bindatcmd("ficha", "atcmd_sample_new8989::OnAtCmd");
+        bindatcmd("corpo2", "atcmd_sample_new8989::OnAtCmd");
         end;
         
     OnAtCmd:
@@ -72,7 +72,7 @@ end;
 //------------------------------------------------------------
 -	script	atcmd_sample_new8988	-1,{
     OnInit:
-        bindatcmd("ficha", "atcmd_sample_new8988::OnAtCmd");
+        bindatcmd("corpo", "atcmd_sample_new8988::OnAtCmd");
         end;
         
     OnAtCmd:
