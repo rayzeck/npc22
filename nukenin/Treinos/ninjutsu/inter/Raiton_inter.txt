@@ -554,10 +554,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2071; }
 		if(#nevoa == 1) { setquest 3071; }
 		if(#nuvem == 1) { setquest 4071; }
-		if(nukenin == 1) {setquest 1071; }
-		if(nukenin == 1) {setquest 2071; }
-		if(nukenin == 1) {setquest 3071; }
-		if(nukenin == 1) {setquest 4071; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			npctalk .@n;
+			if(.@n == 1)
+				setquest 1071;
+			if(.@n == 2)
+				setquest 2071;
+			if(.@n == 3)
+				setquest 3071;
+			if(.@n == 4)
+				setquest 4071;
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";
