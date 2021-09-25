@@ -87,8 +87,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Parabéns apartir de hoje você deixa de ser um estudante para se tornar algo maior. Agora escolha o design da sua bandana:";
 		next;
-		
-	}
+
 		if(quest_basic_inicio == 5) {
 		if(Class == 4019) {set title$, "Rank E"; setquest 1000; set quest_basic_inicio,6; warp "bibli_01",62,40; savepoint "lou_in",238,166;}
 		if (#konoha == 1) {
