@@ -556,7 +556,6 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4071; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			npctalk .@n;
 			if(.@n == 1)
 				setquest 1071;
 			if(.@n == 2)
@@ -652,7 +651,6 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4072; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			npctalk .@n;
 			if(.@n == 1)
 				setquest 1072;
 			if(.@n == 2)
@@ -748,7 +746,6 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#nuvem == 1) { setquest 4073; }
 		if(nukenin == 1) {
 			set .@n, rand(1,4);
-			npctalk .@n;
 			if(.@n == 1)
 				setquest 1073;
 			if(.@n == 2)
