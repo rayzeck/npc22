@@ -192,7 +192,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								set pegoukg,1;
 								close;
 						case 10:
-							switch(select("- Shakuton:- Jinton:- Ressonante:- Kidoumaru:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Senjutsu")) {
+							switch(select("- Shakuton:- Ressonante:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Senjutsu")) {
 								case 1:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Shakuton ?";
@@ -202,7 +202,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30122;
 										set pegoukg,1;
 										close;
-								case 2:
+								/*case 2:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Jinton ?";
 									if(select("- Sim:- Não") == 2) close;
@@ -210,8 +210,8 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										getitem2 30123,1,1,0,0,30090,0,0,0; 
 										equip 30123;
 										set pegoukg,1;
-										close;
-								case 3:
+										close;*/
+								case 2:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Ressonancia ?";
 									if(select("- Sim:- Não") == 2) close;
@@ -220,7 +220,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30124;
 										set pegoukg,1;
 										close;
-								case 4:
+								/*case 3:
 									mes .@menu$;
 									mes "Você tem certeza que quer ser um usuário de Arco ?";
 									if(select("- Sim:- Não") == 2) close;
@@ -231,7 +231,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 1233;
 										set pegoukg,1;
 										close;
-								/*case 5:
+								case 5:
 									mes .@menu$;
 									mes "Você tem certeza que quer ser um Manipulador de Relâmpago ?";
 									if(select("- Sim:- Não") == 2) close;
@@ -240,7 +240,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30126;
 										set pegoukg,1;
 										close;*/
-								case 5:
+								case 3:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Kenjutsu?";
 									if(select("- Sim:- Não") == 2) close;
@@ -249,7 +249,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30130;
 										set pegoukg,1;
 										close;
-								case 6:
+								case 4:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar usuário de Kibaku Nendo??";
 									if(select("- Sim:- Não") == 2) close;
@@ -261,7 +261,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 7:
+								case 5:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Liberação de Cristal?";
 									if(select("- Sim:- Não") == 2) close;
@@ -271,7 +271,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 8:
+								case 6:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Liberação de Lava?";
 									if(select("- Sim:- Não") == 2) close;
@@ -281,7 +281,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 9:
+								case 7:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Manipulador dos 5 Elementos?";
 									if(select("- Sim:- Não") == 2) close;
@@ -291,7 +291,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 10:
+								case 8:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um herdeiro da Senju no Ato?";
 									if(select("- Sim:- Não") == 2) close;
@@ -313,7 +313,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;*/
 
-								case 11:
+								case 9:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário da Arte Sábia?";
 									if(select("- Sim:- Não") == 2) close;
