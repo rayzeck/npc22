@@ -40,7 +40,7 @@ OnPCKillEvent:
 }
 
 function	script	adicionar_zeny	{
-
+	if(Class < 4008) { end; }
 	if (title$ == "Rank E") {set Zeny,Zeny + 3500; announce "Você acabou de roubar 3.500 do ninja que você derrotou.",#008000|bc_self; }
 	if (title$ == "Rank D") {set Zeny,Zeny + 20000; announce "Você acabou de roubar 20.000 do ninja que você derrotou.",#008000|bc_self; }
 	if (title$ == "Rank C") {set Zeny,Zeny + 40000; announce "Você acabou de roubar 40.000 do ninja que você derrotou.",#008000|bc_self; }
