@@ -1,10 +1,3 @@
--	script	backto	-1,{
-OnPcDieEvent:
-if(dreamwalk==1) callfunc "dreamout";
-end;
-}
-
-
 /*-	script	Death	-1,{
 OnPCDieEvent:
 
@@ -47,7 +40,7 @@ OnPCKillEvent:
 }
 
 function	script	adicionar_zeny	{
-	if(Class < 4008) { end; }
+
 	if (title$ == "Rank E") {set Zeny,Zeny + 3500; announce "Você acabou de roubar 3.500 do ninja que você derrotou.",#008000|bc_self; }
 	if (title$ == "Rank D") {set Zeny,Zeny + 20000; announce "Você acabou de roubar 20.000 do ninja que você derrotou.",#008000|bc_self; }
 	if (title$ == "Rank C") {set Zeny,Zeny + 40000; announce "Você acabou de roubar 40.000 do ninja que você derrotou.",#008000|bc_self; }
@@ -74,9 +67,9 @@ if( getcharid(3) == killedrid) end;
 }
 
 function	script	remover_zeny	{
-	
+
 	set @quebrar, rand(7,9);
-	if(Class < 4008) { end; }
+	
 	if (title$ == "Rank E" && Zeny < 25000) {
         announce "Você perdeu 10 à mais de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-10; breakequip @quebrar;
         }
