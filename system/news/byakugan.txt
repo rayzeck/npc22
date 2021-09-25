@@ -149,7 +149,7 @@ set JobLevel,JobLevel-JobLevel;
 set JobLevel,@10;
 set SkillPoint,SkillPoint-SkillPoint;
 set SkillPoint,@20;
-percentheal -99,-99;
+percentheal 100,100;
 if(@11>0) equip @11;
 if(@12>0) equip @12;
 if(@13>0) equip @13;
