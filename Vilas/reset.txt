@@ -42,3 +42,4 @@ konoha3,119,263,5	duplicate(reset)	Resetadora#1	59
 sunagakure,215,119,5	duplicate(reset)	Resetadora#2	59
 kumogakure,92,117,5	duplicate(reset)	Resetadora#4	59
 akatsuki,182,186,5	duplicate(reset)	Resetadora#5	59
+lou_in02,244,175,5	duplicate(reset)	Resetadora#6	59

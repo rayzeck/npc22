@@ -66,13 +66,17 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2021; }
 		if(#nevoa == 1) { setquest 3021; }
 		if(#nuvem == 1) { setquest 4021; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
 				setquest 1021;
-			}else {
+			}else if(.@n == 2){
+				setquest 2021;
+			}else if(.@n == 3){
 				setquest 3021;
-			}
+			}else if(.@n == 4){
+				setquest 4021;
+			} else {close;}
 		}
 		next;
 		mes "[Medicina Básico]";
@@ -175,13 +179,17 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2022; }
 		if(#nevoa == 1) { setquest 3022; }
 		if(#nuvem == 1) { setquest 4022; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
 				setquest 1022;
-			}else {
+			}else if(.@n == 2){
+				setquest 2022;
+			}else if(.@n == 3){
 				setquest 3022;
-			}
+			}else if(.@n == 4){
+				setquest 4022;
+			} else {close;}
 		}
 		next;
 		mes "[Medicina Básico]";
@@ -286,13 +294,17 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2023; }
 		if(#nevoa == 1) { setquest 3023; }
 		if(#nuvem == 1) { setquest 4023; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
 				setquest 1023;
-			}else {
+			}else if(.@n == 2){
+				setquest 2023;
+			}else if(.@n == 3){
 				setquest 3023;
-			}
+			}else if(.@n == 4){
+				setquest 4023;
+			} else {close;}
 		}
 		next;
 		mes "[Medicina Básico]";
@@ -395,13 +407,17 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2024; }
 		if(#nevoa == 1) { setquest 3024; }
 		if(#nuvem == 1) { setquest 4024; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
 				setquest 1024;
-			}else {
+			}else if(.@n == 2){
+				setquest 2024;
+			}else if(.@n == 3){
 				setquest 3024;
-			}
+			}else if(.@n == 4){
+				setquest 4024;
+			} else {close;}
 		}
 		next;
 		mes "[Medicina Básico]";
@@ -505,13 +521,17 @@ lhz_dun02,23,233,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2025; }
 		if(#nevoa == 1) { setquest 3025; }
 		if(#nuvem == 1) { setquest 4025; }
-		if(nukenin == 1){
-			.@rand = rand(50);
-			if(.@rand <= 50){
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
 				setquest 1025;
-			}else {
+			}else if(.@n == 2){
+				setquest 2025;
+			}else if(.@n == 3){
 				setquest 3025;
-			}
+			}else if(.@n == 4){
+				setquest 4025;
+			} else {close;}
 		}
 		next;
 		mes "[Medicina Básico]";

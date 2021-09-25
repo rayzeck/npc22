@@ -554,10 +554,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2071; }
 		if(#nevoa == 1) { setquest 3071; }
 		if(#nuvem == 1) { setquest 4071; }
-		if(nukenin == 1) {setquest 1071; }
-		if(nukenin == 1) {setquest 2071; }
-		if(nukenin == 1) {setquest 3071; }
-		if(nukenin == 1) {setquest 4071; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
+				setquest 1071;
+			}else if(.@n == 2){
+				setquest 2071;
+			}else if(.@n == 3){
+				setquest 3071;
+			}else if(.@n == 4){
+				setquest 4071;
+			} else {close;}
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -642,10 +650,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2072; }
 		if(#nevoa == 1) { setquest 3072; }
 		if(#nuvem == 1) { setquest 4072; }
-		if(nukenin == 1) {setquest 1072; }
-		if(nukenin == 1) {setquest 2072; }
-		if(nukenin == 1) {setquest 3072; }
-		if(nukenin == 1) {setquest 4072; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
+				setquest 1072;
+			}else if(.@n == 2){
+				setquest 2072;
+			}else if(.@n == 3){
+				setquest 3072;
+			}else if(.@n == 4){
+				setquest 4072;
+			} else {close;}
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";
@@ -730,10 +746,18 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2073; }
 		if(#nevoa == 1) { setquest 3073; }
 		if(#nuvem == 1) { setquest 4073; }
-		if(nukenin == 1) {setquest 1073; }
-		if(nukenin == 1) {setquest 2073; }
-		if(nukenin == 1) {setquest 3073; }
-		if(nukenin == 1) {setquest 4073; }
+		if(nukenin == 1) {
+			set .@n, rand(1,4);
+			if(.@n == 1){
+				setquest 1073;
+			}else if(.@n == 2){
+				setquest 2073;
+			}else if(.@n == 3){
+				setquest 3073;
+			}else if(.@n == 4){
+				setquest 4073;
+			} else {close;}
+		}
 		next;
 		mes "[Raiton Básico]";
 		mes "Vá e faça seu treinamento.";

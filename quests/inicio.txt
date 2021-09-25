@@ -184,6 +184,95 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				
 			}
 		}
+		if (#nevoa == 1) {
+			savepoint "hospital3",55,62;
+			switch(select("- Bandana Normal:- Bandana de Lado:- Bandana no Pescoço:- Bandana Yamato:- Bandana Kisame:- Bandana Kakashi")) {
+		
+			case 1:
+				next;
+				getitem 30020,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E"; 
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3;  
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+		
+			case 2:
+				next;
+				getitem 30021,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E"; 
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3; 
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+		
+			case 3:
+				next;
+				getitem 30022,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E"; 
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3;  
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+		
+			case 4:
+				next;
+				getitem 30023,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E"; 
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3; 
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+		
+			case 5:
+				next;
+				getitem 30024,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E"; 
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3;  
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+		
+			case 6:
+				next;
+				getitem 30025,1;
+				setquest 1000;
+				set quest_basic_inicio,6;
+				set title$, "Rank E";
+				announce strcharinfo(0)+" é o mais novo Genin da Névoa, parabéns.",bc_blue|bc_all; 
+				jobchange 3; 
+				mes "^B0449E[ Akira Izumi ]^000000";
+				mes "O Kage esta esperando você em sua sala.";
+				close2;
+				warp "salakage3",31,18;
+				end;
+			}
+		}
 		
 		if (#suna == 1) {
 			savepoint "hospital2",55,62;
@@ -287,6 +376,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -301,6 +391,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -315,6 +406,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -329,6 +421,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -343,6 +436,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -357,6 +451,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
+				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
