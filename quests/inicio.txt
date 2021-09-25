@@ -7,7 +7,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 	}
 	
 	if(quest_basic_inicio == 4) {
-	mes "[^DC143CExame Escrito^000000]";
+		mes "[^DC143CExame Escrito^000000]";
 		mes "Olá jovem shinobi, vejo que você completou os treinamentos básicos e está pronto para meu exame final, não vamos perder tempo então, creio que já estudou tudo que precisa, vamos a primeira pergunta!";
 		next;
 		mes "[^DC143CExame Escrito^000000]";
@@ -81,7 +81,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		mes "Que pena... você errou, caso queira refazer o exame, é só falar comigo novamente, boa sorte na próxima vez!";
 		close;
 		
-	}	
+	}
 		
 		if(quest_basic_inicio == 5) {
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
