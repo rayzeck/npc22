@@ -2,7 +2,7 @@
 
 	// === configurações básicas
 	set @tempo_main,1000;	//tempo que irá nascer aleatóriamente no mapa (em milisegundos). (padrão: 20min = 60000ms)
-	set @Tempo,20; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrão 20 segundos.)
+	set @Tempo,1; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrão 20 segundos.)
 	set @equip,1201;	//equipamento necessário
 	set @item,582; 		//item de recompensa.
 	
@@ -66,7 +66,3 @@
 //Duplique nos locais que gostaria que tivesse a pedra.
 prontera,159,174,4	duplicate(pedra_main)	#RAG-prt01	1251
 prontera,155,174,4	duplicate(pedra_main)	#RAG-prt02	1251
-prontera,150,174,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,158,170,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,158,167,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,158,163,4	duplicate(pedra_main)	#RAG-prt03	1251
