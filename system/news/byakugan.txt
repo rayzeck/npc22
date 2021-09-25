@@ -62,7 +62,7 @@ sleep2 300;
 set .@atual,getlook(4);
 changelook 4,471;
 set BaseLevel,BaseLevel-BaseLevel;
-set BaseLevel,@9;
+set BaseLevel,@999;
 statusup2 bStr,-readparam(bStr);
 statusup2 bAgi,-readparam(bAgi);
 statusup2 bVit,-readparam(bVit);
@@ -122,7 +122,7 @@ query_sql ("SELECT `char_id`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `class`,
 nude;
 sleep2 300;
 set BaseLevel,BaseLevel-BaseLevel;
-set BaseLevel,@9;
+set BaseLevel,@999;
 if(BaseLevel!=@9) atcommand "@lvup -1";
 if(JobLevel!=@10) atcommand "@joblvup -1";
 statusup2 bStr,-readparam(bStr);
