@@ -1,7 +1,7 @@
 -	script	::pedra_main	FAKE_NPC,{
 
 	// === configurações básicas
-	set @tempo_main,100;	//tempo que irá nascer aleatóriamente no mapa (em milisegundos). (padrão: 20min = 60000ms)
+	set @tempo_main,1000;	//tempo que irá nascer aleatóriamente no mapa (em milisegundos). (padrão: 20min = 60000ms)
 	set @Tempo,20; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrão 20 segundos.)
 	set @equip,1201;	//equipamento necessário
 	set @item,582; 		//item de recompensa.
@@ -48,7 +48,7 @@
 	cutin "p_04",4; specialeffect2 457; sleep2 700;
 	cutin "p_05",4; specialeffect2 457; sleep2 500; 
 	specialeffect2 457;
-	classchange 1011,getd(".name_"+strnpcinfo(2)+"$"),bc_area;
+	classchange 1251,getd(".name_"+strnpcinfo(2)+"$"),bc_area;
 
 	if(!@reward){ cutin "p_fail",4; sleep2 500; cutin "",255; setd("."+strnpcinfo(2)+"",0); end; } else getitem @reward,1;
 	
@@ -64,9 +64,9 @@
 }
 
 //Duplique nos locais que gostaria que tivesse a pedra.
-prontera,150,175,4	duplicate(pedra_main)	#RAG-prt01	1010
-prontera,151,177,4	duplicate(pedra_main)	#RAG-prt02	1010
-prontera,153,174,4	duplicate(pedra_main)	#RAG-prt03	1010
-prontera,154,170,4	duplicate(pedra_main)	#RAG-prt03	1010
-prontera,154,168,4	duplicate(pedra_main)	#RAG-prt03	1010
-prontera,151,167,4	duplicate(pedra_main)	#RAG-prt03	1010
+prontera,150,175,4	duplicate(pedra_main)	#RAG-prt01	1254
+prontera,151,177,4	duplicate(pedra_main)	#RAG-prt02	1254
+prontera,153,174,4	duplicate(pedra_main)	#RAG-prt03	1254
+prontera,154,170,4	duplicate(pedra_main)	#RAG-prt03	1254
+prontera,154,168,4	duplicate(pedra_main)	#RAG-prt03	1254
+prontera,151,167,4	duplicate(pedra_main)	#RAG-prt03	1254

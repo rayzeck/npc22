@@ -6,7 +6,7 @@ if(elementofuuton != 1) { mes "[Fuuton Intermediário]"; mes "Esse elemento não é
 	if(BaseLevel >= 500) {	
 	mes "[Fuuton Intermediário]";
 	mes "Olá "+strcharinfo(0)+", sou professor de Fuuton escolha qual habilidade você gostaria de aprender.";
-	switch( select( "- Kamaitachi:- Renkuudan:- Nindou:- Tatsu no Oshigoto:- Sonic Wave" ) ){
+	switch( select( "- Kamaitachi:- Renkuudan:- Nindou:- Tatsu no Oshigoto:- Fuuton Shinku Taigyoku" ) ){
 
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 1:
@@ -397,7 +397,7 @@ if(elementofuuton != 1) { mes "[Fuuton Intermediário]"; mes "Esse elemento não é
 			//========================================================================
 			
 			mes "[Raiton Intermediário]";
-			mes "Sonic Wave?";
+			mes "Fuuton Shinku Taigyoku?";
 			next;
 			mes "[Raiton Intermediário]";
 			mes "Lembre-se que você só pode ter 6 skills intermediária, após isso não poderá aprender mais nenhum intermediário";
@@ -407,7 +407,7 @@ if(elementofuuton != 1) { mes "[Fuuton Intermediário]"; mes "Esse elemento não é
 			menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
 			
 			//========================================================================
-			//	Sonic Wave
+			//	Sonic Wave / Fuuton Shinku Taigyoku
 			//========================================================================
 			
 			5_delete:
