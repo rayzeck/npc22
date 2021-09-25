@@ -192,7 +192,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 								set pegoukg,1;
 								close;
 						case 10:
-							switch(select("- Shakuton:- Jinton:- Ressonante:- Kidoumaru:- Liberação de Relâmpago:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Kasa no Senbon:- Senjutsu:- Liberação Ying Yang")) {
+							switch(select("- Shakuton:- Jinton:- Ressonante:- Kidoumaru:- Kenjutsu:- Kibaku Nendo:- Liberação de Cristal:- Liberação de Lava:- Manipulação 5 Elementos:- Senju:- Senjutsu")) {
 								case 1:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Shakuton ?";
@@ -231,7 +231,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 1233;
 										set pegoukg,1;
 										close;
-								case 5:
+								/*case 5:
 									mes .@menu$;
 									mes "Você tem certeza que quer ser um Manipulador de Relâmpago ?";
 									if(select("- Sim:- Não") == 2) close;
@@ -239,8 +239,8 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										getitem2 30126,1,1,0,0,30090,0,0,0; 
 										equip 30126;
 										set pegoukg,1;
-										close;
-								case 6:
+										close;*/
+								case 5:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Kenjutsu?";
 									if(select("- Sim:- Não") == 2) close;
@@ -249,7 +249,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30130;
 										set pegoukg,1;
 										close;
-								case 7:
+								case 6:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar usuário de Kibaku Nendo??";
 									if(select("- Sim:- Não") == 2) close;
@@ -261,7 +261,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 8:
+								case 7:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Liberação de Cristal?";
 									if(select("- Sim:- Não") == 2) close;
@@ -271,7 +271,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 9:
+								case 8:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário de Liberação de Lava?";
 									if(select("- Sim:- Não") == 2) close;
@@ -281,7 +281,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 10:
+								case 9:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário Manipulador dos 5 Elementos?";
 									if(select("- Sim:- Não") == 2) close;
@@ -291,7 +291,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 11:
+								case 10:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um herdeiro da Senju no Ato?";
 									if(select("- Sim:- Não") == 2) close;
@@ -301,7 +301,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 12:
+								/*case 12:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário da Kasa no Senbon?";
 									if(select("- Sim:- Não") == 2) close;
@@ -311,9 +311,9 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										equip 30137;
 										equip 1114;
 										set pegoukg,1;
-										close;
+										close;*/
 
-								case 13:
+								case 11:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário da Arte Sábia?";
 									if(select("- Sim:- Não") == 2) close;
@@ -323,7 +323,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										set pegoukg,1;
 										close;
 
-								case 14:
+								/*case 14:
 									mes .@menu$;
 									mes "Você tem certeza que quer se tornar um usuário da Liberação Ying Yang?";
 									if(select("- Sim:- Não") == 2) close;
@@ -331,7 +331,7 @@ bibli_01,62,43,3	script	Habilidades Kekkei::Kekkeis	402,{
 										getitem2 30138,1,1,0,0,30090,0,0,0;
 										equip 30138;
 										set pegoukg,1;
-										close;
+										close;*/
 
 
 							}
