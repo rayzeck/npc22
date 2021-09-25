@@ -385,6 +385,7 @@ lou_in02,229,171,0	warp	nuk7	1,1,moc_fild06,371,240
 
 
 lou_in02,210,47,1	script	Chefe#1	70,{
+if(Class == 4019) { end; }
 mes "[^DC143CChefe^000000]";
 mes "Fiquei sabendo que você se deu muito bem com meus empregados ein!? Hehe, mas eu sei que não é isso que veio fazer aqui.";
 next;
