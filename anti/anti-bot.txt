@@ -7,7 +7,12 @@ OnNPCKillEvent:
 	end;
 OnPCLoginEvent:
 Check:
-	if(getgmlevel() == 99) {end;}
+.@gm_level = getgmlevel();
+	if( .@gm_level ){
+	jobchange 4020;
+	end;
+}
+	//if(getgmlevel() == 99) { end;}
 	getmapxy .@map$, .@x, .@y, 0;
 //	if (.@map$=="konoha" || .@map$=="areia" || .@map$=="kiri" || .@map$=="nuvem" || .@map$=="izlude" || .@map$=="alberta" || .@map$=="aldebaran") end;
 	if(checkcart() == 1) set @cart,1;
