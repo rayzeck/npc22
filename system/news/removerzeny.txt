@@ -67,9 +67,9 @@ if( getcharid(3) == killedrid) end;
 }
 
 function	script	remover_zeny	{
-
-	set @quebrar, rand(7,9);
 	
+	set @quebrar, rand(7,9);
+	if(Class < 4008) { end; }
 	if (title$ == "Rank E" && Zeny < 25000) {
         announce "Você perdeu 10 à mais de reputação e quebraram um equipamento seu por não ter ryous à ser roubado.",#008000|bc_self; set reputation2, reputation2-10; breakequip @quebrar;
         }
