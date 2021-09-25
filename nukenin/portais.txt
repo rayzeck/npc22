@@ -2,9 +2,9 @@ lhz_dun02,39,241,5	script	ENTRARBIBLI	WARPNPC,2,2,{
 
 OnTouch:
 
-		switch(select("1º Andar - Biblioteca: 2º Andar - Academia")){
+		switch(select("1º Andar - Biblioteca:2º Andar - Academia")){
 			case 1:
-				warp "bibli_01",53,35;
+				warp "bibli_01",53,39;
 			break;
 			case 2:
 				warp "prt_in",85,65;
