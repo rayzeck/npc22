@@ -1363,7 +1363,7 @@ OnTouch:
 		if(#suna == 1) { warp "sunagakure",229,256; }
 		if(#nevoa == 1) { warp "academia",79,148; }
 		if(#nuvem == 1) { warp "kumogakure",107,121; }
-		if(nukenin == 1) { warp "lou_in02",237,166; }
+		if(nukenin == 1) { warp "lhz_dun02",36,241; }
 		
 //		mes "Você precisa passar na prova para sair se não ficará mais um semestre estudando.";
 		close;
