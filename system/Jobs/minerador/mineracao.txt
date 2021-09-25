@@ -1,25 +1,25 @@
 -	script	::pedra_main	FAKE_NPC,{
 
-	// === configuraÃ§Ãµes bÃ¡sicas
-	set @tempo_main,1000;	//tempo que irÃ¡ nascer aleatÃ³riamente no mapa (em milisegundos). (padrÃ£o: 20min = 60000ms)
-	set @Tempo,20; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrÃ£o 20 segundos.)
-	set @equip,1201;	//equipamento necessÃ¡rio
+	// === configurações básicas
+	set @tempo_main,1000;	//tempo que irá nascer aleatóriamente no mapa (em milisegundos). (padrão: 20min = 60000ms)
+	set @Tempo,20; 		//Tempo que pode quebrar novamente outra pedra. (em segundos). (padrão 20 segundos.)
+	set @equip,1201;	//equipamento necessário
 	set @item,582; 		//item de recompensa.
 	
 	//Checks
 	if(getequipid(EQI_HAND_L)==@equip || getequipid(EQI_HAND_R)==@equip){ set .@eqiON,1; }
-	if(!.@eqiON){ dispbottom "[RAG] Seu equipamento de minerador nÃ£o esta equipado."; end; }
-	if(pedra >= gettimetick(2)){ npctalk "VocÃª precisa descansar "+(pedra-gettimetick(2))+" segundos, para minerar novamente."; end; }	
-	if(getd("."+strnpcinfo(2)+"")){ dispbottom "[RAG] AlguÃ©m jÃ¡ estÃ¡ usando essa pedra."; end; } else setd("."+strnpcinfo(2)+"",1);
+	if(!.@eqiON){ dispbottom "[RAG] Seu equipamento de minerador não esta equipado."; end; }
+	if(pedra >= gettimetick(2)){ npctalk "Você precisa descansar "+(pedra-gettimetick(2))+" segundos, para minerar novamente."; end; }	
+	if(getd("."+strnpcinfo(2)+"")){ dispbottom "[RAG] Alguém já está usando essa pedra."; end; } else setd("."+strnpcinfo(2)+"",1);
 	
 	//sets
 	setd(".mapa_"+strnpcinfo(2)+"$",strnpcinfo(4));
 	setd(".name_"+strnpcinfo(2)+"$",strnpcinfo(0));
 	
-	// Possiveis recompensas. (aleatÃ³rio)
+	// Possiveis recompensas. (aleatório)
 	switch(rand(8))
 	{
-		default: set @reward,0; break; 	//valor de falha (nÃ£o adicionar ID)
+		default: set @reward,0; break; 	//valor de falha (não adicionar ID)
 		case 1:	set @reward,501; break; //recompensa 1
 		case 2:	set @reward,501; break; //recompensa 2
 		case 3:	set @reward,501; break; //recompensa 3
@@ -57,16 +57,16 @@
 	disablenpc getd(".name_"+strnpcinfo(2)+"$");
 	sleep @tempo_main; 
 
-	//nÃ£o mexer.
+	//não mexer.
 	while( !checkcell( getd(".mapa_"+strnpcinfo(2)+"$"),( .@x = rand( 1,400 ) ),( .@y = rand( 1,400 ) ),cell_chkpass ) ); 
 	movenpc getd(".name_"+strnpcinfo(2)+"$"),.@x,.@y;
 	enablenpc getd(".name_"+strnpcinfo(2)+"$"); end;
 }
 
 //Duplique nos locais que gostaria que tivesse a pedra.
-prontera,150,175,4	duplicate(pedra_main)	#RAG-prt01	1251
-prontera,151,177,4	duplicate(pedra_main)	#RAG-prt02	1251
-prontera,153,174,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,154,170,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,154,168,4	duplicate(pedra_main)	#RAG-prt03	1251
-prontera,151,167,4	duplicate(pedra_main)	#RAG-prt03	1251
+prontera,159,174,4	duplicate(pedra_main)	#RAG-prt01	1251
+prontera,155,174,4	duplicate(pedra_main)	#RAG-prt02	1251
+prontera,150,174,4	duplicate(pedra_main)	#RAG-prt03	1251
+prontera,158,170,4	duplicate(pedra_main)	#RAG-prt03	1251
+prontera,158,167,4	duplicate(pedra_main)	#RAG-prt03	1251
+prontera,158,163,4	duplicate(pedra_main)	#RAG-prt03	1251
