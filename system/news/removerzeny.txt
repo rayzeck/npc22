@@ -1,3 +1,10 @@
+-	script	backto	-1,{
+OnPcDieEvent:
+if(dreamwalk==1) callfunc "dreamout";
+end;
+}
+
+
 /*-	script	Death	-1,{
 OnPCDieEvent:
 
