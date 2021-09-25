@@ -564,9 +564,7 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 				setquest 3091;
 			}else if(.@n == 4){
 				setquest 4091;
-			}else{
-				close;
-			}
+			} else {close;}
 		}
 		next;
 		mes "[Fuuton Básico]";
