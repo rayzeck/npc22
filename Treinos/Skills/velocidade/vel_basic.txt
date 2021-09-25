@@ -257,7 +257,7 @@ lhz_dun02,23,239,5	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2014; }
 		if(#nevoa == 1) { setquest 3014; }
 		if(#nuvem == 1) { setquest 4014; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1014;

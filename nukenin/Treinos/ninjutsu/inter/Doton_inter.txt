@@ -461,7 +461,7 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2081; }
 		if(#nevoa == 1) { setquest 3081; }
 		if(#nuvem == 1) { setquest 4081; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1081;
@@ -556,7 +556,7 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2082; }
 		if(#nevoa == 1) { setquest 3082; }
 		if(#nuvem == 1) { setquest 4082; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1082;
@@ -651,7 +651,7 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2083; }
 		if(#nevoa == 1) { setquest 3083; }
 		if(#nuvem == 1) { setquest 4083; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1083;

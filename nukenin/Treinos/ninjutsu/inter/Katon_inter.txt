@@ -466,7 +466,7 @@ if(elementokaton != 1) { mes "[Katon Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2051; }
 		if(#nevoa == 1) { setquest 3051; }
 		if(#nuvem == 1) { setquest 4051; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 2051;
@@ -561,7 +561,7 @@ if(elementokaton != 1) { mes "[Katon Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2052; }
 		if(#nevoa == 1) { setquest 3052; }
 		if(#nuvem == 1) { setquest 4052; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 2052;
@@ -656,7 +656,7 @@ if(elementokaton != 1) { mes "[Katon Básico]"; mes "Esse elemento não é de sua n
 		if(#suna == 1) {  setquest 2053; }
 		if(#nevoa == 1) { setquest 3053; }
 		if(#nuvem == 1) { setquest 4053; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 2053;

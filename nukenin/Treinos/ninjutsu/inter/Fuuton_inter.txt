@@ -555,7 +555,6 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#nevoa == 1) { setquest 3091; }
 		if(#nuvem == 1) { setquest 4091; }
 		if(nukenin == 1) {
-			if(nukenin == 1) { 
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1091;
@@ -650,7 +649,7 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2092; }
 		if(#nevoa == 1) { setquest 3092; }
 		if(#nuvem == 1) { setquest 4092; }
-		if(nukenin == 1) {  
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1092;
@@ -745,7 +744,7 @@ if(elementofuuton != 1) { mes "[Fuuton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2093; }
 		if(#nevoa == 1) { setquest 3093; }
 		if(#nuvem == 1) { setquest 4093; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 1093;

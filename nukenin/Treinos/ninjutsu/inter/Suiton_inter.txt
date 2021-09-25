@@ -464,7 +464,7 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2061; }
 		if(#nevoa == 1) { setquest 3061; }
 		if(#nuvem == 1) { setquest 4061; }
-		if(nukenin == 1) { 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 2061;
@@ -654,7 +654,7 @@ if(elementosuiton != 1) { mes "[Suiton Básico]"; mes "Esse elemento não é de sua
 		if(#suna == 1) {  setquest 2063; }
 		if(#nevoa == 1) { setquest 3063; }
 		if(#nuvem == 1) { setquest 4063; }
-		if(nukenin == 1) {setquest 1063; 
+		if(nukenin == 1) {
 			set .@n, rand(1,4);
 			if(.@n == 1)
 				setquest 2063;
