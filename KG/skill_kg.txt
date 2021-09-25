@@ -37,16 +37,17 @@ OnPCUseSkillEvent:
 // BYAKUGAN
 
 	if(lskillid == 949) {
+		callfunc "dreamin"; 
 		AddTimer 5000, "REMOVERCORPO::OnByakugan";
 		sc_start SC_ATKPOTION,15000,4000;
-		callfunc "dreamin"; 
+		
 		end;
 	}
 
 -	script	REMOVERCORPO	-1,{
 		
 	OnByakugan:
-		callfunc "dreamout"; 
+		callfunc "dreamout";
 		DelTimer "REMOVERCORPO::OnByakugan";
 		end;
 }
