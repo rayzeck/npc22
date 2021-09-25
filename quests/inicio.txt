@@ -86,13 +86,13 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		if(quest_basic_inicio == 5) {
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Parabéns apartir de hoje você deixa de ser um estudante para se tornar algo maior. Agora escolha o design da sua bandana:";
+		if(Class == 4019) {set title$, "Rank E"; setquest 1000; set quest_basic_inicio,6; warp "bibli_01",62,40; savepoint "lou_in",238,166;}
 		next;
 //	if(Class < 4008 || Class < 4009 || Class < 4011) { mes "Você precisa ser Jounin.";  close; }
 		next;
 		
 	}
 		if(quest_basic_inicio == 5) {
-		if(Class == 4019) {set title$, "Rank E"; setquest 1000; set quest_basic_inicio,6; warp "bibli_01",62,40; savepoint "lou_in",238,166;}
 		if (#konoha == 1) {
 			savepoint "hospital",55,62;
 			switch(select("- Bandana Normal:- Bandana de Lado:- Bandana no Pescoço:- Bandana Yamato:- Bandana Kisame:- Bandana Kakashi")) {
@@ -453,7 +453,7 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		}
 	}
 	
-	if(quest_basic_inicio == 1) {
+	if(quest_basic_inicio < 1) {
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
 		mes "Olá "+strcharinfo(0)+" , sejá bem vindo a Academia Shinobi!";
 		mes "Eu sou o Aruotuora Azumi, depois de um semestre de aulas finalmente chegou a hora da prova vamos ver se você ira se tornar um genin!";
@@ -496,7 +496,10 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 	mes "Termine suas aulas para falar comigo.";
 	close;
 	
-
+	
+	
+OnInit:
+waitingroom "[Professor]",0;
 }
 
 
@@ -745,6 +748,8 @@ mes "Agora você precisa falar com o Mestre Elemental. ";
 if(quest_basic_inicio < 2) { set quest_basic_inicio,2; }
 close;
 
+OnInit:
+	waitingroom "[Treinamentos]",0;
 }
 
 prt_in,85,71,5	script	Mestre Elemental	48,{	
@@ -1051,6 +1056,8 @@ prt_in,85,71,5	script	Mestre Elemental	48,{
 	mes "Estou ocupado no momento com os testes.";
 	close;
 	
+OnInit:
+waitingroom "[Elemento]",0;
 }
 
 prt_in,84,69,5	script	Asuma Aburame 	65,{
@@ -1089,6 +1096,9 @@ prt_in,84,69,5	script	Asuma Aburame 	65,{
 	mes "^B0449E[ Asuma Aburame ]^000000";
 	mes "Entre no portal à esquerda para aprender seus jutsus.";
 	end;
+
+OnInit:
+	waitingroom "[Instrutor de Jutsu]",0;
 
 }
 
