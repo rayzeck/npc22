@@ -51,6 +51,7 @@ statusup2 bInt,-readparam(bInt);
 statusup2 bDex,-readparam(bDex);
 statusup2 bLuk,-readparam(bLuk);
 set StatusPoint,@19;
+atcommand "@hide";
 sleep2 300;
 statusup2 bStr,@2-1;
 statusup2 bAgi,@3-1;
