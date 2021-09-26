@@ -187,17 +187,18 @@ OnHPSELOSKILL22:
 // BYAKUGAN
 
 	if(lskillid == 949) {
-		callfunc "xyz"; 
+		callfunc "dreamin"; 
 		sc_start SC_ATKPOTION,15000,4000;
 		
 		end;
 	}
 
-function	script	xyz	{
-    
-    mes "Olá ^ff0000["+strcharinfo(0)+"]^000000";
-    close;
+-	script	ATIVAR_BYAKUGAN	-1,{
 
+OnInit:
+
+mes "oi";
+close;
 }
 
 -	script	backto	-1,{
