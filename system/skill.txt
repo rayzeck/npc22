@@ -3,7 +3,10 @@
 OnSkillFuncione:
 
 callfunc "dreamin";
-sleep 1000;
+sleep 3000;
+goto segunda;
+
+segunda:
 callfunc "dreamout";
 
 }
