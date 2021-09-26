@@ -376,7 +376,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -391,7 +390,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -406,7 +404,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -421,7 +418,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -436,7 +432,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3;  
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
@@ -451,7 +446,6 @@ prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 				jobchange 3; 
 				mes "^B0449E[ Aruotuora Azumi ]^000000";
 				mes "O Kage esta esperando você em sua sala.";
-				Zeny 100000;
 				close2;
 				warp "salakage3",31,18;
 				end;
