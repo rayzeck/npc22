@@ -1,4 +1,4 @@
--	script	ATIVAR_BYAKUGAN	-1,{
+-	script	Skill	-1,{
 
 OnSkillFuncione:
 
