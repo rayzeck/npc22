@@ -3,13 +3,19 @@
 OnSkillFuncione:
 
 callfunc "dreamin";
-sleep 3000;
-goto segunda;
-
-segunda:
-callfunc "dreamout";
+AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE";
+end;
 
 }
+
+-	script	REMOVERGORDAKG	-1,{
+		
+	OnHPGORDAREMOVE:
+		callfunc "dreamout";
+		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
+		end;
+}
+
 
 function	script	dreamin	{
 
