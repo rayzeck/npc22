@@ -3,15 +3,9 @@
 OnSkillFuncione:
 
 callfunc "dreamin";
-sleep 5000;
+sleep 1000;
 callfunc "dreamout";
 
-}
-
--	script	backto	-1,{
-OnPcDieEvent:
-if(dreamwalk==1) callfunc "dreamout";
-end;
 }
 
 function	script	dreamin	{
