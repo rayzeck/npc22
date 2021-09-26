@@ -2,6 +2,30 @@
 
 OnInit:
 
-mes "oi";
-close;
+mes "Hell";
+
+switch(select("- 1:- 2")){
+
+case 1:
+
+close2;
+
+callfunc "dreamin";
+
+end; 
+
+ 
+
+case 2:
+
+close2;
+
+callfunc "dreamout";
+
+end;
+
+}
+
+end;
+
 }
