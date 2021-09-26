@@ -184,14 +184,6 @@ OnHPSELOSKILL22:
 		end;
 }
 
--	script	ATIVAR_BYAKUGAN	-1,{
-
-OnInit:
-
-mes "oi";
-close;
-}
-
 -	script	backto	-1,{
 OnPcDieEvent:
 if(dreamwalk==1) callfunc "dreamout";

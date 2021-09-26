@@ -1,0 +1,7 @@
+-	script	ATIVAR_BYAKUGAN	-1,{
+
+OnInit:
+
+mes "oi";
+close;
+}
