@@ -1,4 +1,4 @@
-/*prontera,154,150,5	script	Rukia	90,{
+prontera,154,150,5	script	Rukia	90,{
 
 mes "Hell";
 
