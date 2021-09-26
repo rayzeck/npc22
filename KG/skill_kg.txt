@@ -184,15 +184,6 @@ OnHPSELOSKILL22:
 		end;
 }
 
-// BYAKUGAN
-
-	if(lskillid == 949) {
-		callfunc "dreamin"; 
-		sc_start SC_ATKPOTION,15000,4000;
-		
-		end;
-	}
-
 -	script	ATIVAR_BYAKUGAN	-1,{
 
 OnInit:
