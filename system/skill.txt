@@ -139,3 +139,9 @@ return;
 }
 end;
 }
+
+-	script	backto	-1,{
+OnPcDieEvent:
+if(dreamwalk==1) callfunc "dreamout";
+end;
+}
