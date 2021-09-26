@@ -31,7 +31,6 @@ query_sql "INSERT char_store VALUES ('"+@CID+"','"+readparam(bStr)+"','"+readpar
 set dreamer,1;
 }
 if(dreamwalk==0){
-atcommand "@save";
 query_sql ("UPDATE `char_store` SET `char_id`='"+@CID+"',`str`='"+readparam(bStr)+"',`agi`='"+readparam(bAgi)+"',`vit`='"+readparam(bVit)+"',`int`='"+readparam(bInt)+"',`dex`='"+readparam(bDex)+"',`luk`='"+readparam(bLuk)+"',`class`='"+@14+"',`level`='"+@15+"',`joblevel`='"+@16+"',`arma`='"+getequipid(EQI_HAND_R)+"',`escudo`='"+getequipid(EQI_HAND_L)+"',`cima`='"+getequipid(EQI_HEAD_TOP)+"',`meio`='"+getequipid(EQI_HEAD_MID)+"',`baixo`='"+getequipid(EQI_HEAD_LOW)+"',`robe`='"+getequipid(EQI_GARMENT)+"',`roupa`='"+getlook(7)+"',`cabelo`='"+getlook(6)+"',`StatusPoint`='"+StatusPoint+"',`skill_point`='"+SkillPoint+"' WHERE `char_id`='"+@CID+"'");
 sleep2 500;
 sleep2 900;
@@ -137,7 +136,6 @@ if(@13>0) equip @13;
 if(@14>0) equip @14;
 if(@15>0) equip @15;
 if(@16>0) equip @16;
-savepoint "prontera",150,150;
 set dreamwalk,0;
 set dwemblem,0;
 return;
