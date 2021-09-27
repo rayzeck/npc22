@@ -13,9 +13,3 @@ OnTouch:
 		
 		close;
 }
-
-/*
-lhz_dun02,39,241	warp	nuke#3		1,1,prt_in,85,65
-
-bibli_01,53,35
-*/
