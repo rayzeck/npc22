@@ -4,6 +4,7 @@ OnSkillFuncione:
 
 callfunc "dreamin";
 //delitem 30106,1;
+atcommand "@hide";
 AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE";
 end;
 
@@ -13,6 +14,7 @@ end;
 		
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
+		atcommand "@hide";
 		if(isequipped(30106)) unequip(EQI_HEAD_MID);
 		AddTimer 500, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 //		getitem2 30106,1,1,0,0,30093,0,0,0;
