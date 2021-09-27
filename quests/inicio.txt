@@ -1313,26 +1313,25 @@ treinamento,94,146,5	script	Retorno#1	99,{
 	if(select("- Sim:- Não") == 2) { close; }
 	
 	if(#konoha == 1){
-		progessbar "^0000FF",2;
+		progressbar "^0000FF",2;
 		warp "hospital",55,64;
-	}
+	}	
 	if(#suna == 1){
-		progessbar "^0000FF",2;
+		progressbar "^0000FF",2;
 		warp "hospital2",55,64;
 	}
 	if(#nevoa == 1){
-		progessbar "^0000FF",2;
+		progressbar "^0000FF",2;
 		warp "hospital3",55,64;
 	}
 	if(#nuvem == 1){
-		progessbar "^0000FF",2;
+		progressbar "^0000FF",2;
 		warp "hospital4",55,64;
 	}
 	if(nukenin == 1){
-		progessbar "^0000FF",2;
+		progressbar "^0000FF",2;
 		warp "lou_in02",237,172;
 	}
-
 }
 
 academia,102,8,5	script	SAIDADAACADEMIA	WARPNPC,2,2,{
