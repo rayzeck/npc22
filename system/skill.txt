@@ -13,13 +13,19 @@ end;
 		
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
-		sleep 5000;
 		getitem2 30106,1,1,0,0,30093,0,0,0;
-		equip 30106;
+		AddTimer 1000, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;
 }
 
+-	script	REMOVERGORDA2KG	-1,{
+		
+	OnHPGORDA2REMOVE:
+		equip 30106;
+		DelTimer "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
+		end;
+}
 
 function	script	dreamin	{
 
