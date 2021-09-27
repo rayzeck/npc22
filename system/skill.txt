@@ -14,7 +14,7 @@ end;
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
 		getitem2 30106,1,1,0,0,30093,0,0,0;
-		sleep2 500;
+		sleep2 5000;
 		equip 30106;
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;
