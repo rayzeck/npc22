@@ -1313,23 +1313,23 @@ treinamento,94,146,5	script	Retorno#1	99,{
 	if(select("- Sim:- Não") == 2) { close; }
 	
 	if(#konoha == 1){
-		progressbar "^0000FF",2;
+		progressbar "^0000FF",3;
 		warp "hospital",55,64;
 	}	
 	if(#suna == 1){
-		progressbar "^0000FF",2;
+		progressbar "^0000FF",3;
 		warp "hospital2",55,64;
 	}
 	if(#nevoa == 1){
-		progressbar "^0000FF",2;
+		progressbar "^0000FF",3;
 		warp "hospital3",55,64;
 	}
 	if(#nuvem == 1){
-		progressbar "^0000FF",2;
+		progressbar "^0000FF",3;
 		warp "hospital4",55,64;
 	}
 	if(nukenin == 1){
-		progressbar "^0000FF",2;
+		progressbar "^0000FF",3;
 		warp "lou_in02",237,172;
 	}
 }

@@ -155,7 +155,7 @@ close;
 					getitem 19086, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
 //				getitem 732, 2, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
 					if( !.@chance )
-						getitem 19086, 1, $@partymemberaid[ .@i ];// put ID gold coin
+						getitem 734, 1, $@partymemberaid[ .@i ];// put ID gold coin
 				}
 	}
 	end;
