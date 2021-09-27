@@ -3,6 +3,7 @@
 OnSkillFuncione:
 
 callfunc "dreamin";
+autoequip 30106,0;
 AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE";
 end;
 
@@ -12,8 +13,6 @@ end;
 		
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
-		sleep2 1000;
-		equip 30106;
 		autoequip 30106,1;
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;
