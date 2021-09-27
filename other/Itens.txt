@@ -1,60 +1,65 @@
-treinamento,86,138,5	script	Quests Avan	1_M_YOUNGKNIGHT,{
+treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 
-	Mes "Escolha os itens necessário para sua Quest avan!";
-
-	switch(select("União da Tribo:Pedra:Ametista:Granada:Peridoto:Safira:Opala:Zircônio:Trança:Coração:Bandagem")){
+	mes "Escolha:"
+	
+	switch(select("- Fuuin no Shoo:- Zeny:- Itens Quest")){
 		case 1:
-			//União da Tribo
-			getitem 737,30;
+			getitem 753,1;
 		break;
 		case 2:
-			//Pedra Brilhante
-			getitem 738,30;
+			set Zeny, Zeny+30000000;
 		break;
 		case 3:
-			//Ametista
-			getitem 739,30;
-		break;
-		case 4:
-			//Granada
-			getitem 740,30;
-		break;
-		case 5:
-			//Peridoto
-			getitem 741,30;
-		break;
-		case 6:
-			//Safira
-			getitem 742,30;
-		break;
-		case 7:
-			//Opala
-			getitem 743,30;
-		break;
-		case 8:
-			//Zircônio
-			getitem 744,30;
-		break;
-		case 9:
-			//Trança
-			getitem 745,30;
-		break;
-		case 10:
-			//Coração Imortal
-			getitem 746,30;
-		break;
-		case 11:
-			//Bandagem Estragada
-			getitem 747,30;
+			mes "Selecione um item.":
+			switch(select("União da Tribo:Pedra:Ametista:Granada:Peridoto:Safira:Opala:Zircônio:Trança:Coração:Bandagem")){
+				case 1:
+					//União da Tribo
+					getitem 737,30;
+				break;
+				case 2:
+					//Pedra Brilhante
+					getitem 738,30;
+				break;
+				case 3:
+					//Ametista
+					getitem 739,30;
+				break;
+				case 4:
+					//Granada
+					getitem 740,30;
+				break;
+				case 5:
+					//Peridoto
+					getitem 741,30;
+				break;
+				case 6:
+					//Safira
+					getitem 742,30;
+				break;
+				case 7:
+					//Opala
+					getitem 743,30;
+				break;
+				case 8:
+					//Zircônio
+					getitem 744,30;
+				break;
+				case 9:
+					//Trança
+					getitem 745,30;
+				break;
+				case 10:
+					//Coração Imortal
+					getitem 746,30;
+				break;
+				case 11:
+					//Bandagem Estragada
+					getitem 747,30;
+				break;
+			}
 		break;
 	}
-
-
-
-
-
-
-
-
+	
+	
 	end;
 }
