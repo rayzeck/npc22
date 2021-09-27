@@ -3,7 +3,7 @@
 //-----Fild Konoha: pay_fild07 Rank E
 konoha3,0,0,0,0	monster	Planta de Konoha	1079,3,60000,180000,0
 pay_fild07,0,0,0,0	monster	Lagarta		1007,1000,0,0,0
-pay_fild07,0,0,0,0	monster	Filhote de Javali		1167,100,0,0,0
+pay_fild07,0,0,0,0	monster	Filhote de Javali		1167,1000,0,0,0
 pay_fild07,0,0,0,0	monster	Filhote de Coelho		1591,1000,0,0,0
 pay_fild07,0,0,0,0	monster	Árvore Morta		1010,1000,0,0,0
 
