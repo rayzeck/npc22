@@ -131,7 +131,7 @@ treinamento,65,73,5	script	Tsunade	423,{
 	}
 
 	if(getskilllv(2502) == 2 ) {
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de se tornar um Mestre?";
 			if(select("- Sim:- Não") == 2) { close; }
@@ -187,7 +187,7 @@ treinamento,65,73,5	script	Tsunade	423,{
 	}
 
 	if(getskilllv(2502) == 1) {
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de evolui-lo?";
 			if(select("- Sim:- Não") == 2) { close; }

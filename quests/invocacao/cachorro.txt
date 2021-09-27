@@ -150,7 +150,7 @@ treinamento,65,81,5	script	Kakashi	843,{
 
 	if(getskilllv(2504) == 2 ) {
 
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 
 			mes .@npc$;
 
@@ -228,7 +228,7 @@ treinamento,65,81,5	script	Kakashi	843,{
 	
 
 	if(getskilllv(2504) == 1) {
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de evolui-lo?";
 			if(select("- Sim:- Não") == 2) { close; }
