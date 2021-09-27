@@ -3,7 +3,7 @@
 OnSkillFuncione:
 
 callfunc "dreamin";
-delitem 30106,1;
+//delitem 30106,1;
 AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE";
 end;
 
@@ -14,7 +14,7 @@ end;
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
 		AddTimer 5000, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
-		getitem2 30106,1,1,0,0,30093,0,0,0;
+//		getitem2 30106,1,1,0,0,30093,0,0,0;
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;
 }
