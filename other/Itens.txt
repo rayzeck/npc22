@@ -1,0 +1,15 @@
+treinamento,86,138,5	script	Quests Avan	1_M_YOUNGKNIGHT,{
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
