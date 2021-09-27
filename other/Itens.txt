@@ -6,9 +6,9 @@ treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 		case 1:
 			getitem 753,1;
 		break;
-		case 2:
-			set Zeny, Zeny+30000000;
-		break;
+		//case 2:
+		//	set Zeny, Zeny+30000000;
+		//break;
 		case 3:
 			mes "Selecione um item.":
 			switch(select("União da Tribo:Pedra:Ametista:Granada:Peridoto:Safira:Opala:Zircônio:Trança:Coração:Bandagem")){
