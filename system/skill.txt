@@ -14,8 +14,8 @@ end;
 	OnHPGORDAREMOVE:
 		callfunc "dreamout";
 //		if(isequipped(30106)) unequip(EQI_HEAD_TOP);
-//		if(isequipped(30106)) unequip(EQI_HEAD_MID);
-		if(isequipped(30106)) unequip(EQI_HEAD_LOW);
+		if(isequipped(30106)) unequip(EQI_HEAD_MID);
+//		if(isequipped(30106)) unequip(EQI_HEAD_LOW);
 		AddTimer 1000, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 //		getitem2 30106,1,1,0,0,30093,0,0,0;
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
