@@ -229,7 +229,7 @@ end;
 }
 
 function	script	KG_SELOSENJUTSU	{
-if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus2 bAddRace,RC_All,5; bonus2 bSkillAtk,"SR_SKYNETBLOW",100; skill 2327,1; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus2 bAddRace,RC_All,5; bonus2 bSkillAtk,"SR_SKYNETBLOW",1000; skill 2327,1; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus2 bAddRace,RC_All,10; skill 2327,2; skill 2476,2; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus2 bAddRace,RC_All,15; skill 2327,3; skill 2476,3; skill 3011,3; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus2 bAddRace,RC_All,20; skill 2327,4; skill 2476,4; skill 3011,4; skill 5014,4; }
