@@ -63,3 +63,53 @@ treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 	
 	end;
 }
+
+treinamento,83,138,5	script	Equips S	1_M_YOUNGKNIGHT,{
+	
+	mes "Escolha:";
+	
+	switch(select("- Equipamentos:- Encantamento")){
+		case 1:
+			next;
+			mes "Selecione:";
+			switch(select("Arma:Pergaminho:Amuleto:Capa:Colete:Sandálias")){
+				// Arma
+				case 1:
+					getitem 1102,1;
+				break;
+				// Pergaminho
+				case 2:
+					getitem 2126,1;
+				break;
+				// Amuleto
+				case 3:
+					getitem 2631,1;
+				break;
+				// Capa
+				case 4:
+					getitem 2511,1;
+				break;
+				// Colete
+				case 5:
+					getitem 2312,1;
+				break;
+				// Sandálias
+				case 6:
+					getitem 2415,1;
+				break;
+				/*
+				Pergaminho S ID: 2126
+				Colete S ID: 2312
+				Sandalia S ID: 2415
+				Capa S ID: 2511
+				Amuleto S ID: 2631
+				Samehada  S: ID 1102
+				*/
+			}
+		break;
+		case 2:
+			getitem 3055,25;
+		break;
+	}
+	end;
+}
