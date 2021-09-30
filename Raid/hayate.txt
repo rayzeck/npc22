@@ -146,7 +146,7 @@ exame,0,0,0	script	torneioinstance	-1,{
 					getitem 19084, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
 //				getitem 732, 2, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
 					if( !.@chance )
-						getitem 19084, 1, $@partymemberaid[ .@i ];// put ID gold coin
+						getitem 734, 1, $@partymemberaid[ .@i ];// put ID gold coin
 				}
 	}
 	end;
@@ -191,7 +191,7 @@ exame,91,9,4	script	Hayate#2	4_m_across,{
 	set raidon,0; 
 	delitem 19084,1;
 	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 200 WHERE `char_id` = '"+getcharid(0)+"'"); 
-	getitem 732,2; 
+	getitem 734,2; 
 	dispbottom "200 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
 	close;

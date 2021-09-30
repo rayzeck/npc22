@@ -1,0 +1,121 @@
+treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
+
+	mes "Escolha:";
+	
+	switch(select("Fuuin no Shoo:Zeny:Itens Quest:Pontos de Missão:Upar para o 999")){
+		case 1:
+			getitem 753,1;
+		break;
+		case 2:
+			set Zeny, Zeny+30000000;
+		break;
+		case 3:
+			mes "Selecione um item.";
+			switch(select("União da Tribo:Pedra:Ametista:Granada:Peridoto:Safira:Opala:Zircônio:Trança:Coração:Bandagem")){
+				case 1:
+					//União da Tribo
+					getitem 737,30;
+				break;
+				case 2:
+					//Pedra Brilhante
+					getitem 738,30;
+				break;
+				case 3:
+					//Ametista
+					getitem 739,30;
+				break;
+				case 4:
+					//Granada
+					getitem 740,30;
+				break;
+				case 5:
+					//Peridoto
+					getitem 741,30;
+				break;
+				case 6:
+					//Safira
+					getitem 742,30;
+				break;
+				case 7:
+					//Opala
+					getitem 743,30;
+				break;
+				case 8:
+					//Zircônio
+					getitem 744,30;
+				break;
+				case 9:
+					//Trança
+					getitem 745,30;
+				break;
+				case 10:
+					//Coração Imortal
+					getitem 746,30;
+				break;
+				case 11:
+					//Bandagem Estragada
+					getitem 747,30;
+				break;
+			}
+		break;
+		case 4:
+			getitem 732,35;
+		break;
+		case 5:
+			atcommand "@lvup 999";
+		break;
+	}
+	
+	
+	end;
+}
+
+treinamento,83,138,5	script	Equips S	1_M_YOUNGKNIGHT,{
+	
+	mes "Escolha:";
+	
+	switch(select("- Equipamentos:- Encantamento")){
+		case 1:
+			next;
+			mes "Selecione:";
+			switch(select("Arma:Pergaminho:Amuleto:Capa:Colete:Sandálias")){
+				// Arma
+				case 1:
+					getitem 1102,1;
+				break;
+				// Pergaminho
+				case 2:
+					getitem 2126,1;
+				break;
+				// Amuleto
+				case 3:
+					getitem 2631,2;
+				break;
+				// Capa
+				case 4:
+					getitem 2511,1;
+				break;
+				// Colete
+				case 5:
+					getitem 2312,1;
+				break;
+				// Sandálias
+				case 6:
+					getitem 2415,1;
+				break;
+				/*
+				Pergaminho S ID: 2126
+				Colete S ID: 2312
+				Sandalia S ID: 2415
+				Capa S ID: 2511
+				Amuleto S ID: 2631
+				Samehada  S: ID 1102
+				*/
+			}
+		break;
+		case 2:
+			getitem 3055,35;
+		break;
+	}
+	end;
+}

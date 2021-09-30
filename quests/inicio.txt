@@ -1309,11 +1309,29 @@ lhz_dun02,39,212	warp	nuke#3	1,1,lou_in02,57,174
 treinamento,94,146,5	script	Retorno#1	99,{
 
 	mes "[Retorno]";
-	mes "Gostaria de retornar para a academia ?";
+	mes "Gostaria de retornar para a Vila ?";
 	if(select("- Sim:- Não") == 2) { close; }
 	
-	warp "academia",104,89;
-
+	if(#konoha == 1){
+		progressbar "^0000FF",3;
+		warp "hospital",55,64;
+	}	
+	if(#suna == 1){
+		progressbar "^0000FF",3;
+		warp "hospital2",55,64;
+	}
+	if(#nevoa == 1){
+		progressbar "^0000FF",3;
+		warp "hospital3",55,64;
+	}
+	if(#nuvem == 1){
+		progressbar "^0000FF",3;
+		warp "hospital4",55,64;
+	}
+	if(nukenin == 1){
+		progressbar "^0000FF",3;
+		warp "lou_in02",237,172;
+	}
 }
 
 academia,102,8,5	script	SAIDADAACADEMIA	WARPNPC,2,2,{

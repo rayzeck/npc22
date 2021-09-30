@@ -158,7 +158,7 @@ treinamento,65,77,5	script	Orochimaru	70,{
 
 	if(getskilllv(2501) == 2 ) {
 
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 
 			mes .@npc$;
 
@@ -236,7 +236,7 @@ treinamento,65,77,5	script	Orochimaru	70,{
 	
 
 	if(getskilllv(2501) == 1) {
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de evolui-lo?";
 			if(select("- Sim:- Não") == 2) { close; }

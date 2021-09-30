@@ -118,7 +118,7 @@ treinamento,121,172,5	script	Kidomaru	4_m_kid1,{
 	}
 	
 	if(getskilllv(2506) == 2 ) {
-		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de se tornar um Mestre?";
 			if(select("- Sim:- Não") == 2) { close; }
@@ -157,7 +157,7 @@ treinamento,121,172,5	script	Kidomaru	4_m_kid1,{
 	}
 	
 	if(getskilllv(2506) == 1) {
-		if(Class == 7 || Class == 8 || Class == 9 || Class == 10 || Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011) {
+		if(Class == 7 || Class == 8 || Class == 9 || Class == 10 || Class == 4008 || Class == 4009 || Class == 4010 || Class == 4011 || Class == 4019) {
 			mes .@npc$;
 			mes "Vejo que você já possui um contrato, você gostaria de evolui-lo?";
 			if(select("- Sim:- Não") == 2) { close; }

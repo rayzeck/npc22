@@ -22,3 +22,11 @@ function	script	caixamisteriosaIII	{
 		getitem .@a,1;
 		end;
 }
+
+
+function	script	caixamisteriosaI	{
+	
+	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 100 WHERE `char_id` = '"+getcharid(0)+"'");
+	dispbottom "100 Pontos de Missão adquiridos.";
+	end;
+}

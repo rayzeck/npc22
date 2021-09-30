@@ -220,15 +220,15 @@ iz_dun00,199,147,5	script	Cientista	402,{
 //
 iz_dun00,168,172,5	script	Portão::main	406,{
 	
-	if(countitem(19093)>=1){
-		progressbar "^0000FF",2;
-		delitem 19093, 1;
-		warp "bra_dun01",37,204;
-		end;
-	} else{
+	//if(countitem(19093)>=1){
+	//	progressbar "^0000FF",2;
+	//	delitem 19093, 1;
+	//	warp "bra_dun01",37,204;
+	//	end;
+	//} else{
 		npctalk "Você não possui o Amuleto Selado!";
 		end;
-	}
+	//}
 	
 
 }
@@ -238,17 +238,16 @@ iz_dun00,168,172,5	script	Portão::main	406,{
 //
 //
 iz_dun00,39,47,5	script	Portão::trap	406,{
-	set .@npcName$, "^0000FF[Portão]^000000";
 	
-	if(countitem(19093)>=1){
-		progressbar "^0000FF",2;
-		delitem 19093, 1;
-		warp "tha_t09",53,137;
-		end;
-	} else{
+	//if(countitem(19093)>=1){
+	//	progressbar "^0000FF",2;
+	//	delitem 19093, 1;
+	//	warp "tha_t09",53,137;
+	//	end;
+	//} else{
 		npctalk "Você não possui o Amuleto Selado!";
 		end;
-	}
+	//}
 }
 //
 // Segunda Entrada Trap
