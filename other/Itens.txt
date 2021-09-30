@@ -59,7 +59,7 @@ treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 			}
 		break;
 		case 4:
-			getitem 372,35;
+			getitem 732,35;
 		break;
 		case 5:
 			atcommand "@lvup 999";
