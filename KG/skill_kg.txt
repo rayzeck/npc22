@@ -38,6 +38,7 @@ OnPCUseSkillEvent:
 
 	if(lskillid == 949) {
 		sc_start SC_ATKPOTION,15000,4000;	
+		soundeffect "BYAKUGAN.wav",0;
 		end;
 	}
 
