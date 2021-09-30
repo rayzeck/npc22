@@ -1,6 +1,9 @@
-/*-	script	Death	-1,{
+-	script	Death	-1,{
 OnPCDieEvent:
 
+if (getcharid(3) != killedrid || strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude") goto L_Continue else end;
+
+L_Continue:
 set $plrdead$, strcharinfo(0);
 
 getmapxy(@mapname$,@mapx,@mapy,0);
@@ -23,7 +26,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 ENDPOS:
 end;
-}*/
+}
 
 //if (getequipid(EQI_HAND_L) == 9001) {
 //	delequip EQI_HAND_L;
