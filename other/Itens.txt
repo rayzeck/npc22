@@ -2,7 +2,7 @@ treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 
 	mes "Escolha:";
 	
-	switch(select("Fuuin no Shoo:Zeny:Itens Quest")){
+	switch(select("Fuuin no Shoo:Zeny:Itens Quest:Pontos de Missão:Upar para o 999")){
 		case 1:
 			getitem 753,1;
 		break;
@@ -58,6 +58,12 @@ treinamento,86,138,5	script	Itens	1_M_YOUNGKNIGHT,{
 				break;
 			}
 		break;
+		case 4:
+			getitem 372,35;
+		break;
+		case 5:
+			atcommand "@lvup 999";
+		break;
 	}
 	
 	
@@ -83,7 +89,7 @@ treinamento,83,138,5	script	Equips S	1_M_YOUNGKNIGHT,{
 				break;
 				// Amuleto
 				case 3:
-					getitem 2631,1;
+					getitem 2631,2;
 				break;
 				// Capa
 				case 4:
@@ -108,7 +114,7 @@ treinamento,83,138,5	script	Equips S	1_M_YOUNGKNIGHT,{
 			}
 		break;
 		case 2:
-			getitem 3055,25;
+			getitem 3055,35;
 		break;
 	}
 	end;
