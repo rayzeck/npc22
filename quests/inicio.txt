@@ -1371,7 +1371,7 @@ bibli_01,53,35,5	script	SAIRBIBLI	WARPNPC,2,2,{
 OnTouch:
 
 //		if(quest_basic_inicio != 6) { mes "Termine o Tutorial"; close2; end; }
-		if(#konoha == 1) { warp "konoha3",97,225; }
+		if(#konoha == 1) { warp "konoha3",280,161; }
 		if(#suna == 1) { warp "sunagakure",229,256; }
 		if(#nevoa == 1) { warp "academia",79,148; }
 		if(#nuvem == 1) { warp "kumogakure",107,121; }
