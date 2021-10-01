@@ -1,0 +1,18 @@
+treinamento,115,140,5	script	Retorno#1	99,{
+
+	set .@npcName$, "^0000FF[Evento]^000000";
+
+	//mes .@npcName$;
+	
+	if(gettime(DT_HOUR) == 17 && gettime(DT_MINUTE) == 32){
+		mes .@npcName$;
+		end;
+	}
+
+
+
+
+
+
+
+}
