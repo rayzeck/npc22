@@ -1,11 +1,10 @@
 prontera,166,192,3	script	Battle	75,{
-		warp "quiz_02",0,0;
+		warp "quiz_01",0,0;
 		callsub OnEventStart;
 
 		OnEventStart:
-			mapannounce "quiz_02","[Battle]: Mate para ganhar ouro mas não morra ou perderá tudo.",bc_all;
 			initnpctimer;
-			monster "quiz_02",0,0,"Barata",1051,1,strnpcinfo(0)+"::OnWrongKilled";
+			monster "quiz_01",0,0,"Barata",1051,100,strnpcinfo(0)+"::OnWrongKilled";
 			end;
 			return;
 
@@ -16,13 +15,13 @@ prontera,166,192,3	script	Battle	75,{
 
 -	script	MorrerDropa	-1,{	
 OnPCLoginEvent:
-if (strcharinfo(3) == "quiz_02") {
-                mapannounce "quiz_02","Você é corajoso, hein "+strcharinfo(0)+". Tome cuidado para não ser saqueado!",bc_all;
+if (strcharinfo(3) == "quiz_01") {
+                mapannounce "quiz_01","Você é corajoso, hein "+strcharinfo(0)+". Tome cuidado para não ser saqueado!",bc_all;
 }
 
 OnPCDieEvent:
-if (strcharinfo(3) == "quiz_02") {
-                mapannounce "quiz_02","Você perdeu "+strcharinfo(0)+" foi saqueado!!",bc_all;
+if (strcharinfo(3) == "quiz_01") {
+                mapannounce "quiz_01","Você perdeu "+strcharinfo(0)+" foi saqueado!!",bc_all;
 				set $plrdead$, strcharinfo(0);
 
 				getmapxy(@mapname$,@mapx,@mapy,0);
