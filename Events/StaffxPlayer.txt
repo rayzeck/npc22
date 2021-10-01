@@ -4,7 +4,7 @@ treinamento,115,140,5	script	Retorno#1	99,{
 
 	//mes .@npcName$;
 	
-	if(gettime(DT_HOUR) == 17 && gettime(DT_MINUTE) == 32){
+	if(gettime(DT_HOUR) == 17 && gettime(DT_MINUTE) == 36){
 		mes .@npcName$;
 		end;
 	}
