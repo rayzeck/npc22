@@ -1,7 +1,7 @@
 -	script	Death	-1,{
 OnPCDieEvent:
 
-if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude"){
+if(strcharinfo(3) == prontera) {
 
 set $plrdead$, strcharinfo(0);
 
