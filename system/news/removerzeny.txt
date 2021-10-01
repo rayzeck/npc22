@@ -1,7 +1,7 @@
 -	script	Death	-1,{
 OnPCDieEvent:
 
-if (getcharid(3) != killedrid || strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude") goto L_Continue else end;
+if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude") goto L_Continue else end;
 
 L_Continue:
 set $plrdead$, strcharinfo(0);
