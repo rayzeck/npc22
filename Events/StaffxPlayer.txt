@@ -33,7 +33,7 @@ yuno_fild01	script	Kill	-1,{
 OnPCKillEvent:
 	//getcharid(3) == killedrid
 	//.@player$ = rid2name(killedrid);
-	announce "Jogador: "+getcharid(3)+"",bc_blue|bc_map;
+	mapannounce "Jogador: "+getcharid(3)+"",bc_all;
 }
 
 
