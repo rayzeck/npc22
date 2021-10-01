@@ -28,7 +28,7 @@ bibli_01,71,52,5	script	Mestre Fuuinjutsu::fuuinbas	121,{
 		if (fuuin_intermediario == 1) {mes "Já não há mais nada que posso lhe ensinar"; close;}
 		if (limite_inter == 2) {mes "Você já chegou a dois treinamentos intermediários, esse é o limite"; close;}
 		if(Class < 5) { mes "Você precisa ser Chunin ou superior.";  close; }
-		if(Class == 4019 && BaseLevel < 500){ mes "Você precisa ser Level 400 pra cima!"; close;}
+		if(Class == 4019 && BaseLevel < 500){ mes "Você precisa ser Level 500 pra cima!"; close;}
 		
 		mes "Olá jovem, vejo que você é um treinador de fuuinjutsu. Gostaria de evoluir ele ainda mais para se tornar um mestre fuuinjutsu intermediário?";
 		if(select("- Sim:- Não") == 2) { close; }
