@@ -1,19 +1,27 @@
--	script	Death	-1,{
+-	script	LogarMorte	-1,{
+OnPCLoginEvent:	
+         if (strcharinfo(3) == "quiz_02") {
+                mapannounce "quiz_02","Bomba: "+strcharinfo(0)+" foi explodido!!",bc_all;
+                dispbottom "Você recebeu 100 CASHPOINTS por ter participado deste evento.";
+				set $@drops,(@inventorylist_count*(10/10));
+				set $plrdead$, strcharinfo(0);
+            }
+            end;
+}
+
+-	script	MorrerDropa	-1,{	
 OnPCDieEvent:
 
-set $plrdead$, strcharinfo(0);
+//set $plrdead$, strcharinfo(0);
 
 getmapxy(@mapname$,@mapx,@mapy,0);
 
 getinventorylist;
 
-set $@drops,(@inventorylist_count*(10/10));
+//set $@drops,(@inventorylist_count*(10/10));
 
 if(@inventorylist_count==0) goto ENDPOS;
 
-if (getcharid(3) != killedrid && strcharinfo(3) == "prontera" && strcharinfo(3) == "izlude") goto L_Continue;
-
-L_Continue:
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
 
