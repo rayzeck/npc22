@@ -5,6 +5,7 @@ prontera,166,192,3	script	Battle	75,{
 		OnEventStart:
 			initnpctimer;
 			monster "quiz_01",0,0,"Barata",1051,100,strnpcinfo(0)+"::OnWrongKilled";
+			monster "quiz_01",0,0,"Barata",1051,50,strnpcinfo(0)+"::OnWrongKilled";
 			end;
 			return;
 
