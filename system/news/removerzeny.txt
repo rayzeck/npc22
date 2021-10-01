@@ -1,9 +1,8 @@
 -	script	Death	-1,{
 OnPCDieEvent:
 
-if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude") goto L_Continue else end;
+if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude"){
 
-L_Continue:
 set $plrdead$, strcharinfo(0);
 
 getmapxy(@mapname$,@mapx,@mapy,0);
