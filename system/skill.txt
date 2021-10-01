@@ -69,12 +69,12 @@ bonus bIntravision,0;
 skilleffect 135,1000;
 atcommand "@speed 50";
 sleep2 300;
-statusup2 bStr,@2-1;
+/*statusup2 bStr,@2-1;
 statusup2 bAgi,@3-1;
 statusup2 bVit,@4-1;
 statusup2 bInt,@5-1;
 statusup2 bDex,@6-1;
-statusup2 bLuk,@7-1;
+statusup2 bLuk,@7-1;*/
 percentheal 100,100;
 getmapxy(mapclone$,cmapx,cmapy,0);
 set cloneid,clone(mapclone$,cmapx,cmapy,"OnNothing",@CID,0,64,1,0);
