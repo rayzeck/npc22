@@ -4,7 +4,7 @@ treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
 
 	//mes .@npcName$;
 	
-	if(gettime(DT_HOUR) == 19 && gettime(DT_MINUTE) == 30){
+	if(gettime(DT_HOUR) >= 19 && gettime(DT_MINUTE) >= 30){
 		mes .@npcName$;
 		mes "Evento:";
 		mes "Staff vs Players está aberto!";
@@ -20,11 +20,6 @@ treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
 			break;
 		}
 		end;
-	} else if(gettime(DT_DAYWEEK)==FRIDAY){
-		mes .@npcName$;
-		mes "O Evento começará as 19:30";
-		mes "Se prepare para a Batalha!";
-		close;
 	} else{
 		mes .@npcName$;
 		mes "Evento Ainda está fechado.";
