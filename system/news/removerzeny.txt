@@ -3,7 +3,7 @@ prontera,166,192,3	script	Battle	75,{
 		callsub OnEventStart;
 
 		OnEventStart:
-			mapannounce "[Battle]: Mate para ganhar ouro mas não morra ou perderá tudo.",bc_all;
+			mapannounce "quiz_02","[Battle]: Mate para ganhar ouro mas não morra ou perderá tudo.",bc_all;
 			initnpctimer;
 			monster "quiz_02",0,0,"Barata",1051,1,strnpcinfo(0)+"::OnWrongKilled";
 			end;
