@@ -70,6 +70,7 @@ end;
 //------------------------------------------------------------
 // @corpo
 //------------------------------------------------------------
+/*
 -	script	atcmd_sample_new8988	-1,{
     OnInit:
         bindatcmd("corpo", "atcmd_sample_new8988::OnAtCmd");
@@ -140,6 +141,7 @@ return;
 }
 end;
 }
+*/
 //
 //alugaritem
 //
