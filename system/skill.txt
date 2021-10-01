@@ -107,8 +107,8 @@ if(dreamwalk!=1){
 return;
 }
 set @14,Class;
-set @15,BaseLevel;
-set @16,JobLevel;
+//set @15,BaseLevel;
+//set @16,JobLevel;
 set @cabelo,getlook(6);
 set @hroupa,getlook(7);
 set @CID,getcharid(0);
