@@ -1,6 +1,6 @@
 treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
 
-	set .@npcName$, "^0000FF[Evento]^000000";
+	set .@npcName$, "^0000FF[Tsunade]^000000";
 
 	//mes .@npcName$;
 	
@@ -23,7 +23,7 @@ treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
 	} else{
 		mes .@npcName$;
 		mes "Evento Ainda está fechado.";
-		mes "Dias do Evento Oficial: Domingo às 21 Horas";
+		mes "Dias do Evento Oficial: ^FF0000Domingo às 21 Horas^000000";
 		mes "Prepare-se até lá para que consigo deter os Membros da Staff";
 		close;
 	}
