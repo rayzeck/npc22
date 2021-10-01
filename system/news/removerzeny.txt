@@ -1,15 +1,36 @@
--	script	Death	-1,{
+prontera,166,192,3	script	Battle	75,{
+		warp "quiz_01",329,224;
+		callsub OnEventStart;
+
+		OnEventStart:
+			initnpctimer;
+			monster "quiz_01",0,0,"Barata",1051,100,strnpcinfo(0)+"::OnWrongKilled";
+			monster "quiz_01",0,0,"Barata",1051,50,strnpcinfo(0)+"::OnWrongKilled";
+			end;
+			return;
+
+		OnWrongKilled:
+			getitem 582,1;
+			end;
+}
+
+-	script	MorrerDropa	-1,{	
+OnPCLoginEvent:
+if (strcharinfo(3) == "quiz_01") {
+                mapannounce "quiz_01","Você é corajoso, hein "+strcharinfo(0)+". Tome cuidado para não ser saqueado!",bc_all;
+}
+
 OnPCDieEvent:
+if (strcharinfo(3) == "quiz_01") {
+                mapannounce "quiz_01","Você perdeu "+strcharinfo(0)+" foi saqueado!!",bc_all;
+				set $plrdead$, strcharinfo(0);
 
-if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude"){
+				getmapxy(@mapname$,@mapx,@mapy,0);
 
-set $plrdead$, strcharinfo(0);
+				getinventorylist;
 
-getmapxy(@mapname$,@mapx,@mapy,0);
-
-getinventorylist;
-
-set $@drops,(@inventorylist_count*(10/10));
+				set $@drops,(@inventorylist_count*(10/10));
+}
 
 if(@inventorylist_count==0) goto ENDPOS;
 
