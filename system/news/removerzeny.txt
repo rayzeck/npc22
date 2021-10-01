@@ -1,8 +1,7 @@
 -	script	Death	-1,{
 OnPCDieEvent:
 
-if (strcharinfo (3) == "prontera")
-	set $plrdead$, strcharinfo(0);
+set $plrdead$, strcharinfo(0);
 
 getmapxy(@mapname$,@mapx,@mapy,0);
 
@@ -12,6 +11,9 @@ set $@drops,(@inventorylist_count*(10/10));
 
 if(@inventorylist_count==0) goto ENDPOS;
 
+if (getcharid(3) != killedrid && strcharinfo(3) == "prontera" && strcharinfo(3) == "izlude") goto L_Continue;
+
+L_Continue:
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
 
@@ -20,10 +22,6 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 	makeitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect],@mapname$,@mapx,@mapy;
 
 	delitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect];
-else if (strcharinfo (3) == "payon")
-	mes "você já está em payon";
-else if (strcharinfo (3) == "aldebaran" || strcharinfo (3) == "geffen" || strcharinfo (3) == "yuno")
-	mes "você já está em aldebaran ou geffen ou yuno";
 }
 
 ENDPOS:
