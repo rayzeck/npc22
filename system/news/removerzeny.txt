@@ -1,5 +1,7 @@
-/*-	script	Death	-1,{
+-	script	Death	-1,{
 OnPCDieEvent:
+
+if (strcharinfo(3) == "prontera" || strcharinfo(3) == "izlude"){
 
 set $plrdead$, strcharinfo(0);
 
@@ -23,7 +25,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 ENDPOS:
 end;
-}*/
+}
 
 //if (getequipid(EQI_HAND_L) == 9001) {
 //	delequip EQI_HAND_L;
