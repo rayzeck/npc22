@@ -31,8 +31,9 @@ treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
 
 yuno_fild01	script	Kill	-1,{
 OnPCKillEvent:
-	.@player$ = rid2name(killedrid);
-	announce "Jogador: "+.@player$+"",bc_blue|bc_map;
+	//getcharid(3) == killedrid
+	//.@player$ = rid2name(killedrid);
+	announce "Jogador: "+getcharid(3)+"",bc_blue|bc_map;
 }
 
 
