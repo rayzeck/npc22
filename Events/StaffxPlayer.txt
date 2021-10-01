@@ -4,15 +4,27 @@ treinamento,115,140,5	script	Retorno#1	99,{
 
 	//mes .@npcName$;
 	
-	if(gettime(DT_HOUR) == 17 && gettime(DT_MINUTE) == 36){
+	if(gettime(DT_HOUR) == 19 && gettime(DT_MINUTE) == 30){
 		mes .@npcName$;
+		mes "Evento:";
+		mes "Staff vs Players está aberto!";
+		mes "Aquele que matar o Staff ganhará um Prêmio!";
+		mes "Boa Sorte!";
+		switch(select("- Entrar:- Sair")){
+			case 1:
+				warp "yuno_fild01",193,162;
+				end;
+			break;
+			case 2:
+				end;
+			break;
+		}
 		end;
+	} else{
+		mes .@npcName$;
+		mes "Evento Ainda está fechado.";
+		mes "Dias do Evento Oficial: Domingo às 21 Horas";
+		mes "Prepare-se até lá para que consigo deter os Membros da Staff";
+		close;
 	}
-
-
-
-
-
-
-
 }
