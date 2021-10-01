@@ -5,7 +5,7 @@ OnSkillFuncione:
 callfunc "dreamin";
 //delitem 30106,1;
 atcommand "@hide";
-sc_start SC_SILENCE,1000000,10;
+sc_start SC_SILENCE,5000,10;
 AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE";
 end;
 
