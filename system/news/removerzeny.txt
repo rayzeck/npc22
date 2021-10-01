@@ -1,5 +1,5 @@
 prontera,166,192,3	script	Battle	75,{
-		warp "quiz_01",0,0;
+		warp "quiz_01",329,224;
 		callsub OnEventStart;
 
 		OnEventStart:
