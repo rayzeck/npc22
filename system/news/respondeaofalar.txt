@@ -1,24 +1,33 @@
 function	script	players2minimap	{
-
-OnWhisperGlobal:
-	While((playerattached()?IsEquipped(30086):0)){
-		if(!playerattached()){ end; }
+	While((playerattached()?IsEquipped(.itemid):0)){
 		getmapxy(.@N$,.@B,.@C,0);
 		while((playerattached()?.@V<($PlayerNumber<=0?.@V+1:$PlayerNumber):0)){
-			if(!playerattached()){ end; }
 			set .@V,.@V+1; 
 			if(isloggedin(getd("$RecordAID"+.@V))) getmapxy(.@map$,.@x[.@V],.@y[.@V],0,rid2name(getd("$RecordAID"+.@V)));
 			if( .@N$ == .@map$ && getd("$RecordAID"+.@V) != getcharid(3) && isloggedin(getd("$RecordAID"+.@V))){
 				viewpoint 1,.@x[.@V],.@y[.@V],.@V,0xFF0000;
 			}
 			if(.@V>=$PlayerNumber){
-				sleep2 1;
+				sleep2 1+.delay;
 				for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1) viewpoint 2,.@x[.@i],.@y[.@i],.@i,0xFF0000;
 			}
 		}
 		if(playerattached()){ set .@V,0; } else { break; }
 	}
 	end;
+	
+OnInit:
+	//=-=-=-=-=Configuration=-=-=-=-=-=
+	set .delay,0; // Delay between refresh in Milliseconds. Default is one Millisecond.
+	set .itemid,30086; // ID of item being used.
+	//You can change the color of the markers
+	//By searching for "FF0000" and replacing
+	//It with a Hexidecimal number.
+	//=-=-=-=-=-=-=Skorm=-=-=-=-=-=-=-=
+	//Credits to goddameit for 
+	//file architecture and  BlackHoleEvent.
+	//Special thanks to joelolopez for
+	//The idea, and testing. <3
 }
 
 -	script	BlackHoleEvent	-1,{
