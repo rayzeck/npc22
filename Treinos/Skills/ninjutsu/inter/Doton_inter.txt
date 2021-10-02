@@ -390,7 +390,5 @@ if(elementodoton != 1) { mes "[Doton Intermediário]"; mes "Esse elemento não é d
 	mes "[Doton Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Doton Intermediário]",0;
 		
 }

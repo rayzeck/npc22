@@ -388,7 +388,5 @@ if(elementosuiton != 1) { mes "[Suiton Intermediário]"; mes "Esse elemento não é
 	mes "[Suiton Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Suiton Intermediário]",0;
 		
 }

@@ -390,7 +390,5 @@ if(elementokaton != 1) { mes "[Katon Intermediário]"; mes "Esse elemento não é d
 	mes "[Katon Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Katon Intermediário]",0;
 		
 }
