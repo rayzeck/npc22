@@ -233,4 +233,4 @@ end;
 2@tower	mapflag	noteleport
 2@tower	mapflag	nobranch
 2@tower	mapflag	noexp
-2@tower	mapflag nodrop
+//2@tower	mapflag	nodrop
