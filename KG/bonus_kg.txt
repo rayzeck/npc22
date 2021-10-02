@@ -113,8 +113,8 @@ function	script	KG_ABURAME	{
 if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus bDex,10; skill 128,1; skill 129,1; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus bDex,15; skill 128,2; skill 129,2; skill 130,2; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus bDex,20; skill 128,3; skill 129,3; skill 130,3; skill 364,3; }
-if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus2 bSPVanishRate,100,5; bonus bDex,30; skill 128,4; skill 129,4; skill 130,4; skill 364,4; skill 381,4; bonus bAtkRange,3; }
-if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus2 bSPVanishRate,100,5; bonus bDex,30; bonus2 bSkillAtk,"HT_BLITZBEAT",10; skill 128,4; skill 129,4; skill 130,4; skill 364,4; skill 381,4; bonus bAtkRange,4; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus2 bSPVanishRate,100,5; bonus bDex,30; skill 128,4; skill 129,4; skill 130,4; skill 364,4; skill 381,4; bonus bAtkRange,2; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus2 bSPVanishRate,100,5; bonus bDex,30; bonus2 bSkillAtk,"HT_BLITZBEAT",10; skill 128,4; skill 129,4; skill 130,4; skill 364,4; skill 381,4; bonus bAtkRange,3; }
 end;
 }
 
