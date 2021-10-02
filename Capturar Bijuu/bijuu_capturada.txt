@@ -75,6 +75,7 @@ biju_pri2,43,44,7	duplicate(npcichibi)	Ichibi#2	1737
 biju_pri3,43,44,7	duplicate(npcichibi)	Ichibi#3	1737
 biju_pri4,43,44,7	duplicate(npcichibi)	Ichibi#4	1737
 biju_pri5,43,44,7	duplicate(npcichibi)	Ichibi#5	1737
+biju_pri5,43,44,7	duplicate(npcichibi)	Ichibi#6	1737
 
 in_hunter,99,99,4	script	Nibi::npcnibi	1984,{
 
@@ -88,6 +89,7 @@ biju_pri2,55,44,7	duplicate(npcnibi)	Nibi#2	1984
 biju_pri3,55,44,7	duplicate(npcnibi)	Nibi#3	1984
 biju_pri4,55,44,7	duplicate(npcnibi)	Nibi#4	1984
 biju_pri5,55,44,7	duplicate(npcnibi)	Nibi#5	1984
+biju_pri5,55,44,7	duplicate(npcnibi)	Nibi#6	1984
 
 in_hunter,99,99,4	script	Sanbi::npcsanbi	1986,{
 
@@ -101,6 +103,7 @@ biju_pri2,67,44,7	duplicate(npcsanbi)	Sanbi#2	1986
 biju_pri3,67,44,7	duplicate(npcsanbi)	Sanbi#3	1986
 biju_pri4,67,44,7	duplicate(npcsanbi)	Sanbi#4	1986
 biju_pri5,67,44,7	duplicate(npcsanbi)	Sanbi#5	1986
+biju_pri5,67,44,7	duplicate(npcsanbi)	Sanbi#6	1986
 
 in_hunter,99,99,4	script	Yonbi::npcyonbi	1981,{
 
@@ -114,6 +117,7 @@ biju_pri2,79,43,7	duplicate(npcyonbi)	Yonbi#2	1981
 biju_pri3,79,43,7	duplicate(npcyonbi)	Yonbi#3	1981
 biju_pri4,79,43,7	duplicate(npcyonbi)	Yonbi#4	1981
 biju_pri5,79,43,7	duplicate(npcyonbi)	Yonbi#5	1981
+biju_pri5,79,43,7	duplicate(npcyonbi)	Yonbi#6	1981
 
 in_hunter,99,99,4	script	gobi::npcgobi	1982,{
 
@@ -127,6 +131,7 @@ biju_pri2,79,17,7	duplicate(npcgobi)	Gobi#2	1982
 biju_pri3,79,17,7	duplicate(npcgobi)	Gobi#3	1982
 biju_pri4,79,17,7	duplicate(npcgobi)	Gobi#4	1982
 biju_pri5,79,17,7	duplicate(npcgobi)	Gobi#5	1982
+biju_pri5,79,17,7	duplicate(npcgobi)	Gobi#6	1982
 
 in_hunter,99,99,4	script	Rokubi::npcrokubi	1985,{
 
@@ -140,6 +145,7 @@ biju_pri2,68,18,7	duplicate(npcrokubi)	Rokubi#2	1985
 biju_pri3,68,18,7	duplicate(npcrokubi)	Rokubi#3	1985
 biju_pri4,68,18,7	duplicate(npcrokubi)	Rokubi#4	1985
 biju_pri5,68,18,7	duplicate(npcrokubi)	Rokubi#5	1985
+biju_pri5,68,18,7	duplicate(npcrokubi)	Rokubi#6	1985
 
 in_hunter,99,99,4	script	shichibi::npcshichibi	1985,{
 
@@ -153,6 +159,7 @@ biju_pri2,55,18,7	duplicate(npcshichibi)	Shichibi#2	1983
 biju_pri3,55,18,7	duplicate(npcshichibi)	Shichibi#3	1983
 biju_pri4,55,18,7	duplicate(npcshichibi)	Shichibi#4	1983
 biju_pri5,55,18,7	duplicate(npcshichibi)	Shichibi#5	1983
+biju_pri5,55,18,7	duplicate(npcshichibi)	Shichibi#6	1983
 
 in_hunter,99,99,4	script	Hachibi::npchachibi	1985,{
 
@@ -166,6 +173,7 @@ biju_pri2,43,18,7	duplicate(npchachibi)	Hachibi#2	1738
 biju_pri3,43,18,7	duplicate(npchachibi)	Hachibi#3	1738
 biju_pri4,43,18,7	duplicate(npchachibi)	Hachibi#4	1738
 biju_pri5,43,18,7	duplicate(npchachibi)	Hachibi#5	1738
+biju_pri5,43,18,7	duplicate(npchachibi)	Hachibi#6	1738
 
 in_hunter,99,99,4	script	Kyuubi::npckyuubi	1985,{
 
@@ -179,6 +187,7 @@ biju_pri2,31,18,7	duplicate(npckyuubi)	Kyuubi#2	1086
 biju_pri3,31,18,7	duplicate(npckyuubi)	Kyuubi#3	1086
 biju_pri4,31,18,7	duplicate(npckyuubi)	Kyuubi#4	1086
 biju_pri5,31,18,7	duplicate(npckyuubi)	Kyuubi#5	1086
+biju_pri5,31,18,7	duplicate(npckyuubi)	Kyuubi#6	1086
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Evento Biju
