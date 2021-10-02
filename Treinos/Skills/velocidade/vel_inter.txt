@@ -4,7 +4,7 @@ academia,25,149,5	script	Velocidade Intermediario	1_f_02,{
 	
 	mes "[Velocidade Intermediário]";
 	mes "Olá "+strcharinfo(0)+", sou professor de Velocidade escolha qual habilidade você gostaria de aprender.";
-	switch( select( "- Troca de Posicão:- Kaze Shunshin:- Teleporte:- Rapto" ) ){
+	switch( select( "- Troca de Posicão:- Kaze Shunshin:- Teleporte:- Rapto:- Aceleração" ) ){
 
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		case 1:
@@ -383,7 +383,100 @@ academia,25,149,5	script	Velocidade Intermediario	1_f_02,{
 		
 			4_no:
 				close;
+		case 5:
+			next;
+			if(checkquest(5033) == 1) goto 5_go;
+			if(Acelera == 1) goto 5_delete;
+			if(skill_intermediaria >= 6) { mes "[Velocidade Intermediário]"; mes "Você já aprendeu todas skills básicos, esse é o limite"; close; }
 			
+			//========================================================================
+			//	MENU
+			//========================================================================
+			
+			mes "[Velocidade Intermediário]";
+			mes "Aceleração?";
+			next;
+			mes "[Velocidade Intermediário]";
+			mes "Lembre-se que você só pode ter 6 skills intermediária, após isso não poderá aprender mais nenhum intermediário";
+			next;
+			mes "[Velocidade Intermediário]";
+			mes "Gostaria de treinar?";
+			menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
+			
+			//========================================================================
+			//	Aceleração
+			//========================================================================
+			
+			5_delete:
+				mes "[Velocidade Intermediário]";
+				mes "Olá novamente, como está esse jutsu que te ensinei?";
+				next;
+				mes "[Velocidade Intermediário]";
+				mes "O que? Você veio falar algo comigo? O que é?";
+				menu "Não gostei desse jutsu, quero remover",delete_5,"Nada não, só papo furado",naoquero_5;
+			
+			delete_5:
+				mes "[Velocidade Intermediário]";
+				mes "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
+				next;
+				mes "[Velocidade Intermediário]";
+				mes "Qual é sua decisão?";
+				menu "Sim, eu tenho certeza",quero_5,"Não, não quero",naoquero_5;
+			
+			quero_5:
+				mes "[Velocidade Intermediário]";
+				mes "Jutsu removido com sucesso";
+				set Acelera,0;
+				skill 2262,0,3;
+				if(skill_intermediaria > 0) {set skill_intermediaria,skill_intermediaria -1;}
+				close;
+			
+			naoquero_5:
+				close;
+			
+			5_SS:
+				mes "[Velocidade Intermediário]";
+				mes "Para consultar os status da missão aperte (Alt+U).";
+				setquest 5033;
+				next;
+				mes "[Velocidade Intermediário]";
+				mes "Vá e faça seu treinamento.";
+				set skill_intermediaria,skill_intermediaria +1;
+				close;
+			
+			5_go:
+				if(checkquest(5033) >= 1) {
+					mes "[Velocidade Intermediário]";
+					mes "Vejo que você está fazendo está skill.";
+					mes "Gostaria de desistir dela ?";
+						switch(select("- Não, Quero Continuar a fazer essa Habilidade:- Sim")) {
+							case 2:
+								if(checkquest(5033) >= 1) { completequest 5033; erasequest 5033; }
+								if(skill_intermediaria > 0) { set skill_intermediaria,skill_intermediaria -1; }
+								mes "[Velocidade Intermediário]";
+								mes "Missão Cancelada com Sucesso"; 
+								close;
+						
+							case 1:
+								if(checkquest(5033,hunting) != 2) { mes "[Velocidade Intermediário]"; mes "Você ainda não completou seu treinamento."; close; }
+								{
+									mes "[Velocidade Intermediario]";
+									mes "Jutsu Completo";
+									completequest 5033; 
+									erasequest 5033;
+									skill 2262,1,3;
+									set Acelera,1;
+									close;
+								}
+								mes "[Velocidade Intermediário]"; 
+								mes "Você ainda não completou seu treinamento."; 
+								close;
+						}
+				}
+		
+			5_no:
+				close;
+		break;
 	}
 	}
 	mes "[Velocidade Intermediário]"; 
