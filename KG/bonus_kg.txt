@@ -68,10 +68,20 @@ if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus2 bSkillAtk,"TK_TURNKICK",5;
 if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus2 bSkillAtk,"TK_TURNKICK",10; bonus2 bSkillAtk,"TK_STORMKICK",10;  bonus2 bSkillAtk,"TK_COUNTER",10; bonus2 bSkillAtk,"TK_DOWNKICK",10; bonus2 bAddRace,RC_All,15; skill 957,2; skill 958,2; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus2 bSkillAtk,"TK_TURNKICK",15; bonus2 bSkillAtk,"TK_STORMKICK",15;  bonus2 bSkillAtk,"TK_COUNTER",15; bonus2 bSkillAtk,"TK_DOWNKICK",15; bonus2 bAddRace,RC_All,20; skill 957,3; skill 958,3; skill 959,3; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus2 bSkillAtk,"TK_TURNKICK",20; bonus2 bSkillAtk,"TK_STORMKICK",20;  bonus2 bSkillAtk,"TK_COUNTER",20; bonus2 bSkillAtk,"TK_DOWNKICK",20; bonus2 bAddRace,RC_All,25; skill 957,4; skill 958,4; skill 959,4; skill 2443,4; skill 2336,4; }
-if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus2 bSkillAtk,"TK_TURNKICK",30; bonus2 bSkillAtk,"TK_STORMKICK",30;  bonus2 bSkillAtk,"TK_COUNTER",30; bonus2 bSkillAtk,"TK_DOWNKICK",30; bonus2 bAddRace,RC_All,30; skill 957,4; skill 958,4; skill 959,4; skill 2443,4; skill 2336,4; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus2 bSkillAtk,"TK_TURNKICK",30; bonus2 bSkillAtk,"TK_STORMKICK",30;  bonus2 bSkillAtk,"TK_COUNTER",30; bonus2 bSkillAtk,"TK_DOWNKICK",30; bonus2 bAddRace,RC_All,30; skill 957,4; skill 958,4; skill 959,4; skill 2443,4; skill 2336,4; skill 368,4; }
 end;
 }
+/*Backup
+function	script	KG_PORTOES	{
 
+if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus2 bSkillAtk,"TK_TURNKICK",5; bonus2 bSkillAtk,"TK_STORMKICK",5;  bonus2 bSkillAtk,"TK_COUNTER",5; bonus2 bSkillAtk,"TK_DOWNKICK",5; bonus2 bAddRace,RC_All,10; skill 957,1; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus2 bSkillAtk,"TK_TURNKICK",10; bonus2 bSkillAtk,"TK_STORMKICK",10;  bonus2 bSkillAtk,"TK_COUNTER",10; bonus2 bSkillAtk,"TK_DOWNKICK",10; bonus2 bAddRace,RC_All,15; skill 957,2; skill 958,2; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus2 bSkillAtk,"TK_TURNKICK",15; bonus2 bSkillAtk,"TK_STORMKICK",15;  bonus2 bSkillAtk,"TK_COUNTER",15; bonus2 bSkillAtk,"TK_DOWNKICK",15; bonus2 bAddRace,RC_All,20; skill 957,3; skill 958,3; skill 959,3; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus2 bSkillAtk,"TK_TURNKICK",20; bonus2 bSkillAtk,"TK_STORMKICK",20;  bonus2 bSkillAtk,"TK_COUNTER",20; bonus2 bSkillAtk,"TK_DOWNKICK",20; bonus2 bAddRace,RC_All,25; skill 957,4; skill 958,4; skill 959,4; skill 2443,4; skill 2336,4; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus2 bSkillAtk,"TK_TURNKICK",30; bonus2 bSkillAtk,"TK_STORMKICK",30;  bonus2 bSkillAtk,"TK_COUNTER",30; bonus2 bSkillAtk,"TK_DOWNKICK",30; bonus2 bAddRace,RC_All,30; skill 957,4; skill 958,4; skill 959,4; skill 2443,4; skill 2336,4; skill  }
+end;
+}
+*/
 function	script	MANGEKYOU	{
 //MANGEKYOU_1 = Itachi
 //MANGEKYOU_2 = Sasuke
@@ -124,10 +134,21 @@ if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus bVit,5; bonus bMaxHpRate,2;
 if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus bVit,10; bonus bMaxHpRate,5;  bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,20; skill 248,2; skill 254,2; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus bVit,15; bonus bMaxHpRate,10; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,30; skill 248,3; skill 254,3; skill 2338,3; }
 if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus bVit,20; bonus bMaxHpRate,15; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,40; skill 248,4; skill 254,4; skill 2338,4; skill 368,4; }
-if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus bVit,20; bonus bMaxHpRate,25; bonus2 bSkillAtk,"CR_GRANDCROSS",10; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,40; skill 248,4; skill 254,4; skill 2338,4; skill 368,4; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus bVit,20; bonus bMaxHpRate,25; bonus2 bSkillAtk,"CR_GRANDCROSS",10; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,40; skill 248,4; skill 254,4; skill 2338,4; skill 2287,4;}
 end;
 }
 
+/* Backup
+function	script	KG_JASHIN	{
+
+if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus bVit,5; bonus bMaxHpRate,2;  bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,10; skill 248,1; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30091 ) { bonus bVit,10; bonus bMaxHpRate,5;  bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,20; skill 248,2; skill 254,2; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30092 ) { bonus bVit,15; bonus bMaxHpRate,10; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,30; skill 248,3; skill 254,3; skill 2338,3; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30093 ) { bonus bVit,20; bonus bMaxHpRate,15; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,40; skill 248,4; skill 254,4; skill 2338,4; skill 368,4; }
+if(getequipcardid(EQI_HEAD_MID,0) == 30097 ) { bonus bVit,20; bonus bMaxHpRate,25; bonus2 bSkillAtk,"CR_GRANDCROSS",10; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,40; skill 248,4; skill 254,4; skill 2338,4; skill 368,4; }
+end;
+}
+*/
 function	script	KG_TAYUYA	{
 
 if(getequipcardid(EQI_HEAD_MID,0) == 30090 ) { bonus bLuk,15; skill 326,1; skill 2205,1; }
