@@ -440,6 +440,4 @@ academia,35,174,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Fuuinjutsu Básico]",0;
 }
