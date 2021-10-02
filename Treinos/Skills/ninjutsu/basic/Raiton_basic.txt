@@ -258,6 +258,4 @@ if(elementoraiton != 1) { mes "[Raiton Básico]"; mes "Esse elemento não é de sua
 		3_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Raiton Básico]",0;
 }

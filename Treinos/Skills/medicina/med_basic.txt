@@ -514,6 +514,4 @@ academia,30,174,5	script	Medicina Básico	1_m_smith,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Medicina Básico]",0;
 }

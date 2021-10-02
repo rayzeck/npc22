@@ -429,6 +429,4 @@ academia,40,174,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Genjutsu Básico]",0;
 }

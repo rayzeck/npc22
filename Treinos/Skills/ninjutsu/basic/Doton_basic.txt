@@ -271,6 +271,4 @@ if(elementodoton != 1) { mes "[Doton Básico]"; mes "Esse elemento não é de sua n
 		close;
 		
 	}
-OnInit:
-	waitingroom "[Doton Básico]",0;
 }

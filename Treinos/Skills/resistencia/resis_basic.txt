@@ -409,6 +409,4 @@ academia,45,174,5	script	Resistência Básico	4_m_chnsoldier,{
 		4_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Resistência Básico]",0;
 }

@@ -341,6 +341,4 @@ academia,20,174,5	script	Taijutsu Básico#9	1_m_pastor,{
 		5_no:
 		close;
 	}
-OnInit:
-	waitingroom "[Taijutsu Básico]",0;
 }

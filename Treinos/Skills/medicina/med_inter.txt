@@ -393,7 +393,5 @@ academia,30,149,5	script	Medicina Intermediario	1_m_smith,{
 	mes "[Medicina Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Medicina Intermediário]",0;
 		
 }

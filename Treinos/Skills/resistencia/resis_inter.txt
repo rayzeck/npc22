@@ -489,7 +489,5 @@ academia,45,149,5	script	Resistência Intermediario	4_m_chnsoldier,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Resistência Intermediário]",0;
 		
 }

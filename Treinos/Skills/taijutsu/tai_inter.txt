@@ -862,7 +862,5 @@ academia,20,149,5	script	Taijutsu Intermediario	1_m_pastor,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Taijutsu Intermediário]",0;
 		
 }

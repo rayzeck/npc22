@@ -575,6 +575,4 @@ academia,35,149,5	script	Fuuinjutsu Intermediario	4_f_zondagirl,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Fuuinjutsu Intermediário]",0;
 }

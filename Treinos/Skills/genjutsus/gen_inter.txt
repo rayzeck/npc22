@@ -677,7 +677,5 @@ academia,40,149,5	script	Genjutsu Intermediario	4_m_thaiongbak,{
 	mes "[Fuuinjutsu Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Genjutsu Intermediário]",0;
 		
 }

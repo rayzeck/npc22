@@ -482,7 +482,5 @@ academia,25,149,5	script	Velocidade Intermediario	1_f_02,{
 	mes "[Velocidade Intermediário]"; 
 	mes "Você precisa ser Chunin ou superior."; 
 	close;
-OnInit:
-	waitingroom "[Velocidade Intermediário]",0;
 		
 }
