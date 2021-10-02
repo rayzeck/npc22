@@ -196,6 +196,5 @@ close;
 }
 
 
-ama_dun01,0,0,0,0	monster	Nukenin	Rank D	1245,5,0,0,0
+ama_dun01,0,0,0,0	monster	Nukenin RankE		1245,5,0,0,0
 ama_dun01,0,0,0,0	monster	Nukenin Rank E	1244,30,0,0,0
-

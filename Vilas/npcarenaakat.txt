@@ -49,17 +49,13 @@ close;
 end;
 }
 
-//hospital,49,60,4	script	Akatsuki	64,{
 
-if(strcharinfo(0) == "Maverick"){
+/*if(strcharinfo(0) == "Maverick"){
 warp "akatsuki",154,196; 
 }
-if(strcharinfo(0) == "Meg Masters"){
-warp "akatsuki",154,196;
-}	 
 close;	
 end;
-}
+}*/
 
 akatsuki,118,191,4	script	Academia	121,{
 mes "^ff0000[Iruka]^000000";

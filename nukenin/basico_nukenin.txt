@@ -713,12 +713,12 @@ warp "prt_in",89,63;
 }
 
 
-//prt_in,222,48,4	script	Saída#26	45,1,1,{
+/*prt_in,222,48,4	script	Saída#26	45,1,1,{
 
 warp "s_atelier",175,64;
 end;
 
-}
+}*/
 
 //lou_in02,46,185,4	script	Sujeira#1	111,1,1,{
 //if (quest_nukenin != 3) {end;}

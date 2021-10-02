@@ -293,5 +293,4 @@ ordeal_1-1	mapflag	nomemo
 ordeal_1-1	mapflag	nobranch
 ordeal_1-1	mapflag	nopenalty
 ordeal_1-1	mapflag	noicewall
-ordeal_1-1	mapflag	pvpon
 ordeal_1-1	mapflag gvgon

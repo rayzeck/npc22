@@ -40,12 +40,12 @@ konoha3,215,146,3	script	Jardineira	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(750) >= 30)
+		if(countitem(750) >= 50)
 		{
-			delitem 750,30;
+			delitem 750,50;
 			set $konoha_ryous, $konoha_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Konoha! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Névoa para Konoha! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -65,12 +65,12 @@ konoha3,215,146,3	script	Jardineira	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(749) >= 30)
+		if(countitem(749) >= 50)
 		{
-			delitem 749,30;
+			delitem 749,50;
 			set $konoha_ryous, $konoha_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Konoha! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Suna para Konoha! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -82,7 +82,7 @@ konoha3,215,146,3	script	Jardineira	91,{
 		close;
 	}
 	mes "[Jardineira]";
-	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Você ainda não conseguiu os 50 exemplares.";
 	mes "Volte quando você tiver todos eles!";
 	close;
 	}
@@ -124,7 +124,7 @@ sunagakure,289,258,3	script	Jardineira#2	91,{
 	case 1:
 		mes "[Plantas da Névoa]";
 		mes "Requerimento:";
-		mes "30x "+getitemname(750);
+		mes "50x "+getitemname(750);
 		next;
 		mes "[Jardineira]";
 		mes "Você possui esses exemplares?";
@@ -135,12 +135,12 @@ sunagakure,289,258,3	script	Jardineira#2	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(750) >= 30)
+		if(countitem(750) >= 50)
 		{
-			delitem 750,30;
-			set $areia_ryous, $areia_ryous + 30;
+			delitem 750,50;
+			set $areia_ryous, $areia_ryous + 50;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Suna! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Névoa para Suna! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -149,7 +149,7 @@ sunagakure,289,258,3	script	Jardineira#2	91,{
 	case 2:
 		mes "[Plantas da Konoha]";
 		mes "Requerimento:";
-		mes "30x "+getitemname(748);
+		mes "50x "+getitemname(748);
 		next;
 		mes "[Jardineira]";
 		mes "Você possui esses exemplares?";
@@ -160,12 +160,12 @@ sunagakure,289,258,3	script	Jardineira#2	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(748) >= 30)
+		if(countitem(748) >= 50)
 		{
-			delitem 748,30;
+			delitem 748,50;
 			set $areia_ryous, $areia_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Suna! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas de Konoha para Suna! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -177,7 +177,7 @@ sunagakure,289,258,3	script	Jardineira#2	91,{
 		close;
 	}
 	mes "[Jardineira]";
-	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Você ainda não conseguiu os 50 exemplares.";
 	mes "Volte quando você tiver todos eles!";
 	close;
 	}
@@ -219,7 +219,7 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 	case 1:
 		mes "[Plantas da Suna]";
 		mes "Requerimento:";
-		mes "30x "+getitemname(749);
+		mes "50x "+getitemname(749);
 		next;
 		mes "[Jardineira]";
 		mes "Você possui esses exemplares?";
@@ -230,12 +230,12 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(749) >= 30)
+		if(countitem(749) >= 50)
 		{
-			delitem 749,30;
+			delitem 749,50;
 			set $nevoa_ryous, $nevoa_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Névoa! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Suna para Névoa! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -244,7 +244,7 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 	case 2:
 		mes "[Plantas da Konoha]";
 		mes "Requerimento:";
-		mes "30x "+getitemname(748);
+		mes "50x "+getitemname(748);
 		next;
 		mes "[Jardineira]";
 		mes "Você possui esses exemplares?";
@@ -255,12 +255,12 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(748) >= 30)
+		if(countitem(748) >= 50)
 		{
-			delitem 748,30;
+			delitem 748,50;
 			set $nevoa_ryous, $nevoa_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Névoa! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas de Konoha para Névoa! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -272,7 +272,7 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 		close;
 	}
 	mes "[Jardineira]";
-	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Você ainda não conseguiu os 50 exemplares.";
 	mes "Volte quando você tiver todos eles!";
 	close;
 	}
@@ -283,7 +283,7 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 }
 
 
-//kumogakure,166,75,5	script	Jardineira#4	91,{
+kumogakure,166,75,5	script	Jardineira#4	91,{
 
 	if(countitem(30030) || countitem(30031) || countitem(30032) || countitem(30033) || countitem(30034) || countitem(30035)) {
 	mes "[Jardineira]";
@@ -325,12 +325,12 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(749) >= 30)
+		if(countitem(749) >= 50)
 		{
-			delitem 749,30;
+			delitem 749,50;
 			set $nuvem_ryous, $nuvem_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Suna para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Suna para Nuvem! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -350,12 +350,12 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(748) >= 30)
+		if(countitem(748) >= 50)
 		{
-			delitem 748,30;
+			delitem 748,50;
 			set $nuvem_ryous, $nuvem_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas de Konoha para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas de Konoha para Nuvem! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -375,12 +375,12 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 			mes "Traga-me os exemplares, por favor!";
 			close;
 		}
-		if(countitem(750) >= 30)
+		if(countitem(750) >= 50)
 		{
-			delitem 750,30;
+			delitem 750,50;
 			set $nuvem_ryous, $nuvem_ryous + 30;
 			Zeny = Zeny + 1000000;
-			announce ""+strcharinfo(0)+" acabou de coletar 30 Plantas da Névoa para Nuvem! Bom trabalho!",bc_blue|bc_all;
+			announce ""+strcharinfo(0)+" acabou de coletar 50 Plantas da Névoa para Nuvem! Bom trabalho!",bc_blue|bc_all;
 			mes "[Jardineira]";
 			mes "Muito Obrigado!";
 			close;
@@ -392,7 +392,7 @@ kirigakure,269,158,3	script	Jardineira#3	91,{
 		close;
 	}
 	mes "[Jardineira]";
-	mes "Você ainda não conseguiu os 30 exemplares.";
+	mes "Você ainda não conseguiu os 50 exemplares.";
 	mes "Volte quando você tiver todos eles!";
 	close;
 	}
