@@ -102,7 +102,7 @@ close;
 		hideonnpc ""+instance_npcname("warpponte")+"";
 		disablenpc ""+instance_npcname("warpponte")+"";
 		instance_announce instance_id(),"Fiquem atentos, os capangas estão vindo!",0;
-		areamonster ""+instance_mapname("1@ponte",instance_id())+"",88,44,130,83,"Genin-Nukenin",1656,50,"ponteinstance::OnCapangaDie1";
+		areamonster ""+instance_mapname("1@ponte",instance_id())+"",88,44,130,83,"Genin-Nukenin",1291,50,"ponteinstance::OnCapangaDie1";
 		end;
 	}
 }
@@ -111,7 +111,7 @@ close;
 	OnCapangaDie1:
 		if(!mobcount(""+instance_mapname("1@ponte",instance_id())+"","ponteinstance::OnCapangaDie1")) {
 			instance_announce instance_id(),"Eles não param de vir, fiquem atentos!",0;
-			areamonster ""+instance_mapname("1@ponte",instance_id())+"",180,44,230,83,"Genin-Nukenin",1656,50,"ponteinstance::OnCapangaDie2";
+			areamonster ""+instance_mapname("1@ponte",instance_id())+"",180,44,230,83,"Genin-Nukenin",1291,50,"ponteinstance::OnCapangaDie2";
 			end;
 		}
 		else
@@ -125,7 +125,7 @@ close;
 			sleep2 5000;
 			set raidon,gettimetick(2) + 6000;
 			instance_announce instance_id(),"Cuidado! Tem mais capangas vindo!",0;
-			areamonster ""+instance_mapname("1@ponte",instance_id())+"",270,44,326,83,"Genin-Nukenin",1656,50,"ponteinstance::OnCapangaDie3";
+			areamonster ""+instance_mapname("1@ponte",instance_id())+"",270,44,326,83,"Genin-Nukenin",1291,50,"ponteinstance::OnCapangaDie3";
 			end;
 		}
 		else

@@ -1,0 +1,42 @@
+treinamento,115,140,1	script	Retorno#1	4w_f_kafra2,{
+
+	set .@npcName$, "^0000FF[Tsunade]^000000";
+
+	//mes .@npcName$;
+	
+	if(gettime(DT_HOUR) >= 19 && gettime(DT_MINUTE) >= 30){
+		mes .@npcName$;
+		mes "Evento:";
+		mes "Staff vs Players está aberto!";
+		mes "Aquele que matar o Staff ganhará um Prêmio!";
+		mes "Boa Sorte!";
+		switch(select("- Entrar:- Sair")){
+			case 1:
+				warp "yuno_fild01",193,162;
+				end;
+			break;
+			case 2:
+				end;
+			break;
+		}
+		end;
+	} else{
+		mes .@npcName$;
+		mes "Evento Ainda está fechado.";
+		mes "Dias do Evento Oficial: ^FF0000Domingo às 21 Horas^000000";
+		mes "Prepare-se até lá para que consigo deter os Membros da Staff";
+		close;
+	}
+}
+
+yuno_fild01	script	Kill	-1,{
+OnPCKillEvent:
+	//getcharid(3) == killedrid
+	//.@player$ = rid2name(killedrid);
+	mapannounce "Jogador: "+getcharid(3)+"",bc_all;
+}
+
+
+yuno_fild01	mapflag	pvpon
+yuno_fild01	mapflag	nomemo
+yuno_fild01	mapflag	nosave	SavePoint
