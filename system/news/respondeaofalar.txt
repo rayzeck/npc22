@@ -1,7 +1,7 @@
 function	script	players2minimap	{
 
 OnWhisperGlobal:
-	While((playerattached()?IsEquipped(2201):0)){
+	While((playerattached()?IsEquipped(30086):0)){
 		if(!playerattached()){ end; }
 		getmapxy(.@N$,.@B,.@C,0);
 		while((playerattached()?.@V<($PlayerNumber<=0?.@V+1:$PlayerNumber):0)){
