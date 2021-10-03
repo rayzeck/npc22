@@ -1,8 +1,7 @@
 -	script	skilldois	-1,{
+OnPCUseSkillEvent:
 
 OnSkillFuncione2:
-
-OnPCUseSkillEvent:
 
 	if(lskillid == 2287) {	
 	changebase 25;
