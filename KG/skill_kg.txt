@@ -3,7 +3,7 @@
 OnPCUseSkillEvent:
 
 	if(lskillid == 2287) {	
-		AddTimer 5000, "JASHINREMOVER::JASHINREMOVER22";
+		AddTimer 5000, "SEDE_SHARSKILL2::OnHPSHARSKILL42";
 		changebase 25;
 		getitem2 19094,1,1,0,0,0,0,0,0; equip 19094;
 		end;
@@ -153,13 +153,13 @@ OnHPSHARSKILL22:
 
 }
 
--	script	JASHINREMOVER	-1,{
+-	script	SEDE_SHARSKILL2	-1,{
 	
-JASHINREMOVER22:	
+OnHPSHARSKILL42:	
 
-	DelTimer "JASHINREMOVER::JASHINREMOVER22";
-	changebase Class;
+	DelTimer "SEDE_SHARSKILL2::OnHPSHARSKILL42";
 	atcommand "@delitem 19094 1";
+	changebase Class;
 	end;
 
 }
