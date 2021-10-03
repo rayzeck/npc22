@@ -3,7 +3,7 @@
 OnSkillFuncione:
 
 changebase 25;
-//sc_start SC_SILENCE,5000,10;  //efeito de silêncio ao usar a skill
+getitem 900,1;
 AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO"; //tempo em milissegundos
 end;
 
