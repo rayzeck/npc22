@@ -1,4 +1,4 @@
-//-	script	CheckDual	-1,{
+-	script	CheckDual	-1,{
 
 OnPCLoadMapEvent:
 

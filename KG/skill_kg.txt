@@ -191,15 +191,14 @@ OnHPSELOSKILL22:
 //==================== JASHIN - DEVOÇÃO JASHIN ============
 	if(lskillid == 2287) {
 		AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO";
-		set @visu,getlook(LOOK_HEAD_MID);
-		setlook LOOK_BASE,25;
+		changebase 25;
 		end;
 	}
 
 -	script	REMOVERJASHIN	-1,{
 		
 	OnJASHINDENTRO:
-		setlook LOOK_HEAD_MID,@visu;
+		changebase Class;
 		DelTimer "REMOVERJASHIN::OnJASHINDENTRO";
 		end;
 }
