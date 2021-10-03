@@ -162,7 +162,7 @@ OnHPSHARSKILL42:
 	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_MID);
 	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_LOW);
 	sleep 200;*/
-	atcommand "@delitem 19094,1";
+	atcommand "@delitem 19094 1";
 	end;
 
 }
