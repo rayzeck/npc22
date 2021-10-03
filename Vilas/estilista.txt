@@ -72,6 +72,7 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 		specialeffect2 339;
 	}
 }
+/*
 moc_fild06,350,227,3	script	Estilista do Bar	756,{
 	mes "[^FF0000Estilista^000000]";
 	mes "Bem-vind"+ (Sex?"o":"a") +" "+strcharinfo(0)+",";
@@ -104,7 +105,7 @@ moc_fild06,350,227,3	script	Estilista do Bar	756,{
 	specialeffect2 339;
 	}
 }
-
+*/
 kirigakure,221,173,3	duplicate(estil)	Estilista#2	756
 sunagakure,215,158,3	duplicate(estil)	Estilista#3	756
 kumogakure,96,123,3	duplicate(estil)	Estilista#6	756
