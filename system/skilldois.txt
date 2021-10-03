@@ -4,7 +4,7 @@ OnSkillFuncione2:
 
 changebase 25;
 getitem 19094,1;
-AddTimer 5, "DARITEM::REMOVERITEM"; //tempo em milissegundos
+AddTimer 100, "DARITEM::REMOVERITEM"; //tempo em milissegundos
 end;
 
 }
@@ -14,6 +14,7 @@ end;
 	REMOVERITEM:
 		changebase Class;
 		equip 19094,1;
+		sleep 100;
 		DelTimer "DARITEM::REMOVERITEM";
 		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN"; //tempo em milissegundos
 		end;
