@@ -12,6 +12,7 @@ end;
 		
 	OnJASHINDENTRO:
 		changebase Class;
+		sc_start SC__SHADOWFORM,1000,1000;
 		DelTimer "REMOVERJASHIN::OnJASHINDENTRO";
 		end;
 }
