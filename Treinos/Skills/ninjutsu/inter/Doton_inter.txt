@@ -1,4 +1,4 @@
-	academia,65,149,5	script	Doton Intermediario	1_m_bard,{
+academia,65,149,5	script	Doton Intermediario	1_m_bard,{
 
 if(elementodoton != 1) { mes "[Doton Intermediário]"; mes "Esse elemento não é de sua natureza"; close;}
 
