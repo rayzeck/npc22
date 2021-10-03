@@ -1,0 +1,8 @@
+treinamento,100,136,5	script	Testezinho	4_m_across,{
+
+	npctalk GetTime(8);
+
+
+
+
+}
