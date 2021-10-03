@@ -5,7 +5,7 @@ OnPCUseSkillEvent:
 	if(lskillid == 2287) {	
 		AddTimer 5000, "SEDE_SHARSKILL2::OnHPSHARSKILL42";
 		changebase 25;
-		getitem 19094,1;
+		getitem2 19094,1,1,0,0,0,0,0,0; equip 19094;
 		end;
 	}
 
