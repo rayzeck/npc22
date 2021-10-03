@@ -188,7 +188,6 @@ close;
 	getitem 734,1; 
 	dispbottom "150 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
-	close;
 	instance_destroy .@instance$; 
 	close;
 	}

@@ -185,7 +185,7 @@ exame,103,117,4	script	Uchiha Sasuke#5	3593,{
 	end;
 }
 
-exame,91,9,4	script	Hayate#2	4_m_across,{	
+exame,91,9,4	script	Hayate#2	4_m_across,{
 
 	if (countitem(19084) == 1) {
 		mes "Parabéns você concluiu a Exame com sucesso!"; 
