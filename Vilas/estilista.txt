@@ -30,24 +30,26 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 	}
 	if(vip_status(1)) {
 		if(@menu == 1) {
-			setarray .@cor[0],1,getbattleflag ("min_hair_style"),getbattleflag ("max_hair_style");
+			setarray .@cor[0],1,getbattleflag("min_hair_style"),getbattleflag("max_hair_style");
 		}
 	} else {
 		if(@menu == 1) {
-			setarray .@cor[0],1,getbattleflag ("min_hair_style"),23;
+			setarray .@cor[0],1,getbattleflag("min_hair_style"),23;
 		}
 	}
 	if(vip_status(1)) {
 		if(@menu == 2) {
-			setarray .@cor[0],6,getbattleflag ("min_hair_color"),getbattleflag ("max_hair_color");
+			setarray .@cor[0],6,getbattleflag("min_hair_color"),getbattleflag("max_hair_color");
 		}
 	} else {
 		if(@menu == 2) {
-			setarray .@cor[0],6,getbattleflag ("min_hair_color"),8;
+			setarray .@cor[0],6,getbattleflag("min_hair_color"),8;
 		}
 	}
 	while(1) {
-		if(select("Próximo","Anterior","Digitar","Cancelar") == 4) { close; }
+		if(select("Próximo","Anterior","Digitar","Cancelar") == 4) {
+			close;
+		}
 		if(@menu == 1) {
 			if(getlook(.@cor[0]) >= .@cor[2]) {
 				setlook .@cor[0],.@cor[1];
@@ -56,7 +58,9 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 			setlook .@cor[0],getlook(.@cor[0])+1;
 		}
 		if(@menu == 2){
-			if(getlook(.@cor[0]) <= .@cor[1]) setlook .@cor[0],.@cor[2];
+			if(getlook(.@cor[0]) <= .@cor[1]) {
+				setlook .@cor[0],.@cor[2];
+			}
 		} else {
 			setlook .@cor[0],getlook(.@cor[0])-1;
 		}
