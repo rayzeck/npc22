@@ -50,7 +50,7 @@ force_1-1,26,31,5	script	Hokage#1	4w_f_kafra2,{
 				mes "[^3131FFNaruto MMORPG Online^000000]";
 				mes "Mais uma coisa, há algo que presamos em nossa vila, a educação entre as pessoas, por tanto respeite seus professores, senpais, amigos e acima de tudo obedeça e acate as normas e regras de seu Naruto MMORPG Online, no caso eu, HeHe";
 				next;
-				if( select( "Entendido Naruto MMORPG Online sama:Estou meio em dúvida." ) == 1 ){
+				if( select( "Entendido Hokage sama:Estou meio em dúvida." ) == 1 ){
 					mes "[^3131FFNaruto MMORPG Online^000000]";
 					mes "Hum ok, assine aqui seu nome de maneira legivel e sem gracinhas.";
 					next;

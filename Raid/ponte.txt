@@ -5,72 +5,73 @@ treinamento,73,160,5	script	Tazuna#1	1_M_LIBRARYMASTER,{
 	mes "Olá, shinobi! Está pronto para começar sua aventura?";
 	menu "Iniciar Raid.",inicio,"Removedor de Raid.",removedor;
 	removedor:
-next;
-if(questmade22 == GetTime(8)) {
-mes "^ff0000[Tazuna]^000000";
-mes "Você pode resetar sua raid novamente amanhã!";
-close;
-}
-
-if(vip_status(1)) {
-mes "^ff0000[Tazuna]^000000";
-mes "Olá "+ strcharinfo(0) +", você tem direito a 1 Reset da Raid do Grande Ponte. Gostaria de utilizar ele agora?";
-menu "- Sim.",r1,"- Não.",r2;
-		
-r1:
-next;
-mes "^ff0000[Tazuna]^000000";
-mes "Boa sorte "+ strcharinfo(0) +"!";
-getitem 7020,1;
-set questmade22, GetTime(8);
-close;
-	
-r2:
-next;
-mes "^ff0000[Tazuna]^000000";
-mes "Estarei aqui se mudar de ideia!";
-close;	
-}
-
-inicio:
-if(questmade2 == GetTime(8)) {
-if(vip_status(1)) goto reset;
-mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
-close;
-
-reset:
-mes "^ff0000[Tazuna]^000000";
-mes "Vou precisar de 1 Removedor de Raid para realizar meu jutsu!";
-if(countitem (7020) < 1) goto moedas;
-next;
-mes "**Uma aura de chakra é formada em sua volta**";
-specialeffect2 488;
-next;
-mes "^ff0000[Tazuna]^000000";
-mes "Meu jutsu foi um sucesso! Você pode entrar no portal novamente!";
-set questmade2, 0;
-delitem 7020,1;
-close;
-
-moedas:
-next;
-mes "^ff0000[Tazuna]^000000";
-mes "Shinobi, preciso do meu pagamento para realizar o jutsu, você não tem o Removedor de Raid! Fale comigo novamente!";
-close;
-}
-	getpartymember getcharid(1),1;
-	getpartymember getcharid(1),2;
-	for(.@i = 0; .@i < $@partymembercount; .@i++) {
-	if($@partymembercount > 5) {
-	mes "Você não pode iniciar a Raid com mais de 5 membros no grupo.";
-	close;
+	next;
+	if(questmade22 == GetTime(8)) {
+		mes "^ff0000[Tazuna]^000000";
+		mes "Você pode resetar sua raid novamente amanhã!";
+		close;
 	}
-}
+
+	if(vip_status(1)) {
+		mes "^ff0000[Tazuna]^000000";
+		mes "Olá "+ strcharinfo(0) +", você tem direito a 1 Reset da Raid do Grande Ponte. Gostaria de utilizar ele agora?";
+		menu "- Sim.",r1,"- Não.",r2;
+				
+		r1:
+			next;
+			mes "^ff0000[Tazuna]^000000";
+			mes "Boa sorte "+ strcharinfo(0) +"!";
+			getitem 7020,1;
+			set questmade22, GetTime(8);
+			close;
+			
+		r2:
+			next;
+			mes "^ff0000[Tazuna]^000000";
+			mes "Estarei aqui se mudar de ideia!";
+			close;	
+	}
+
+	inicio:
+		if(questmade2 == GetTime(8)) {
+			if(vip_status(1)) goto reset;
+			
+			mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
+			close;
+
+			reset:
+				mes "^ff0000[Tazuna]^000000";
+				mes "Vou precisar de 1 Removedor de Raid para realizar meu jutsu!";
+				if(countitem (7020) < 1) goto moedas;
+				next;
+				mes "**Uma aura de chakra é formada em sua volta**";
+				specialeffect2 488;
+				next;
+				mes "^ff0000[Tazuna]^000000";
+				mes "Meu jutsu foi um sucesso! Você pode entrar no portal novamente!";
+				set questmade2, 0;
+				delitem 7020,1;
+				close;
+
+			moedas:
+				next;
+				mes "^ff0000[Tazuna]^000000";
+				mes "Shinobi, preciso do meu pagamento para realizar o jutsu, você não tem o Removedor de Raid! Fale comigo novamente!";
+				close;
+		}
+		getpartymember getcharid(1),1;
+		getpartymember getcharid(1),2;
+		for(.@i = 0; .@i < $@partymembercount; .@i++) {
+			if($@partymembercount > 5) {
+				mes "Você não pode iniciar a Raid com mais de 5 membros no grupo.";
+				close;
+			}
+		}
 
 		if(!instance_check_party(getcharid(1),1,400,999)) {
 			mes "Todos os membros do grupo devem ser no mínimo nível 400.";
 			close;
-}
+		}
 
 	if (instance_id()) {
 		if (select("Entrar na raid.:Cancelar.") == 2) end;
@@ -171,13 +172,12 @@ close;
 	if (countitem(19085) == 1) {
 	mes "Safada!."; 
 	set questmade2, GetTime(8);
-	set raidon,1; 
+	set raidon,0; 
 	delitem 19085,1;
 	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 150 WHERE `char_id` = '"+getcharid(0)+"'"); 
 	getitem 734,1; 
 	dispbottom "150 Pontos de Missão adquiridos."; 
 	warp "SavePoint",0,0; 
-	close;
 	instance_destroy; 
 	close;
 	}
