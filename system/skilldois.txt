@@ -1,5 +1,4 @@
 -	script	skilldois	-1,{
-OnPCUseSkillEvent:
 
 OnSkillFuncione2:
 
