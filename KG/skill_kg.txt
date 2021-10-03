@@ -2,6 +2,36 @@
 
 OnPCUseSkillEvent:
 
+	if(lskillid == 2287) {	
+	changebase 25;
+	getitem 19094,1;
+	AddTimer 100, "DARITEM::REMOVERITEM"; //tempo em milissegundos
+	end;
+
+}
+
+-	script	DARITEM	-1,{
+		
+	REMOVERITEM:
+		changebase Class;
+		equip 19094,1;
+		sleep 100;
+		DelTimer "DARITEM::REMOVERITEM";
+		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN"; //tempo em milissegundos
+		end;
+}
+
+-	script	JASHINEFEITO	-1,{
+		
+	REMOVERJASHIN:
+		changebase Class;
+		delitem 19094,1;
+		DelTimer "JASHINEFEITO::REMOVERJASHIN";
+		end;
+}
+
+
+
 	if(lskillid == 901) {		
 		atcommand "@disguise Kyuubi";
 		sc_start SC_ATKPOTION,15000,5000;
