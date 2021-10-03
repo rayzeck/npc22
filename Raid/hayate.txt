@@ -5,93 +5,93 @@ treinamento,73,166,5	script	Hayate#1	4_m_across,{
 	mes "Olá, shinobi! Está pronto para começar o Torneio Chunin?";
 	menu "Iniciar Raid.",inicio,"Removedor de Raid.",removedor;
 	removedor:
-next;
-if(questmade33 == GetTime(8)) {
-mes "^ff0000[Hayate]^000000";
-mes "Você pode resetar sua raid novamente amanhã!";
-close;
-}
+	next;
+	if(questmade33 == GetTime(8)) {
+	mes "^ff0000[Hayate]^000000";
+	mes "Você pode resetar sua raid novamente amanhã!";
+	close;
+	}
 
-if(vip_status(1)) {
-mes "^ff0000[Hayate]^000000";
-mes "Olá "+ strcharinfo(0) +", você tem direito a 1 Reset da Raid do Torneio Chunin. Gostaria de utilizar ele agora?";
-menu "- Sim.",r1,"- Não.",r2;
-		
-r1:
-next;
-mes "^ff0000[Hayate]^000000";
-mes "Boa sorte "+ strcharinfo(0) +"!";
-getitem 7027,1;
-set questmade33, GetTime(8);
-close;
-	
-r2:
-next;
-mes "^ff0000[Hayate]^000000";
-mes "Estarei aqui se mudar de ideia!";
-close;	
-}
+	if(vip_status(1)) {
+		mes "^ff0000[Hayate]^000000";
+		mes "Olá "+ strcharinfo(0) +", você tem direito a 1 Reset da Raid do Torneio Chunin. Gostaria de utilizar ele agora?";
+		menu "- Sim.",r1,"- Não.",r2;
+			
+		r1:
+		next;
+		mes "^ff0000[Hayate]^000000";
+		mes "Boa sorte "+ strcharinfo(0) +"!";
+		getitem 7027,1;
+		set questmade33, GetTime(8);
+		close;
+			
+		r2:
+		next;
+		mes "^ff0000[Hayate]^000000";
+		mes "Estarei aqui se mudar de ideia!";
+		close;	
+	}
 
-inicio:
-if(questmade3 == GetTime(8)) {
-if(vip_status(1)) goto reset;
-mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
-close;
+	inicio:
+	if(questmade3 == GetTime(8)) {
+		if(vip_status(1)) { goto reset; }
+		mes "Você já realizou essa instância hoje. Você pode jogar novamente amanhã!";
+		close;
 
-reset:	
-mes "^ff0000[Hayate]^000000";
-mes "Vou precisar de 1 Removedor de Raid para realizar meu jutsu!";
-if(countitem (7027) < 1) goto moedas;
-next;
-mes "**Uma aura de chakra é formada em sua volta**";
-specialeffect2 488;
-next;
-mes "^ff0000[Hayate]^000000";
-mes "Meu jutsu foi um sucesso! Você pode entrar no portal novamente!";
-set questmade3, 0;
-delitem 7027,1;
-close;
+		reset:	
+			mes "^ff0000[Hayate]^000000";
+			mes "Vou precisar de 1 Removedor de Raid para realizar meu jutsu!";
+			if(countitem (7027) < 1) { goto moedas; }
+			next;
+			mes "**Uma aura de chakra é formada em sua volta**";
+			specialeffect2 488;
+			next;
+			mes "^ff0000[Hayate]^000000";
+			mes "Meu jutsu foi um sucesso! Você pode entrar no portal novamente!";
+			set questmade3, 0;
+			delitem 7027,1;
+			close;
 
-moedas:
-next;
-mes "^ff0000[Hayate]^000000";
-mes "Shinobi, preciso do meu pagamento para realizar o jutsu, você não tem o Removedor de Raid! Fale comigo novamente!";
-close;
-}
+		moedas:
+			next;
+			mes "^ff0000[Hayate]^000000";
+			mes "Shinobi, preciso do meu pagamento para realizar o jutsu, você não tem o Removedor de Raid! Fale comigo novamente!";
+			close;
+	}
 
 	getpartymember getcharid(1),1;
 	getpartymember getcharid(1),2;
 	for(.@i = 0; .@i < $@partymembercount; .@i++) {
-	if($@partymembercount > 5) {
-	mes "Você não pode iniciar a Raid com mais de 5 membros no grupo.";
-	close;
+		if($@partymembercount > 5) {
+			mes "Você não pode iniciar a Raid com mais de 5 membros no grupo.";
+			close;
+		}
 	}
-}
 
 	if (instance_id()) {
-		if (select("Entrar na raid.:Cancelar.") == 2) end;
+		if (select("Entrar na raid.:Cancelar.") == 2) { end; }
 		if (instance_enter(.@instance$) != 0) {
 			mes "Você não atende aos requisitos do ^FF0000Torneio Chunin^000000.";
 			close;
 		}
 	} else {
-		if (select("Criar raid.:Cancelar.") == 2) end;
-		if(getpartyleader(getcharid(1),2) != getcharid(0)) goto naocria;
+		if (select("Criar raid.:Cancelar.") == 2) { end; }
+		if(getpartyleader(getcharid(1),2) != getcharid(0)) { goto naocria; }
 
 		if (instance_create(.@instance$) < 0) {
-		mes "Você não atende aos requisitos do ^FF0000Torneio Chunin^000000.";
-		close;
+			mes "Você não atende aos requisitos do ^FF0000Torneio Chunin^000000.";
+			close;
 
-		naocria:
-		mes "Você precisa ser o líder do grupo para criar a raid ^FF0000Torneio Chunin^000000.";
-		close;
+			naocria:
+				mes "Você precisa ser o líder do grupo para criar a raid ^FF0000Torneio Chunin^000000.";
+				close;
 		}
 
 		mes "Raid criada.";
 		instance_enter(.@instance$);
 		getpartymember getcharid(1),2;
 		for(.@i = 0; .@i < $@partymembercount; .@i++) {
-		attachrid($@partymemberaid[.@i]);
+			attachrid($@partymemberaid[.@i]);
 		}
 		attachrid(getpartyleader(getcharid(1),1));
 		// Começo da Raid
@@ -135,26 +135,28 @@ exame,0,0,0	script	torneioinstance	-1,{
 
 	OnSasukeDie:
 		hideoffnpc ""+instance_npcname("Hayate#2")+"";
-	if( getcharid(1) ) {
-		getpartymember( getcharid(1),2 );
-		getpartymember( getcharid(1),1 );
-		.@map_killer$ = strcharinfo(3);
-		.@chance = rand(10);
-		for( .@i = 0; .@i < $@partymembercount; .@i++ )
-			if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) )
-				if( !getmapxy( .@map$, .@x, .@y, 0, rid2name( $@partymemberaid[ .@i ] ) ) && .@map$ == .@map_killer$ ) {
-					getitem 19084, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
-//				getitem 732, 2, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
-					if( !.@chance )
-						getitem 734, 1, $@partymemberaid[ .@i ];// put ID gold coin
+		if( getcharid(1) ) {
+			getpartymember( getcharid(1),2 );
+			getpartymember( getcharid(1),1 );
+			.@map_killer$ = strcharinfo(3);
+			.@chance = rand(10);
+			for( .@i = 0; .@i < $@partymembercount; .@i++ ){
+				if( isloggedin( $@partymemberaid[ .@i ],$@partymembercid[ .@i ] ) ){
+					if( !getmapxy( .@map$, .@x, .@y, 0, rid2name( $@partymemberaid[ .@i ] ) ) && .@map$ == .@map_killer$ ) {
+						getitem 19084, 1, $@partymemberaid[ .@i ];// put ID bronze coin instead of 501
+						if( !.@chance ){
+							getitem 734, 1, $@partymemberaid[ .@i ];// put ID gold coin
+						}
+					}
 				}
+			}
 	}
 	end;
 }
 exame,103,117,4	script	Rock Lee#5	3588,{
 	if(getpartyleader(getcharid(1),2) != getcharid(0)) {
 		mes "[Rock Lee]";
-		mes "Apesar o líder do grupo pode me desafiar!";
+		mes "Apenas o líder do grupo pode me desafiar!";
 		close;
 	}
 	hideonnpc ""+instance_npcname("Rock Lee#5")+"";
@@ -170,7 +172,7 @@ exame,103,117,4	script	Rock Lee#5	3588,{
 exame,103,117,4	script	Uchiha Sasuke#5	3593,{
 	if(getpartyleader(getcharid(1),2) != getcharid(0)) {
 		mes "[Uchiha Sasuke]";
-		mes "Apesar o líder do grupo pode me desafiar!";
+		mes "Apenas o líder do grupo pode me desafiar!";
 		close;
 	}
 	hideonnpc ""+instance_npcname("Uchiha Sasuke#5")+"";
@@ -186,9 +188,9 @@ exame,103,117,4	script	Uchiha Sasuke#5	3593,{
 exame,91,9,4	script	Hayate#2	4_m_across,{	
 
 	if (countitem(19084) == 1) {
-	mes "Safada!."; 
+	mes "Parabéns você concluiu a Exame com sucesso!"; 
 	set questmade3, GetTime(8);
-	set raidon,0; 
+	set raidon,0;
 	delitem 19084,1;
 	query_sql("UPDATE `char` SET `quest_points` = `quest_points` + 200 WHERE `char_id` = '"+getcharid(0)+"'"); 
 	getitem 734,2; 
