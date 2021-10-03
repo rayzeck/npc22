@@ -3,6 +3,7 @@
 OnSkillFuncione2:
 
 changebase 25;
+sc_start SC__SHADOWFORM,1000,1000;
 AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO"; //tempo em milissegundos
 end;
 
