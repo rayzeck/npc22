@@ -5,7 +5,7 @@ OnPCUseSkillEvent:
 	if(lskillid == 2287) {	
 		changebase 25;
 		getitem 19094,1;
-		AddTimer 100, "DARITEM::REMOVERITEM"; //tempo em milissegundos
+		AddTimer 100, "FOME_SHAR::SHAR_FOME"; //tempo em milissegundos
 		end;
 	}
 
@@ -195,12 +195,12 @@ OnHPSELOSKILL22:
 		end;
 }
 
--	script	DARITEM	-1,{
+-	script	FOME_SHAR	-1,{
 		
-	REMOVERITEM:
+	SHAR_FOME:
 		equip 19094,1;
 		sleep 100;
-		DelTimer "DARITEM::REMOVERITEM";
+		DelTimer "FOME_SHAR::SHAR_FOME";
 		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN"; //tempo em milissegundos
 		end;
 }

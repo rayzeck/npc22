@@ -1,4 +1,4 @@
--	script	skilldois	-1,{
+/*-	script	skilldois	-1,{
 
 OnSkillFuncione2:
 
@@ -30,4 +30,4 @@ OnSkillFuncione2:
 		end;
 }
 
-
+*/
