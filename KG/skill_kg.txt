@@ -158,6 +158,8 @@ OnHPSHARSKILL22:
 OnHPSHARSKILL42:	
 	setlook LOOK_HEAD_MID,@visu;
 	DelTimer "SEDE_SHARSKILL2::OnHPSHARSKILL42";
+	equip 19094,1;
+	sleep 100;
 	end;
 
 }
