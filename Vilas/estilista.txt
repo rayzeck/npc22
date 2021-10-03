@@ -52,7 +52,7 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 	specialeffect2 339;
 	}
 }
-lou_in02,255,153,3	script	Estilista do Bar	756,{
+moc_fild06,350,227,3	script	Estilista do Bar	756,{
 	mes "[^FF0000Estilista^000000]";
 	mes "Bem-vind"+ (Sex?"o":"a") +" "+strcharinfo(0)+",";
 	mes "o que você gostaria de alterar?";
