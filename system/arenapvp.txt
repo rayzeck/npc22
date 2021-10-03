@@ -55,7 +55,7 @@ mes "Gostaria de entrar na arena de guerra?";
 hospital2,111,33,5	duplicate(arenapvp)	Arena PvP#2	4_m_across
 hospital3,111,33,5	duplicate(arenapvp)	Arena PvP#3	4_m_across
 hospital4,111,33,5	duplicate(arenapvp)	Arena PvP#4	4_m_across
-lou_in02,251,170,5	duplicate(arenapvp)	Arena PvP#bar	99
+lou_in02,251,170,3	duplicate(arenapvp)	Arena PvP#bar	99
 
 //============== MAP FLAG ===============
 
