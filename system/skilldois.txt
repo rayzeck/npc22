@@ -3,7 +3,6 @@
 OnSkillFuncione:
 
 changebase 25;
-getitem 900,1;
 AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO"; //tempo em milissegundos
 end;
 
