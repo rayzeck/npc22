@@ -20,7 +20,7 @@
 //= v1.0 - Split into two NPCs
 //============================================================ 
 
-konoha3,116,261,3	script	Estilista::estil	756,{
+konoha3,116,261,3	script	Estilista::estil	4_f_zondagirl,{
 	mes "[^FF0000Estilista^000000]";
 	mes "Bem-vind"+ (Sex?"o":"a") +" "+strcharinfo(0)+",";
 	mes "o que você gostaria de alterar?";
