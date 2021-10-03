@@ -188,7 +188,7 @@ OnHPSELOSKILL22:
 		end;
 }
 
-//==================== JASHIN - DEVOÇÃO JASHIN ============\\
+//==================== JASHIN - DEVOÇÃO JASHIN ============
 	if(lskillid == 2287) {
 		AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO";
 		set @visu,getlook(LOOK_HEAD_MID);
