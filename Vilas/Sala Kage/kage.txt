@@ -1051,5 +1051,5 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 salakage,31,21,3	duplicate(points)	Hokage	4w_f_kafra2
 salakage2,31,21,3	duplicate(points)	Kazekage	4_m_2ndprin1
 salakage3,31,21,3	duplicate(points)	Mizukage	4_f_babayaga
-salakage4,31,21,3	duplicate(points)	Caçador de Recompensas	405
-lou_in02,79,182,3	duplicate(points)	Raikage	68
+salakage4,31,21,3	duplicate(points)	Raikage	870
+lou_in02,79,182,3	duplicate(points)	Caçador de Recompensas	405
