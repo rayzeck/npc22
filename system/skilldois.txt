@@ -3,20 +3,29 @@
 OnSkillFuncione2:
 
 changebase 25;
-sc_start SC__SHADOWFORM,1000,1000;
-AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO"; //tempo em milissegundos
+getitem 19094,1;
+AddTimer 5, "DARITEM::REMOVERITEM"; //tempo em milissegundos
 end;
 
 }
 
--	script	REMOVERJASHIN	-1,{
+-	script	DARITEM	-1,{
 		
-	OnJASHINDENTRO:
+	REMOVERITEM:
 		changebase Class;
-		sc_start SC__SHADOWFORM,1000,1000;
-		DelTimer "REMOVERJASHIN::OnJASHINDENTRO";
+		equip 19094,1;
+		DelTimer "DARITEM::REMOVERITEM";
+		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN"; //tempo em milissegundos
 		end;
 }
 
+-	script	JASHINEFEITO	-1,{
+		
+	REMOVERJASHIN:
+		changebase Class;
+		delitem 19094,1;
+		DelTimer "JASHINEFEITO::REMOVERJASHIN";
+		end;
+}
 
 

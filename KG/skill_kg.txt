@@ -2,10 +2,9 @@
 
 OnPCUseSkillEvent:
 
-	if(lskillid == 15) {		
-//		atcommand "@disguise Kyuubi";
+	if(lskillid == 901) {		
+		atcommand "@disguise Kyuubi";
 		sc_start SC_ATKPOTION,15000,5000;
-		sc_start SC__SHADOWFORM,15000,5000;
 		sleep2 15000;
 		atcommand "@undisguise";
 		end;
