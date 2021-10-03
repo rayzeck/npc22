@@ -1,0 +1,21 @@
+-	script	Skilldois	-1,{
+
+OnSkillFuncione:
+
+changebase 25;
+//sc_start SC_SILENCE,5000,10;  //efeito de silêncio ao usar a skill
+AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO"; //tempo em milissegundos
+end;
+
+}
+
+-	script	REMOVERJASHIN	-1,{
+		
+	OnJASHINDENTRO:
+		changebase Class;
+		DelTimer "REMOVERJASHIN::OnJASHINDENTRO";
+		end;
+}
+
+
+

@@ -188,18 +188,3 @@ OnHPSELOSKILL22:
 		end;
 }
 
-//==================== JASHIN - DEVOÇÃO JASHIN ============
-	if(lskillid == 2287) {
-		AddTimer 5000, "REMOVERJASHIN::OnJASHINDENTRO";
-		changebase 25;
-		end;
-	}
-
--	script	REMOVERJASHIN	-1,{
-		
-	OnJASHINDENTRO:
-		changebase Class;
-		DelTimer "REMOVERJASHIN::OnJASHINDENTRO";
-		end;
-}
-
