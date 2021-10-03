@@ -158,11 +158,11 @@ OnHPSHARSKILL22:
 OnHPSHARSKILL42:	
 
 	DelTimer "SEDE_SHARSKILL2::OnHPSHARSKILL42";
-	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_TOP);
+/*	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_TOP);
 	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_MID);
 	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_LOW);
-	sleep 100;
-	delitem 19094,1;
+	sleep 200;*/
+	atcommand "@delitem 19094,1";
 	end;
 
 }
