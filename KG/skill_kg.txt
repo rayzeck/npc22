@@ -3,9 +3,9 @@
 OnPCUseSkillEvent:
 
 	if(lskillid == 2287) {	
+		AddTimer 100, "FOME_SHAR::SHAR_FOME"; //tempo em milissegundos
 		changebase 25;
 		getitem 19094,1;
-		AddTimer 100, "FOME_SHAR::SHAR_FOME"; //tempo em milissegundos
 		end;
 	}
 
@@ -198,10 +198,11 @@ OnHPSELOSKILL22:
 -	script	FOME_SHAR	-1,{
 		
 	SHAR_FOME:
+		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN";
 		equip 19094,1;
 		sleep 100;
 		DelTimer "FOME_SHAR::SHAR_FOME";
-		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN"; //tempo em milissegundos
+		 //tempo em milissegundos
 		end;
 }
 
