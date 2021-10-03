@@ -1,4 +1,4 @@
--	script	Skilldois	-1,{
+-	script	skilldois	-1,{
 
 OnSkillFuncione:
 
