@@ -3,7 +3,7 @@
 OnPCUseSkillEvent:
 
 	if(lskillid == 2287) {	
-		AddTimer 100, "FOME_SHAR::SHAR_FOME"; //tempo em milissegundos
+		AddTimer 5000, "SEDE_SHARSKILL2::OnHPSHARSKILL42";
 		changebase 25;
 		getitem 19094,1;
 		end;
@@ -144,7 +144,6 @@ OnPCUseSkillEvent:
 //	end;
 //
 //}
-
 -	script	FOME_SHARSKILL2	-1,{
 	
 OnHPSHARSKILL22:	
@@ -154,6 +153,14 @@ OnHPSHARSKILL22:
 
 }
 
+-	script	SEDE_SHARSKILL2	-1,{
+	
+OnHPSHARSKILL42:	
+	setlook LOOK_HEAD_MID,@visu;
+	DelTimer "SEDE_SHARSKILL2::OnHPSHARSKILL42";
+	end;
+
+}
 
 // ========================= Remover Selos Amaldiçoado =========================
 
@@ -194,7 +201,7 @@ OnHPSELOSKILL22:
 		DelTimer "REMOVERGATEKG::OnHPGATEREMOVE";
 		end;
 }
-
+/*
 -	script	FOME_SHAR	-1,{
 		
 	SHAR_FOME:
@@ -218,3 +225,4 @@ OnHPSELOSKILL22:
 		DelTimer "JASHINEFEITO::REMOVERJASHIN";
 		end;
 }
+/*
