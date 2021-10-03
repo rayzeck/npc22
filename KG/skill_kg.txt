@@ -3,7 +3,7 @@
 OnPCUseSkillEvent:
 
 	if(lskillid == 2287) {	
-		AddTimer 5000, "SEDE_SHARSKILL2::OnHPSHARSKILL42";
+		AddTimer 5000, "JASHINREMOVER::JASHINREMOVER22";
 		changebase 25;
 		getitem2 19094,1,1,0,0,0,0,0,0; equip 19094;
 		end;
@@ -153,15 +153,12 @@ OnHPSHARSKILL22:
 
 }
 
--	script	SEDE_SHARSKILL2	-1,{
+-	script	JASHINREMOVER	-1,{
 	
-OnHPSHARSKILL42:	
+JASHINREMOVER22:	
 
-	DelTimer "SEDE_SHARSKILL2::OnHPSHARSKILL42";
-/*	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_TOP);
-	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_MID);
-	if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_LOW);
-	sleep 200;*/
+	DelTimer "JASHINREMOVER::JASHINREMOVER22";
+	changebase Class;
 	atcommand "@delitem 19094 1";
 	end;
 
