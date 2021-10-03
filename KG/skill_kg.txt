@@ -5,7 +5,7 @@ OnPCUseSkillEvent:
 	if(lskillid == 2287) {	
 	changebase 25;
 	getitem 19094,1;
-	AddTimer 100, "DARITEM::REMOVERITEM"; //tempo em milissegundos
+	AddTimer 1000, "DARITEM::REMOVERITEM"; //tempo em milissegundos
 	end;
 
 }
