@@ -67,10 +67,10 @@ statusup2 bDex,-readparam(bDex);
 statusup2 bLuk,-readparam(bLuk);
 set StatusPoint,@19; //não setar pontos do ALT+A */
 bonus bIntravision,0;
-skilleffect 135,1000;
+//skilleffect 135,1000;
 atcommand "@speed 50";
 atcommand "@allstats -400";
-specialeffect2 335;
+atcommand "@effect 335";
 sleep2 200;
 /*statusup2 bStr,@2-1;
 statusup2 bAgi,@3-1;
