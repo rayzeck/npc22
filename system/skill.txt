@@ -56,7 +56,7 @@ query_sql "SELECT `char_id`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `class`, 
 nude;
 sleep2 200;
 set .@atual,getlook(4);
-changelook 4,471;
+//changelook 4,471;
 /*set BaseLevel,BaseLevel-BaseLevel; //não setar nivel, continuar no que estava antes
 set BaseLevel,@9;
 statusup2 bStr,-readparam(bStr);
@@ -152,7 +152,7 @@ set SkillPoint,SkillPoint-SkillPoint;
 set SkillPoint,@20;
 percentheal 100,100;
 atcommand "@alive";
-skilleffect 135,0;
+//skilleffect 135,0;
 atcommand "@speed 100";
 if(@11>0) equip @11;
 if(@12>0) equip @12;
