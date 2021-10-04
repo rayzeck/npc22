@@ -3,8 +3,8 @@
 OnSkillFuncione:
 
 //EF_TRUESIGHT
-callfunc "dreamin";
 atcommand "@hide";
+callfunc "dreamin";
 //sc_start SC_SILENCE,5000,10;  //efeito de silêncio ao usar a skill
 AddTimer 5000, "REMOVERGORDAKG::OnHPGORDAREMOVE"; //tempo em milissegundos
 end;
