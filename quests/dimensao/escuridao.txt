@@ -168,7 +168,7 @@ OnMonsterDie2:
 	}
 }
 
-gef_dun02,104,29,5	script	Instância da Escuridão#2	4_m_gef_soldier,{
+gef_dun02,104,39,5	script	Instância da Escuridão#2	4_m_gef_soldier,{
 	if(getcharid(0) != getpartyleader(getcharid(1),2)) {
 		mes "Apenas o líder pode finalizar a missão.";
 		close;
