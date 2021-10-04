@@ -56,7 +56,7 @@ nude;
 sleep2 150;
 set .@atual,getlook(4);
 //changelook 4,471;
-set BaseLevel,BaseLevel-BaseLevel; //não setar nivel, continuar no que estava antes
+//set BaseLevel,BaseLevel-BaseLevel; //não setar nivel, continuar no que estava antes
 set BaseLevel,@9;
 statusup2 bStr,-readparam(bStr);
 statusup2 bAgi,-readparam(bAgi);
@@ -120,7 +120,7 @@ sleep2 150;
 query_sql ("SELECT `char_id`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `class`, `level`, `joblevel`, `arma`, `escudo`, `cima`, `meio`, `baixo`, `robe`, `roupa`, `cabelo`, `StatusPoint`, `skill_point` FROM `char_store` WHERE char_id = '"+@CID+"' "),@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@hroupa,@cabelo,@19,@20;
 nude;
 sleep2 150;
-set BaseLevel,BaseLevel-BaseLevel;
+//set BaseLevel,BaseLevel-BaseLevel;
 set BaseLevel,@9;
 //if(BaseLevel!=@9) atcommand "@lvup -1";
 //if(JobLevel!=@10) atcommand "@joblvup -1";
