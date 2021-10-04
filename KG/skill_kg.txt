@@ -41,9 +41,10 @@ OnPCUseSkillEvent:
 //		end;
 //	}
 
-// BYAKUGAN
+// BYAKUGAN 949 ativar
 
-	if(lskillid == 949) {
+	if(lskillid == 371) {
+		sleep 2000;
 		sc_start SC_ATKPOTION,15000,4000;	
 		end;
 	}
