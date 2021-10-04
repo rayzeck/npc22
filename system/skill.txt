@@ -170,3 +170,9 @@ OnPcDieEvent:
 if(dreamwalk==1) callfunc "dreamout";
 end;
 }
+
+-	script	backto	-1,{
+OnPCLoginEvent:
+if(dreamwalk==1) callfunc "dreamout";
+end;
+}
