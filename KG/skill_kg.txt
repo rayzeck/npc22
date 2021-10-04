@@ -42,11 +42,6 @@ OnPCUseSkillEvent:
 //	}
 
 // BYAKUGAN 949 ativar
-
-	if(lskillid == 949) {
-		specialeffect EF_TRUESIGHT;
-		end;
-	}
 	//combo 32
 	if(lskillid == 371) {
 		sleep 2000;
