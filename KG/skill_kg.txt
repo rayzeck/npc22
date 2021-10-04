@@ -204,28 +204,3 @@ OnHPSELOSKILL22:
 		DelTimer "REMOVERGATEKG::OnHPGATEREMOVE";
 		end;
 }
-/*
--	script	FOME_SHAR	-1,{
-		
-	SHAR_FOME:
-		AddTimer 5000, "JASHINEFEITO::REMOVERJASHIN";
-		equip 19094,1;
-		sleep 100;
-		DelTimer "FOME_SHAR::SHAR_FOME";
-		 //tempo em milissegundos
-		end;
-}
-
--	script	JASHINEFEITO	-1,{
-		
-	REMOVERJASHIN:
-		changebase Class;
-		if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_TOP);
-		if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_MID);
-		if(isequipped(19094)) unequip(EQI_COSTUME_HEAD_LOW);
-		sleep 100;
-		delitem 19094,1;
-		DelTimer "JASHINEFEITO::REMOVERJASHIN";
-		end;
-}
-/*
