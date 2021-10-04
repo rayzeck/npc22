@@ -47,7 +47,7 @@ OnPCUseSkillEvent:
 		specialeffect EF_TRUESIGHT;
 		end;
 	}
-	
+	//combo 32
 	if(lskillid == 371) {
 		sleep 2000;
 		sc_start SC_ATKPOTION,15000,4000;	
