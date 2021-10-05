@@ -1,0 +1,152 @@
+// ==================================================================================================================================
+// ==================================================================================================================================
+// =	Feito Por: ThordenZ																											=
+// ==================================================================================================================================	
+// =	Contato: thzinlol@gmail.com																									=
+// ==================================================================================================================================
+// =  									  		___________																			=
+// =									  		|         |       /¨¨¨¨\															=
+// =									  		|___   ___|      /      \                                                           =
+// =									       	   |   |        |   /\   |                                                          =
+// =	 									 	   |   |        |   \/   |                                                          =
+// =											  _|   |_        \      /                                                           =
+// =											  |_____|		  \____/															=            
+// ==================================================================================================================================
+// ==================================================================================================================================
+
+prontera,109,321,6	script	Montion, o Cozinheiro	749,{
+	//query_sql("INSERT INTO `ninja_info` (`char_id`,`char_name`,`char_job`,`level_job`) VALUES ('"+getcharid(0)+"','"+strcharinfo(0)+"','nenhum', 0)");
+}
+
+// O principal.
+prontera,111,321,6	script	Lion, o Cozinheiro	820,{
+	.@sql$ = query_sql("SELECT `char_job`, `id_info` FROM `ninja_info` WHERE `char_id` = '"+getcharid(0)+"'", .@jobName$, .@id_info);
+	set .@cook$, "cozinheiro";
+	set .@npc_name$,"^0000FFLion, o Cozinheiro";
+	if(.@jobName$ == .@cook$){
+		mes .@npc_name$, "Bem vindo Jovem Cozinheiro.";
+		end;
+	}else if(.@jobName$ == "nenhum" || .@id_info == 0){
+		mes .@npc_name$, "Bem vindo jovem ninja,", "eu sou o Lion, o melhor cozinheiro da vila,", "e sou o chefe da cozinha do Kage.","Estou em busca de um novo cozinheiro para me ajudar a fazer os pratos para os ninjas,","que tal você se tornar um chefe como eu e me ajudar?";
+		mes "Isso pode lhe dar algumas vantagens hein!";
+		next;
+		switch(select("Conte-me mais sobre as vantagens. :Não desejo ser cozinheiro!")){
+			case 1:
+				mes .@npc_name$, "Ooh, claro que lhe conto!";
+				mes "Como cozinheiro, você verá como fazemos as comidas especiais, e aprenderá e poderá fazer para você mesmo em suas missões.";
+				mes "Como exemplo o Ramen de Ovo, que da um bônus de Ataque físico durante 1 minuto.";
+				mes "Eu te passarei todas as minhas receitas e também você poderá experimentar fazer novas receitas especiais.";
+				next;
+				switch(select("Gostei, quero me tornar um cozinheiro! :Deixe-me pensar mais um pouco.")){
+					case 1:
+						mes .@npc_name$, "Que ótima notícia meu jovem, então vamos lá...(Quest)";
+						query_sql("INSERT INTO `ninja_info`(`char_id`, `char_name`, `char_job`, `level_job`) VALUES ('"+getcharid(0)+"', '"+strcharinfo(0)+"', 'cozinheiro', 1)");
+						set $xpJob, 0;
+						set $upJob2, 2500;
+					break;
+					case 2:
+						mes .@npc_name$, "Tudo bem meu jovem, volte quando você quiser se tornar um chefe.";
+						mes "Tome aqui algumas comidas especiais das minha receitas";
+						getitem 657,3;
+						close;
+					break;
+				}
+			break;
+			case 2:
+				mes .@npc_name$, "Tudo bem, volte depois caso mude de ideia, e tome essas comidas para você testar pra mim.";
+				getitem 657,3;
+				close;
+			break;
+		}
+		end;		
+	}else{
+		mes .@npc_name$, "Você ja possui uma Job, infelizmente não posso te ajudar!";
+		end;
+	}	
+}
+
+prontera,113,321,6	script	Jarbas, o Cozinheiro	886,{
+	npctalk "Fé";
+	cutin "selo02",2;
+}
+
+prontera,105,321,6	script	Fornalha	1617,{
+	.@sql$ = query_sql("SELECT `char_job`, `level_job` FROM `ninja_info` WHERE `char_id` = '"+getcharid(0)+"'",.@jobName$,.@jobLvl);
+	
+	set .@cook$, "cozinheiro";
+	set .@percent, 40;
+	set .@progress, 5;
+	if(.@jobLvl == 2){
+		.@menu$ += " :Selo de Ataque D :Selo de Agilidade D";
+		set .@progress, 4;
+		set .@percent, 45;
+	}
+	if(.@jobLvl == 3){
+		set .@progress, 3;
+		set .@percent, 50;
+	}
+	if(.@jobLvl == 4){			
+		set .@progress, 2;
+		set .@percent, 60;
+	}
+	if(.@jobLvl == 5){
+		set .@progress, 1;
+		set .@percent, 70;
+	}
+	
+	if(.@jobName$ == .@cook$){
+		set .@menu$, "Bolo de Chocolate";
+		if(.@jobLvl<=2){
+			set .@menu$, .@menu$+" :Suco Revigorante";
+		}
+		mes "Opções de produção:";
+		next;
+		switch(select(.@menu$)){
+			case 1:
+				mes "Receita:";
+				mes "1 Leite";
+				mes "1 Barra de chocolate";
+				mes "2 Trigos";
+				mes "2 Ovos";
+				if(countitem(519)>=1 && countitem(558)>=1 && countitem(577)>=2 && countitem(574)>=2){
+					delitem 519,1;
+					delitem 558,1;
+					delitem 577,2;
+					delitem 574,2;
+					progressbar "0x0000FF",.@progress;
+					getitem 597,1;
+					$xpJob+=1000;
+					dispbottom "Exp Job: "+$xpJob+"/"+$upJob2;
+				}else{
+					npctalk "Falta ingrediente!";
+					close;
+				}
+			break;
+			case 2:
+				mes "Receita:";
+				mes "1 Suco de Maçã;";
+				mes "1 Suco de Banana;";
+				mes "2 Sucos de Cenoura;";
+				if(countitem(531)>=1 && countitem(532)>=1 && countitem(534)>=2){
+					delitem 531,1;
+					delitem 532,1;
+					delitem 534,2;
+					progressbar "0x0000FF",.@progress;
+					getitem 645,1;
+					$xpJob+=2000;
+					dispbottom "Exp Job: "+$xpJob+"/"+$upJob2;
+				}else{
+					npctalk "Falta ingrediente!";
+					close;
+				}
+			break;
+		}
+		if($xpJob>=$upJob2){
+			query_sql("UPDATE `ninja_info` SET `level_job` = 2 WHERE `char_id` = '"+getcharid(0)+"'");
+		}
+		end;
+	} else{
+		npctalk "Você não é cozinheiro!";
+		end;
+	}
+}

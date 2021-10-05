@@ -1,0 +1,120 @@
+prontera,151,121,6	script	Selador	805,{
+	.@slq = query_sql("SELECT `char_job`, `level_job`, `id_info` FROM `ninja_info` WHERE `char_id` = '"+getcharid(0)+"'", .@jobName$, .@jobLvl, .@id_info);
+	set .@npc_name$, "^0000FF[Luke, Mestre de Selamento]";
+	if(.@jobName$ == "selador"){
+		mes .@npc_name$;
+		mes "Bem vindo Jovem aprendiz de Selador!";
+		end;
+	} else if(.@jobName$ == "nenhum" || .@id_info == 0){
+		mes .@npc_name$;
+		mes "blablabla";
+		mes "quer se tornar um Selador?";
+		next;
+		switch(select("Sim :Não")){
+			case 1:
+				mes .@npc_name$;
+				mes "Que ótima notícia!";
+				mes "Agora você é um Selador.";
+				query_sql("INSERT INTO `ninja_info`(`char_id`,`char_name`,`char_job`,`level_job`) VALUES ('"+getcharid(0)+"','"+strcharinfo(0)+"','selador',1)");
+			break;
+			case 2:
+				mes .@npc_name$;
+				mes "Tudo bem, se mudar de ideia estatei aqui!";
+			break;
+		}
+		end;
+	} else {
+		npctalk "Você já possui uma job!";
+		end;
+	}
+}
+
+prontera,155,121,6	script	Altar de Selamento	651,{
+	.@sql = query_sql("SELECT `char_job`,`level_job` FROM `ninja_info` WHERE `char_id` = '"+getcharid(0)+"'",.@jobName$,.@jobLvl);
+	if(.@jobName$=="selador"){
+		set .@menu$, "Selo de Ataque E :Selo de Agilidade E";
+		set .@percent, 40;
+		set .@progress, 5;
+		if(.@jobLvl == 2){
+			.@menu$ += " :Selo de Ataque D :Selo de Agilidade D";
+			set .@progress, 4;
+			set .@percent, 45;
+		}
+		if(.@jobLvl == 3){
+			set .@progress, 3;
+			set .@percent, 50;
+		}
+		if(.@jobLvl == 4){			
+			set .@progress, 2;
+			set .@percent, 60;
+		}
+		if(.@jobLvl == 5){
+			set .@progress, 1;
+			set .@percent, 70;
+		}
+		
+		mes "Selos disponíveis:";
+		next;
+		switch(select(.@menu$)){
+			case 1:
+				mes "Itens Necessários:";
+				mes "1 Runa de Str;";
+				mes "2 Pergaminhos em Branco;";
+				next;
+				if(countitem(4994)>=1 && countitem(618)>=2){
+					.@rand = rand(0,100);
+					dispbottom ""+.@rand;
+					
+					
+					delitem 4994,1;
+					delitem 618,2;
+					progressbar "0x0000FF",.@progress;
+					
+					if(.@rand <= .@percent){
+						npctalk "Sucesso no selamento.";
+						getitem  4008,1;
+					}else {
+						getitem 25261,1;
+						npctalk "Falha no selamento.";
+					}					
+				} else{
+					npctalk "Você não possui os itens necessários!";
+					close;
+				}
+			break;
+			case 2:
+				mes "Itens Necessários:";
+				mes "1 Runa de Str;";
+				mes "2 Pergaminhos em Branco;";
+				next;
+				if(countitem(29000)>=1 && countitem(618)>=2){
+					.@rand = rand(0,100);
+					dispbottom ""+.@rand;
+					delitem 29000,1;
+					delitem 618,2;
+					progressbar "0x0000FF",.@jobLvl;
+					if(.@rand <= .@percent){
+						npctalk "Sucesso no selamento.";
+						getitem  4016,1;
+					}else {
+						getitem 25261,1;
+						npctalk "Falha no selamento.";
+					}					
+				} else{
+					npctalk "Você não possui os itens necessários!";
+					close;
+				}
+			break;
+			case 3:
+			
+			break;
+			case 4:
+			
+			break;
+		}
+		end;
+	}else {
+		npctalk "Você não é um Selador!";
+		end;
+	}
+}
