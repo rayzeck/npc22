@@ -165,23 +165,45 @@ function	script	setquestparty	{
 				mes "Lembre-se você so pode fazer 15 Missão Rank D, caso sejá VIP poderá fazer 18 Missão Rank D. Gostaria de Fazer ?";
 				if(select("- Sim:- Não") == 2) { close; }
 					next;
-					set .@missaod, rand(11000,11040);
-					if(getcharid(1)) {
-						mes "["+strnpcinfo(3)+"]";
-						mes "Lembre-se você está em grupo.";						
-						mes "Gostaria mesmo de pegar a missão ?";
-						if(select("- Não:- Sim") == 1) { close; }
-						close2;
-						setquestparty .@missaod;
-					} else {
-						setquest .@missaod;
-						set MissaoDAtivada,1;						
-						query_sql("UPDATE `char` SET `D_Dia` = `D_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+					switch(select("- Drop:- Kill")){
+						case 1:
+							set .@missaod, rand(11016,11027);
+							if(getcharid(1)) {
+								mes "["+strnpcinfo(3)+"]";
+								mes "Lembre-se você está em grupo.";						
+								mes "Gostaria mesmo de pegar a missão ?";
+								if(select("- Não:- Sim") == 1) { close; }
+								close2;
+								setquestparty .@missaod;
+							} else {
+								setquest .@missaod;
+								set MissaoDAtivada,1;						
+								query_sql("UPDATE `char` SET `D_Dia` = `D_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+							}
+							next;
+							mes "["+strnpcinfo(3)+"]";
+							mes "Mais informações da missão aperte alt+U";
+							close;
+						break;
+						case 2:
+							set .@missaod, rand(11000,11015);
+							if(getcharid(1)) {
+								mes "["+strnpcinfo(3)+"]";
+								mes "Lembre-se você está em grupo.";						
+								mes "Gostaria mesmo de pegar a missão ?";
+								if(select("- Não:- Sim") == 1) { close; }
+								close2;
+								setquestparty .@missaod;
+							} else {
+								setquest .@missaod;
+								set MissaoDAtivada,1;						
+								query_sql("UPDATE `char` SET `D_Dia` = `D_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+							}
+							next;
+							mes "["+strnpcinfo(3)+"]";
+							mes "Mais informações da missão aperte alt+U";
+						break;
 					}
-					next;
-					mes "["+strnpcinfo(3)+"]";
-					mes "Mais informações da missão aperte alt+U";
-					close;
 		}
 		mes "Você precisa ser Nivel 200";
 		close;
