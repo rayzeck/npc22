@@ -1,7 +1,7 @@
 -	script	Anti Bot	-1,{
 //
 OnNPCKillEvent:
-//	if(getgmlevel() == 99) {mes "Bem-vindo"; close;}
+//	if(getgmlevel() == 99) {mes "Bem-vindo"; close;} //
 	set @kill,@kill+1;
 	if(@kill >= rand(2000,3000)) goto Check;
 	end;
@@ -23,8 +23,8 @@ Check:
 	setoption 0x2,1;
 //	sc_start sc_berserk, 1000000000, 1;
 	mes "[Anti Bot]";
-	mes "Verificação de bot";
-	mes "Digite o número que aparecer";
+	mes "Verificaï¿½ï¿½o de bot";
+	mes "Digite o nï¿½mero que aparecer";
 	next;
 	switch( rand(1,9) ) {
 	case 1:
@@ -146,7 +146,7 @@ Check:
 	}
 	next;
 	mes "[Anti Bot]";
-	mes "Obrigado pela compreensão, você está livre.";
+	mes "Obrigado pela compreensï¿½o, vocï¿½ estï¿½ livre.";
 	atcommand "@option 0 0 0";
 	atcommand "@battleignore";
 	setoption 0x2,0;
