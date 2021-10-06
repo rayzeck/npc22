@@ -5,10 +5,10 @@ pay_fild07,280,382,4	script	Entrada pra Konoha	45,2,2,{
 	if($EEinfo[1] == 1) { end; }
 	
 		entrar:
-		warp "konoha3", 194,56;
+		warp "konoha3", 148,7;
 		if(countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1){announce strcharinfo(0)+" da Akatsuki acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
 		if(nukenin == 1) {announce strcharinfo(0)+" da Nukenin acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
-		if(#nevoa == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Névoa acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
+		if(#nevoa == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Nï¿½voa acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
 		if(#suna == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Suna acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
 		if(#nuvem == 1 ) {announce strcharinfo(0)+" da Vila Oculta da Nuvem acaba de invadir Konohagakure.",bc_blue|bc_all; end;}
 		end;
@@ -47,7 +47,7 @@ mjolnir_08,369,258,0	warp	fild_konoha#10	2,2,mjolnir_10,21,258
 //cmd_fild01,26,318,0	warp	tanzaku#1	2,2,cidade tanzaku,0,0
 //cidade tanzaku,0,0,0	warp	tanzaku#2	2,2,cmd_fild01,31,318
 
-// País dos rios:
+// Paï¿½s dos rios:
 
 gef_fild02,14,79,0	warp	fild_rios#1	2,2,gef_fild03,377,278
 gef_fild03,382,278,0	warp	fild_rios#2	2,2,gef_fild02,19,79
@@ -67,7 +67,7 @@ gef_fild14,373,219,0	warp	fild rios#10	2,2,gef_fild10,31,217
 gef_fild14,58,40,0	warp	fild rios#11	2,2,moc_fild13,302,50
 moc_fild13,308,50,0	warp	fild rios#12	2,2,gef_fild14,63,43
 
-// país do chá
+// paï¿½s do chï¿½
 
 mjolnir_10,384,220,0	warp	fild_cha#1	2,2,um_fild03,24,334
 um_fild03,18,334,0	warp	fild_cha#2	2,2,mjolnir_10,379,219
@@ -103,9 +103,9 @@ hu_fild01,348,314,0	warp	fild_enchant#2	2,2,mjolnir_08,186,32
 //--------------------------------------------------------------
 hu_fild01,116,148,5	script	Fenda Suspeita#5	4_crack,{
 
-if(!countitem(775)) { mes "Você Não tem Autorização para Passar por essa Fenda"; close; }
-	mes "Você Deseja descer ?";
-	if(select("- Sim:- Não") == 2) close;
+if(!countitem(775)) { mes "Vocï¿½ Nï¿½o tem Autorizaï¿½ï¿½o para Passar por essa Fenda"; close; }
+	mes "Vocï¿½ Deseja descer ?";
+	if(select("- Sim:- Nï¿½o") == 2) close;
 	close2;
 	warp "1@nyd",32,35;
 	end;
@@ -113,9 +113,9 @@ if(!countitem(775)) { mes "Você Não tem Autorização para Passar por essa Fenda";
 //--------------------------------------------------------------
 1@nyd,32,35,5	script	Fenda Suspeita#6	4_crack,{
 
-if(!countitem(775)) { mes "Você Não tem Autorização para Passar por essa Fenda"; close; }
-	mes "Você Deseja descer ?";
-	if(select("- Sim:- Não") == 2) close;
+if(!countitem(775)) { mes "Vocï¿½ Nï¿½o tem Autorizaï¿½ï¿½o para Passar por essa Fenda"; close; }
+	mes "Vocï¿½ Deseja descer ?";
+	if(select("- Sim:- Nï¿½o") == 2) close;
 	close2;
 	warp "hu_fild01",116,148;
 	end;

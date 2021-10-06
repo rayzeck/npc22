@@ -1,12 +1,12 @@
-konoha3,103,231,5	script	Shinobi Guia#1	121,{
+konoha3,132,184,5	script	Shinobi Guia#1	121,{
 
 mes "[^0000FFShinobi Guia^000000]";
-mes "Olá Shinobi, sou o guia de nossa aldeia.";
+mes "Olï¿½ Shinobi, sou o guia de nossa aldeia.";
 next;
 mes "[^0000FFShinobi Guia^000000]";
 mes "Posso te levar aos principais pontos da vila.";
-mes "Para onde você gostaria de ir?";
-switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+mes "Para onde vocï¿½ gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisï¿½o Bijuu")) {					
 	next;					
 	case 1:
 		mes "[^0000FFShinobi Guia^000000]";
@@ -59,12 +59,12 @@ switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de
 kumogakure,96,123,5	script	Shinobi Guia#2	49,{
 
 mes "[^0000FFShinobi Guia^000000]";
-mes "Olá Shinobi, sou o guia de nossa aldeia.";
+mes "Olï¿½ Shinobi, sou o guia de nossa aldeia.";
 next;
 mes "[^0000FFShinobi Guia^000000]";
 mes "Posso te levar aos principais pontos da vila.";
-mes "Para onde você gostaria de ir?";
-switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+mes "Para onde vocï¿½ gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisï¿½o Bijuu")) {					
 	next;					
 	case 1:
 		mes "[^0000FFShinobi Guia^000000]";
@@ -117,12 +117,12 @@ switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de
 sunagakure,214,253,5	script	Shinobi Guia#3	48,{
 
 mes "[^0000FFShinobi Guia^000000]";
-mes "Olá Shinobi, sou o guia de nossa aldeia.";
+mes "Olï¿½ Shinobi, sou o guia de nossa aldeia.";
 next;
 mes "[^0000FFShinobi Guia^000000]";
 mes "Posso te levar aos principais pontos da vila.";
-mes "Para onde você gostaria de ir?";
-switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+mes "Para onde vocï¿½ gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisï¿½o Bijuu")) {					
 	next;					
 	case 1:
 		mes "[^0000FFShinobi Guia^000000]";
@@ -175,12 +175,12 @@ switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de
 kirigakure,220,175,5	script	Shinobi Guia#4	117,{
 
 mes "[^0000FFShinobi Guia^000000]";
-mes "Olá Shinobi, sou o guia de nossa aldeia.";
+mes "Olï¿½ Shinobi, sou o guia de nossa aldeia.";
 next;
 mes "[^0000FFShinobi Guia^000000]";
 mes "Posso te levar aos principais pontos da vila.";
-mes "Para onde você gostaria de ir?";
-switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisão Bijuu")) {					
+mes "Para onde vocï¿½ gostaria de ir?";
+switch(select("- Academia:- Biblioteca:- Sala do Kage:- Viajante Ninja:- Loja de Equipamentos:- Prisï¿½o Bijuu")) {					
 	next;					
 	case 1:
 		mes "[^0000FFShinobi Guia^000000]";

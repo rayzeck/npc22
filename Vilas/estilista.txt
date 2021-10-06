@@ -20,10 +20,10 @@
 //= v1.0 - Split into two NPCs
 //============================================================ 
 
-konoha3,116,261,3	script	Estilista::estil	756,{
+konoha3,126,90,3	script	Estilista::estil	756,{
 	mes "[^FF0000Estilista^000000]";
 	mes "Bem-vind"+ (Sex?"o":"a") +" "+strcharinfo(0)+",";
-	mes "o que você gostaria de alterar?";
+	mes "o que vocï¿½ gostaria de alterar?";
 	next;
 	if(select("Estilo do Cabelo","Cor do Cabelo","Cancelar") == 3) {
 		close;
@@ -47,7 +47,7 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 		}
 	}
 	while(1) {
-		if(select("Próximo","Anterior","Digitar","Cancelar") == 4) {
+		if(select("Prï¿½ximo","Anterior","Digitar","Cancelar") == 4) {
 			close;
 		}
 		if(@menu == 1) {
@@ -68,7 +68,7 @@ konoha3,116,261,3	script	Estilista::estil	756,{
 			input .@num,.@cor[1],.@cor[2];
 			setlook .@cor[0],.@num;
 		}
-		mes "Número ^FF0000"+getlook(.@cor[0])+"^000000/"+.@cor[2];
+		mes "Nï¿½mero ^FF0000"+getlook(.@cor[0])+"^000000/"+.@cor[2];
 		specialeffect2 339;
 	}
 }

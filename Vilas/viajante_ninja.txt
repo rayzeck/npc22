@@ -1,23 +1,23 @@
-konoha3,220,81,5	script	Viajante Ninja::portos	706,{
+konoha3,161,92,5	script	Viajante Ninja::portos	706,{
 set @price,5000;
 mes "[^0000FFViajante Ninja^000000]";
 mes "Bem vindo(a) ao Viajante Ninja";
 next;
 mes "[^0000FFViajante Ninja^000000]";
-mes "Está querendo conhecer mais esse mundo cheio de perigos e shinobis poderosos?";
+mes "Estï¿½ querendo conhecer mais esse mundo cheio de perigos e shinobis poderosos?";
 next;
 mes "[^0000FFViajante Ninja^000000]";
 mes "Eu posso te levar!";
 next;
 mes "[^0000FFViajante Ninja^000000]";
 mes "Por favor escolha o seu destino!";
-menu "Arredores de Konoha",arrekonoha,"Arredores da Suna",arresuna,"Arredores da Névoa",arrenevoa,"Arredores da Nuvem",arrenuvem,"Cavernas Bijuu",cavernabijuu,"Guerra Ninja",guerraninja;
+menu "Arredores de Konoha",arrekonoha,"Arredores da Suna",arresuna,"Arredores da Nï¿½voa",arrenevoa,"Arredores da Nuvem",arrenuvem,"Cavernas Bijuu",cavernabijuu,"Guerra Ninja",guerraninja;
 
 arrekonoha:
 	next;
 	if (Zeny < @price) goto Sem_Zeny;
 	mes "[^0000FFViajante Ninja^000000]";	
-	mes "Para qual Nivel de Mapa você gostaria de ir?";		
+	mes "Para qual Nivel de Mapa vocï¿½ gostaria de ir?";		
 	switch(select("- Rank E:- Rank D:- Rank C") ) {			
 		case 1:				
 			set Zeny,Zeny-@price;				
@@ -42,7 +42,7 @@ arresuna:
 	next;	
 	if (Zeny < @price) goto Sem_Zeny;	
 	mes "[^0000FFViajante Ninja^000000]";	
-	mes "Para qual Nivel de Mapa você gostaria de ir?";		
+	mes "Para qual Nivel de Mapa vocï¿½ gostaria de ir?";		
 	switch(select("- Rank E:- Rank D:- Rank C") ) {	
 		case 1:				
 			set Zeny,Zeny-@price;				
@@ -67,7 +67,7 @@ arrenevoa:
 	next;
 	if (Zeny < @price) goto Sem_Zeny;	
 	mes "[^0000FFViajante Ninja^000000]";	
-	mes "Para qual Nivel de Mapa você gostaria de ir?";		
+	mes "Para qual Nivel de Mapa vocï¿½ gostaria de ir?";		
 	switch(select("- Rank E:- Rank D:- Rank C") ) {	
 		case 1:				
 			set Zeny,Zeny-@price;				
@@ -92,7 +92,7 @@ arrenuvem:
 	next;	
 	if (Zeny < @price) goto Sem_Zeny;	
 	mes "[^0000FFViajante Ninja^000000]";	
-	mes "Para qual Nivel de Mapa você gostaria de ir?";		
+	mes "Para qual Nivel de Mapa vocï¿½ gostaria de ir?";		
 	switch(select("- Rank E:- Rank D:- Rank C") ) {		
 	
 		case 1:				
@@ -118,7 +118,7 @@ cavernabijuu:
 	next;	
 	if (Zeny < @price) goto Sem_Zeny;	
 	mes "[^0000FFViajante Ninja^000000]";	
-	mes "Para qual Caverna Bijuu você gostaria de ir?";		
+	mes "Para qual Caverna Bijuu vocï¿½ gostaria de ir?";		
 	switch(select("- Ichibi:- Nibi:- Sanbi:- Yonbi:- Gobi:- Rokubi:- Shichibi:- Hachibi:- Kyuubi") ) {	
 	
 		case 1:				
@@ -178,7 +178,7 @@ cavernabijuu:
 
 guerraninja:
 	if(!getcharid(2)) {
-	mes "Você precisa estar dentro do clã da sua vila";
+	mes "Vocï¿½ precisa estar dentro do clï¿½ da sua vila";
 	close;
 }
 	set Zeny,Zeny-@price;				
@@ -190,7 +190,7 @@ guerraninja:
 Sem_Zeny:
 next;
 mes "[^0000FFViajante Ninja^000000]";
-mes "Você não tem zenys suficientes";
+mes "Vocï¿½ nï¿½o tem zenys suficientes";
 close;
 }
 

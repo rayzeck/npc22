@@ -1,10 +1,10 @@
-konoha3,100,231,5	script	Campo de Treinamento#1	843,{
+konoha3,161,184,5	script	Campo de Treinamento#1	843,{
 
 if(#konoha) {
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
-if(select("- Sim:- Não") == 2) close;
+if(select("- Sim:- Nï¿½o") == 2) close;
 close2;
 warp "treinamento",98,136; 
 end;
@@ -12,7 +12,7 @@ end;
 }
 
 mes "[Campo de Treinamento]";
-mes "Você não é membro dessa vila.";
+mes "Vocï¿½ nï¿½o ï¿½ membro dessa vila.";
 close;
 }
 
@@ -22,7 +22,7 @@ if(#suna) {
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
-if(select("- Sim:- Não") == 2) close;
+if(select("- Sim:- Nï¿½o") == 2) close;
 close2;
 warp "treinamento",98,136; 
 end;
@@ -30,7 +30,7 @@ end;
 }
 
 mes "[Campo de Treinamento]";
-mes "Você não é membro dessa vila.";
+mes "Vocï¿½ nï¿½o ï¿½ membro dessa vila.";
 close;
 }
 
@@ -40,7 +40,7 @@ if(#nevoa) {
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
-if(select("- Sim:- Não") == 2) close;
+if(select("- Sim:- Nï¿½o") == 2) close;
 close2;
 warp "treinamento",98,136; 
 end;
@@ -48,7 +48,7 @@ end;
 }
 
 mes "[Campo de Treinamento]";
-mes "Você não é membro dessa vila.";
+mes "Vocï¿½ nï¿½o ï¿½ membro dessa vila.";
 close;
 }
 
@@ -58,7 +58,7 @@ if(#nuvem) {
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
-if(select("- Sim:- Não") == 2) close;
+if(select("- Sim:- Nï¿½o") == 2) close;
 close2;
 warp "treinamento",98,136; 
 end;
@@ -66,14 +66,14 @@ end;
 }
 
 mes "[Campo de Treinamento]";
-mes "Você não é membro dessa vila.";
+mes "Vocï¿½ nï¿½o ï¿½ membro dessa vila.";
 close;
 }
 lou_in02,52,182,5	script	Campo de Treinamento#5	843,{
 
 mes "[Campo de Treinamento]";
 mes "Gostaria de ir para o Campo de Treinamento ?";
-if(select("- Sim:- Não") == 2) close;
+if(select("- Sim:- Nï¿½o") == 2) close;
 close2;
 warp "treinamento",98,136; 
 end;
