@@ -35,12 +35,12 @@ else {
     }
 }
 
-if (killerstreak == 2) {
+if (killerstreak > 2) {
 
     getitem 900,1;
      set killerstreak, killerstreak+1;
      dispbottom "Bingo Book Rank: "+killerstreak;
-     announce rid2name(killedrid)+" da lista Bingo Book foi morto por @name$!",0;	
+     announce rid2name(killedrid)+" da lista Bingo Book foi morto por ""+ strcharinfo(0) +"!",0;	
     
 }
 
