@@ -11,7 +11,6 @@ OnPCKillEvent:
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
 
-if (#nukenin == 1) { end; }
 if (#nevoa == 1) { end; }
 if (#suna) { end; }
 
@@ -21,7 +20,7 @@ if (#konoha == 1) {
 for(set .@i,0; .@i < $wantedlistlength && #nukenin == 1 && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
 if(.@i < $wantedlistlength && #nukenin == 1 && rid2name(killedrid)==$wantedlist$[.@i]) {
  //set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
- //getitem .rewarditem,.@price;  //ganho o premio se eu matar um renegado procurado que tem .killstreak de kill
+ //getitem .rewarditem,.@price;  //ganho o premio se eu matar um renegado procurado que tem o total .killstreak de kill
 
  dispbottom "Você matou um Renegado procurado!";
  for(set .@remove,.@i; .@remove < $wantedlistlength; set .@remove, .@remove+1) {
