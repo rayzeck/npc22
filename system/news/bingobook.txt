@@ -1,9 +1,9 @@
 
 -	script	Bounty	-1,{
 OnInit:
-set $wantedlistlength,10;	// comprimento de recompensa
+set $wantedlistlength,5;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 3; // matança antes de chegar à recompensa
+set .killstreak, 12; // matança antes de chegar à recompensa
 end;
 
 OnPCKillEvent:
@@ -34,6 +34,11 @@ else {
     }
 }
 
+if (killerstreak == 10) {
+
+    getitem 900,1;
+    
+}
 
 if(killerstreak > .killstreak) {
  for(set .@i, 0; .@i < $wantedlistlength && $wantedliststreak[.@i] > killerstreak; set .@i, .@i+1);
