@@ -4,7 +4,6 @@ OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
-set #killerstreak2 = #killerstreak/2;
 
 end;
 OnPCKillEvent:
@@ -73,12 +72,14 @@ close;
 }
 
 -	script	comandos	-1,{
+
+#killerstreak = #killerstreak / 2;
+
 OnInit:
 bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
 end;
 
 OnAtcommand:
    
-   dispbottom "Caro Guerreiro, participe de nossos eventos e ganhe Ticket Viking!";
-    dispbottom "Kill Streak: "+killerstreak2;
+    dispbottom "Kill Streak: "+killerstreak;
 }
