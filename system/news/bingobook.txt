@@ -74,6 +74,7 @@ close;
 
 -	script	comandos	-1,{
 
+killerstreak = killerstreak / 2;
 
 OnInit:
 bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
@@ -81,10 +82,6 @@ end;
 
 OnAtcommand:
 
-killerstreak = killerstreak / 2;
+    dispbottom "Kill Streak: "+killerstreak;
 
-    dispbottom "Kill Streak: "+killerstreak;
-    sleep 100;
-    clear;
-    dispbottom "Kill Streak: "+killerstreak;
 }
