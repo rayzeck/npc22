@@ -3,12 +3,12 @@
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 2; // matança antes de chegar à recompensa
+set .killstreak, 3; // matança antes de chegar à recompensa
 end;
+
 OnPCKillEvent:
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
-//if(.@map$ != "guild_vs5") end;
 
 if (#nukenin == 1) { end; }
 if (#nevoa == 1) { end; }
@@ -35,7 +35,7 @@ else {
 }
 
 
-if(killerstreak >= .killstreak) {
+if(killerstreak > .killstreak) {
  for(set .@i, 0; .@i < $wantedlistlength && $wantedliststreak[.@i] > killerstreak; set .@i, .@i+1);
 
   if(.@i < $wantedlistlength && killerstreak >= $wantedliststreak[.@i]) {
