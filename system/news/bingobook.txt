@@ -4,7 +4,7 @@ OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
-set killerstreak, killerstreak2*.desc/2
+set killerstreak, killerstreak2*.desc/2;
 end;
 OnPCKillEvent:
 if(#konoha == 1 && #suna == 1 && #nevoa == 1) { end; }
