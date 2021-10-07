@@ -741,7 +741,7 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 						next;
 						switch(select("- Drop:- Kill")){
 						case 1:
-							set .@missaoc, rand(12000,12015);
+							set .@missaoc, rand(12016,12021);							
 							if(getcharid(1)) {
 								mes "["+strnpcinfo(3)+"]";
 								mes "Lembre-se você está em grupo.";						
@@ -760,7 +760,7 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 							close;
 						break;
 						case 2:
-							set .@missaoc, rand(12016,12021);
+							set .@missaoc, rand(12000,12015);
 							if(getcharid(1)) {
 								mes "["+strnpcinfo(3)+"]";
 								mes "Lembre-se você está em grupo.";						
@@ -810,23 +810,46 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 					mes "Lembre-se você so pode fazer 10 Missão Rank B, caso sejá VIP poderá fazer 13 Missão Rank B. Gostaria de Fazer ?";
 				if(select("- Sim:- Não") == 2) { close; }
 					next;
-					set .@missaob, rand(13000,13020);
-					if(getcharid(1)) {
-						mes "["+strnpcinfo(3)+"]";
-						mes "Lembre-se você está em grupo.";
-						mes "Gostaria mesmo de pegar a missão ?";
-						if(select("- Não:- Sim") == 1) { close; }
-							close2;
-							setquestparty .@missaob; 
-					} else {
-							setquest .@missaob;
-							set MissaoBAtivada,1;
-							query_sql("UPDATE `char` SET `B_Dia` = `B_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+					switch(select("- Drop:- Kill")){
+						case 1:
+							set .@missaob, rand(13016,13020);							
+							if(getcharid(1)) {
+								mes "["+strnpcinfo(3)+"]";
+								mes "Lembre-se você está em grupo.";						
+								mes "Gostaria mesmo de pegar a missão ?";
+								if(select("- Não:- Sim") == 1) { close; }
+								close2;
+								setquestparty .@missaob;
+							} else {
+								setquest .@missaob;
+								set MissaoBAtivada,1;						
+								query_sql("UPDATE `char` SET `B_Dia` = `B_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+							}
+							next;
+							mes "["+strnpcinfo(3)+"]";
+							mes "Mais informações da missão aperte alt+U";
+							close;
+						break;
+						case 2:
+							set .@missaoc, rand(13000,13015);
+							if(getcharid(1)) {
+								mes "["+strnpcinfo(3)+"]";
+								mes "Lembre-se você está em grupo.";						
+								mes "Gostaria mesmo de pegar a missão ?";
+								if(select("- Não:- Sim") == 1) { close; }
+								close2;
+								setquestparty .@missaob;
+							} else {
+								setquest .@missaob;
+								set MissaoBAtivada,1;						
+								query_sql("UPDATE `char` SET `B_Dia` = `B_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+							}
+							next;
+							mes "["+strnpcinfo(3)+"]";
+							mes "Mais informações da missão aperte alt+U";
+						break;
 					}
-					next;
-					mes "["+strnpcinfo(3)+"]";
-					mes "Mais informações da missão aperte alt+U";
-					close;
+					
 			}
 			mes "Você precisa ser Nivel 500 e efetuar +"+(25-@c)+" Missões Rank C";
 			close;
