@@ -45,7 +45,7 @@ if(killerstreak >= .killstreak) {
   set $wantedlist$[.@x], $wantedlist$[.@x-1];
   set $wantedliststreak[.@x], $wantedliststreak[.@x-1];
  }
-announce strcharinfo(0)+" está agora no topo da lista Bingo Book "+(.@i+1)+"!",0;
+announce strcharinfo(0)+" está agora no Rank "+(.@i+1)+" do Bingo Book!",0;
 
 set $wantedlist$[.@i], strcharinfo(0);
 set $wantedliststreak[.@i], killerstreak;
