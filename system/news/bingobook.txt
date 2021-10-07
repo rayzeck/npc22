@@ -4,6 +4,7 @@ OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
+set killerstreak, killerstreak2*./2
 end;
 OnPCKillEvent:
 if(#konoha == 1 && #suna == 1 && #nevoa == 1) { end; }
@@ -68,4 +69,15 @@ for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
  mes .@no+".) "+$wantedlist$[.@i]+" Nukenin: "+$wantedliststreak[.@i];
 }
 close;
+}
+
+-    script    EventoComando    -1,{
+OnInit:
+bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
+end;
+
+OnAtcommand:
+   
+   dispbottom "Caro Guerreiro, participe de nossos eventos e ganhe Ticket Viking!";
+    dispbottom "Kill Streak: "+killerstreak2;
 }
