@@ -6,6 +6,7 @@ set .rewarditem, 900;	//reward item id
 set .killstreak, 10; // matança antes de chegar à recompensa
 end;
 OnPCKillEvent:
+if(#konoha == 1) { end; }
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
 
