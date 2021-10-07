@@ -60,7 +60,7 @@ if(killerstreak) {
 end;
 }
 
-prontera,156,180,4 script Bingo Book 100,{
+prontera,156,180,4  script  Bingo Book  100,{
 
 mes "Bingo Book";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
