@@ -3,7 +3,7 @@
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 1; // matança antes de chegar à recompensa
+set .killstreak, 2; // matança antes de chegar à recompensa
 end;
 OnPCKillEvent:
 getmapxy.@map$,.@x,.@y,0;
