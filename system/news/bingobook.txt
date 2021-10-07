@@ -52,7 +52,7 @@ set $wantedliststreak[.@i], killerstreak;
 }
 
 attachrid(killedrid);
-if(killerstreak) {
+if(killerstreak == 2) {
  set killerstreak, 0;
  dispbottom "Seu ranking do Bingo Book zerou por você ter morrido!";
 }
