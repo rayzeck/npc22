@@ -9,7 +9,7 @@ OnPCKillEvent:
     end();
   }
 
-  if(#konoha)
+  if(#konoha == 1)
   {
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
