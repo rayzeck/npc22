@@ -21,7 +21,8 @@ if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
   set $wantedliststreak[.@remove], $wantedliststreak[.@remove+1];  
  }		  
- announce rid2name(killedrid)+" foi removido da lista Bingo Book!",0;	
+// announce rid2name(killedrid)+" foi removido da lista Bingo Book!",0;
+
 }
 else {
  set killerstreak, killerstreak+1;
@@ -67,7 +68,7 @@ prontera,158,76,4	script	Chunin Shiken	882,{
 mes "Bingo Book";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
  set .@no, .@i+1;
- mes .@no+".) "+$wantedlist$[.@i]+" Nukenin: "+$wantedliststreak[.@i];
+ mes .@no+".) Nukenin: "+$wantedlist$[.@i]+"  "+$wantedliststreak[.@i];
 }
 close;
 }
