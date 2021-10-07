@@ -8,7 +8,7 @@ end;
 OnPCKillEvent:
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
-if(.@map$ != "guild_vs5") end;
+//if(.@map$ != "guild_vs5") end;
 
 for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
 if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
@@ -62,10 +62,21 @@ end;
 
 prontera,158,76,4	script	Chunin Shiken	882,{
 
-mes "Bingo Book";
+mes "[^4B0082 Wanted List ^000000]";
+mes "Announcement:";
+mes "This is the current Wanted List.";
+mes "Anyone who can kill any of these";
+mes "people will be reward with "+getitemname(50000)+"";
+next;
+mes "[^4B0082 Wanted List ^000000]";
+mes "Current Wanted List";
+mes "";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
  set .@no, .@i+1;
- mes .@no+".) "+$wantedlist$[.@i]+" Streak: "+$wantedliststreak[.@i];
+ mes .@no+".) "+$wantedlist$[.@i]+" Nukenin: "+$wantedliststreak[.@i];
 }
+next;
+mes "[^4B0082 Wanted List ^000000]";
+mes "Happy hunting.";
 close;
 }
