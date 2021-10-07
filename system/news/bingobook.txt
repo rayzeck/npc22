@@ -4,6 +4,7 @@ OnInit:
 set $wantedlistlength,5;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
+set @name$,strcharinfo(0);  //nome do player
 end;
 
 OnPCKillEvent:
@@ -39,7 +40,7 @@ if (killerstreak == 2) {
     getitem 900,1;
      set killerstreak, killerstreak+1;
      dispbottom "Bingo Book Rank: "+killerstreak;
-     announce rid2name(killedrid)+" da lista Bingo Book foi morto por strcharinfo(0)+"!",0;	
+     announce rid2name(killedrid)+" da lista Bingo Book foi morto por @name$!",0;	
     
 }
 
