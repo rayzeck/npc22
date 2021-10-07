@@ -10,6 +10,10 @@ getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
 //if(.@map$ != "guild_vs5") end;
 
+if (#nukenin == 1) { end; }
+if (#nevoa == 1) { end; }
+if (#suna) { end; }
+
 if (#konoha == 1) {
     
 
