@@ -9,6 +9,23 @@ set @name$,strcharinfo(0);  //nome do player
 end;
 
 OnPCKillEvent:
+
+ if(killerstreak)
+  {
+    killerstreak++;
+    end();
+  }
+
+  if(#konoha)
+  {
+    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
+    
+    if(.@pontosNukenin >= 1)
+      announce(sprintf("O sobrevivente %s acaba de matar o zumbi %s que possuía %d pontos!", strcharinfo(0), strcharinfo(0, .@killed_cid), .@pontosNukenin), 0);
+      announce "procurado do Bingo Book foi mooooorto por "+ strcharinfo(0) +"!",0;
+  }
+
+
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
 
@@ -67,22 +84,6 @@ if (killerstreak == 150) {
 
   
 
-  if(killerstreak)
-  {
-    killerstreak++;
-    end();
-  }
-
-  if(#konoha)
-  {
-    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
-    
-    if(.@pontosNukenin >= 1)
-      announce(sprintf("O sobrevivente %s acaba de matar o zumbi %s que possuía %d pontos!", strcharinfo(0), strcharinfo(0, .@killed_cid), .@pontosNukenin), 0);
-      announce rid2name(killedrid)+" procurado do Bingo Book foi mooooorto por "+ strcharinfo(0) +"!",0;
-  }
-
-  end();
 
 if(killerstreak > .killstreak) {
  for(set .@i, 0; .@i < $wantedlistlength && $wantedliststreak[.@i] > killerstreak; set .@i, .@i+1);
@@ -109,7 +110,7 @@ set $wantedliststreak[.@i], killerstreak;
 }
 
 attachrid(killedrid);
-if(killerstreak == 2) {
+if(killerstreak) {
  set killerstreak, 0;
  dispbottom "Seu ranking do Bingo Book zerou por você ter morrido!";
 }
