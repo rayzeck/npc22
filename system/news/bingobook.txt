@@ -1,6 +1,7 @@
 
 -	script	Bounty	-1,{
 OnInit:
+.@killed_cid = getcharid(0, rid2name(killedrid));
 set $wantedlistlength,5;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
@@ -63,6 +64,24 @@ if (killerstreak == 150) {
      announce rid2name(killedrid)+" procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
     
 }
+
+  
+
+  if(killerstreak)
+  {
+    killerstreak++;
+    end();
+  }
+
+  if(#konoha)
+  {
+    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
+    
+    if(.@pontosNukenin >= 10)
+      announce(sprintf("O sobrevivente %s acaba de matar o zumbi %s que possuía %d pontos!", strcharinfo(0), strcharinfo(0, .@killed_cid), .@pontosNukenin), 0);
+  }
+
+  end();
 
 if(killerstreak > .killstreak) {
  for(set .@i, 0; .@i < $wantedlistlength && $wantedliststreak[.@i] > killerstreak; set .@i, .@i+1);
