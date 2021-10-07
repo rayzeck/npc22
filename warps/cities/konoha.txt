@@ -1,10 +1,10 @@
 konoha3,240,251,0	script	treino#13	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar na biblioteca"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar na biblioteca"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1)
 
@@ -18,11 +18,11 @@ end;
 
 konoha3,280,164,4	script	VilaKonoha#01	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar na biblioteca"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar na biblioteca"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1)
 
@@ -40,11 +40,11 @@ end;
 
 konoha3,88,233,4	script	VilaKonoha#03	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar no hospital"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar no hospital"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1)
 
@@ -96,11 +96,11 @@ konoha3,112,176,0	warp	VilaKonoha#06	2,2,konoha3,120,169
 
 konoha3,148,220,4	script	VilaKonoha#07	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar no hospital"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar no hospital"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1) 
 
@@ -114,7 +114,7 @@ end;
 
 
 
-salakage,31,2,0	warp	VilaKonoha#08	2,2,konoha3,194,232
+salakage,31,2,0	warp	VilaKonoha#08	2,2,konoha3,148,127
 
 
 
@@ -122,11 +122,11 @@ salakage,31,2,0	warp	VilaKonoha#08	2,2,konoha3,194,232
 
 konoha3,302,225,4	script	VilaKonoha#09	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar no hospital"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar no hospital"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1) 
 
@@ -148,11 +148,11 @@ biju_pri1,18,15,0	warp	VilaKonoha#11	2,2,konoha3,302,222
 
 konoha3,188,92,4	script	VilaKonoha#12	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar no hospital"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar no hospital"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1) 
 
@@ -177,11 +177,11 @@ ama_in01,23,16,0	warp	VilaKonoha#13	2,2,konoha3,188,89
 
 konoha3,240,251,0	script	treino#13	45,1,1,{
 
-if (#konoha != 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
-if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar na biblioteca"; close;}
+if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar na biblioteca"; close;}
 
-if (nukenin == 1) {mes "Vocï¿½ nï¿½o ï¿½ dessa vila e foi bloqueado de entrar"; close;}
+if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1)
 
