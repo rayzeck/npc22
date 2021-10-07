@@ -84,4 +84,7 @@ OnAtcommand:
 killerstreak = killerstreak / 2;
 
     dispbottom "Kill Streak: "+killerstreak;
+    sleep 100;
+    clear;
+    dispbottom "Kill Streak: '+killerstreak;
 }
