@@ -831,7 +831,7 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 							close;
 						break;
 						case 2:
-							set .@missaoc, rand(13000,13015);
+							set .@missaob, rand(13000,13015);
 							if(getcharid(1)) {
 								mes "["+strnpcinfo(3)+"]";
 								mes "Lembre-se você está em grupo.";						
