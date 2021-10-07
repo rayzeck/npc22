@@ -3,7 +3,7 @@
 OnInit:
 set $wantedlistlength,5;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 12; // matança antes de chegar à recompensa
+set .killstreak, 0; // matança antes de chegar à recompensa
 end;
 
 OnPCKillEvent:
@@ -19,8 +19,8 @@ if (#konoha == 1) {
 
 for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
 if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
- set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
- getitem .rewarditem,.@price;  
+ //set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
+ //getitem .rewarditem,.@price;  //ganho o premio se eu matar um renegado procurado que tem .killstreak de kill
  dispbottom "Você matou um Renegado procurado!";
  for(set .@remove,.@i; .@remove < $wantedlistlength; set .@remove, .@remove+1) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
@@ -34,9 +34,12 @@ else {
     }
 }
 
-if (killerstreak == 10) {
+if (killerstreak == 2) {
 
     getitem 900,1;
+     set killerstreak, killerstreak+1;
+     dispbottom "Bingo Book Rank: "+killerstreak;
+     announce rid2name(killedrid)+" da lista Bingo Book foi morto por strcharinfo(0)+"!",0;	
     
 }
 
