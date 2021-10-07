@@ -4,7 +4,7 @@ OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
-set killerstreak = killerstreak / 2;
+killerstreak = killerstreak / 2;
 
 end;
 OnPCKillEvent:
@@ -80,5 +80,5 @@ end;
 
 OnAtcommand:
    
-    dispbottom "Kill Streak: "+killerstreak2;
+    dispbottom "Kill Streak: "+killerstreak;
 }
