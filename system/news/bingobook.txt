@@ -68,7 +68,7 @@ prontera,158,76,4	script	Chunin Shiken	882,{
 mes "Bingo Book";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
  set .@no, .@i+1;
- mes .@no+".) Nukenin: "+$wantedlist$[.@i]+"  ^FF0000 "+$wantedliststreak[.@i]^000000;
+ mes .@no+".) Nukenin: "+$wantedlist$[.@i]+"  ^FF0000 "+$wantedliststreak[.@i]^000000";
 }
 close;
 }
