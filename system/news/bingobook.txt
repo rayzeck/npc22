@@ -18,16 +18,18 @@ if (#suna) { end; }
 if (#konoha == 1) {
     
 
-for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
-if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
+for(set .@i,0; .@i < $wantedlistlength && #nukenin == 1 && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
+if(.@i < $wantedlistlength && #nukenin == 1 && rid2name(killedrid)==$wantedlist$[.@i]) {
  //set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
  //getitem .rewarditem,.@price;  //ganho o premio se eu matar um renegado procurado que tem .killstreak de kill
+
  dispbottom "Você matou um Renegado procurado!";
  for(set .@remove,.@i; .@remove < $wantedlistlength; set .@remove, .@remove+1) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
   set $wantedliststreak[.@remove], $wantedliststreak[.@remove+1];  
  }		  
  announce rid2name(killedrid)+" foi removido da lista Bingo Book!",0;
+ attachrid(killedrid);
  set killerstreak, 0; // seta os pontos de kill no ranking pra zero	
 }
 else {
