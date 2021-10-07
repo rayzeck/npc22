@@ -895,7 +895,7 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 							} else {
 								setquest .@missaoa;
 								set MissaoAAtivada,1;						
-								query_sql("UPDATE `char` SET `B_Dia` = `B_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+								query_sql("UPDATE `char` SET `A_Dia` = `A_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
 							}
 							next;
 							mes "["+strnpcinfo(3)+"]";
@@ -914,7 +914,7 @@ akatsuki,154,199,3	script	Akatsuki	1_m_wizard,{
 							} else {
 								setquest .@missaoa;
 								set MissaoAAtivada,1;						
-								query_sql("UPDATE `char` SET `B_Dia` = `B_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
+								query_sql("UPDATE `char` SET `A_Dia` = `A_Dia` + 1 WHERE `char_id` = '"+getcharid(0)+"' ");
 							}
 							next;
 							mes "["+strnpcinfo(3)+"]";
