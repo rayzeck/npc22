@@ -27,7 +27,8 @@ if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
   set $wantedliststreak[.@remove], $wantedliststreak[.@remove+1];  
  }		  
- announce rid2name(killedrid)+" foi removido da lista Bingo Book!",0;	
+ announce rid2name(killedrid)+" foi removido da lista Bingo Book!",0;
+ set killerstreak, 0; // seta os pontos de kill no ranking pra zero	
 }
 else {
  set killerstreak, killerstreak+1;
@@ -35,12 +36,30 @@ else {
     }
 }
 
-if (killerstreak > 2) {
+if (killerstreak == 50) {
 
     getitem 900,1;
      set killerstreak, killerstreak+1;
      dispbottom "Bingo Book Rank: "+killerstreak;
-     announce rid2name(killedrid)+" da lista Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
+     announce rid2name(killedrid)+" procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
+    
+}
+
+if (killerstreak == 100) {
+
+    getitem 900,1;
+     set killerstreak, killerstreak+1;
+     dispbottom "Bingo Book Rank: "+killerstreak;
+     announce rid2name(killedrid)+" procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
+    
+}
+
+if (killerstreak == 150) {
+
+    getitem 900,1;
+     set killerstreak, killerstreak+1;
+     dispbottom "Bingo Book Rank: "+killerstreak;
+     announce rid2name(killedrid)+" procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
     
 }
 
@@ -60,7 +79,7 @@ if(killerstreak > .killstreak) {
   set $wantedlist$[.@x], $wantedlist$[.@x-1];
   set $wantedliststreak[.@x], $wantedliststreak[.@x-1];
  }
-announce strcharinfo(0)+" está agora no topo da lista Bingo Book "+(.@i+1)+"!",0;
+//announce strcharinfo(0)+" está agora no topo da lista Bingo Book "+(.@i+1)+"!",0;
 
 set $wantedlist$[.@i], strcharinfo(0);
 set $wantedliststreak[.@i], killerstreak;
