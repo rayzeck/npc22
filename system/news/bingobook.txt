@@ -1,9 +1,9 @@
 
 -	script	Bounty	-1,{
 OnInit:
-set $wantedlistlength,10;	// comprimento de recompensa
+set $wantedlistlength,100;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 10; // matança antes de chegar à recompensa
+set .killstreak, 1; // matança antes de chegar à recompensa
 end;
 OnPCKillEvent:
 getmapxy.@map$,.@x,.@y,0;
@@ -14,7 +14,7 @@ for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]
 if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
  set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
  getitem .rewarditem,.@price;  
- dispbottom "Você matou um Nukenin procurado!";
+ dispbottom "Você matou um Renegado procurado!";
  for(set .@remove,.@i; .@remove < $wantedlistlength; set .@remove, .@remove+1) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
   set $wantedliststreak[.@remove], $wantedliststreak[.@remove+1];  
@@ -23,7 +23,7 @@ if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
 }
 else {
  set killerstreak, killerstreak+1;
- dispbottom "Kill Streak: "+killerstreak;
+ dispbottom "Bingo Book Rank: "+killerstreak;
 }
 
 
@@ -52,9 +52,9 @@ set $wantedliststreak[.@i], killerstreak;
 }
 
 attachrid(killedrid);
-if(killerstreak) {
+if(killerstreak == 5) {
  set killerstreak, 0;
- dispbottom "Sua seqüência foi zerada porque você morreu!";
+ dispbottom "Seu ranking do Bingo Book zerou por você ter morrido!";
 }
 
 end;
@@ -62,21 +62,16 @@ end;
 
 prontera,158,76,4	script	Chunin Shiken	882,{
 
-mes "[^4B0082 Wanted List ^000000]";
-mes "Announcement:";
-mes "This is the current Wanted List.";
-mes "Anyone who can kill any of these";
-mes "people will be reward with "+getitemname(50000)+"";
-next;
-mes "[^4B0082 Wanted List ^000000]";
-mes "Current Wanted List";
+mes "[^4B0082 Bingo Book ^000000]";
+
+mes "Lista de procurados:";
 mes "";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
  set .@no, .@i+1;
  mes .@no+".) "+$wantedlist$[.@i]+" Nukenin: "+$wantedliststreak[.@i];
 }
 next;
-mes "[^4B0082 Wanted List ^000000]";
-mes "Happy hunting.";
+mes "[^4B0082 Bingo Book^000000]";
+mes "Boa sorte!";
 close;
 }
