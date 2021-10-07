@@ -38,7 +38,7 @@ else {
     }
 }
 
-if (killerstreak == 5) {
+/*if (killerstreak == 5) {
 
     getitem 900,1;
      set killerstreak, killerstreak+1;
@@ -63,7 +63,7 @@ if (killerstreak == 150) {
      dispbottom "Bingo Book Rank: "+killerstreak;
      announce rid2name(killedrid)+" procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;	
     
-}
+}*/
 
   
 
