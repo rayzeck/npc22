@@ -14,11 +14,11 @@ if(getcharid(3)==killedrid) end;
 if (#nevoa == 1) { end; }
 if (#suna) { end; }
 
-if (#konoha == 1) {
+if (#nukenin == 1) {
     
 
-for(set .@i,0; .@i < $wantedlistlength && #nukenin == 0 && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
-if(.@i < $wantedlistlength && #nukenin == 0 && rid2name(killedrid)==$wantedlist$[.@i]) {
+for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
+if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
  //set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
  //getitem .rewarditem,.@price;  //ganho o premio se eu matar um renegado procurado que tem o total .killstreak de kill
 
