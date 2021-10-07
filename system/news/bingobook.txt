@@ -1,5 +1,5 @@
 
--   script  Bounty   -1,{
+-	script	Bounty	-1,{
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
