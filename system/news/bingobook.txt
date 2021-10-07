@@ -3,7 +3,7 @@
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 10; // matança antes de chegar à recompensa
+set .killstreak, 0; // matança antes de chegar à recompensa
 end;
 OnPCKillEvent:
 if(#konoha == 1) { end; }
@@ -12,8 +12,8 @@ if(getcharid(3)==killedrid) end;
 
 for(set .@i,0; .@i < $wantedlistlength && rid2name(killedrid)!=$wantedlist$[.@i]; set .@i, .@i+1);
 if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
- set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
- getitem .rewarditem,.@price;  
+ //set .@price , 10 - (.@i);   // quantidade de recompensa (não sei o cálculo, desculpe)
+ //getitem .rewarditem,.@price;  
  dispbottom "Você matou um Nukenin procurado!";
  for(set .@remove,.@i; .@remove < $wantedlistlength; set .@remove, .@remove+1) {
   set $wantedlist$[.@remove], $wantedlist$[.@remove+1];  
