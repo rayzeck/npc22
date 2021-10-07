@@ -71,7 +71,7 @@ for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
 close;
 }
 
--    script    EventoComando    -1,{
+-	script	comandos	-1,{
 OnInit:
 bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
 end;
