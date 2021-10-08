@@ -86,7 +86,7 @@ end;
 
 OnAtcommand:
 dispbottom "     Bingo Book:";
-if(killerstreak >= 1) {
+if(killerstreak >= 0) {
 dispbottom "Posição no Livro Bingo: "+killerstreak;
 }
 if(vilamatanuke >= 0) {
