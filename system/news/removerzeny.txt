@@ -1,6 +1,8 @@
 -	script	Bingo_book_dois	-1,{
 
-	attachrid(killedrid);
+OnPCDieEvent:
+
+attachrid(killedrid);
 if(killerstreak >= 1) {
  killerstreak = killerstreak / 2;
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
