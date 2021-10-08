@@ -2,15 +2,14 @@
 
 OnPCKillEvent:
 
-if (#konoha ==1) {
-	
+
 attachrid(killedrid);
-if(killerstreak >= 1) {
+if(killerstreak) {
  killerstreak = killerstreak / 2;
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
 }
+
 end;
-}
 }
 
 prontera,166,192,3	script	Battle	75,{
