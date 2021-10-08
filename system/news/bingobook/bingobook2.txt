@@ -8,6 +8,7 @@ OnPCKillEvent:
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
     if(.@pontosNukenin >= 1)
+      set vilamatanuke, vilamatanuke+1; 
       announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
   }
 
