@@ -7,7 +7,7 @@ OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
 set .killstreak, 0; // matança antes de chegar à recompensa
-
+.@killed_cid = getcharid(0, rid2name(killedrid));
 
 end;
 OnPCKillEvent:
@@ -62,8 +62,8 @@ if(killerstreak) {
  killerstreak = killerstreak / 2;
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
 }*/
-
-  .@killed_cid = getcharid(0, rid2name(killedrid));
+end;
+}
 
   if(#konoha == 1)
   {
@@ -75,11 +75,6 @@ if(killerstreak) {
 
   end();
 }
-
-end;
-}
-
-
 
 prontera,158,76,4	script	Chunin Shiken	882,{
 
