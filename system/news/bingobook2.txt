@@ -1,16 +1,21 @@
 -	script	bingobook_reconhecervila	-1,{
 
-
 OnPCKillEvent:
-.@killed_cid = getcharid(0, rid2name(killedrid));
+  .@killed_cid = getcharid(0, rid2name(killedrid));
 
-  if(#konoha == 1 && #suna == 1 && #nevoa == 1)
+  if(#konoha)
+  {
+    dispbottom "nada";
+    end();
+  }
+
+  if(#konoha)
   {
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
-    if(.@pontosNukenin >= 1)
-	
+    if(.@pontosNukenin >= 10)
       announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
   }
-end();
+
+  end();
 }
