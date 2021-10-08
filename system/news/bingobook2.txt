@@ -13,16 +13,4 @@ OnPCKillEvent:
       announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
   }
 end();
-
--	script	Bingo_book_remover	-1,{
-
-OnPCKillEvent:
-
-
-attachrid(killedrid);
-if(killerstreak) {
- killerstreak = killerstreak / 2;
- dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
-}
-end;
 }
