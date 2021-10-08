@@ -89,8 +89,5 @@ dispbottom "Bingo Book:"
 if(killerstreak >= 1) {
 dispbottom "Posição no Rank: "+killerstreak;
 }
-if(vilamatanuke >= 1 {
-dispbottom "Capturou [ "+vilamatanuke+" ] Nukenins";
-}
 end;
 }
