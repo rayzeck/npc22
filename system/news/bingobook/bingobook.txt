@@ -6,7 +6,7 @@ if(#konoha == 1) { end; }
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
-set .killstreak, 0; // matança antes de chegar à recompensa
+set .killstreak, 1; // matança antes de chegar à recompensa
 
 
 end;
@@ -29,7 +29,7 @@ if(.@i < $wantedlistlength && rid2name(killedrid)==$wantedlist$[.@i]) {
 }
 else {
  set killerstreak, killerstreak+1;
- dispbottom "Kill Streak: "+killerstreak;
+ dispbottom "Bingo Book: "+killerstreak;
 }
 
 
@@ -66,7 +66,7 @@ if(killerstreak) {
 end;
 }
 
-prontera,158,76,4	script	Chunin Shiken	882,{
+prontera,158,76,4	script	Bingo Book	882,{
 
 mes "Bingo Book";
 for (set .@i,0; .@i < $wantedlistlength; set .@i, .@i+1) {
@@ -81,10 +81,10 @@ close;
 
 
 OnInit:
-bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
+bindatcmd "bingobook",strnpcinfo(3)+"::OnAtcommand";
 end;
 
 OnAtcommand:
-dispbottom "Kill Streak: "+killerstreak;
+dispbottom "Bingo Book: "+killerstreak;
 
 }
