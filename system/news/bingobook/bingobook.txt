@@ -85,7 +85,7 @@ bindatcmd "bingobook",strnpcinfo(3)+"::OnAtcommand";
 end;
 
 OnAtcommand:
-dispbottom "Bingo Book:";
+dispbottom "     Bingo Book:";
 if(killerstreak >= 1) {
 dispbottom "Posição no Livro Bingo: "+killerstreak;
 }
