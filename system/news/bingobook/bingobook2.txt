@@ -3,13 +3,7 @@
 OnPCKillEvent:
   .@killed_cid = getcharid(0, rid2name(killedrid));
 
-  if(#konoha)
-  {
-    dispbottom "nada";
-    end();
-  }
-
-  if(#konoha)
+   if(#konoha)
   {
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
