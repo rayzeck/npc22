@@ -1,0 +1,24 @@
+-	script	bingobook	-1,{
+
+
+OnPCKillEvent:
+.@killed_cid = getcharid(0, rid2name(killedrid));
+
+  if(#konoha == 1 && #suna == 1 && #nevoa == 1)
+  {
+    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
+    
+    if(.@pontosNukenin >= 1)
+	
+      announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
+  }
+end();
+
+attachrid(killedrid);
+if(killerstreak) {
+ killerstreak = killerstreak / 2;
+ dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
+}
+
+}
+
