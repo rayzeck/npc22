@@ -85,6 +85,8 @@ bindatcmd "bingobook",strnpcinfo(3)+"::OnAtcommand";
 end;
 
 OnAtcommand:
-dispbottom "Bingo Book: "+killerstreak;
+dispbottom "Bingo Book:"
+dispbottom "Posição no Rank: "+killerstreak;
+dispbottom "Capturou [ "+vilamatanuke" ] Nukenins";
 
 }
