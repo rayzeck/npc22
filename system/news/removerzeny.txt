@@ -2,6 +2,8 @@
 
 OnPCKillEvent:
 
+if (#konoha ==1) {
+	
 attachrid(killedrid);
 if(killerstreak >= 1) {
  killerstreak = killerstreak / 2;
