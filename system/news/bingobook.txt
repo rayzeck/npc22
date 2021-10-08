@@ -56,12 +56,12 @@ set $wantedliststreak[.@i], killerstreak;
 
   }
 }
-
+/*
 attachrid(killedrid);
 if(killerstreak) {
  killerstreak = killerstreak / 2;
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
-}
+}*/
 
 end;
 }

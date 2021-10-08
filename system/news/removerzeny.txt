@@ -1,6 +1,6 @@
 -	script	Bingo_book_dois	-1,{
 
-OnPCDieEvent:
+OnPCKillEvent:
 
 attachrid(killedrid);
 if(killerstreak >= 1) {
