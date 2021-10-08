@@ -135,9 +135,3 @@ function	script	remover_zeny	{
 	
 	end;
 }
-
-/*-	script	testestore	-1,{
-
-OnPCLoginEvent:
-	if (title$ == "Rank S") {announce "[Ranking] "+strcharinfo(0)+" Everyone Praise him",#008000|bc_all; close; }
-}*/
