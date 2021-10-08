@@ -65,8 +65,7 @@ if(killerstreak) {
 end;
 }
 
-  if(#konoha == 1)
-  {
+  if(#konoha == 1)  {
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
     if(.@pontosNukenin >= 1)
