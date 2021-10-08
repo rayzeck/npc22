@@ -56,8 +56,8 @@ set $wantedliststreak[.@i], killerstreak;
 
 attachrid(killedrid);
 if(killerstreak) {
- set killerstreak, 0;
- dispbottom "Sua seqüência foi zerada porque você morreu!";
+ killerstreak = killerstreak / 2;
+ dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
 }
 
 end;
@@ -75,14 +75,13 @@ close;
 
 -	script	comandos	-1,{
 
-killerstreak = killerstreak / 2;
+
 
 OnInit:
 bindatcmd "evento",strnpcinfo(3)+"::OnAtcommand";
 end;
 
 OnAtcommand:
-
-    dispbottom "Kill Streak: "+killerstreak;
+dispbottom "Kill Streak: "+killerstreak;
 
 }
