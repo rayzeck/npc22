@@ -63,8 +63,23 @@ if(killerstreak) {
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
 }*/
 
+  .@killed_cid = getcharid(0, rid2name(killedrid));
+
+  if(#konoha == 1)
+  {
+    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
+    
+    if(.@pontosNukenin >= 1)
+      announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
+  }
+
+  end();
+}
+
 end;
 }
+
+
 
 prontera,158,76,4	script	Chunin Shiken	882,{
 
