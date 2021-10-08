@@ -1,4 +1,4 @@
--	script	bingobook	-1,{
+-	script	bingobook_reconhecervila	-1,{
 
 
 OnPCKillEvent:
@@ -15,3 +15,16 @@ OnPCKillEvent:
 end();
 }
 
+-	script	Bingo_book_remover	-1,{
+
+OnPCKillEvent:
+
+
+attachrid(killedrid);
+if(killerstreak) {
+ killerstreak = killerstreak / 2;
+ dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
+}
+
+end;
+}

@@ -1,17 +1,3 @@
--	script	Bingo_book_dois	-1,{
-
-OnPCKillEvent:
-
-
-attachrid(killedrid);
-if(killerstreak) {
- killerstreak = killerstreak / 2;
- dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
-}
-
-end;
-}
-
 prontera,166,192,3	script	Battle	75,{
 		warp "quiz_01",329,224;
 		callsub OnEventStart;
