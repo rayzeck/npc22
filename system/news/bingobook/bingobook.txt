@@ -87,10 +87,10 @@ end;
 OnAtcommand:
 dispbottom "Bingo Book:";
 if(killerstreak >= 1) {
-dispbottom "Posição no Rank: "+killerstreak;
+dispbottom "Posição: "+killerstreak;
 }
 if(vilamatanuke >= 0) {
-dispbottom "Posição no Rank: "+vilamatanuke;
+dispbottom "Capturados: "+vilamatanuke;
 }
 end;
 }
