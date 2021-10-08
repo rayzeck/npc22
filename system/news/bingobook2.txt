@@ -15,10 +15,10 @@ OnPCKillEvent:
 end();
 
 attachrid(killedrid);
-if(killerstreak) {
+if(killerstreak >= 1) {
  killerstreak = killerstreak / 2;
  dispbottom "Sua seqüência foi reduzida na metade porque você morreu!";
 }
-
+end;
 }
 
