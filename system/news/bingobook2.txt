@@ -13,7 +13,6 @@ OnPCKillEvent:
       announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
   }
 end();
-}
 
 -	script	Bingo_book_remover	-1,{
 
