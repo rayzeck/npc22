@@ -1,20 +1,3 @@
--	script	bingobook	-1,{
-
-
-OnPCKillEvent:
-.@killed_cid = getcharid(0, rid2name(killedrid));
-
-  if(#konoha == 1)
-  {
-    .@pontosNukenin = getvar(killerstreak, .@killed_cid);
-    
-    if(.@pontosNukenin >= 1)
-      //announce(sprintf("O sobrevivente %s acaba de matar o zumbi %s que possuía %d pontos!", strcharinfo(0), strcharinfo(0, .@killed_cid), .@pontosNukenin), 0);
-      announce rid2name(killedrid)+ " procurado com do Bingo Book foi mooooorto por "+ strcharinfo(0) +"!",0;
-  }
-end();
-}
-
 prontera,166,192,3	script	Battle	75,{
 		warp "quiz_01",329,224;
 		callsub OnEventStart;
