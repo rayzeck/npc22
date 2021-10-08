@@ -1,7 +1,8 @@
 
 -	script	Bounty	-1,{
 
-if(#konoha == 1 && #suna == 1 && #nevoa == 1) { end; }    
+if(#konoha == 1) { end; }    
+
 OnInit:
 set $wantedlistlength,10;	// comprimento de recompensa
 set .rewarditem, 900;	//reward item id
@@ -10,7 +11,7 @@ set .killstreak, 0; // matança antes de chegar à recompensa
 
 end;
 OnPCKillEvent:
-if(#konoha == 1 && #suna == 1 && #nevoa == 1) { end; }
+if(#konoha == 1) { end; } 
 getmapxy.@map$,.@x,.@y,0;
 if(getcharid(3)==killedrid) end;
 
