@@ -5,17 +5,9 @@ OnPCKillEvent:
 
   if(#konoha)
   {
-    dispbottom "nada";
-    end();
-  }
-
-  if(#konoha == 1)
-  {
     .@pontosNukenin = getvar(killerstreak, .@killed_cid);
     
     if(.@pontosNukenin >= 1)
       announce rid2name(killedrid)+ " procurado do Bingo Book foi morto por "+ strcharinfo(0) +"!",0;
+    end();
   }
-
-  end();
-}
