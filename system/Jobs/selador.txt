@@ -30,6 +30,14 @@ prontera,151,121,6	script	Selador	805,{
 }
 
 prontera,155,121,6	script	Altar de Selamento	651,{
+	cutin "selo_00",4; sleep 2000;
+	cutin "selo_01",4; sleep 2000;
+	cutin "selo_02",4; sleep 2000;
+	cutin "selo_03",4; sleep 2000;
+	cutin "selo_04",4; sleep 2000;
+	cutin "selo_05",4; sleep 2000;
+	cutin "selo_06",4; sleep 2000;
+	cutin "selo_07",4; sleep 2000;
 	.@sql = query_sql("SELECT `char_job`,`level_job` FROM `ninja_info` WHERE `char_id` = '"+getcharid(0)+"'",.@jobName$,.@jobLvl);
 	if(.@jobName$=="selador"){
 		set .@menu$, "Selo de Ataque E :Selo de Agilidade E";
