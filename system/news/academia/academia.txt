@@ -5364,13 +5364,13 @@ academia4,118,309,7	script	Professor#3	65,{
 		cutin "sensei03",2;
         npctalk "Olá " + strcharinfo(0) + ", vejo que você completou os treinamentos básicos e está pronto para meu exame final.", "", bc_self;
         sleep2 5500;
-        npctalk "não vamos perder tempo então, creio que já estudou tudo que precisa, vamos à primeira pergunta!", "", bc_self;
+        npctalk "não vamos perder tempo, creio que já estudou tudo que precisa, vamos à primeira pergunta!", "", bc_self;
         sleep2 4900;
 		npctalk "O anime foi criado por quem?", "", bc_self;
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
 		
 		L_certo:
-        sleep2 500;
+        sleep2 400;
 		cutin "sensei03",2;		
 		npctalk "Muito bem! Vamos à segunda pergunta:", "", bc_self;
 		sleep2 4500;
@@ -5379,7 +5379,7 @@ academia4,118,309,7	script	Professor#3	65,{
 		menu "Byakugan",L_certo1,"Tenketsu",L_errado,"Pontos de Chakra",L_errado,"Rinnegan",L_errado;
 		
 		L_certo1:
-        sleep2 500;
+        sleep2 400;
 		cutin "sensei03",2;
 		npctalk "Correto, terceira pergunta:", "", bc_self;
         sleep2 3500;
@@ -5389,7 +5389,7 @@ academia4,118,309,7	script	Professor#3	65,{
 		menu "4",L_errado,"2",L_errado,"3",L_errado,"5",L_certo2;
 		
 		L_certo2:
-        sleep2 500;
+        sleep2 400;
 		cutin "sensei03",2;
 		npctalk "Boa, quinta pergunta:", "", bc_self;
         sleep2 3500;
@@ -5399,7 +5399,7 @@ academia4,118,309,7	script	Professor#3	65,{
 		menu "200",L_errado,"999",L_certo3,"600",L_errado,"499",L_errado;
 		
 		L_certo3:
-		sleep2 500;
+		sleep2 400;
 		cutin "sensei03",2;
 		npctalk "Estudou bastante mesmo hein? Estamos quase no final, se concentra agora!", "", bc_self;
         sleep2 3500;
@@ -5408,7 +5408,7 @@ academia4,118,309,7	script	Professor#3	65,{
 		menu "6",L_errado,"9",L_certo4,"2",L_errado,"4",L_errado;
 		
 		L_certo4:
-        sleep2 500;
+        sleep2 400;
 		cutin "sensei03",2;
 		npctalk "Última pergunta agora, vamos lá!";
         sleep2 3500;
@@ -5422,11 +5422,11 @@ academia4,118,309,7	script	Professor#3	65,{
 		set quest_basic_inicio,5;
         sleep2 500;
 		npctalk "Parabéns jovem prodígio, você realmente me impressionou e está apto agora a se juntar a esse mundo caótico dos shinobis, tome cuidado.", "", bc_self;
-        sleep2 4500;
+        sleep2 4600;
 		npctalk "Busque mais poder, se torne um Chunin, Jounin e busque seus objetivos, não importa quais sejam, não desista!", "", bc_self;
         sleep2 4500;
 		npctalk "E lembre-se, caso precise de refrescar seus conhecimentos, a academia é aberta a todos os shinobis do mundo, vá agora, e mostre seu jeito ninja!", "", bc_self;
-        sleep2 4500;
+        sleep2 5000;
 		npctalk "Volte no Aruotuora Azumi na recepção.", "", bc_self;
         sleep2 500;
 		cutin "",255;
