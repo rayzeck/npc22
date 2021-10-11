@@ -5362,7 +5362,7 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
 
 	if(quest_basic_inicio == 4) {
 		cutin "sensei03",2;
-        npctalk "You are the person that " + $@name2$ + " just mentioned.";
+        npctalk "You are the person that " + strcharinfo(0); + " just mentioned.";
         sleep2 9000;
 		npctalk "Pergunta: O anime foi criado por quem? "+strcharinfo(0);
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
