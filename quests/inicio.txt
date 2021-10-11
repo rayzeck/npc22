@@ -1,4 +1,4 @@
-prt_in,89,72,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
+academia4,231,363,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 
 	if(quest_basic_inicio == 6) { 
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
