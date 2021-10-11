@@ -5370,7 +5370,7 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
 		
 		L_certo:
-        sleep2 3000;
+        sleep2 1000;
 		cutin "sensei03",2;		
 		npctalk "Muito bem! Vamos a segunda pergunta:";
 		sleep2 4500;
@@ -5379,13 +5379,12 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
 		menu "Byakugan",L_certo1,"Tenketsu",L_errado,"Pontos de Chakra",L_errado,"Rinnegan",L_errado;
 		
 		L_certo1:
+        sleep2 1000;
 		cutin "sensei03",2;
-		next;
-		mes "[^DC143CExame Escrito^000000]";
-		mes "Correto, terceira pergunta:";
-		next;
-		mes "[^DC143CExame Escrito^000000]";
-		mes "Pergunta: Quantos níveis uma Kekkei Genkai (linhagem sanguinea) pode possuir?";
+		npctalk "Correto, terceira pergunta:";
+        sleep2 3500;
+		npctalk "Pergunta: Quantos níveis uma Kekkei Genkai (linhagem sanguinea) pode possuir?";
+        sleep2 1000;
 		cutin "",255;
 		menu "4",L_errado,"2",L_errado,"3",L_errado,"5",L_certo2;
 		
