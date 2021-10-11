@@ -147,7 +147,7 @@ biju_pri1,18,15,0	warp	VilaKonoha#11	2,2,konoha3,302,222
 
 
 konoha3,188,92,4	script	VilaKonoha#12	45,1,1,{
-
+goto vilakonoha;
 if (#konoha != 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1) || (countitem(30085) >= 1) {mes "Você não é dessa vila e foi bloqueado de entrar no hospital"; close;}
@@ -155,7 +155,7 @@ if (countitem(30082) >= 1) || (countitem(30083) >= 1) || (countitem(30084) >= 1)
 if (nukenin == 1) {mes "Você não é dessa vila e foi bloqueado de entrar"; close;}
 
 if (#konoha == 1) 
-
+bindatcmd("testes", strnpcinfo(3)+"::vilakonoha");
 warp "ama_in01", 23,19;
 
 end;

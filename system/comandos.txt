@@ -1,6 +1,60 @@
+-    script    command#provar    -1,{
+
+OnInit:
+    bindatcmd("provar",strnpcinfo(0)+"::OnCommandProvar");
+    end;
+
+OnCommandProvar:
+    set @bottomview, getlook(3);
+    set @topview, getlook(4);
+    set @midview, getlook(5);
+    set @robeview, getlook(12);
+
+     set .@item_id, atoi(.@atcmd_parameters$[0]);
+
+    switch(.@item_id){
+        case 420010: // Aura da Escuridão - 12.000 Cash
+        case 20257: // Capuz com Orelhas de Coelho
+        case 19746: // Capuz do Coração Gelado
+        case 31709: // Violeta Dourada Visual - 12.000 Cash
+            dispbottom "Testando o Visual: " + getitemname(.@item_id) + " por 60 Segundos.";
+            set @equip, getiteminfo(.@item_id, 5);
+            set @view, getiteminfo(.@item_id, 11);
+
+            switch(@equip){
+                case 1024:
+                    atcommand "@changelook 1 " + @view;
+                    sleep2 60000;
+                    atcommand "@changelook 1 " + @topview;
+                    break;
+                case 2048:
+                    atcommand "@changelook 2 " + @view;
+                        sleep2 60000;
+                    atcommand "@changelook 2 " + @midview;
+                    break;
+                case 4096:
+                    atcommand "@changelook 3 " + @view;
+                    sleep2 60000;
+                    atcommand "@changelook 3 " + @bottomview;
+                    break;
+                case 8192:
+                    atcommand "@changelook 7 " + @view;
+                    sleep2 60000;
+                    atcommand "@changelook 7 " + @robeview;
+                    break;
+            }
+            break;
+        default:
+            dispbottom "Isse ID não está correto.";
+            break;
+    }
+    end;
+
+}
+
 -	script	cabelovip	-1,{
     OnInit:
-        bindatcmd ("cabelo", "cabelovip::OnAtcmd_style");
+        bindatcmd ("cabelovip", "cabelovip::OnAtcmd_style");
     end;
 
     OnAtcmd_style:
