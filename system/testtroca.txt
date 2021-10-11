@@ -1,7 +1,7 @@
 treinamento,80,118,5	script	Trocar de Vila	843,{
 goto trocadevila;
 
-OnInit
+OnInit:
     // == Configuração dos Preços ==
     // O primeiro valor é o preço para atributos, o segundo para habilidades,
     // e o terceiro é para ambos. Coloque apenas número inteiros e positivos.

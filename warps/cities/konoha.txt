@@ -187,5 +187,5 @@ if (#konoha == 1)
 warp "academia", 102,11;
 
 end;
-lou_in02 57 170
+lou_in02 57 170;
 }
