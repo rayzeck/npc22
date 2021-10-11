@@ -1,14 +1,13 @@
 treinamento,80,118,5	script	Trocar de Vila	843,{
-goto trocardevila;
+goto OnTroca;
 
 OnInit:
     // == Configuração dos Preços ==
     // O primeiro valor é o preço para atributos, o segundo para habilidades,
     // e o terceiro é para ambos. Coloque apenas número inteiros e positivos.
-    bindatcmd("trocadevila", strnpcinfo(3)+"::trocardevila");
+    bindatcmd("trocadevila", strnpcinfo(3)+"::OnTroca");
 end;
 
-trocardevila:
 if(quest_basic_inicio != 6) { mes "[Troca de Vila]"; mes "Termine o Tutorial"; close2; end; }
 
 if(countitem(30060) || countitem(30061) || countitem(30062) || countitem(30063) ||
@@ -36,7 +35,7 @@ if(countitem(7006) < 1){
 
 if(#konoha || #suna || #nevoa || #nuvem || nukenin) { goto trocagratis; }
 
-
+OnTroca:
 trocagratis:
 mes "[Troca de Vila]";
 mes "Escolha qual a vilas você gostaria de ir.";
