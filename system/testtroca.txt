@@ -32,7 +32,7 @@ if(getcharid(2)){
 }
 
 if(countitem(7006) < 1){
-		unittalk getcharid(3), "Hey";
+		unittalk getcharid(3), "Ah não! Eu estou sem o item para trocar de vila.";
         sleep2 1000;
 		end;	
 }
