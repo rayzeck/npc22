@@ -1,4 +1,4 @@
--    script    command#provar    -1,{
+-	script	command#provar	-1,{
 
 OnInit:
     bindatcmd("provar",strnpcinfo(0)+"::OnCommandProvar");
