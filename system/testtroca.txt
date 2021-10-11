@@ -7,6 +7,11 @@ OnInit:
     bindatcmd("trocadevila", strnpcinfo(3)+"::OnTroca");
 end;
 
+
+if(#konoha || #suna || #nevoa || #nuvem || nukenin) { goto OnTroca; }
+
+
+OnTroca:
 if(quest_basic_inicio != 6) { mes "[Troca de Vila]"; mes "Termine o Tutorial"; close2; end; }
 
 if(countitem(30060) || countitem(30061) || countitem(30062) || countitem(30063) ||
@@ -32,10 +37,6 @@ if(countitem(7006) < 1){
 	close;
 }
 
-if(#konoha || #suna || #nevoa || #nuvem || nukenin) { goto OnTroca; }
-
-
-OnTroca:
 mes "[Troca de Vila]";
 mes "Escolha qual a vilas você gostaria de ir.";
 switch(select("- Konoha:- Suna:- Névoa:- Nuvem:- Nukenin")) {
