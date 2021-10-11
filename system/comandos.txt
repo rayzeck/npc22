@@ -24,28 +24,28 @@ OnCommandProvar:
             switch(@equip){
                 case 1024:
                     atcommand "@changelook 1 " + @view;
-                    sleep2 60000;
+                    sleep2 30000;
                     atcommand "@changelook 1 " + @topview;
                     break;
                 case 2048:
                     atcommand "@changelook 2 " + @view;
-                        sleep2 60000;
+                        sleep2 30000;
                     atcommand "@changelook 2 " + @midview;
                     break;
                 case 4096:
                     atcommand "@changelook 3 " + @view;
-                    sleep2 60000;
+                    sleep2 30000;
                     atcommand "@changelook 3 " + @bottomview;
                     break;
                 case 8192:
                     atcommand "@changelook 7 " + @view;
-                    sleep2 60000;
+                    sleep2 30000;
                     atcommand "@changelook 7 " + @robeview;
                     break;
             }
             break;
         default:
-            dispbottom "Isse ID não está correto.";
+            dispbottom "Isse item não está na loja.";
             break;
     }
     end;
