@@ -5362,12 +5362,11 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
 
 	if(quest_basic_inicio == 4) {
 		cutin "sensei03",2;
-        npctalk "Olá +strcharinfo(0); , vejo que você completou os treinamentos básicos e está pronto para meu exame final, não vamos perder tempo então, creio que já estudou tudo que precisa, vamos a primeira pergunta! ";
-        sleep2 3000;
+        npctalk "Olá +strcharinfo(0);, vejo que você completou os treinamentos básicos e está pronto para meu exame final, não vamos perder tempo então, creio que já estudou tudo que precisa, vamos a primeira pergunta! ";
+        sleep2 5000;
 		next;
-		mes "[^DC143CExame Escrito^000000]";
 		npctalk "Pergunta: O anime foi criado por quem?";
-        sleep2 500;
+        sleep2 1500;
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
 		
 		L_certo:
