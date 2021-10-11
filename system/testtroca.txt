@@ -34,7 +34,7 @@ if(getcharid(2)){
 if(countitem(7006) < 1){
 	mes "[Troca de Vila]";
 	mes "Você não tem o ticket de Troca de Vila.";
-	sleep 100;
+	sleep2 100;
 	atcommand "@refresh";
 	close;
 }
