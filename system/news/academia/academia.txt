@@ -5370,7 +5370,7 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
 		
 		L_certo:
-		next;
+        sleep2 3000;
 		cutin "sensei03",2;		
 		npctalk "Muito bem! Vamos a segunda pergunta:";
 		sleep2 4500;
