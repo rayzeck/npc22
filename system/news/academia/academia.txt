@@ -5354,10 +5354,9 @@ waitingroom "[Prova]",0;
 academia4,118,309,7	script	Professor#3	65,1,9,{
 
 	if(quest_basic_inicio == 5) {
-		mes "[^DC143CExame Escrito^000000]";
-		mes "Volte no Aruotuora Azumi na Sala Inicial.";
+		npctalk "Volte no Aruotuora Azumi na Sala Inicial.";
 		cutin "",255;
-		close;
+		end;
 	}
 
 	if(quest_basic_inicio == 4) {
@@ -5420,7 +5419,7 @@ academia4,118,309,7	script	Professor#3	65,1,9,{
         sleep2 500;
 		cutin "sensei03",2;
 		set quest_basic_inicio,5;
-        sleep2 4500;
+        sleep2 500;
 		npctalk "Parabéns jovem prodígio, você realmente me impressionou e está apto agora a se juntar a esse mundo caótico dos shinobis, tome cuidado.";
         sleep2 4500;
 		npctalk "Busque mais poder, se torne um Chunin, Jounin e busque seus objetivos, não importa quais sejam, não desista!";
