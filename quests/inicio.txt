@@ -490,7 +490,7 @@ academia4,231,363,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		next;
 		
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
-		mes "As nações foram criadas de junções de clãs, cada clã carrega poderes especias, chamados de Habilidade Hidden, com 4 evoluções.";
+		mes "As nações foram criadas de junções de clãs, cada clã carrega poderes especias, chamados de Linhagem Sanguinea (Kekkei Genkai), com 5 evoluções.";
 		skill 426,1,3;
 		skill 278,1,3;
 		next;
@@ -500,7 +500,7 @@ academia4,231,363,5	script	Aruotuora Azumi	1_M_YOUNGKNIGHT,{
 		next;
 		
 		mes "^B0449E[ Aruotuora Azumi ]^000000";
-		mes "Primeiro você deverá se conversar com o Fujimoshi Lamona-sensei. Ele fará a análise de seu corpo para ver qual seu biotipo de batalha.";
+		mes "Primeiro você deverá conversar com a Sakura. Ela fica na sala 1. Ela fará a análise de seu corpo para ver qual seu biotipo de batalha.";
 		set quest_basic_inicio,1;
 		close;
 	}
