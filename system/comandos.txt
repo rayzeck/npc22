@@ -15,7 +15,7 @@ OnCommandProvar:
     switch(.@item_id){
         case 420010: // Aura da Escuridão - 12.000 Cash
         case 20257: // Capuz com Orelhas de Coelho
-        case 19746: // Capuz do Coração Gelado
+        case 31161: // Capuz do Coração Gelado
         case 31709: // Violeta Dourada Visual - 12.000 Cash
             dispbottom "Testando o Visual: " + getitemname(.@item_id) + " por 60 Segundos.";
             set @equip, getiteminfo(.@item_id, 5);
