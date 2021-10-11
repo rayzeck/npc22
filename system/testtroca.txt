@@ -19,16 +19,16 @@ if(countitem(30060) || countitem(30061) || countitem(30062) || countitem(30063) 
    countitem(30082) || countitem(30083) || countitem(30084) || countitem(30085) ||
    countitem(30086) || countitem(30081) || countitem(31224)) {
 
-mes "[Troca de Vila]";
-mes "Você precisa entregar seu cargo antes de trocar de vila.";
-close;
-
+		unittalk getcharid(3), "Ah não! Eu esqueci de entregar meu cargo pra poder trocar de vila.";
+        sleep2 1500;
+		end;
 }
 
 if(getcharid(2)){
-	mes "[Troca de Vila]";
-	mes "Você precisa sair da guild.";
-	close;
+		mes "[Troca de Vila]";
+		unittalk getcharid(3), "Ah não! Eu esqueci de sair do meu clã para trocar de vila.";
+		sleep2 1000;
+		end;
 }
 
 if(countitem(7006) < 1){
