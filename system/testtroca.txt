@@ -32,7 +32,7 @@ if(getcharid(2)){
 }
 
 if(countitem(7006) < 1){
-		npctalk "Contrabandista: Ei, você!.", "Constrabandista", bc_self;
+		unittalk getcharid(3), "Hey";
         sleep2 1000;
 		end;	
 }
