@@ -558,7 +558,6 @@ academia4,178,346,5	script	Sala 2	837,{
 npctalk "Aqui você fará seu teste elemental e escolherá seu elemento!";
 dispbottom "Fale com o NPC dentro da sala!";
 end;
-}
 
 OnInit:
 	waitingroom "[Sala 2]",0;
