@@ -32,23 +32,23 @@ academia4,285,344,5	script	1. Interface	843,{
 
 npctalk "[Interface]";
 npctalk "A tela de jogo apresenta uma 'janela principal' composta de um menu com o desenvolvimento, o nome do personagem, sua classe, o HP, o SP, o peso em itens e o dinheiro do personagem.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Interface]";
 npctalk "Existe também uma barra de atalhos que representam as teclas do F1 ao F9 ( Para tivar essa barra clique em F12 ) .O jogador pode configurar seus itens, equipamentos e suas habilidades que serão usadas nele.";
 cutin "tutorial05",4;
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 npctalk "[Interface]";
 npctalk "É possível configurar mais teclas de atalhos apertando o ESC e indo em Configurações de Atalho. Você pode colocar mais barras apertando F12 e configurando para usar as letras ou os Fs como atalho pra habilidades";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Interface]";
 npctalk "Também existe uma barra de chat, que permite o jogador se comunicar publicamente com outros personagens presentes no npctalkmo mapa, ou privadamente com qualquer outro jogador, com os membros da guild, da party, e amigos.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Interface]";
 npctalk "Para ver as suas quests, você pode clicar no canto superior esquerdo da tela ou utilizar o atalho ALT+U para abrir sua janelinha de missões.";
 dispbottom "Fale com todos os NPCS para entender melhor sobre o jogo e continue o corredor!";
 cutin "tutorial02",4;
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 end;
 
@@ -64,13 +64,13 @@ academia4,281,344,5	script	2. Atalhos	884,{
 
 npctalk "[Atalhos]";
 npctalk "Existem comandos de atalho para verificar uma 'aba' de informações de seu personagem , verifique a seguir os atalhos:";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Atalhos]";
 npctalk "Alt + A = Abre a parte de atributos do personagem.";
 npctalk "Alt + E = Abre o inventário do personagem.";
 npctalk "Alt + S = Abre a lista de habilidades.";
 npctalk "Alt + G = Abre a janela da sua vila (Clã, mas você precisa ser convidado para o clã para conseguir usar o atalho).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Atalhos]";
 npctalk "Alt + V = Abre as informações de HP e SP de seu personagem";
 npctalk "Alt + Z = Abre a janela do seu grupo.";
@@ -92,20 +92,20 @@ academia4,277,344,5	script	3. Equipamentos	121,{
 
 npctalk "[Equipamentos]";
 npctalk "Os equipamentos são divididos em dez categorias: cabeça, corpo, capa, mão esquerda, mão direita, sapatos, acessório esquerdo e acessório direito.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Equipamentos]";
 npctalk "E servem para aumentar os atributos de um personagem, podem ser equipados dando um click duplo ou pela barra de atalhos.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Equipamentos]";
 npctalk "Para obter-los , derrote monstros de diferentes mapas e obtenha o equipamento. Quanto mais forte o monstro, mais forte será a vantagem que o equipamento possuirá";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Equipamentos]";
 npctalk "Aqui no Naruto RPG Online existe equipamentos de níveis com categorias de Rank igual ao Anime. Temos equipamentos do Rank E, até o Rank S.";
-sleep2 4800;
+sleep2 5500;
 npctalk "Para conseguir equipamentos Rank S, você precisará de uma autorização que conseguirá fazendo missões para o Kage ou eventos. Você precisa de Pontos de Missão";
 npctalk "para conseguir comprar uma autorização para ir até a dimensão para fazer a quest dos itens Rank S. Temos tutoriais no fórum para ajudá-lo sobre isso!";
 dispbottom "Fale com todos os NPCS para entender melhor sobre o jogo e continue o corredor!";
-sleep2 4800;
+sleep2 5500;
 end;
 
 OnInit:
@@ -121,7 +121,7 @@ academia4,273,344,5	script	4. Atributos	819,{
 npctalk "[Atributos]";
 npctalk "Ao passar um nível de base, o jogador recebe pontos para serem distribuídos livremente entre seus atributos. Quanto mais pontos forem investidos em determinado atributo, mais pontos serão necessários para que se possa elevar o npctalkmo.";
 npctalk "Atributos influenciam diretamente no desempenho do personagem.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Atributos]";
 npctalk "STR, acrescenta mais ataque físico taijutsu ao personagem.";
 npctalk "INT, acrescenta mais ataque magico ninjutsu, defesa magica ninjutsu e sp ao personagem";
@@ -143,20 +143,20 @@ academia4,269,344,5	script	5. Monstros	706,{
 
 npctalk "[Monstros]";
 npctalk "São NPCs que agem sob inteligência artificial, e são encontrados nos mais variados mapas do jogo.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Monstros]";
 npctalk "Podem, ou não, se locomover, assim como podem atacar o jogador sem que o npctalkmo o tenha provocado.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Monstros]";
 npctalk "Possuem também a capacidade de usar jutsus(Habilidades), e são divididos por várias raças, formas e níveis.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Monstros]";
 npctalk "Existem também, em alguns mapas, os 'bijuus' popularmente chamados de 'boss' ou 'MVP'.";
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Monstros]";
 npctalk "Os monstros desse tipo são mais fortes e qualquer jogador pode atacá-lo, sendo que o npctalkmo pode ser selado pelo kage da sua vila ou akatsuki.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Monstros]";
 npctalk "Somente Kages e a Akatsuki são capazes de selar um bijuu, utilizando a habilidade 'Capturar Bijuu'.";
 end;
@@ -172,13 +172,13 @@ academia4,265,344,5	script	6. Grupos 	55,{
 
 npctalk "[Grupos]";
 npctalk "São equipes que podem ser criadas e desfeitas a qualquer hora, desde que o personagem tenha as habilidades necessárias. Possuem o limite de 25 membros";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Grupos]";
 npctalk "Os membros de uma party podem dividir itens e EXP entre eles (desde que a diferença entre níveis dos npctalkmos não ultrapasse 400) assim como podem ver quantidade de HP de seus aliados.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Grupos]";
 npctalk "O 'líder' da Party é o único que possui o direito de convidar, expulsar membros e configurar a party, como drops divididos entre os membros.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Grupos]";
 npctalk "Personagens não podem participar de mais de um grupo ao npctalkmo tempo, e os personagens de uma npctalkma conta não podem participar da npctalkma party.";
 end;
@@ -194,11 +194,11 @@ academia4,261,344,5	script	7. Se tornando forte	49,{
 
 npctalk "[Como ficar mais forte]";
 npctalk "Agora que voce já entendeu as principais partes, você pode começar a fortificar seu personagem. Ao completar o tutorial, pegue as habilidades de cada Treino que voce escolheu e treine para subir de graduação. Uma maneira de evoluir rapidamente as suas habilidades, é fazer as missões que o Kage lhe pede (No Escritório Kage).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Como ficar mais forte]";
 npctalk "Para evoluir sua força e sua habilidade, voce deve subir de graduação para pegar pedras de treinamento mais avançadas.";
 npctalk "Depois de ter pegado seus treinamentos e jutsus, você pode começar a evoluir um de seus treinos, para no futuro transformá-lo em intermediário.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Como ficar mais forte]";
 npctalk "Para evoluir seu treino, apenas consiga pontos de missão para subir de graduação ou participe de um shiken (Quanto mais dificil a missão que você fizer, mais rápido você irá evoluir).";
 npctalk "Após deixar o seu treino no intermediário na biblioteca, procure as habilidades intermediárias do npctalkmo, que estão no segundo andar da academia.";
@@ -219,16 +219,16 @@ npctalk "Existem 7 treinos ao total, são eles:";
 npctalk "Ninjutsu ( O uso de técnicas que dependem do seu elemento, voltada para personagens defensivos )";
 npctalk "Taijutsu ( O uso de técnicas de ataque corpo-a-corpo, voltada para personagens ofensivos )";
 npctalk "Fuuinjutsu ( O uso de técnicas de habilidades de selamento, que beneficiam o usuário )";
-sleep2 4800;
+sleep2 5500;
 npctalk "[O que é um treino]";
 npctalk "Medicina ( O uso de técnicas que não ajudam só o usuário , mas como também seus aliados, sendo com curas ou com a habilidade de ressuscitar)";
 npctalk "Genjutsu ( O uso de técnicas confundem o inimigo, como atordoar, fazer-lo dormir , etc..)";
 npctalk "Velocidade ( O uso de técnicas que fazem com que o usuário fique mais rápido, tanto em batalha , quanto na hora de fugir do inimigo)";
 npctalk "Resistencia (O uso de técnicas que fazem com que o usuário resista à mais danos e seja um tanker em batalhas)";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Como adquirir um treino]";
 npctalk "Para adquirir os treinos , você deve se dirigir a biblioteca de sua vila, e lá conversar com o NPC de seus respectivos treinos.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Como evoluir meu treino]";
 npctalk "Para evoluir seus treinos, você precisa primeiro precisa subir de graduação.";
 npctalk "Ao virar Chunin você pode tornar o seu treino Intermediário, e ao virar Jounin você poderá pegar o treino avançado.";
@@ -285,13 +285,13 @@ set treinos_escolha,0;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Olá, meu nome é Sakura e irei analisar seu biotipo de batalha.";
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "O que são treinamentos você pergunta?";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Treinamentos são os estilos de luta que você irá possuir, você pode ter três treinamentos de uma lista de seis.";
-sleep2 4800;
+sleep2 5500;
 vltinicio:
 npctalk "[^DC143CSakura^000000]";
 npctalk "Os detalhes dos treinamentos disponíveis e seus detalhes você pode conferir abaixo, caso já queira escolher poderá ir na última opção:";
@@ -303,146 +303,146 @@ menu "- Ninjutsu",ninjutsu,"- Taijutsu",taijutsu,"- Genjutsu",genjutsu,"- Fuuinj
 
 ninjutsu:
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal são ataques mágicos e o atributo inteligência (INT), possui habilidades focadas em ataques de médio e longo alcance.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seus ataques são de acordo com o elemento que pertence a você (para saber mais sobre elemento, vá para a sala de elementos), e é um treino totalmente ofensivo.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores que gostam de jogar mais recuados, e que gostem de causar danos massivos.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Não é aconselhado que este treinamento seja escolhido juntamente de Taijutsu.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre Ninjutsu.";
 cutin "",255;
-sleep2 4800;
+sleep2 5500;
 goto vltinicio;
 
 taijutsu:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal são ataque físicos e o atributo força (STR), possui habilidades focadas em ataques de curto e médio alcance.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Alguns deles também ignoram esquivas, é um treino totalmente ofensivo.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores mais agressivos e que seja aliado a um personagem que aguente segurar muito dano, pois sempre estará a frente nas batalhas.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Não é aconselhado que este treinamento seja escolhido juntamente de Ninjutsu.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre taijutsu.";
 cutin "",255;
-sleep2 4800;
+sleep2 5500;
 goto vltinicio;
 
 genjutsu:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal é debuffs e o atributo Sorte (LUK), possui habilidades que causam anormalidades nos inimigos como: cegueira, slow (lerdeza), atordoamento, sangramento, silêncio, maldição, sono, etc...";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Serve tanto para suporte como para jogadores mais ofensivos e é uma ótima maneira para impedir que seus inimigos possam se mover ou atacar.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado tanto para jogadores que gostam de dar suporte aos aliados, quanto para jogadores mais ofensivos, pois um genjutsu bem aplicado pode ser o diferencial na luta contra um inimigo poderoso.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre genjutsu.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vltinicio;
 
 fuuinjutsu:
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal é suporte, aplicando buffs em seus aliados, e o atributo Destreza (DEX)";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Possui habilidades utilizadas com selos de mão que buffam seus aliados ou a si npctalkmo com: aumento de atributos (str,int,dex,agi,etc), diminuição de cast(conjuração), diminuição de custo de SP (mana/chakra), melhoria na precisão, etc.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores que gostam de dar suporte para os seus aliados, assim como serve para melhorar o poder seu personagem.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Este treinamento funciona muito bem com Ninjutsu, devido a redução de cast (conjuração) dos jutsus.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre fuuinjutsu.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vltinicio;
 
 medicina:
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal é suporte e o atributo Inteligência (INT).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Auxilia você e seus aliados utilizando curas, remoções de armadilhas e habilidades que removem anormalidades como: congelamento, petrificação, atordoamento, sono,etc... Possui algumas habilidades ofensivas como ataques com veneno e buffs que dão aumento de ataque.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores de suporte, para manter seus aliados vivos durante a batalha.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre Medicina.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vltinicio;
 
 velocidade:
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal é a agilidade (AGI).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Aumenta sua velocidade de movimento, velocidade de ataque, possui habilidades que aumentam a esquiva, teleportes e possui poucas habilidades ofensivas.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores que queiram se mover rapidamente enquanto possam dar suporte ou distribuir dano sem sofrer muito dano";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre velocidade.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vltinicio;
 
 resistencia:
 cutin "sensei02",2;
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Seu foco principal é a vitalidade (VIT).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Aumenta sua duração nas lutas, com o custo de ter menos dano contra outros jogadores.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É aconselhado para jogadores que gostam de ser a linha de frente durante as batalhas!";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo sobre Resistência.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vltinicio;
 
 
 entendi:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Antes de definir os seus três treinamentos, vou dar mais algumas explicações gerais sobre treinamentos, leia com cuidado pois são importantes!";
-sleep2 4800;
+sleep2 5500;
 vtl2menu:
 npctalk "[^DC143CSakura^000000]";
 npctalk "Qual informação sobre treinamentos você gostaria de saber?";
@@ -450,86 +450,86 @@ cutin "",255;
 menu "- Como melhorar meu treinamento",melhorar_t,"- Como mudar de treinamento",mudar_t,"- Pedras de treinamentos",pedras_t,"- Ok, já entendi tudo",entendi2;
 
 melhorar_t:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Os treinamentos são todos divididos por nível de aprendizado, Ao escolher seus treinamentos eles virão no estágio mais baixo, conhecido como básico";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "É possível dominar os treinamentos elevando o estágio dele para treinamento intermediário ou avançado, o que fará que liberem novos jutsus para você aprender, mais poderosos que os do estágio anterior";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Porém não é possível dominar todos os seus três treinamentos para o estágio mais alto; você poderá elevar apenas um treinamento para o estágio mais alto, chamado de avançado. Poderá também evoluir outro treinamento até o intermediário e último ficará como básico.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Sendo assim, É possível ter um treinamento no estágio avançado, dois no estágio intermediário e um no estágio básico";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Para elevar o estágio de seus treinamentos, é preciso antes aumentar o nível base de seus treinamentos, cada treinamento poderá aumentar o nível do 1 ao 100.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Este nível é usado como requisito para elevar o estágio do seu treinamento, o nível necessário para aumentar o estágio do básico para intermediário é 40, e o nível necessário para do intermediário para avançado é 75";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Para aumentar o nível dos treinamentos é preciso matar monstros, cada monstro dá uma quantia diferente de experiência de treinamento e pode ser encontrado no nosso fórum";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "E para escolher qual treinamento deseja aumentar o nível, é só falar com a Kurenai sensei na entrada da biblioteca shinobi!";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Caso queira ver os niveis de seus treinamentos, é só digitar @treinos";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Caso não entendeu algo é só procurar a Kurenai sensei na biblioteca de tutoriais!ou no fórum do game,ou algum (STAFF on no GAME).";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo que precisa saber para melhorar seu treinamento.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vtl2menu;
 
 mudar_t:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Caso você não gostou ou simplesmente queira mudar de treinamento é preciso antes possuir alguns itens especiais";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "caso você escolheu errado ou mudou de ideia e seu personagem está apenas no início é aconselhado criar um novo personagem pois é mais fácil que conseguir os itens de remoção";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "O nome dos itens de remoção são removedor de treino básico, intermediário e avançado, cada um serve pra remover um estágio do treinamento e o modo de os obter são: por troca com outros jogadores, ou com doações para o servidor";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Agora você ja sabe como trocar de treinamento.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vtl2menu;
 
 pedras_t:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "As pedras de treinamentos são itens que são recebidos ao escolher ou melhorar o seu treinamento, eles possuem poderes que aumentam a força de seu personagem, uma pedra avançada por exemplo possui muito mais força que uma básica";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Essas pedras são ligadas aos seus treinamentos e só possui uma pedra avançada de fuuinjutsu por exemplo quem possuir o treinamento fuuinjutsu avançado.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Elas não precisam de nenhum comando do usuário para ter efeito, o efeito é automático";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Já expliquei tudo que sei sobre as pedras de treino.";
-sleep2 4800;
+sleep2 5500;
 cutin "",255;
 goto vtl2menu;
 
 entendi2:
-sleep2 4800;
+sleep2 5500;
 cutin "sensei02",2;
 npctalk "[^DC143CSakura^000000]";
 npctalk "Ótimo, agora você possui todas as informações necessárias dos treinamentos.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[^B0449ESakura^000000]";
 npctalk "Agora você deverá se dirigir para a Sala 2, onde o npctalktre Elemental sensei estará a sua espera para fazer o teste elemental";
 dispbottom "Quando terminar a academia, pegue seus treinamentos na Biblioteca, não esqueça!";
@@ -576,9 +576,9 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 		npctalk "Olá "+strcharinfo(0)+" vejó que você ja possui um elemento. ";		
 		npctalk "Gostaria de trocar de elemento?";			
 		if(select("- Sim:- Não") == 2) end;				
-		sleep2 4800;
+		sleep2 5500;
 		cutin "",255;
-		if(countitem(7005) < 1) { sleep2 4800; npctalk .@menu$; npctalk "Você precisa do ticket de troca elemental"; end; }									
+		if(countitem(7005) < 1) { sleep2 5500; npctalk .@menu$; npctalk "Você precisa do ticket de troca elemental"; end; }									
 		
 		if( elementokaton ) {					
 			if(getskilllv(534) || getskilllv(17) || getskilllv(2259) ||					
@@ -634,11 +634,11 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 		cutin "cutin_zabuza",2;		
 		npctalk "Para qual elemento gostaria de mudar?";				
 		switch(select("- Katon:- Suiton:- Raiton:- Doton:- Fuuton")) {					
-			sleep2 4800;
+			sleep2 5500;
 			cutin "",255;
 			case 1:						
 				if (elementokaton == 1)  { 
-					npctalk .@menu$; sleep2 4800; npctalk "Você já é deste elemento"; 
+					npctalk .@menu$; sleep2 5500; npctalk "Você já é deste elemento"; 
 					end; 
 				}						
 				if (elementosuiton == 1) { 
@@ -666,7 +666,7 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				}						
 				if (elementosuiton == 1) { 
 					npctalk .@menu$; 
-					sleep2 4800; npctalk "Você já é deste elemento"; 
+					sleep2 5500; npctalk "Você já é deste elemento"; 
 					end;
 				}						
 				if (elementoraiton == 1) { 
@@ -693,7 +693,7 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				}						
 				if (elementoraiton == 1) { 
 					npctalk .@menu$; 
-					sleep2 4800; 
+					sleep2 5500; 
 					npctalk "Você já é deste elemento"; 
 					end;
 				}						
@@ -721,7 +721,7 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				}						
 				if (elementodoton == 1)  { 
 					npctalk .@menu$; 
-					sleep2 4800; npctalk "Você já é deste elemento"; 
+					sleep2 5500; npctalk "Você já é deste elemento"; 
 					end; 
 				}						
 				if (elementofuuton == 1) { 
@@ -762,22 +762,22 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		cutin "cutin_zabuza",2;
 		npctalk "Olá "+strcharinfo(0)+",  sou Koichi Kuwabara e serei o seu orientador elemental.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn uchiha da vila da folha. ";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn koori da vila da névoa.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn kaminari da vila da nuvem.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Doton. Elemento terra, lhe possibilita o poder de dominar as rochas pedras terra e as partículas de poeira para criar muros arrenpctalksar pedras elevar ou abaixar a terra criar fissuras  e tremores no solo de batalha, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan tsuchi da vila da pedra.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Fuuton. Elemento vento, lhe possibilita o poder de dominar as brisas de vento para criar tufões laminas de corte e rajadas de repulsão de vento, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan kazekage da vila da suna.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Bom , agora que já sabe todos os elementos , qual elemento você acha que você pode usar.";
 		cutin "",255;
@@ -785,14 +785,14 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 			
 			{
 				case 1:
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Katon? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel queimou, parabéns você é um usuário de Katon!";
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
@@ -802,14 +802,14 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				end;
 				
 				case 2:
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Suiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel ficou molhado, parabéns você é um usuário de Suiton.";
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
@@ -819,14 +819,14 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				end;
 				
 				case 3:
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Raiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel ficou enrrugado e eletrizado, parabéns você é um usuário de Raiton.";
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
@@ -836,14 +836,14 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				end;
 				
 				case 4:
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Doton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel ficou duro feito pedra, parabéns você é um usuário de Doton.";
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
@@ -853,14 +853,14 @@ academia4,174,364,5	script	npctalktre Elemental	68,1,10,{
 				end;
 				
 				case 5:
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Fuuton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel foi cortado, parabéns você é um usuário de Fuuton.";
-				sleep2 4800;
+				sleep2 5500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala, desejo um ótimo futuro.";
 				close2;
@@ -890,22 +890,22 @@ academia4,175,308,2	script	Susume Keiko	65,1,9,{
 	{
 		npctalk "[Susume Keiko]";
 		npctalk "Olá, sou Susume sensei, cuido dos jovens que estão no treino básico ainda.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keiko]";
 		npctalk "É aqui em que os ninjas vem escolher as habilidades basicas de cada treino que desejam fazer.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keiko]";
 		npctalk "Vejo que você é um ninja também, mais a dentro se encontram os 6 senseis que irão lhe dar auxilio para suas habilidades básicas.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keiko]";
 		npctalk "Mas desde já devo lhe dizer, você só pode aprender 3 técnicas de cada treinamento, e ao escolher a técnica o sensei ira lhe pedir algo em troca.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keiko]";
 		npctalk "Caso tenha escolhido algum jutsu mas deseja aprender outro, fale com o sensei e diga que não ve mais utilidade na habilidade e que deseja aprender outra e só assim poderá aprender outra habilidade.";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keioko]";
 		npctalk "Você já pode escolher suas habilidades, os senseis estão atrás de mim. - GAMBATTE!";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Susume Keioko]";
 		npctalk "Siga para Sala 3, para fazer o seu exame.";
 		set quest_basic_inicio,4;
@@ -932,7 +932,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		switch( select( "- Precisão:- Aura Ninja:- Concentração:- Glória:- Explodir Chakra" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1031) == 1) goto 1_go;
 		if(checkquest(2031) == 1) goto 1_go;
 		if(checkquest(3031) == 1) goto 1_go;
@@ -946,10 +946,10 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Precisão?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -960,7 +960,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		1_delete:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -968,7 +968,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		delete_1:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -991,7 +991,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2031; }
 		if(#nevoa == 1) { setquest 3031; }
 		if(#nuvem == 1) { setquest 4031; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1016,7 +1016,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(seloskill543 >= 1) {
 			npctalk "[Fuuinjutsu Básico]";
 			npctalk "Você acaba de remover os selos e pegar o jutsu.";
@@ -1037,10 +1037,10 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Aura Ninja?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -1051,7 +1051,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		2_delete:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -1059,7 +1059,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		delete_2:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -1082,7 +1082,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1)  { setquest 2032; }
 		if(#nevoa == 1) { setquest 3032; }
 		if(#nuvem == 1) { setquest 4032; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1107,7 +1107,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(seloskill45 >= 1) {
 			npctalk "[Fuuinjutsu Básico]";
 			npctalk "Você acaba de remover os selos e pegar o jutsu.";
@@ -1128,10 +1128,10 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Concentração?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -1142,7 +1142,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		3_delete:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -1150,7 +1150,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		delete_3:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -1173,7 +1173,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2033; }
 		if(#nevoa == 1) { setquest 3033; }
 		if(#nuvem == 1) { setquest 4033; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1198,7 +1198,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		end;
 
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1034) == 1) goto 4_go;
 		if(checkquest(2034) == 1) goto 4_go;
 		if(checkquest(3034) == 1) goto 4_go;
@@ -1212,10 +1212,10 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Glória?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -1226,7 +1226,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		4_delete:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -1234,7 +1234,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		delete_4:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -1257,7 +1257,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2034; }
 		if(#nevoa == 1) { setquest 3034; }
 		if(#nuvem == 1) { setquest 4034; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1284,7 +1284,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		end;
 		
 	case 5:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1035) == 1) goto 5_go;
 		if(checkquest(2035) == 1) goto 5_go;
 		if(checkquest(3035) == 1) goto 5_go;
@@ -1298,10 +1298,10 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Explodir Chakra?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
@@ -1312,7 +1312,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		5_delete:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_5,"Nada não, só papo furado",naoquero_5;
@@ -1320,7 +1320,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		delete_5:
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_5,"Não, não quero",naoquero_5;
@@ -1343,7 +1343,7 @@ academia4,184,303,5	script	Fuuinjutsu Básico	4_f_zondagirl,{
 		if(#suna == 1) {  setquest 2035; }
 		if(#nevoa == 1) { setquest 3035; }
 		if(#nuvem == 1) { setquest 4035; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuinjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1379,7 +1379,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		switch( select( "- Fukai Yasumi:- Kokubanjou no Jutsu:- Magen Kasegui no Jutsu:- Mahi no Jutsu:- Shikumi no Jutsu" ) ){
 		
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1041) == 1) goto 1_go;
 		if(checkquest(2041) == 1) goto 1_go;
 		if(checkquest(3041) == 1) goto 1_go;
@@ -1394,10 +1394,10 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		
 		npctalk "[Genjutsu Básico]";
 		npctalk "Fukai Yasumi?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -1408,7 +1408,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		1_delete:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -1416,7 +1416,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		delete_1:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -1439,7 +1439,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2041; }
 		if(#nevoa == 1) { setquest 3041; }
 		if(#nuvem == 1) { setquest 4041; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1464,7 +1464,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1042) == 1) goto 2_go;
 		if(checkquest(2042) == 1) goto 2_go;
 		if(checkquest(3042) == 1) goto 2_go;
@@ -1479,10 +1479,10 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		
 		npctalk "[Genjutsu Básico]";
 		npctalk "Kokubanjou no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -1493,7 +1493,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		2_delete:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -1501,7 +1501,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		delete_2:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -1524,7 +1524,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2042; }
 		if(#nevoa == 1) { setquest 3042; }
 		if(#nuvem == 1) { setquest 4042; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1549,7 +1549,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1043) == 1) goto 3_go;
 		if(checkquest(2043) == 1) goto 3_go;
 		if(checkquest(3043) == 1) goto 3_go;
@@ -1564,10 +1564,10 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		
 		npctalk "[Genjutsu Básico]";
 		npctalk "Magen: Kasegui no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -1578,7 +1578,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		3_delete:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -1586,7 +1586,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		delete_3:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -1609,7 +1609,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2043; }
 		if(#nevoa == 1) { setquest 3043; }
 		if(#nuvem == 1) { setquest 4043; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1634,7 +1634,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		end;
 
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1044) == 1) goto 4_go;
 		if(checkquest(2044) == 1) goto 4_go;
 		if(checkquest(3044) == 1) goto 4_go;
@@ -1649,10 +1649,10 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		
 		npctalk "[Genjutsu Básico]";
 		npctalk "Mahi no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -1663,7 +1663,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		4_delete:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -1671,7 +1671,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		delete_4:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -1694,7 +1694,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2044; }
 		if(#nevoa == 1) { setquest 3044; }
 		if(#nuvem == 1) { setquest 4044; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1719,7 +1719,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		end;
 		
 	case 5:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1045) == 1) goto 5_go;
 		if(checkquest(2045) == 1) goto 5_go;
 		if(checkquest(3045) == 1) goto 5_go;
@@ -1734,10 +1734,10 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		
 		npctalk "[Genjutsu Básico]";
 		npctalk "Shikumi no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
@@ -1748,7 +1748,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		5_delete:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_5,"Nada não, só papo furado",naoquero_5;
@@ -1756,7 +1756,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		delete_5:
 		npctalk "[Genjutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_5,"Não, não quero",naoquero_5;
@@ -1779,7 +1779,7 @@ academia4,186,303,5	script	Genjutsu Básico	4_m_thaiongbak,{
 		if(#suna == 1) {  setquest 2045; }
 		if(#nevoa == 1) { setquest 3045; }
 		if(#nuvem == 1) { setquest 4045; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Genjutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1817,7 +1817,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1021) == 1) goto 1_go;
 		if(checkquest(2021) == 1) goto 1_go;
 		if(checkquest(3021) == 1) goto 1_go;
@@ -1832,10 +1832,10 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 		npctalk "[Medicina Básico]";
 		npctalk "Chiyute no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -1846,7 +1846,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		1_delete:
 		npctalk "[Medicina Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -1854,7 +1854,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		delete_1:
 		npctalk "[Medicina Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -1877,7 +1877,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2021; }
 		if(#nevoa == 1) { setquest 3021; }
 		if(#nuvem == 1) { setquest 4021; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -1919,7 +1919,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1022) == 1) goto 2_go;
 		if(checkquest(2022) == 1) goto 2_go;
 		if(checkquest(3022) == 1) goto 2_go;
@@ -1933,10 +1933,10 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 		npctalk "[Medicina Básico]";
 		npctalk "Relaxar?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -1947,7 +1947,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		2_delete:
 		npctalk "[Medicina Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -1955,7 +1955,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		delete_2:
 		npctalk "[Medicina Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -1978,7 +1978,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2022; }
 		if(#nevoa == 1) { setquest 3022; }
 		if(#nuvem == 1) { setquest 4022; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2021,7 +2021,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1023) == 1) goto 3_go;
 		if(checkquest(2023) == 1) goto 3_go;
 		if(checkquest(3023) == 1) goto 3_go;
@@ -2036,10 +2036,10 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 		npctalk "[Medicina Básico]";
 		npctalk "Inyu Shometsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -2050,7 +2050,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		3_delete:
 		npctalk "[Medicina Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -2058,7 +2058,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		delete_3:
 		npctalk "[Medicina Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -2081,7 +2081,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2023; }
 		if(#nevoa == 1) { setquest 3023; }
 		if(#nuvem == 1) { setquest 4023; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2123,7 +2123,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		end;
 
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1024) == 1) goto 4_go;
 		if(checkquest(2024) == 1) goto 4_go;
 		if(checkquest(3024) == 1) goto 4_go;
@@ -2137,10 +2137,10 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 		npctalk "[Medicina Básico]";
 		npctalk "Remover Armadilha?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -2151,7 +2151,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		4_delete:
 		npctalk "[Medicina Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -2159,7 +2159,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		delete_4:
 		npctalk "[Medicina Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -2182,7 +2182,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2024; }
 		if(#nevoa == 1) { setquest 3024; }
 		if(#nuvem == 1) { setquest 4024; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2224,7 +2224,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		end;
 		
 	case 5:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1025) == 1) goto 5_go;
 		if(checkquest(2025) == 1) goto 5_go;
 		if(checkquest(3025) == 1) goto 5_go;
@@ -2239,10 +2239,10 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		
 		npctalk "[Medicina Básico]";
 		npctalk "Souzou Saisei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
@@ -2253,7 +2253,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		5_delete:
 		npctalk "[Medicina Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_5,"Nada não, só papo furado",naoquero_5;
@@ -2261,7 +2261,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		delete_5:
 		npctalk "[Medicina Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_5,"Não, não quero",naoquero_5;
@@ -2284,7 +2284,7 @@ academia4,188,303,5	script	Medicina Básico	1_m_smith,{
 		if(#suna == 1) {  setquest 2025; }
 		if(#nevoa == 1) { setquest 3025; }
 		if(#nuvem == 1) { setquest 4025; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Medicina Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2339,7 +2339,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		switch( select( "- Doton Doryuuheki:- Doton Sousou:- Doton Doryuusou" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1081) == 1) goto 1_go;
 		if(checkquest(2081) == 1) goto 1_go;
 		if(checkquest(3081) == 1) goto 1_go;
@@ -2353,10 +2353,10 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Doton Básico]";
 		npctalk "Doryuuheki no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -2367,7 +2367,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		1_delete:
 		npctalk "[Doton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -2375,7 +2375,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		delete_1:
 		npctalk "[Doton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -2402,7 +2402,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2081; }
 		if(nukenin == 1) {setquest 3081; }
 		if(nukenin == 1) {setquest 4081; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2427,7 +2427,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1082) == 1) goto 2_go;
 		if(checkquest(2082) == 1) goto 2_go;
 		if(checkquest(3082) == 1) goto 2_go;
@@ -2441,10 +2441,10 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Doton Básico]";
 		npctalk "Sabaku Sousou?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -2455,7 +2455,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		2_delete:
 		npctalk "[Doton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -2463,7 +2463,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		delete_2:
 		npctalk "[Doton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -2490,7 +2490,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2081; }
 		if(nukenin == 1) {setquest 3081; }
 		if(nukenin == 1) {setquest 4081; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2515,7 +2515,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1083) == 1) goto 3_go;
 		if(checkquest(2083) == 1) goto 3_go;
 		if(checkquest(3083) == 1) goto 3_go;
@@ -2529,10 +2529,10 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Doton Básico]";
 		npctalk "Doton Doyuusou?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -2543,7 +2543,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		3_delete:
 		npctalk "[Doton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -2551,7 +2551,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		delete_3:
 		npctalk "[Doton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -2578,7 +2578,7 @@ if(elementodoton != 1) { npctalk "[Doton Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2081; }
 		if(nukenin == 1) {setquest 3081; }
 		if(nukenin == 1) {setquest 4081; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Doton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2616,7 +2616,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		switch( select( "- Fuuton Shinkuuha:- Fuuton Daitoppa:- Fuuton Shuriken" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1091) == 1) goto 1_go;
 		if(checkquest(2091) == 1) goto 1_go;
 		if(checkquest(3091) == 1) goto 1_go;
@@ -2630,10 +2630,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Shinkuuha no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -2644,7 +2644,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		1_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -2652,7 +2652,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_1:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -2675,7 +2675,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2091; }
 		if(#nevoa == 1) { setquest 3091; }
 		if(#nuvem == 1) { setquest 4091; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2700,7 +2700,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1092) == 1) goto 2_go;
 		if(checkquest(2092) == 1) goto 2_go;
 		if(checkquest(3092) == 1) goto 2_go;
@@ -2714,10 +2714,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Fuuton Daitoppa?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -2728,7 +2728,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		2_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -2736,7 +2736,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_2:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -2759,7 +2759,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2092; }
 		if(#nevoa == 1) { setquest 3092; }
 		if(#nuvem == 1) { setquest 4092; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2784,7 +2784,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1093) == 1) goto 3_go;
 		if(checkquest(2093) == 1) goto 3_go;
 		if(checkquest(3093) == 1) goto 3_go;
@@ -2798,10 +2798,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Fuuton Shuriken?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -2812,7 +2812,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		3_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -2820,7 +2820,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_3:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -2843,7 +2843,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2093; }
 		if(#nevoa == 1) { setquest 3093; }
 		if(#nuvem == 1) { setquest 4093; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2881,7 +2881,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		switch( select( "- Katon Housenka:- Katon Hana Shuriken:- Katon Lanca Chamas" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1051) == 1) goto 1_go;
 		if(checkquest(2051) == 1) goto 1_go;
 		if(checkquest(3051) == 1) goto 1_go;
@@ -2895,10 +2895,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Housenka no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -2909,7 +2909,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		1_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -2917,7 +2917,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_1:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -2944,7 +2944,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2051; }
 		if(nukenin == 1) {setquest 3051; }
 		if(nukenin == 1) {setquest 4051; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -2969,7 +2969,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1052) == 1) goto 2_go;
 		if(checkquest(2052) == 1) goto 2_go;
 		if(checkquest(3052) == 1) goto 2_go;
@@ -2983,10 +2983,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Hana Shuriken?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -2997,7 +2997,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		2_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -3005,7 +3005,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_2:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -3032,7 +3032,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2052; }
 		if(nukenin == 1) {setquest 3052; }
 		if(nukenin == 1) {setquest 4052; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3057,7 +3057,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1053) == 1) goto 3_go;
 		if(checkquest(2053) == 1) goto 3_go;
 		if(checkquest(3053) == 1) goto 3_go;
@@ -3071,10 +3071,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Lança Chamas?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -3085,7 +3085,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		3_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -3093,7 +3093,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_3:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -3120,7 +3120,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2051; }
 		if(nukenin == 1) {setquest 3051; }
 		if(nukenin == 1) {setquest 4051; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3157,7 +3157,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		switch( select( "- Katon Housenka:- Katon Hana Shuriken:- Katon Lanca Chamas" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1051) == 1) goto 1_go;
 		if(checkquest(2051) == 1) goto 1_go;
 		if(checkquest(3051) == 1) goto 1_go;
@@ -3171,10 +3171,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Housenka no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -3185,7 +3185,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		1_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -3193,7 +3193,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_1:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -3220,7 +3220,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2051; }
 		if(nukenin == 1) {setquest 3051; }
 		if(nukenin == 1) {setquest 4051; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3245,7 +3245,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1052) == 1) goto 2_go;
 		if(checkquest(2052) == 1) goto 2_go;
 		if(checkquest(3052) == 1) goto 2_go;
@@ -3259,10 +3259,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Hana Shuriken?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -3273,7 +3273,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		2_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -3281,7 +3281,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_2:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -3308,7 +3308,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2052; }
 		if(nukenin == 1) {setquest 3052; }
 		if(nukenin == 1) {setquest 4052; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3333,7 +3333,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1053) == 1) goto 3_go;
 		if(checkquest(2053) == 1) goto 3_go;
 		if(checkquest(3053) == 1) goto 3_go;
@@ -3347,10 +3347,10 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		
 		npctalk "[Katon Básico]";
 		npctalk "Lança Chamas?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -3361,7 +3361,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		3_delete:
 		npctalk "[Katon Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -3369,7 +3369,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		delete_3:
 		npctalk "[Katon Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -3396,7 +3396,7 @@ if(elementokaton != 1) { npctalk "[Katon Básico]"; npctalk "Esse elemento não é 
 		if(nukenin == 1) {setquest 2053; }
 		if(nukenin == 1) {setquest 3053; }
 		if(nukenin == 1) {setquest 4053; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Katon Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3433,7 +3433,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		switch( select( "- Suiton Hanhonryuu:- Campo Aquático:- Suiton Sensatsu Suishou" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1061) == 1) goto 1_go;
 		if(checkquest(2061) == 1) goto 1_go;
 		if(checkquest(3061) == 1) goto 1_go;
@@ -3447,10 +3447,10 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Suiton Básico]";
 		npctalk "Hanhonryuu no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -3461,7 +3461,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		1_delete:
 		npctalk "[Suiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -3469,7 +3469,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		delete_1:
 		npctalk "[Suiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -3492,7 +3492,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2061; }
 		if(#nevoa == 1) { setquest 3061; }
 		if(#nuvem == 1) { setquest 4061; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3517,7 +3517,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1062) == 1) goto 2_go;
 		if(checkquest(2062) == 1) goto 2_go;
 		if(checkquest(3062) == 1) goto 2_go;
@@ -3531,10 +3531,10 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Suiton Básico]";
 		npctalk "Campo Aquático?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -3545,7 +3545,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		2_delete:
 		npctalk "[Suiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -3553,7 +3553,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		delete_2:
 		npctalk "[Suiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -3576,7 +3576,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2062; }
 		if(#nevoa == 1) { setquest 3062; }
 		if(#nuvem == 1) { setquest 4062; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3601,7 +3601,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1063) == 1) goto 3_go;
 		if(checkquest(2063) == 1) goto 3_go;
 		if(checkquest(3063) == 1) goto 3_go;
@@ -3615,10 +3615,10 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Suiton Básico]";
 		npctalk "Sensatsu Suishou?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -3629,7 +3629,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		3_delete:
 		npctalk "[Suiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -3637,7 +3637,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		delete_3:
 		npctalk "[Suiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -3660,7 +3660,7 @@ if(elementosuiton != 1) { npctalk "[Suiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2063; }
 		if(#nevoa == 1) { setquest 3063; }
 		if(#nuvem == 1) { setquest 4063; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Suiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3697,7 +3697,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		switch( select( "- Raiton Maisou:- Raiton Kaminari Oroshi:- Raiton Corte Rapido" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1071) == 1) goto 1_go;
 		if(checkquest(2071) == 1) goto 1_go;
 		if(checkquest(3071) == 1) goto 1_go;
@@ -3711,10 +3711,10 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Raiton Básico]";
 		npctalk "Maisou no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -3725,7 +3725,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		1_delete:
 		npctalk "[Raiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -3733,7 +3733,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		delete_1:
 		npctalk "[Raiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -3756,7 +3756,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2071; }
 		if(#nevoa == 1) { setquest 3071; }
 		if(#nuvem == 1) { setquest 4071; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3781,7 +3781,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1072) == 1) goto 2_go;
 		if(checkquest(2072) == 1) goto 2_go;
 		if(checkquest(3072) == 1) goto 2_go;
@@ -3795,10 +3795,10 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Raiton Básico]";
 		npctalk "Kaminari Oroshi?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -3809,7 +3809,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		2_delete:
 		npctalk "[Raiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -3817,7 +3817,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		delete_2:
 		npctalk "[Raiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -3840,7 +3840,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2072; }
 		if(#nevoa == 1) { setquest 3072; }
 		if(#nuvem == 1) { setquest 4072; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3865,7 +3865,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1073) == 1) goto 3_go;
 		if(checkquest(2073) == 1) goto 3_go;
 		if(checkquest(3073) == 1) goto 3_go;
@@ -3879,10 +3879,10 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Raiton Básico]";
 		npctalk "Corte Espiritual?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -3893,7 +3893,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		3_delete:
 		npctalk "[Raiton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -3901,7 +3901,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		delete_3:
 		npctalk "[Raiton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -3924,7 +3924,7 @@ if(elementoraiton != 1) { npctalk "[Raiton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2073; }
 		if(#nevoa == 1) { setquest 3073; }
 		if(#nuvem == 1) { setquest 4073; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Raiton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -3963,7 +3963,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		switch( select( "- Fuuton Shinkuuha:- Fuuton Daitoppa:- Fuuton Shuriken" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1091) == 1) goto 1_go;
 		if(checkquest(2091) == 1) goto 1_go;
 		if(checkquest(3091) == 1) goto 1_go;
@@ -3977,10 +3977,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Shinkuuha no Jutsu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -3991,7 +3991,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		1_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -3999,7 +3999,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_1:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -4022,7 +4022,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2091; }
 		if(#nevoa == 1) { setquest 3091; }
 		if(#nuvem == 1) { setquest 4091; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4047,7 +4047,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1092) == 1) goto 2_go;
 		if(checkquest(2092) == 1) goto 2_go;
 		if(checkquest(3092) == 1) goto 2_go;
@@ -4061,10 +4061,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Fuuton Daitoppa?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -4075,7 +4075,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		2_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -4083,7 +4083,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_2:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -4106,7 +4106,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2092; }
 		if(#nevoa == 1) { setquest 3092; }
 		if(#nuvem == 1) { setquest 4092; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4131,7 +4131,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1093) == 1) goto 3_go;
 		if(checkquest(2093) == 1) goto 3_go;
 		if(checkquest(3093) == 1) goto 3_go;
@@ -4145,10 +4145,10 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		
 		npctalk "[Fuuton Básico]";
 		npctalk "Fuuton Shuriken?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -4159,7 +4159,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		3_delete:
 		npctalk "[Fuuton Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -4167,7 +4167,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		delete_3:
 		npctalk "[Fuuton Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -4190,7 +4190,7 @@ if(elementofuuton != 1) { npctalk "[Fuuton Básico]"; npctalk "Esse elemento não 
 		if(#suna == 1) {  setquest 2093; }
 		if(#nevoa == 1) { setquest 3093; }
 		if(#nuvem == 1) { setquest 4093; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Fuuton Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4225,7 +4225,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		switch( select( "- Kami no hogo:- Hogo Suru:- Burokkingu:- Pneuma" ) ){
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1100) == 1) goto 1_go;
 		if(checkquest(2100) == 1) goto 1_go;
 		if(checkquest(3100) == 1) goto 1_go;
@@ -4240,10 +4240,10 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		
 		npctalk "[Resistência Básico]";
 		npctalk "Kami no hogo?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -4254,7 +4254,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		1_delete:
 		npctalk "[Resistência Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -4262,7 +4262,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		delete_1:
 		npctalk "[Resistência Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -4285,7 +4285,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2100; }
 		if(#nevoa == 1) { setquest 3100; }
 		if(#nuvem == 1) { setquest 4100; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4327,7 +4327,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1101) == 1) goto 2_go;
 		if(checkquest(2101) == 1) goto 2_go;
 		if(checkquest(3101) == 1) goto 2_go;
@@ -4341,10 +4341,10 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		
 		npctalk "[Resistência Básico]";
 		npctalk "Hogo Suru?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -4355,7 +4355,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		2_delete:
 		npctalk "[Resistência Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -4363,7 +4363,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		delete_2:
 		npctalk "[Resistência Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -4386,7 +4386,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2101; }
 		if(#nevoa == 1) { setquest 3101; }
 		if(#nuvem == 1) { setquest 4101; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4428,7 +4428,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1102) == 1) goto 3_go;
 		if(checkquest(2102) == 1) goto 3_go;
 		if(checkquest(3102) == 1) goto 3_go;
@@ -4442,10 +4442,10 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		
 		npctalk "[Resistência Básico]";
 		npctalk "Burokkingu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -4456,7 +4456,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		3_delete:
 		npctalk "[Resistência Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -4464,7 +4464,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		delete_3:
 		npctalk "[Resistência Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -4487,7 +4487,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2102; }
 		if(#nevoa == 1) { setquest 3102; }
 		if(#nuvem == 1) { setquest 4102; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4529,7 +4529,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		end;
 		
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1103) == 1) goto 4_go;
 		if(checkquest(2103) == 1) goto 4_go;
 		if(checkquest(3103) == 1) goto 4_go;
@@ -4543,10 +4543,10 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		
 		npctalk "[Resistência Básico]";
 		npctalk "Pneuma?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -4557,7 +4557,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		4_delete:
 		npctalk "[Resistência Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -4565,7 +4565,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		delete_4:
 		npctalk "[Resistência Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -4588,7 +4588,7 @@ academia4,182,303,5	script	Resistência Básico	4_m_chnsoldier,{
 		if(#suna == 1)  { setquest 2103; }
 		if(#nevoa == 1) { setquest 3103; }
 		if(#nuvem == 1) { setquest 4103; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Resistência Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4639,7 +4639,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 	npctalk "Olá "+strcharinfo(0)+", sou professor de taijutsu escolha qual habilidade você gostaria de aprender.";
 		switch( select( "- Jyuuken Ryuu:- Rasteira:- Shikomishidan:- Expandir Chakra" ) ){
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1002) == 1) goto 2_go;
 		if(checkquest(2002) == 1) goto 2_go;
 		if(checkquest(3002) == 1) goto 2_go;
@@ -4653,10 +4653,10 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		
 		npctalk "[Taijutsu Básico]";
 		npctalk "Jyuuken Ryuu?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -4667,7 +4667,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		2_delete:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -4675,7 +4675,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		delete_2:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -4699,7 +4699,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2002; }
 		if(#nevoa == 1) { setquest 3002; }
 		if(#nuvem == 1) { setquest 4002; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4724,7 +4724,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		end;
 		
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1003) == 1) goto 3_go;
 		if(checkquest(2003) == 1) goto 3_go;
 		if(checkquest(3003) == 1) goto 3_go;
@@ -4738,10 +4738,10 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		
 		npctalk "[Taijutsu Básico]";
 		npctalk "Rasteira?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -4752,7 +4752,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		3_delete:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -4760,7 +4760,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		delete_3:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -4783,7 +4783,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2003; }
 		if(#nevoa == 1) { setquest 3003; }
 		if(#nuvem == 1) { setquest 4003; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4808,7 +4808,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		end;
 
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1004) == 1) goto 4_go;
 		if(checkquest(2004) == 1) goto 4_go;
 		if(checkquest(3004) == 1) goto 4_go;
@@ -4822,10 +4822,10 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		
 		npctalk "[Taijutsu Básico]";
 		npctalk "Shikomishindan?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -4836,7 +4836,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		4_delete:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -4844,7 +4844,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		delete_4:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -4867,7 +4867,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2004; }
 		if(#nevoa == 1) { setquest 3004; }
 		if(#nuvem == 1) { setquest 4004; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4893,7 +4893,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		end;
 		
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1005) == 1) goto 5_go;
 		if(checkquest(2005) == 1) goto 5_go;
 		if(checkquest(3005) == 1) goto 5_go;
@@ -4907,10 +4907,10 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		
 		npctalk "[Taijutsu Básico]";
 		npctalk "Tokken?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",5_SS,"Agora não",5_no;
@@ -4921,7 +4921,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		5_delete:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_5,"Nada não, só papo furado",naoquero_5;
@@ -4929,7 +4929,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		delete_5:
 		npctalk "[Taijutsu Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_5,"Não, não quero",naoquero_5;
@@ -4952,7 +4952,7 @@ academia4,180,303,3	script	Taijutsu Básico#9	1_m_pastor,{
 		if(#suna == 1) { setquest 2005; }
 		if(#nevoa == 1) { setquest 3005; }
 		if(#nuvem == 1) { setquest 4005; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Taijutsu Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -4988,7 +4988,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		
 
 	case 1:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1011) == 1) goto 1_go;
 		if(checkquest(2011) == 1) goto 1_go;
 		if(checkquest(3011) == 1) goto 1_go;
@@ -5002,10 +5002,10 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		
 		npctalk "[Velocidade Básico]";
 		npctalk "Concentrar chakra nos pés?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",1_SS,"Agora não",1_no;
@@ -5016,7 +5016,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		1_delete:
 		npctalk "[Velocidade Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_1,"Nada não, só papo furado",naoquero_1;
@@ -5024,7 +5024,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		delete_1:
 		npctalk "[Velocidade Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_1,"Não, não quero",naoquero_1;
@@ -5047,7 +5047,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2011; }
 		if(#nevoa == 1) {  setquest 3011; }
 		if(#nuvem == 1) {  setquest 4011; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -5072,7 +5072,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		end;
 
 	case 2:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1012) == 1) goto 2_go;
 		if(checkquest(2012) == 1) goto 2_go;
 		if(checkquest(3012) == 1) goto 2_go;
@@ -5086,10 +5086,10 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		
 		npctalk "[Velocidade Básico]";
 		npctalk "Perícia em Esquiva?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",2_SS,"Agora não",2_no;
@@ -5100,7 +5100,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		2_delete:
 		npctalk "[Velocidade Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_2,"Nada não, só papo furado",naoquero_2;
@@ -5108,7 +5108,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		delete_2:
 		npctalk "[Velocidade Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_2,"Não, não quero",naoquero_2;
@@ -5131,7 +5131,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {   setquest 2012; }
 		if(#nevoa == 1) {  setquest 3012; }
 		if(#nuvem == 1) {  setquest 4012; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -5156,7 +5156,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		end;
 		
 	case 3:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1014) == 1) goto 3_go;
 		if(checkquest(2014) == 1) goto 3_go;
 		if(checkquest(3014) == 1) goto 3_go;
@@ -5170,10 +5170,10 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		
 		npctalk "[Velocidade Básico]";
 		npctalk "Recuar?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",3_SS,"Agora não",3_no;
@@ -5184,7 +5184,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		3_delete:
 		npctalk "[Velocidade Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_3,"Nada não, só papo furado",naoquero_3;
@@ -5192,7 +5192,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		delete_3:
 		npctalk "[Velocidade Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_3,"Não, não quero",naoquero_3;
@@ -5217,7 +5217,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2014; }
 		if(#nevoa == 1) { setquest 3014; }
 		if(#nuvem == 1) { setquest 4014; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -5242,7 +5242,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		end;
 
 	case 4:
-		sleep2 4800;
+		sleep2 5500;
 		if(checkquest(1013) == 1) goto 4_go;
 		if(checkquest(2013) == 1) goto 4_go;
 		if(checkquest(3013) == 1) goto 4_go;
@@ -5256,10 +5256,10 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		
 		npctalk "[Velocidade Básico]";
 		npctalk "Rapidez com uma mão?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Lembre-se que você só pode ter 9 skills básicos, após isso não poderá aprender mais nenhum básico";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Gostaria de treinar?";
 		menu "Sim, vamos treinar",4_SS,"Agora não",4_no;
@@ -5270,7 +5270,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		4_delete:
 		npctalk "[Velocidade Básico]";
 		npctalk "Olá novamente, como está esse jutsu que te ensinei?";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "O que? Você veio falar algo comigo? O que é?";
 		menu "Não gostei desse jutsu, quero remover",delete_4,"Nada não, só papo furado",naoquero_4;
@@ -5278,7 +5278,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		delete_4:
 		npctalk "[Velocidade Básico]";
 		npctalk "Você tem certeza que gostaria de remover este jutsu? Se sim, você poderá aprender outro em seu lugar, porém terá que fazer a quest novamente";
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Qual é sua decisão?";
 		menu "Sim, eu tenho certeza",quero_4,"Não, não quero",naoquero_4;
@@ -5302,7 +5302,7 @@ academia4,191,303,2	script	Velocidade Básico::velbas	1_f_02,{
 		if(#suna == 1) {  setquest 2013; }
 		if(#nevoa == 1) { setquest 3013; }
 		if(#nuvem == 1) { setquest 4013; }
-		sleep2 4800;
+		sleep2 5500;
 		npctalk "[Velocidade Básico]";
 		npctalk "Vá e faça seu treinamento.";
 		set skill_basica,skill_basica +1;
@@ -5469,7 +5469,7 @@ academia4,225,344,5	script	9. Habilidades	60,{
 npctalk "[Habilidades]";
 npctalk "Para cada pedra de treino, você pode escolher 3 habilidades em cada level, totalizando 9 básicas e 6 intermediárias.";
 npctalk "Devido ao fato de as habilidades avançadas serem de extrema força, pode-se ter apenas 2 para sua pedra avançada.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Habilidades]";
 npctalk "As Habilidades podem sem adquiridas no terceiro andar desta academia, lá se encontram os NPC’s de todos os treinos básicos e intermediários.";
 npctalk "As habilidades avançadas podem ser obtidas posteriormente no campo de treinamento, após provar ser digno de tal poder.";
@@ -5486,7 +5486,7 @@ academia4,222,344,5	script	10. Invocações	69,{
 
 npctalk "[Invocações (Kuchiyose no Jutsu) ]";
 npctalk "As invocações são fiéis companheiros que irão lhe ajudar em sua jornada ninja, cada uma possuindo 3 níveis, quanto mais alto, mais forte.";
-sleep2 4800;
+sleep2 5500;
 npctalk "[Invocações]";
 npctalk "Atualmente existem 6 tipos de invocações , sendo elas :";
 npctalk "- Girino ( Focado em Dano Elemental, e buff do usuário )";
@@ -5513,13 +5513,13 @@ npctalk "[O que é]";
 
 npctalk "No Anime/Mangá Naruto, kekkei genkai 'Linhagem Sangüínea Avançada' ou 'Linhagem Avançada' é uma propriedade passada geneticamente dentro de um clã (ex: Sharingan do Clã Uchiha, Byakugan do Clã Hyuuga) .";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Pra que serve]";
 
 npctalk "Kekkei Genkai são benéficos, e geralmente ajudam um ninja durante as suas batalhas ou em outras situações.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Onde conseguir]";
 
@@ -5527,61 +5527,61 @@ npctalk "Onde consigo?";
 
 npctalk "Há um npc dentro da biblioteca de sua vila e por aqui também que lhe oferece as kekkei genkais. Lá você escolhe qual Kekkei Genkai voce deseja obter e depois ela estará disponível para voce despertar depois de um certo tempo.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Existem diversas KG's , todas possuem um objetivo. Para começar a sua seleção de KG , tenha em mente quais habilidades voce irá utilizar no futuro , estude os jutsus com cuidado e junte-os com os de sua KG, assim voce estará mais preparado.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Sharingan = Kekkei Genkai voltada para os modos de GvG , onde não está presente o 1x1. Essa KG possuí a habilidade de refletir ataques físicos e mágicos , o que pode ajudar muito em batalha. ";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Byakugan = Kekkei Genkai ofensiva , para quem gosta de atacar os oponentes e derrotár-los fácil. Possui combos de habilidades com poder de ataque altíssimos";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Selo do Céu = Kekkei Genkai para ninjutsus ofensivos , por possuir um alto poder de ataque mágico e velocidade de locomoção.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Selo da Terra = Kekkei Genkai para taijutsus ofensivos , possui grande poder de ataque físico e velocidade.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Sombras ( Nara )= Kekkei Genkai tática , pois prende o inimigo , confundindo os npctalkmos. ";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Hyouton = Kekkei Genkai tática , voce pode desaparecer e aparecer , surpreendendo seus adversários , o que pode tornár-lo muito forte.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Akimichi ( Baika ) = Kekkei Genkai Defensiva , os portadores dessa Kekkei Genkai possuem grande resistencia e HP , geralmente usada por usuários de Medicina.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
 npctalk "Kugutsu = Kekkei Genkai Defensiva , possui grande resistencia e o sistema de invocação de Marionetes.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kekkei Genkai]";
 
@@ -5613,7 +5613,7 @@ npctalk "Missões são tarefas que o Kage ( NPC que está presente dentro do Escrit
 
 npctalk "Estas missões consistem em matar monstros , geralmente em torno de 50 a 100 monstros.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do Kage]";
 
@@ -5621,7 +5621,7 @@ npctalk "Onde eu consigo pegar Missões ?";
 
 npctalk "Vá ao escritório do Kage de sua Vila , converse com o NPC Kage e veja as missões que voce já recebeu.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do kage]";
 npctalk "As missões te dão pontos de missões para voce trocar por itens para sua evolução";
@@ -5649,7 +5649,7 @@ npctalk "Missões são tarefas que o Kage ( NPC que está presente dentro do Escrit
 
 npctalk "Estas missões consistem em matar monstros , geralmente em torno de 50 a 100 monstros.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do Kage]";
 
@@ -5657,7 +5657,7 @@ npctalk "Onde eu consigo pegar Missões ?";
 
 npctalk "Vá ao escritório do Kage de sua Vila , converse com o NPC Kage e veja as missões que voce já recebeu.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do kage]";
 npctalk "As missões te dão pontos de missões para voce trocar por itens para sua evolução";
@@ -5686,7 +5686,7 @@ npctalk "Missões são tarefas que o Kage ( NPC que está presente dentro do Escrit
 
 npctalk "Estas missões consistem em matar monstros , geralmente em torno de 50 a 100 monstros.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do Kage]";
 
@@ -5694,7 +5694,7 @@ npctalk "Onde eu consigo pegar Missões ?";
 
 npctalk "Vá ao escritório do Kage de sua Vila , converse com o NPC Kage e veja as missões que voce já recebeu.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do kage]";
 npctalk "As missões te dão pontos de missões para voce trocar por itens para sua evolução";
@@ -5723,7 +5723,7 @@ npctalk "Missões são tarefas que o Kage ( NPC que está presente dentro do Escrit
 
 npctalk "Estas missões consistem em matar monstros , geralmente em torno de 50 a 100 monstros.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do Kage]";
 
@@ -5731,7 +5731,7 @@ npctalk "Onde eu consigo pegar Missões ?";
 
 npctalk "Vá ao escritório do Kage de sua Vila , converse com o NPC Kage e veja as missões que voce já recebeu.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do kage]";
 npctalk "As missões te dão pontos de missões para voce trocar por itens para sua evolução";
@@ -5759,7 +5759,7 @@ npctalk "Missões são tarefas que o Kage ( NPC que está presente dentro do Escrit
 
 npctalk "Estas missões consistem em matar monstros , geralmente em torno de 50 a 100 monstros.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do Kage]";
 
@@ -5767,7 +5767,7 @@ npctalk "Onde eu consigo pegar Missões ?";
 
 npctalk "Vá ao escritório do Kage de sua Vila , converse com o NPC Kage e veja as missões que voce já recebeu.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Missões do kage]";
 npctalk "As missões te dão pontos de missões para voce trocar por itens para sua evolução";
@@ -5796,7 +5796,7 @@ npctalk "- Rank é um sistema que define o quão bom um Player pode ser.";
 
 npctalk "Dependendo do Rank de um jogador , ele pode ter matado mais inimigos e completado mais missões. Quanto maior sua reputação, maior o seu Rank.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Sistema de Rank]";
 
@@ -5804,7 +5804,7 @@ npctalk "O que é Reputação ?";
 
 npctalk "- Reputação significa que você matou e tem capacidade de matar os outros players.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Sistema de Rank]";
 
@@ -5837,7 +5837,7 @@ npctalk "- São elas :";
 
 npctalk "Chunin, Jounin, ANBU, Kage, Akatsuki";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Graduações]";
 
@@ -5851,7 +5851,7 @@ npctalk "- Jounin : Ser no mínimo level 800 e passar no Jounin Shiken";
 
 npctalk "ou Conseguir 3.000 pontos de missão";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Graduações]";
 
@@ -5859,7 +5859,7 @@ npctalk "- ANBU : Ser Jounin e ser indicado pelo Kage para participar do ANBU Sh
 
 npctalk "- Kage : Para participar do Kage Shiken , você deve ser Jounin e ser votado pela sua Vila.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Graduações]";
 
@@ -5891,7 +5891,7 @@ npctalk "O que é Shiken ?";
 
 npctalk "- Shiken é um evento realizado de 15 em 15 dias , para definir os próximos jogadores a serem graduados.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Shikens]";
 
@@ -5905,7 +5905,7 @@ npctalk "Jounin Shiken ( JS ) :";
 
 npctalk "- Funciona de modo Sobrevivencia , com as regras do aplicador presente no dia do shiken.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Shikens]";
 
@@ -5915,7 +5915,7 @@ npctalk "-1 x 1 entre os indicados ( Jounins ) pelo Kage.";
 
 npctalk "Os 4 ou 5 Melhores ganham o cargo de ANBU.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Shikens]";
 
@@ -5947,7 +5947,7 @@ npctalk "[Aldeias]";
 
 npctalk "O sistema de aldeias ocorre todos os dias as 21:00, onde 10 aldeias aparecem no servidor e as vilas devem conquistar-las. Cada aldeia fornece uma quantidade de Ryous, e os ryous podem ser usados para investimentos.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Aldeias]";
 
@@ -5977,7 +5977,7 @@ npctalk "[Bijuu]";
 
 npctalk "O Sistema de bijuu ocorre todos os domingos as 21:00 , onde os 9 bijuus resurgem em seu esconderijo. Os Kages de cada vila devem capturar os bijuus , para que a vila tenha seu HP e SP aumentados.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[ Bijuu ]";
 
@@ -6005,19 +6005,19 @@ npctalk "[Jinchuurikis]";
 
 npctalk "Cada vila pode ter 1 Jinchuuriki , que é escolhido por votação e o vencedor recebe o cargo de Jinchuuriki.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Jinchuuriki]";
 
 npctalk "A votação ocorre mensalmente e pode ser anulada caso o jogador não logue em seu cargo por 3 ou 4 dias.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Jinchuuriki]";
 
 npctalk "Jinchuurikis recebem bonus no HP , SP , ATK , MATK e podem se transformar no bijuu de sua vila.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Jinchuuriki]";
 
@@ -6051,13 +6051,13 @@ npctalk "[Kages]";
 
 npctalk "É obrigação do Kage ajudar a vila com informações para iniciantes , Aldeias , Bijuus , e a ordem da vila.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kages]";
 
 npctalk "O Kage é escolhido por meio de votação, e essa npctalkma votação ocorre novamente depois de 30 dias , dando o cargo a outro jogador , que se tornará o novo Kage.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Kages]";
 
@@ -6089,19 +6089,19 @@ npctalk " O Sistema de PvP é aplicado no servidor em alguns mapas envolta de sua
 
 npctalk "A cada morte ( tanto sua quanto do inimigo ) voce irá ganhar e perder pontos de Ranking.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[PvP]";
 
 npctalk "Quanto maior for o seu Rank , maior será a sua reputação no servidor. Esse sistema só é aplicado a jogadores com nível de base igual ou superior a 500.Ou seja , antes do level 500 , o jogador não pode entrar em duelos diretos contra outros jogadores.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[PvP]";
 
 npctalk "Existem também as arenas de PvP , onde jogadores podem entrar a qualquer momento e duelarem entre si. O sistema de Arena possuí um Rank de jogadores , ou seja , a cada morte sua ou de seu inimigo , seu rank na arena irá subir ou descer.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[PvP]";
 
@@ -6131,19 +6131,19 @@ npctalk "[Guild]";
 
 npctalk "Cada vila possuí uma Guild , liderada pelo seu Kage. O Limite de pessoas para cada Guild é de 150 pessoas , o que pode causar a retirada de jogadores que não logam a um certo tempo da npctalkma.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Guild]";
 
 npctalk "É de total responsabilidade do Kage cuidar de sua Guild assim como de sua vila, para que não haja desordem em ambas.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Guild]";
 
 npctalk "A Guild possuí a habilidade 'Reunião Emergencial' que é somente utilizada pelo Kage da, que faz com que todos os membros presentes na guild sejam teleportados ao local que o Kage utilizou a habilidade.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Guild]";
 
@@ -6171,13 +6171,13 @@ npctalk "[Guerra Ninja]";
 
 npctalk "Ocorre de quartas, quintas e sábados, no período da noite, as 20 horas. ";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[WoE]";
 
 npctalk "O Objetivo principal é conquistar o bijuu que está dentro do castelo, e caso seja conquistado, deve ser defendido. ";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[WoE]";
 
@@ -6207,19 +6207,19 @@ npctalk "[Torre Sangrenta]";
 
 npctalk "A Torre Sangrenta é um sistema onde um grupo de players entram em um mapa onde monstros muito fortes são invocados.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Torre Sangrenta]";
 
 npctalk "Essa Torre possuí 5 dificuldades que variam de 8 a 10 andares , e a cada andar , os monstros vão ficando mais fortes.";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Torre Sangrenta]";
 
 npctalk "Caso voce complete a Torre , seu grupo irá receber Caixas Surpresas , e ao abrir-las , voces tem chance de ganhar itens lendários !";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Torre Sangrenta]";
 
@@ -6255,18 +6255,18 @@ npctalk "2-> Click em 'Doações'";
 
 npctalk "http://|narutorpgonline.com/doa.html";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Doações] 3-> Quando vooc entrar na parte 'Doaçoes' clique no botão 'Doar pelo PagSeguro';.";
 
 npctalk "[Doações] Ou leia o QRCODE para fazer a doação por PIX";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "[Doações] 4-> Depois de fazer isso, envie email para narutommorpgonline@gmail.com";
 npctalk "Com o comprovante e o nome do seu personagem";
 
-sleep2 4800;
+sleep2 5500;
 
 npctalk "5-> Pronto, voce já fez seu deposito e a confirmação, agora espere a STAFF depositar seus rops";
 
