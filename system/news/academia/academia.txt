@@ -583,9 +583,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			if(getskilllv(534) || getskilllv(17) || getskilllv(2259) ||					
 			getskilllv(19) || getskilllv(186) || getskilllv(80) || getskilllv(81) ||					
 			getskilllv(536) || getskilllv(83) || getskilllv(2211) ) { 
-				npctalk .@menu$; 
-				npctalk "Você precisa remover todas as habilidades de Katon"; 
-				end; 
+				mes .@menu$; 
+				mes "Você precisa remover todas as habilidades de Katon"; 
+				close; 
 			}				
 		}
 		
@@ -593,9 +593,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			if(getskilllv(15) || getskilllv(88) || getskilllv(537) ||					
 			getskilllv(14) || getskilllv(184) || getskilllv(2449) || getskilllv(2447) ||					
 			getskilllv(89) || getskilllv(539) || getskilllv(2203) ) { 
-				npctalk .@menu$; 
-				npctalk "Você precisa remover todas as habilidades de Suiton"; 
-				end; 
+				mes .@menu$; 
+				mes "Você precisa remover todas as habilidades de Suiton"; 
+				close; 
 			}				
 		}				
 			
@@ -603,9 +603,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			if(getskilllv(192) || getskilllv(21) || getskilllv(3005) ||					
 			getskilllv(20) || getskilllv(187) || getskilllv(84) || getskilllv(2040) || getskilllv(2454) ||					
 			getskilllv(85) || getskilllv(2214) || getskilllv(541) ) { 
-				npctalk .@menu$; 
-				npctalk "Você precisa remover todas as habilidades de Raiton"; 
-				end; 
+				mes .@menu$; 
+				mes "Você precisa remover todas as habilidades de Raiton"; 
+				close; 
 			}				
 		}	
 		
@@ -613,9 +613,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			if(getskilllv(185) || getskilllv(91) || getskilllv(137) ||					
 			getskilllv(90) || getskilllv(800) || getskilllv(16) || getskilllv(2446) ||					
 			getskilllv(666) || getskilllv(2216) || getskilllv(653) ) {
-				npctalk .@menu$; 
-				npctalk "Você precisa remover todas as habilidades de Doton"; 
-				end; 
+				mes .@menu$; 
+				mes "Você precisa remover todas as habilidades de Doton"; 
+				close; 
 			}				
 		}								
 		
@@ -623,9 +623,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			if(getskilllv(191) || getskilllv(11) || getskilllv(13) ||					
 			getskilllv(540) || getskilllv(542) || getskilllv(148) || getskilllv(2453) || getskilllv(2002) ||					
 			getskilllv(469) || getskilllv(394) || getskilllv(2005) ) { 
-				npctalk .@menu$; 
-				npctalk "Você precisa remover todas as habilidades de Fuuton"; 
-				end; 
+				mes .@menu$; 
+				mes "Você precisa remover todas as habilidades de Fuuton"; 
+				close; 
 			}				
 		}	
 		
