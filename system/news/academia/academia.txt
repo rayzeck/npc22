@@ -559,8 +559,6 @@ npctalk "Aqui você fará seu teste elemental e escolherá seu elemento!";
 dispbottom "Fale com o NPC dentro da sala!";
 end;
 
-OnInit:
-	waitingroom "[Sala 2]",0;
 }
 
 
