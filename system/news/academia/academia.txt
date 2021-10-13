@@ -3,18 +3,19 @@ academia4,317,358,4	script	 	111,1,1,{
 if (tutorialnovo == 1) { end; }
 set tutorialnovo,1;
 
-mes set(.@nfn$, "[^FF0000Naruto RPG Online^000000]");
-mes "Olá! Para jogar no Naruto RPG Online, você utilizará o mouse para andar. Utilizará o mouse também para atacar monstros fisicamente, usando seu Taijutsu ou clicando nas suas habilidades para usar genjutsu e ninjutsu.";
-next;
-mes .@nfn$;
-mes "Assim como mostrará na imagem em sua tela:";
+npctalk "Olá " + strcharinfo(0) + ", Para jogar no Naruto RPG Online, você utilizará o mouse para andar. Utilizará o mouse também para atacar monstros fisicamente,", "", bc_self;
+sleep2 3500;
+npctalk "usando seu Taijutsu ou clicando nas suas habilidades para usar genjutsu e ninjutsu.";
+sleep2 3000;
+npctalk "Assim como mostrará na imagem em sua tela:";
 cutin "tutorial01",4;
-next;
-mes .@nfn$;
-mes "Entendeu? Vá seguindo nos corredores que ensinaremos mais à você. Mas cuidado! Esse lugar é o antigo esconderijo do Orochimaru, é bastante perigoso!";
+sleep2 2000;
+npctalk "Entendeu? Vá seguindo nos corredores que ensinaremos mais à você. Mas cuidado! Esse lugar é o antigo esconderijo do Orochimaru, é bastante perigoso!";
 cutin "",255;
+sleep 3500;
+npctalk "Fale com todos os npcs para entender melhor sobre o nosso universo!";
 dispbottom "Fale com todos os NPCS para entender melhor sobre o jogo e continue o corredor!";
-close;
+end;
 
 }
 
@@ -5362,7 +5363,6 @@ academia4,118,309,7	script	Professor#3	65,{
 
 	if(quest_basic_inicio == 4) {
 		cutin "sensei03",2;
-		messagecolor 1,"teste",1;
         npctalk "Olá " + strcharinfo(0) + ", vejo que você completou os treinamentos básicos e está pronto para meu exame final.", "", bc_self;
         sleep2 5500;
         npctalk "não vamos perder tempo, creio que já estudou tudo que precisa, vamos à primeira pergunta!", "", bc_self;
