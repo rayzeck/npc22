@@ -758,26 +758,19 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 		}	
 	}	
 	if(quest_basic_inicio == 2) {
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		cutin "cutin_zabuza",2;
 		npctalk "Olá "+strcharinfo(0)+",  sou Koichi Kuwabara e serei o seu orientador elemental.";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn uchiha da vila da folha. ";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn koori da vila da névoa.";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn kaminari da vila da nuvem.";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Doton. Elemento terra, lhe possibilita o poder de dominar as rochas pedras terra e as partículas de poeira para criar muros arrenpctalksar pedras elevar ou abaixar a terra criar fissuras  e tremores no solo de batalha, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan tsuchi da vila da pedra.";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Fuuton. Elemento vento, lhe possibilita o poder de dominar as brisas de vento para criar tufões laminas de corte e rajadas de repulsão de vento, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan kazekage da vila da suna.";
 		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 		npctalk "Bom , agora que já sabe todos os elementos , qual elemento você acha que você pode usar.";
 		cutin "",255;
 			switch(select("- Katon:- Suiton:- Raiton:- Doton:- Fuuton"))
@@ -788,13 +781,12 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Será que você é um usuário de Katon? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
 					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
+				sleep2 4500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "O papel queimou, parabéns você é um usuário de Katon!";
-				sleep2 6000;
+				sleep2 4500;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
-				close2;
 				set quest_basic_inicio,3;
 				set elementokaton,1;
 				set elemento,1;
@@ -811,7 +803,6 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				sleep2 6000;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
-				close2;
 				set quest_basic_inicio,3;
 				set elementosuiton,1;
 				set elemento,1;
@@ -828,7 +819,6 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				sleep2 6000;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
-				close2;
 				set quest_basic_inicio,3;
 				set elementoraiton,1;
 				set elemento,1;
@@ -845,7 +835,6 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				sleep2 6000;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
-				close2;
 				set quest_basic_inicio,3;
 				set elementodoton,1;
 				set elemento,1;
@@ -862,7 +851,6 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				sleep2 6000;
 				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
 				npctalk "Siga para a próxima sala, desejo um ótimo futuro.";
-				close2;
 				set quest_basic_inicio,3;
 				set elementofuuton,1;
 				set elemento,1;
