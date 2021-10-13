@@ -6296,4 +6296,5 @@ OnTouch:
 		mes "Você precisa passar na prova para sair se não ficará mais um semestre estudando.";
 		close;
 
+	}
 }
