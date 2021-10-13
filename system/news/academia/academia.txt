@@ -560,7 +560,7 @@ dispbottom "Fale com o NPC dentro da sala!";
 end;
 
 
-academia4,174,364,5	script	Mestre Elemental	68,1,10,{	
+academia4,174,364,5	script	Mestre Elemental	68,{	
 
 	.@menu$ = "^B0449E[ Koichi Kuwabara ]^000000";
 
