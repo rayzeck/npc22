@@ -554,10 +554,15 @@ OnInit:
 
 
 academia4,178,346,5	script	Sala 2	837,{
-npctalk "[Sala 2]";
+
 npctalk "Aqui você fará seu teste elemental e escolherá seu elemento!";
 dispbottom "Fale com o NPC dentro da sala!";
 end;
+}
+
+OnInit:
+	waitingroom "[Sala 2]",0;
+}
 
 
 academia4,174,364,5	script	Mestre Elemental	68,{	
