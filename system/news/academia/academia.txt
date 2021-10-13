@@ -28,8 +28,7 @@ end;
 
 academia4,285,344,5	script	1. Interface	843,{
 
-OnTouch:
- setpcblock PCBLOCK_NPC, true;
+setpcblock PCBLOCK_NPC, true;
 npctalk "[Interface]";
 npctalk "A tela de jogo apresenta uma 'janela principal' composta de um menu com o desenvolvimento, o nome do personagem, sua classe, o HP, o SP, o peso em itens e o dinheiro do personagem.";
 sleep2 6000;
