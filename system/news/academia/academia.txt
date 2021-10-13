@@ -54,12 +54,7 @@ sleep2 6000;
 cutin "",255;
 end;
 
-OnInit:
-
-	waitingroom "[Tutorial   1]",0;
-
 }
-
 
 
 academia4,281,344,5	script	2. Atalhos	884,{
