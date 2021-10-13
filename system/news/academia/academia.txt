@@ -29,7 +29,7 @@ end;
 academia4,285,344,5	script	1. Interface	843,{
 
 OnTouch:
-if (getpcblock() & (PCBLOCK_MOVE|PCBLOCK_NPC))
+ setpcblock PCBLOCK_NPC, true;
 npctalk "[Interface]";
 npctalk "A tela de jogo apresenta uma 'janela principal' composta de um menu com o desenvolvimento, o nome do personagem, sua classe, o HP, o SP, o peso em itens e o dinheiro do personagem.";
 sleep2 6000;
@@ -48,6 +48,7 @@ npctalk "[Interface]";
 npctalk "Para ver as suas quests, você pode clicar no canto superior esquerdo da tela ou utilizar o atalho ALT+U para abrir sua janelinha de missões.";
 dispbottom "Fale com todos os NPCS para entender melhor sobre o jogo e continue o corredor!";
 cutin "tutorial02",4;
+ setpcblock PCBLOCK_NPC, false;
 sleep2 6000;
 cutin "",255;
 end;
@@ -186,7 +187,6 @@ end;
 OnInit:
 	waitingroom "[Tutorial   6]",0;
 }
-
 
 academia4,261,344,5	script	7. Se tornando forte	49,{
 
