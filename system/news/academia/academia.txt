@@ -6287,13 +6287,13 @@ academia4,10,334,5	script	SAIDADAACADEMIA	WARPNPC,2,2,{
 
 OnTouch:
 
-		if(quest_basic_inicio != 6) { npctalk "Termine o Tutorial"; close2; end; }
+		if(quest_basic_inicio != 6) { mes "Termine o Tutorial"; close2; end; }
 		if(#konoha == 1) { warp "konoha3",240,248; }
 		if(#suna == 1) { warp "sunagakure",225,125; }
 		if(#nevoa == 1) { warp "kirigakure",192,152; }
 		if(#nuvem == 1) { warp "kumogakure",223,110; }
 		
 		mes "Você precisa passar na prova para sair se não ficará mais um semestre estudando.";
-		end;
+		close;
 
 }
