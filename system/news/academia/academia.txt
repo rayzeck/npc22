@@ -760,12 +760,14 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 	if(quest_basic_inicio == 2) {
 		cutin "cutin_zabuza",2;
 		npctalk "Olá "+strcharinfo(0)+",  sou Koichi Kuwabara e serei o seu orientador elemental.";
+		sleep2 3000;
+		npctalk "Vou te explicar sobre cada elemento, ok? Vamos lá!";
+		sleep2 3500;
+		npctalk "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clan uchiha da vila da folha. ";
 		sleep2 6000;
-		npctalk "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn uchiha da vila da folha. ";
+		npctalk "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clan koori da vila da névoa.";
 		sleep2 6000;
-		npctalk "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn koori da vila da névoa.";
-		sleep2 6000;
-		npctalk "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn kaminari da vila da nuvem.";
+		npctalk "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clan kaminari da vila da nuvem.";
 		sleep2 6000;
 		npctalk "Doton. Elemento terra, lhe possibilita o poder de dominar as rochas pedras terra e as partículas de poeira para criar muros arrenpctalksar pedras elevar ou abaixar a terra criar fissuras  e tremores no solo de batalha, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan tsuchi da vila da pedra.";
 		sleep2 6000;
@@ -863,7 +865,7 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 }
 
 
-academia4,175,308,2	script	Susume Keiko	65,1,9,{
+academia4,175,308,2	script	Susume Keiko	65,{
 	
 	if(quest_basic_inicio == 4) {
 		npctalk "[Susume Keioko]";
@@ -891,7 +893,7 @@ academia4,175,308,2	script	Susume Keiko	65,1,9,{
 		npctalk "Caso tenha escolhido algum jutsu mas deseja aprender outro, fale com o sensei e diga que não ve mais utilidade na habilidade e que deseja aprender outra e só assim poderá aprender outra habilidade.";
 		sleep2 6000;
 		npctalk "[Susume Keioko]";
-		npctalk "Você já pode escolher suas habilidades, os senseis estão atrás de mim. - GAMBATTE!";
+		npctalk "Você poderá escolher suas habilidades na sala de Jutsus ao terminar a prova final, no outro andar da academia, os senseis estarão lá. - GAMBATTE!";
 		sleep2 6000;
 		npctalk "[Susume Keioko]";
 		npctalk "Siga para Sala 3, para fazer o seu exame.";
