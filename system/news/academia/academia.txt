@@ -564,7 +564,7 @@ OnInit:
 }
 
 
-academia4,174,364,5	script	Mestre Elemental	68,{	
+academia4,174,364,5	script	Mestre Elemental	68,1,10,{	
 
 	.@menu$ = "^B0449E[ Koichi Kuwabara ]^000000";
 
@@ -574,7 +574,7 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 		cutin "cutin_zabuza",2;
 		mes "Olá "+strcharinfo(0)+" vejó que você ja possui um elemento. ";		
 		mes "Gostaria de trocar de elemento?";			
-		if(select("- Sim:- Não") == 2) end;				
+		if(select("- Sim:- Não") == 2) close;				
 		next;
 		cutin "",255;
 		if(countitem(7005) < 1) { next; mes .@menu$; mes "Você precisa do ticket de troca elemental"; close; }									
@@ -629,16 +629,16 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 			}				
 		}	
 		
-		npctalk .@menu$;
+		mes .@menu$;
 		cutin "cutin_zabuza",2;		
-		npctalk "Para qual elemento gostaria de mudar?";				
+		mes "Para qual elemento gostaria de mudar?";				
 		switch(select("- Katon:- Suiton:- Raiton:- Doton:- Fuuton")) {					
-			sleep2 1000;
+			next;
 			cutin "",255;
 			case 1:						
 				if (elementokaton == 1)  { 
-					npctalk .@menu$; sleep2 6000; npctalk "Você já é deste elemento"; 
-					end; 
+					mes .@menu$; next; mes "Você já é deste elemento"; 
+					close; 
 				}						
 				if (elementosuiton == 1) { 
 					set elementosuiton,0;
@@ -654,9 +654,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				}						
 				set elementokaton,1;						
 				delitem 7005,1;						
-				npctalk .@menu$;						
-				npctalk "Elemento trocado com sucesso para Katon";						
-				end;	
+				mes .@menu$;						
+				mes "Elemento trocado com sucesso para Katon";						
+				close;	
 				
 			case 2:	
 		
@@ -664,9 +664,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 					set elementokaton,0;
 				}						
 				if (elementosuiton == 1) { 
-					npctalk .@menu$; 
-					sleep2 6000; npctalk "Você já é deste elemento"; 
-					end;
+					mes .@menu$; 
+					next; mes "Você já é deste elemento"; 
+					close;
 				}						
 				if (elementoraiton == 1) { 
 					set elementoraiton,0;
@@ -679,9 +679,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				}						
 				set elementosuiton,1;						
 				delitem 7005,1;						
-				npctalk .@menu$;						
-				npctalk "Elemento trocado com sucesso para Suiton";						
-				end;					
+				mes .@menu$;						
+				mes "Elemento trocado com sucesso para Suiton";						
+				close;					
 				
 			case 3:						
 				if (elementokaton == 1)  {
@@ -691,10 +691,10 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 					set elementosuiton,0;
 				}						
 				if (elementoraiton == 1) { 
-					npctalk .@menu$; 
-					sleep2 6000; 
-					npctalk "Você já é deste elemento"; 
-					end;
+					mes .@menu$; 
+					next; 
+					mes "Você já é deste elemento"; 
+					close;
 				}						
 				if (elementodoton == 1)  { 
 					set elementodoton,0; 
@@ -704,9 +704,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				}						
 				set elementoraiton,1;						
 				delitem 7005,1;						
-				npctalk .@menu$;						
-				npctalk "Elemento trocado com sucesso para Raiton";			
-				end;
+				mes .@menu$;						
+				mes "Elemento trocado com sucesso para Raiton";			
+				close;
 				
 			case 4:						
 				if (elementokaton == 1)  { 
@@ -719,18 +719,18 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 					set elementoraiton,0;
 				}						
 				if (elementodoton == 1)  { 
-					npctalk .@menu$; 
-					sleep2 1000; npctalk "Você já é deste elemento"; 
-					end; 
+					mes .@menu$; 
+					next; mes "Você já é deste elemento"; 
+					close; 
 				}						
 				if (elementofuuton == 1) { 
 					set elementofuuton,0;
 				}						
 				set elementodoton,1;						
 				delitem 7005,1;						
-				npctalk .@menu$;						
-				npctalk "Elemento trocado com sucesso para Doton";						
-				end;					
+				mes .@menu$;						
+				mes "Elemento trocado com sucesso para Doton";						
+				close;					
 				
 			case 5:						
 				if (elementokaton == 1)  { 
@@ -746,54 +746,54 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 					set elementodoton,0; 
 				}						
 				if (elementofuuton == 1) { 
-					npctalk .@menu$; 
-					npctalk "Você já é deste elemento"; 
-					end;
+					mes .@menu$; 
+					mes "Você já é deste elemento"; 
+					close;
 				}						
 				set elementofuuton,1;						
 				delitem 7005,1;						
-				npctalk .@menu$;						
-				npctalk "Elemento trocado com sucesso para Fuuton";						
-				end;								
+				mes .@menu$;						
+				mes "Elemento trocado com sucesso para Fuuton";						
+				close;								
 		}	
 	}	
 	if(quest_basic_inicio == 2) {
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
 		cutin "cutin_zabuza",2;
-		npctalk "Olá "+strcharinfo(0)+",  sou Koichi Kuwabara e serei o seu orientador elemental.";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn uchiha da vila da folha. ";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn koori da vila da névoa.";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn kaminari da vila da nuvem.";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Doton. Elemento terra, lhe possibilita o poder de dominar as rochas pedras terra e as partículas de poeira para criar muros arrenpctalksar pedras elevar ou abaixar a terra criar fissuras  e tremores no solo de batalha, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan tsuchi da vila da pedra.";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Fuuton. Elemento vento, lhe possibilita o poder de dominar as brisas de vento para criar tufões laminas de corte e rajadas de repulsão de vento, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan kazekage da vila da suna.";
-		sleep2 6000;
-		npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-		npctalk "Bom , agora que já sabe todos os elementos , qual elemento você acha que você pode usar.";
+		mes "Olá "+strcharinfo(0)+",  sou Koichi Kuwabara e serei o seu orientador elemental.";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Katon. Elemento fogo, lhe possibilita o poder da incineração dos adversários e soltar rajadas e labaredas pela boca, e os usuarios mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn uchiha da vila da folha. ";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Suiton. Elemento água, lhe possibilita o poder de dominar as moléculas de água para criar paredes, tempestades e soltar rajadas de água pela boca, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn koori da vila da névoa.";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Raiton. Elemento raio, lhe possibilita o poder de dominar as particulas de energia existentes para eletrocutar criar campos de energia e soltar rajadas de raios, e os usuários mais conhecidos que conseguiram dominar este elemento completamente foram os do clãn kaminari da vila da nuvem.";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Doton. Elemento terra, lhe possibilita o poder de dominar as rochas pedras terra e as partículas de poeira para criar muros arremessar pedras elevar ou abaixar a terra criar fissuras  e tremores no solo de batalha, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan tsuchi da vila da pedra.";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Fuuton. Elemento vento, lhe possibilita o poder de dominar as brisas de vento para criar tufões laminas de corte e rajadas de repulsão de vento, e os usuários mais conhecidos que conseguiram dominar completamente foram os do clan kazekage da vila da suna.";
+		next;
+		mes "^B0449E[ Koichi Kuwabara ]^000000";
+		mes "Bom , agora que já sabe todos os elementos , qual elemento você acha que você pode usar.";
 		cutin "",255;
 			switch(select("- Katon:- Suiton:- Raiton:- Doton:- Fuuton"))
 			
 			{
 				case 1:
-				sleep2 1000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Será que você é um usuário de Katon? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
-					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "O papel queimou, parabéns você é um usuário de Katon!";
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Será que você é um usuário de Katon? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
+					if(select("- Sim:- Não") == 2) { close; }
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "O papel queimou, parabéns você é um usuário de Katon!";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
 				set quest_basic_inicio,3;
 				set elementokaton,1;
@@ -801,16 +801,16 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				end;
 				
 				case 2:
-				sleep2 1000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Será que você é um usuário de Suiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
-					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "O papel ficou molhado, parabéns você é um usuário de Suiton.";
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Será que você é um usuário de Suiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
+					if(select("- Sim:- Não") == 2) { close; }
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "O papel ficou molhado, parabéns você é um usuário de Suiton.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
 				set quest_basic_inicio,3;
 				set elementosuiton,1;
@@ -818,16 +818,16 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				end;
 				
 				case 3:
-				sleep2 1000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Será que você é um usuário de Raiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
-					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "O papel ficou enrrugado e eletrizado, parabéns você é um usuário de Raiton.";
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Será que você é um usuário de Raiton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
+					if(select("- Sim:- Não") == 2) { close; }
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "O papel ficou enrrugado e eletrizado, parabéns você é um usuário de Raiton.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
 				set quest_basic_inicio,3;
 				set elementoraiton,1;
@@ -835,16 +835,16 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				end;
 				
 				case 4:
-				sleep2 1000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Será que você é um usuário de Doton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
-					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "O papel ficou duro feito pedra, parabéns você é um usuário de Doton.";
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Siga para a próxima sala. Desejo um ótimo futuro.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Será que você é um usuário de Doton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
+					if(select("- Sim:- Não") == 2) { close; }
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "O papel ficou duro feito pedra, parabéns você é um usuário de Doton.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Siga para a próxima sala. Desejo um ótimo futuro.";
 				close2;
 				set quest_basic_inicio,3;
 				set elementodoton,1;
@@ -852,16 +852,16 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				end;
 				
 				case 5:
-				sleep2 1000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Será que você é um usuário de Fuuton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
-					if(select("- Sim:- Não") == 2) { end; }
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "O papel foi cortado, parabéns você é um usuário de Fuuton.";
-				sleep2 6000;
-				npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-				npctalk "Siga para a próxima sala, desejo um ótimo futuro.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Será que você é um usuário de Fuuton? Vamos ao teste concentre seu chakra no papel e veremos como ele irá reagir.";
+					if(select("- Sim:- Não") == 2) { close; }
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "O papel foi cortado, parabéns você é um usuário de Fuuton.";
+				next;
+				mes "^B0449E[ Koichi Kuwabara ]^000000";
+				mes "Siga para a próxima sala, desejo um ótimo futuro.";
 				close2;
 				set quest_basic_inicio,3;
 				set elementofuuton,1;
@@ -869,9 +869,9 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 				end;
 			}
 	}
-	npctalk "^B0449E[ Koichi Kuwabara ]^000000";
-	npctalk "Estou ocupado no momento com os testes.";
-	end;
+	mes "^B0449E[ Koichi Kuwabara ]^000000";
+	mes "Estou ocupado no momento com os testes.";
+	close;
 }
 
 
