@@ -47,7 +47,7 @@ npctalk "[Interface]";
 npctalk "Para ver as suas quests, você pode clicar no canto superior esquerdo da tela ou utilizar o atalho ALT+U para abrir sua janelinha de missões.";
 dispbottom "Fale com todos os NPCS para entender melhor sobre o jogo e continue o corredor!";
 cutin "tutorial02",4;
- setpcblock PCBLOCK_NPC, false;
+setpcblock PCBLOCK_NPC, false;
 sleep2 6000;
 cutin "",255;
 end;
