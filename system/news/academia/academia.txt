@@ -5362,6 +5362,7 @@ academia4,118,309,7	script	Professor#3	65,{
 
 	if(quest_basic_inicio == 4) {
 		cutin "sensei03",2;
+		messagecolor "teste";
         npctalk "Olá " + strcharinfo(0) + ", vejo que você completou os treinamentos básicos e está pronto para meu exame final.", "", bc_self;
         sleep2 5500;
         npctalk "não vamos perder tempo, creio que já estudou tudo que precisa, vamos à primeira pergunta!", "", bc_self;
