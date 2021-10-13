@@ -264,7 +264,7 @@ OnInit:
 }
 
 
-academia4,231,309,7	script	Sakura	63,1,10,{
+academia4,231,309,7	script	Sakura	63,{
 
 if(quest_basic_inicio == 2) {
 npctalk "[^B0449ESakura^000000]";
@@ -6293,7 +6293,7 @@ OnTouch:
 		if(#nevoa == 1) { warp "kirigakure",192,152; }
 		if(#nuvem == 1) { warp "kumogakure",223,110; }
 		
-		npctalk "Você precisa passar na prova para sair se não ficará mais um semestre estudando.";
+		mes "Você precisa passar na prova para sair se não ficará mais um semestre estudando.";
 		end;
 
 }
