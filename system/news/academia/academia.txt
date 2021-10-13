@@ -5368,7 +5368,6 @@ academia4,118,309,7	script	Professor#3	65,{
         npctalk "não vamos perder tempo, creio que já estudou tudo que precisa, vamos à primeira pergunta!", "", bc_self;
         sleep2 4900;
 		npctalk "O anime foi criado por quem?", "", bc_self;
-        close;
 		menu "Mizuki Yuri",L_errado,"Yori Yon",L_errado,"Masashi Kishimoto",L_certo,"Masashe Kimoto",L_errado;
 		
 		L_certo:
