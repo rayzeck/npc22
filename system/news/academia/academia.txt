@@ -570,14 +570,14 @@ academia4,174,364,5	script	Mestre Elemental	68,{
 
 	if(elementokaton || elementosuiton || elementoraiton || elementodoton || elementofuuton) {		
 	
-		npctalk .@menu$;
+		mes .@menu$;
 		cutin "cutin_zabuza",2;
-		npctalk "Olá "+strcharinfo(0)+" vejó que você ja possui um elemento. ";		
-		npctalk "Gostaria de trocar de elemento?";			
+		mes "Olá "+strcharinfo(0)+" vejó que você ja possui um elemento. ";		
+		mes "Gostaria de trocar de elemento?";			
 		if(select("- Sim:- Não") == 2) end;				
-		sleep2 6000;
+		next;
 		cutin "",255;
-		if(countitem(7005) < 1) { sleep2 6000; npctalk .@menu$; npctalk "Você precisa do ticket de troca elemental"; end; }									
+		if(countitem(7005) < 1) { next; mes .@menu$; mes "Você precisa do ticket de troca elemental"; close; }									
 		
 		if( elementokaton ) {					
 			if(getskilllv(534) || getskilllv(17) || getskilllv(2259) ||					
