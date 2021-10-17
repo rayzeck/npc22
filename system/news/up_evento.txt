@@ -3,7 +3,11 @@
 OnPCBaseLvUpEvent:
     if (BaseLevel == 999){
         // seu get item aqui
-set title$, "Feroz";
-        announce "Próximo do Ápice! Jogador, " + strcharinfo(0) + " alcançou o Level 30, deu inicio à lenda de seu nome!",bc_blue|bc_all;
+set title$, "Conquistador";
+        cutin "tutorial02",4;
+        sleep2 6000;
+        cutin "",255;
+        announce "Uau! O jogador, " + strcharinfo(0) + " alcançou o Level máximo e deu inicio à lenda de seu nome!",bc_blue|bc_all;
+
  }
 }
