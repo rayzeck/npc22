@@ -9,7 +9,7 @@ OnPCBaseLvUpEvent:
 .@body$ = "Parabéns " + .@name$ + "! Você iniciou à jornada e conseguiu seus primeiros poderes.";
 .@zeny = 0;
 
-set .@title$;
+set title$, "Feroz";
 
         announce "Próximo do Ápice! Jogador, " + strcharinfo(0) + " alcançou o Level 30, deu inicio à lenda de seu nome!",bc_blue|bc_all;
  }
