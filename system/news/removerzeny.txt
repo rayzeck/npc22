@@ -32,7 +32,7 @@ if (strcharinfo(3) == "quiz_01") {
 				//Change "/3" to reflect the amount of items to drop
 				//1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
 				//Let's not make it easy for players to dup.
-				set $@drops,(@inventorylist_count*(100/100));
+				set $@drops,(@inventorylist_count == 5;
 
 if(@inventorylist_count==0) goto ENDPOS;
 	
@@ -42,7 +42,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 
 
-	set $@randselect, (@inventorylist_card4);
+	set $@randselect, (@inventorylist_equip);
 
 	makeitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect],@mapname$,@mapx,@mapy;
 
