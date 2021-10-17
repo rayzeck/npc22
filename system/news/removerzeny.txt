@@ -22,25 +22,20 @@ if (strcharinfo(3) == "quiz_01") {
 
 OnPCDieEvent:
 if (strcharinfo(3) == "quiz_01") {
-				@inventorylist_count = @inventorylist_count / 2;
                 mapannounce "quiz_01","Você perdeu "+strcharinfo(0)+" foi saqueado!!",bc_all;
 				set $plrdead$, strcharinfo(0);
 
 				getmapxy(@mapname$,@mapx,@mapy,0);
 
 				getinventorylist;
-				//Change "/3" to reflect the amount of items to drop
-				//1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
-				//Let's not make it easy for players to dup.
+
 				set $@drops,(@inventorylist_count*(100 / 4));
+}
 
 if(@inventorylist_count==0) goto ENDPOS;
-	
 
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
-
-
 
 	set $@randselect, (@inventorylist_equip);
 
@@ -52,7 +47,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 ENDPOS:
 end;
 }
-/*
+
 //if (getequipid(EQI_HAND_L) == 9001) {
 //	delequip EQI_HAND_L;
 //	makeitem <item id>,<amount>,"<map name>",<X>,<Y>;
@@ -124,4 +119,4 @@ function	script	remover_zeny	{
 	if (title$ == "Rank S") {set Zeny,Zeny - 600000; announce "Você acabou de perder 600.000 ryous para o ninja que te derrotou.",#008000|bc_self; }
 	
 	end;
-}*/
+}
