@@ -31,7 +31,7 @@ if (strcharinfo(3) == "quiz_01") {
 
 				getinventorylist;
 
-				set $@drops,(@inventorylist_count*(100 / 2));
+				set $@drops,(@inventorylist_count);
 }
 
 if(@inventorylist_count==0) goto ENDPOS;
