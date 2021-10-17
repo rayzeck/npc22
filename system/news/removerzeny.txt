@@ -33,9 +33,15 @@ if (strcharinfo(3) == "quiz_01") {
 }
 
 if(@inventorylist_count==0) goto ENDPOS;
+	//Change "/3" to reflect the amount of items to drop
+	//1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
+	//Let's not make it easy for players to dup.
+	set $@drops,(@inventorylist_count*(100/4));
 
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
+
+
 
 	set $@randselect, (@inventorylist_equip);
 
