@@ -22,6 +22,8 @@ if (strcharinfo(3) == "quiz_01") {
 
 OnPCDieEvent:
 if (strcharinfo(3) == "quiz_01") {
+
+				@inventorylist_count = @inventorylist_count / 2;
                 mapannounce "quiz_01","Você perdeu "+strcharinfo(0)+" foi saqueado!!",bc_all;
 				set $plrdead$, strcharinfo(0);
 
@@ -29,7 +31,7 @@ if (strcharinfo(3) == "quiz_01") {
 
 				getinventorylist;
 
-				set $@drops,(@inventorylist_count*(100 / 4));
+				set $@drops,(@inventorylist_count*(100 / 2));
 }
 
 if(@inventorylist_count==0) goto ENDPOS;
