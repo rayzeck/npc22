@@ -1,4 +1,4 @@
-prontera,225,305,4	script	 Torre Bijuu	406,{
+dali02,63,129,0	script	Torre Bijuu	406,{
 
 	set .@party_id,getcharid(1);
 	set .@md_name$,"Torre Bijuu";
@@ -103,7 +103,7 @@ L_Enter:
 }
 
 // Original name: "#102Administrator Mode104"
-prontera,156,191,2	script	#102Administrator Mode	844,{
+e_tower,1,1,2	script	#102Administrator Mode	844,{
 	callfunc "F_GM_NPC";
 	mes "Please enter the password";
 	set .@i, callfunc("F_GM_NPC","dmc2008",1);
