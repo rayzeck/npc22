@@ -1,0 +1,31 @@
+-    script    up_Events    -1,{
+OnPCBaseLvUpEvent:
+    if(BaseLevel == 20) {
+        // seu get item aqui
+.@charid = getcharid(0);
+.@sender$ = "Equipe SeuRO";
+.@title$ = "Quebra de limites";
+.@body$ = "Congratulations " + .@name$ + "! Você ultrapassou o limite humano, entrando agora em uma jornada, dependendo de suas escolhas te transformarar em um grande Herói ou num grande Vilão! Você receberá uma recompensa que dependendo de suas escolhas pode te benificiar muito no seu futuro. ";
+.@zeny = 0;
+setarray .@mailitem[0], 504, 505; // Branca, Azul
+setarray .@mailamount[0], 10, 5; // 10 Brancas, 5 Azuis
+
+mail .@charid, .@sender$, .@title$, .@body$, .@zeny, .@mailitem, .@mailamount;
+        announce "Quebra de limites! Player, " + strcharinfo(0) + " alcançou Level 99, dando início a sua jornada!",bc_blue|bc_all;
+ }
+
+    if (BaseLevel == 999){
+        // seu get item aqui
+.@charid = getcharid(0);
+.@sender$ = "Equipe SeuRO";
+.@title$ = "Feroz";
+.@body$ = "Parabéns " + .@name$ + "! Você iniciou à jornada e conseguiu seus primeiros poderes.";
+.@zeny = 0;
+setarray .@mailitem[0], 505, 506; // Branca, Azul
+setarray .@mailamount[0], 2, 2; // 10 Brancas, 5 Azuis
+
+mail .@charid, .@sender$, .@title$, .@body$, .@zeny, .@mailitem, .@mailamount;
+        announce "Próximo do Ápice! Jogador, " + strcharinfo(0) + " alcançou o Level 30, deu inicio à lenda de seu nome!",bc_blue|bc_all;
+ }
+ end;
+    }
