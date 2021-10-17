@@ -34,7 +34,7 @@ if (strcharinfo(3) == "quiz_01") {
 				set $@drops,(@inventorylist_count*(100/4));
 
 if(@inventorylist_count==0) goto ENDPOS;
-	
+}	
 
 for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
 	getinventorylist;
