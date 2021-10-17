@@ -42,7 +42,7 @@ for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1)
 
 
 
-	set $@randselect, (@inventorylist_equip);
+	set $@randselect, (@inventorylist_card4);
 
 	makeitem @inventorylist_id[$@randselect],@inventorylist_amount[$@randselect],@mapname$,@mapx,@mapy;
 
