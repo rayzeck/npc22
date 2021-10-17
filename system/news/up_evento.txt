@@ -1,5 +1,5 @@
--   script up_Events    -1,{
-    
+-	script	up_Events	-1,{
+
 OnPCBaseLvUpEvent:
     if(BaseLevel == 20) {
         // seu get item aqui
