@@ -27,20 +27,25 @@ if (strcharinfo(3) == "quiz_01") {
 
 				getmapxy(@mapname$,@mapx,@mapy,0);
 
-				getinventorylist;
-				//Change "/3" to reflect the amount of items to drop
-				//1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
-				//Let's not make it easy for players to dup.
-				set $@drops,(@inventorylist_count*(100/2));
-}
-
-if(@inventorylist_count==0) goto ENDPOS;
-	
-
-for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
+					//Remove all cards and unequip everything
+	//Ideally, we wouldn't do this, however there's no good way to drop
+	//an item that has cards compounded onto it. A bit inconvienant, but
+	//it works.
+	for (set @i,0; @i < 10; set @i,@i+1) {
+		successremovecards @i;
+	}
+	nude;
+	//Figure out how many items to take
 	getinventorylist;
-
-
+	//Change "/3" to reflect the amount of items to drop
+	//1 = 100%, 2 = 50%, 3 = 33%, 4= 25%, etc.
+	set $@drops,(@inventorylist_count*(100/4));
+	//Let's not make it easy for players to dup.
+	if(@inventorylist_count==0) goto ENDPOS;
+	//This is the loop that goes through the inventory dropping items
+	for(set $@iterations,0; $@iterations < $@drops; set $@iterations,$@iterations+1) {
+		//Update inventory variables
+		getinventorylist;
 
 	set $@randselect, (@inventorylist_equip);
 
