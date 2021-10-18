@@ -291,6 +291,7 @@ OnTouch_:
 	callfunc "F_Tower_Warp",
 		atoi(replacestr(strnpcinfo(0),"FGate102tower","")) + 1,
 		strnpcinfo(4);
+		instance_destroy(.@instance);
 	end;
 
 OnMyMobDead:

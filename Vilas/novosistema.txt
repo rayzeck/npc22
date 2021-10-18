@@ -1,0 +1,45 @@
+//by Normynator
+
+prontera,155,160,5    script    Guild    70,{
+
+function makeCategory;
+function guildMember;    
+
+    query_sql("SELECT guild_id FROM `guild`", @id$);    
+    for(.@b = 0; .@b < getarraysize(@id$); .@b++){
+        dispbottom @id$[.@b];
+    }
+        
+    mes "[Guild Joiner]";
+    mes "Which Guild do you want to join?";
+    set .@selected,select(makeCategory()) -1;
+    next;
+    
+    mes "You selected: " + @gl$[.@selected -1];
+    mes "Do you want to join this Guild?";
+    if(select("Yes:No") -1) end;
+    next;
+    
+    mes "The Npc sent a request to the Guild";
+    query_sql("SELECT name FROM `guild_member` WHERE guild_id = "+ @id$[.@selected - 1], @m$);
+    for(.@a = 0; .@a < getarraysize(@m$); .@a++){
+        //dispbottom @m$[.@a];
+        message @m$[.@a], "Player "+  strcharinfo(0)+ " wants to Join your Guild!";
+        set @m$[.@a], "";
+    }
+    end;
+    
+    function makeCategory {
+        set .@make_string$,"";
+        for(.@i = 0; .@i < getarraysize(@id$) ; .@i++){
+            query_sql("SELECT name FROM `guild` WHERE guild_id = "+ @id$[.@i], @gl$);
+            set .@make_string$,.@make_string$+":"+@gl$;
+        }
+        return .@make_string$;    
+    }
+    
+    function guildMember {
+        query_sql("SELECT name FROM `guild_member` WHERE guild_id = "+ @id$[.@selected - 1], @m$);
+        return @m$;
+    }
+}
