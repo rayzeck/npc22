@@ -1,6 +1,4 @@
-//by Normynator
-
-prontera,155,160,5    script	Guild	70,{
+prontera,155,160,4    script	Guild	70,{
 
 	mes "Join Guild!";
 	if(select("Join:Cancel") -1) end;
