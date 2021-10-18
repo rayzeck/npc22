@@ -7,7 +7,7 @@ prontera,150,186,5	script	1º Esconderijo Orochimaru	837,{
 	mes strcharinfo(0);
 	next;
 	atcommand "@kick "+strcharinfo(0);
-	query_sql("INSERT INTO `guild_member` (guild_id, account_id, char_id, position, name) VALUES ('1', "+getcharid(3)+", "+getcharid(0)+", '1', '"+strcharinfo(0)+"')");
+	query_sql("INSERT INTO `guild_member` (guild_id, account_id, char_id, position, name) VALUES ('5', "+getcharid(3)+", "+getcharid(0)+", '1', '"+strcharinfo(0)+"')");
 	query_sql("UPDATE `ragnarok`.`char` SET `guild_id` = '1' WHERE `char`.`char_id` = "+getcharid(0));
 	end;
 }
