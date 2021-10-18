@@ -1,10 +1,13 @@
 prontera,150,186,5	script	1º Esconderijo Orochimaru	837,{
 
-    npctalk "[1º Esconderijo do Clã Orochimaru]";
-    npctalk "Siga no corredor para continuar seus tutoriais!";
-    npctalk "Ah e você está no primeiro esconderijo do Orochimaru!";
+	mes "Join Guild!";
+	if(select("Join:Cancel") -1) end;
+	mes getcharid(3);
+	mes getcharid(0);
+	mes strcharinfo(0);
+	next;
+	atcommand "@kick "+strcharinfo(0);
 	query_sql("INSERT INTO `guild_member` (guild_id, account_id, char_id, position, name) VALUES ('1', "+getcharid(3)+", "+getcharid(0)+", '1', '"+strcharinfo(0)+"')");
-    sleep2 1000;
-    query_sql("UPDATE `ragnarok`.`char` SET `guild_id` = '1' WHERE `char`.`char_id` = "+getcharid(0));
-    end;
+	query_sql("UPDATE `rathena`.`char` SET `guild_id` = '1' WHERE `char`.`char_id` = "+getcharid(0));
+	end;
 }
