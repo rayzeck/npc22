@@ -1,6 +1,6 @@
 prontera,155,160,4    script	Guild	70,{
 
-	mes "Join Guild!";
+	mes "teste";
 	if(select("Join:Cancel") -1) end;
 	mes getcharid(3);
 	mes getcharid(0);
