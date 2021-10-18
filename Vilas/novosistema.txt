@@ -1,13 +1,43 @@
 prontera,150,186,5	script	1º Esconderijo Orochimaru	837,{
 
-	mes "Join Guild!";
-	if(select("Join:Cancel") -1) end;
-	mes getcharid(3);
-	mes getcharid(0);
-	mes strcharinfo(0);
-	next;
-	atcommand "@kick "+strcharinfo(0);
-	query_sql("INSERT INTO `guild_member` (guild_id, account_id, char_id, position, name) VALUES ('5', "+getcharid(3)+", "+getcharid(0)+", '1', '"+strcharinfo(0)+"')");
-	query_sql("UPDATE `ragnarok`.`char` SET `guild_id` = '1' WHERE `char`.`char_id` = "+getcharid(0));
-	end;
+function makeCategory;
+function guildMember;    
+
+    query_sql("SELECT guild_id FROM `guild`", @id$);    
+    for(.@b = 0; .@b < getarraysize(@id$); .@b++){
+        dispbottom @id$[.@b];
+    }
+        
+    mes "[Guild Joiner]";
+    mes "Which Guild do you want to join?";
+    set .@selected,select(makeCategory()) -1;
+    next;
+    
+    mes "You selected: " + @gl$[.@selected -1];
+    mes "Do you want to join this Guild?";
+    if(select("Yes:No") -1) end;
+    next;
+    
+    mes "The Npc sent a request to the Guild";
+    query_sql("SELECT name FROM `guild_member` WHERE guild_id = "+ @id$[.@selected - 1], @m$);
+    for(.@a = 0; .@a < getarraysize(@m$); .@a++){
+        //dispbottom @m$[.@a];
+        message @m$[.@a], "Player "+  strcharinfo(0)+ " wants to Join your Guild!";
+        set @m$[.@a], "";
+    }
+    end;
+    
+    function makeCategory {
+        set .@make_string$,"";
+        for(.@i = 0; .@i < getarraysize(@id$) ; .@i++){
+            query_sql("SELECT name FROM `guild` WHERE guild_id = "+ @id$[.@i], @gl$);
+            set .@make_string$,.@make_string$+":"+@gl$;
+        }
+        return .@make_string$;    
+    }
+    
+    function guildMember {
+        query_sql("SELECT name FROM `guild_member` WHERE guild_id = "+ @id$[.@selected - 1], @m$);
+        return @m$;
+    }
 }
