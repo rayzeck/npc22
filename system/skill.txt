@@ -4,6 +4,7 @@ OnSkillFuncione:
 
 //EF_TRUESIGHT
 callfunc "dreamin";
+sleep2 300;
 callfunc "players2minimap";
 atcommand "@hide";
 //sc_start SC_SILENCE,5000,10;  //efeito de silêncio ao usar a skill
