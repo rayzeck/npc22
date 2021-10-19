@@ -181,14 +181,12 @@ end;
 
 function	script	playermap	{
 
--	script	BlackHoleEvents	-1,{
 setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
 	end;
 }
 
 function	script	playermap2	{
 
--	script	BlackHoleEventes	-1,{
 	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
 	{
 		if(!isloggedin(getd("$RecordAID"+.@i)))
