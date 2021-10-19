@@ -180,7 +180,7 @@ end;
 
 function	script	players3minimap	{
 
--	script	BlackHoleEvent	-1,{
+-	script	BlackHoleEventes	-1,{
 	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
 	{
 		if(!isloggedin(getd("$RecordAID"+.@i)))
