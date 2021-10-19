@@ -51,6 +51,8 @@ OnPCUseSkillEvent:
 
 	if(lskillid == 949) {
 		callfunc "players2minimap";
+		sleep2 3000;
+		callfunc "players3minimap";
 		end;
 	}
 
@@ -227,6 +229,43 @@ function	script	players2minimap	{
 		if(playerattached()){ set .@V,0; } else { break; }
 	}
 	end;
+	
+OnInit:
+	//=-=-=-=-=Configuration=-=-=-=-=-=
+	set .delay,0; // Delay between refresh in Milliseconds. Default is one Millisecond.
+	set .itemid,2201; // ID of item being used.
+	//You can change the color of the markers
+	//By searching for "FF0000" and replacing
+	//It with a Hexidecimal number.
+	//=-=-=-=-=-=-=Skorm=-=-=-=-=-=-=-=
+	//Credits to goddameit for 
+	//file architecture and  BlackHoleEvent.
+	//Special thanks to joelolopez for
+	//The idea, and testing. <3
+}
+
+-	script	BlackHoleEvent	-1,{
+OnPCLoginEvent:
+	setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
+	end;
+OnInit:
+OnTimer1000:
+	initnpctimer;
+OnPCLogoutEvent:
+	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
+	{
+		if(!isloggedin(getd("$RecordAID"+.@i)))
+		{
+			set $PlayerNumber,$PlayerNumber-1;
+			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
+			setd "$RecordAID"+(.@i+1),0;
+			set .@i,.@i-1;
+		}
+	}
+	end;
+}
+
+function	script	players3minimap	{
 	
 OnInit:
 	//=-=-=-=-=Configuration=-=-=-=-=-=
