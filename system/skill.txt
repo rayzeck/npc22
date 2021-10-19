@@ -27,7 +27,7 @@ end;
 		
 	OnHPGORDA2REMOVE:
 		equip 30106;
-		callfunc "players3minimap";
+//		callfunc "players3minimap";
 		DelTimer "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 		end;
 }
