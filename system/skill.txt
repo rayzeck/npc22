@@ -18,6 +18,7 @@ end;
 		atcommand "@hide";
 		if(isequipped(30106)) unequip(EQI_HEAD_MID);
 		AddTimer 500, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
+		callfunc "playermap";
 //		getitem2 30106,1,1,0,0,30093,0,0,0; //byakugan no nivel 4 
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;
@@ -27,7 +28,7 @@ end;
 		
 	OnHPGORDA2REMOVE:
 		equip 30106;
-		callfunc "playermap";
+		callfunc "playermap2";
 		DelTimer "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 		end;
 }
@@ -179,6 +180,13 @@ end;
 }
 
 function	script	playermap	{
+
+-	script	BlackHoleEvents	-1,{
+setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
+	end;
+}
+
+function	script	playermap2	{
 
 -	script	BlackHoleEventes	-1,{
 	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
