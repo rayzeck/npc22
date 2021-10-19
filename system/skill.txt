@@ -180,10 +180,6 @@ end;
 
 function	script	players3minimap	{
 
-OnInit:
-OnTimer1000:
-	initnpctimer;
-		
 	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
 	{
 		if(!isloggedin(getd("$RecordAID"+.@i)))
@@ -195,4 +191,11 @@ OnTimer1000:
 		}
 	}
 	end;
+sleep2 500;
+setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
+	end;
+OnInit:
+OnTimer1000:
+	initnpctimer;
+
 }
