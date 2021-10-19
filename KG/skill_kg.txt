@@ -282,7 +282,10 @@ OnInit:
 }
 
 -	script	BlackHoleEvente	-1,{
-
-	setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
+		for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
+		set $PlayerNumber,$PlayerNumber-1;
+			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
+			setd "$RecordAID"+(.@i+1),0;
+			set .@i,.@i-1;
 	end;
 }
