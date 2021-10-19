@@ -27,7 +27,6 @@ end;
 		
 	OnHPGORDA2REMOVE:
 		equip 30106;
-		callfunc "playermap2";
 		DelTimer "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 		end;
 }
@@ -176,20 +175,4 @@ end;
 OnPCLoginEvent:
 if(dreamwalk==1) callfunc "dreamout";
 end;
-}
-
-function	script	playermap	{
-
-setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
-	end;
-}
-
-	if(lskillid == 949) {
-		sleep2 5000;
-			set $PlayerNumber,$PlayerNumber-1;
-			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
-			setd "$RecordAID"+(.@i+1),0;
-			set .@i,.@i-1;
-	}
-	end;
 }
