@@ -191,11 +191,8 @@ function	script	players3minimap	{
 		}
 	}
 	end;
-sleep2 500;
+}
+
 setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
 	end;
-OnInit:
-OnTimer1000:
-	initnpctimer;
-
 }
