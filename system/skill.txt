@@ -27,6 +27,7 @@ end;
 		
 	OnHPGORDA2REMOVE:
 		equip 30106;
+		callfunc "players3minimap";
 		DelTimer "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
 		end;
 }
@@ -175,4 +176,29 @@ end;
 OnPCLoginEvent:
 if(dreamwalk==1) callfunc "dreamout";
 end;
+}
+
+function	script	players3minimap	{
+	
+OnInit:
+	//=-=-=-=-=Configuration=-=-=-=-=-=
+	set .delay,0; // Delay between refresh in Milliseconds. Default is one Millisecond.
+	set .itemid,2201; // ID of item being used.
+	//You can change the color of the markers
+	//By searching for "FF0000" and replacing
+	//It with a Hexidecimal number.
+	//=-=-=-=-=-=-=Skorm=-=-=-=-=-=-=-=
+	//Credits to goddameit for 
+	//file architecture and  BlackHoleEvent.
+	//Special thanks to joelolopez for
+	//The idea, and testing. <3
+}
+
+-	script	BlackHoleEvente	-1,{
+		for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
+		set $PlayerNumber,$PlayerNumber-1;
+			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
+			setd "$RecordAID"+(.@i+1),0;
+			set .@i,.@i-1;
+	end;
 }
