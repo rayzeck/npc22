@@ -180,19 +180,6 @@ end;
 
 function	script	players3minimap	{
 
-	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
-	{
-		if(!isloggedin(getd("$RecordAID"+.@i)))
-		{
-			set $PlayerNumber,$PlayerNumber-1;
-			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
-			setd "$RecordAID"+(.@i+1),0;
-			set .@i,.@i-1;
-		}
-	}
-	end;
-}
-
 setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
 	end;
 }
