@@ -1,52 +1,166 @@
-function	script	players2minimap	{
-	While((playerattached()?IsEquipped(.itemid):0)){
-		getmapxy(.@N$,.@B,.@C,0);
-		while((playerattached()?.@V<($PlayerNumber<=0?.@V+1:$PlayerNumber):0)){
-			set .@V,.@V+1; 
-			if(isloggedin(getd("$RecordAID"+.@V))) getmapxy(.@map$,.@x[.@V],.@y[.@V],0,rid2name(getd("$RecordAID"+.@V)));
-			if( .@N$ == .@map$ && getd("$RecordAID"+.@V) != getcharid(3) && isloggedin(getd("$RecordAID"+.@V))){
-				viewpoint 1,.@x[.@V],.@y[.@V],.@V,0xFF0000;
-			}
-			if(.@V>=$PlayerNumber){
-				sleep2 1+.delay;
-				for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1) viewpoint 2,.@x[.@i],.@y[.@i],.@i,0xFF0000;
-			}
-		}
-		if(playerattached()){ set .@V,0; } else { break; }
-	}
-	end;
-	
-OnInit:
-	//=-=-=-=-=Configuration=-=-=-=-=-=
-	set .delay,0; // Delay between refresh in Milliseconds. Default is one Millisecond.
-	set .itemid,2201; // ID of item being used.
-	//You can change the color of the markers
-	//By searching for "FF0000" and replacing
-	//It with a Hexidecimal number.
-	//=-=-=-=-=-=-=Skorm=-=-=-=-=-=-=-=
-	//Credits to goddameit for 
-	//file architecture and  BlackHoleEvent.
-	//Special thanks to joelolopez for
-	//The idea, and testing. <3
+prontera,154,150,5	script	Rukia	90,{
+
+mes "Hell";
+
+switch(select("- 1:- 2")){
+
+case 1:
+
+close2;
+
+callfunc "dreamin";
+
+end; 
+
+ 
+
+case 2:
+
+close2;
+
+callfunc "dreamout";
+
+end;
+
 }
 
--	script	BlackHoleEvent	-1,{
-OnPCLoginEvent:
-	setd "$RecordAID"+set($PlayerNumber,$PlayerNumber+1),getcharid(3);
-	end;
-OnInit:
-OnTimer1000:
-	initnpctimer;
-OnPCLogoutEvent:
-	for(set .@i,1;.@i<=$PlayerNumber;set .@i,.@i+1)
-	{
-		if(!isloggedin(getd("$RecordAID"+.@i)))
-		{
-			set $PlayerNumber,$PlayerNumber-1;
-			setd "$RecordAID"+.@i,getd("$RecordAID"+(.@i+1));
-			setd "$RecordAID"+(.@i+1),0;
-			set .@i,.@i-1;
-		}
-	}
-	end;
+end;
+
 }
+
+
+-	script	backto	-1,{
+OnPcDieEvent:
+if(dreamwalk==1) callfunc "dreamout";
+end;
+}
+
+function	script	dreamin	{
+
+if(dreamwalk!=0){
+return;
+}
+set @14,Class;
+set @15,BaseLevel;
+set @16,JobLevel;
+set @cabelo,getlook(6);
+set @hroupa,getlook(7);
+set @CID,getcharid(0);
+if(dreamer==0){
+query_sql "INSERT char_dream VALUES ('"+@CID+"','"+readparam(bStr)+"','"+readparam(bAgi)+"','"+readparam(bVit)+"','"+readparam(bInt)+"','"+readparam(bDex)+"','"+readparam(bLuk)+"','"+@14+"','"+@15+"','"+@16+"','"+getequipid(EQI_HAND_R)+"','"+getequipid(EQI_HAND_L)+"','"+getequipid(EQI_HEAD_TOP)+"','"+getequipid(EQI_HEAD_MID)+"','"+getequipid(EQI_HEAD_LOW)+"','"+getequipid(EQI_GARMENT)+"','"+@hroupa+"','"+@cabelo+"', '"+StatusPoint+"', '"+SkillPoint+"')";
+query_sql "INSERT char_store VALUES ('"+@CID+"','"+readparam(bStr)+"','"+readparam(bAgi)+"','"+readparam(bVit)+"','"+readparam(bInt)+"','"+readparam(bDex)+"','"+readparam(bLuk)+"','"+@14+"','"+@15+"','"+@16+"','"+getequipid(EQI_HAND_R)+"','"+getequipid(EQI_HAND_L)+"','"+getequipid(EQI_HEAD_TOP)+"','"+getequipid(EQI_HEAD_MID)+"','"+getequipid(EQI_HEAD_LOW)+"','"+getequipid(EQI_GARMENT)+"','"+@hroupa+"','"+@cabelo+"', '"+StatusPoint+"', '"+SkillPoint+"')";
+set dreamer,1;
+}
+if(dreamwalk==0){
+atcommand "@save";
+query_sql ("UPDATE `char_store` SET `char_id`='"+@CID+"',`str`='"+readparam(bStr)+"',`agi`='"+readparam(bAgi)+"',`vit`='"+readparam(bVit)+"',`int`='"+readparam(bInt)+"',`dex`='"+readparam(bDex)+"',`luk`='"+readparam(bLuk)+"',`class`='"+@14+"',`level`='"+@15+"',`joblevel`='"+@16+"',`arma`='"+getequipid(EQI_HAND_R)+"',`escudo`='"+getequipid(EQI_HAND_L)+"',`cima`='"+getequipid(EQI_HEAD_TOP)+"',`meio`='"+getequipid(EQI_HEAD_MID)+"',`baixo`='"+getequipid(EQI_HEAD_LOW)+"',`robe`='"+getequipid(EQI_GARMENT)+"',`roupa`='"+getlook(7)+"',`cabelo`='"+getlook(6)+"',`StatusPoint`='"+StatusPoint+"',`skill_point`='"+SkillPoint+"' WHERE `char_id`='"+@CID+"'");
+sleep2 500;
+sleep2 900;
+query_sql "SELECT `char_id`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `class`, `level`, `joblevel`, `arma`, `escudo`, `cima`, `meio`, `baixo`, `robe`, `roupa`, `cabelo`, `StatusPoint`, `skill_point` FROM `char_dream` WHERE char_id = '"+@CID+"' ",@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@hroupa,@cabelo,@19,@20;
+nude;
+sleep2 300;
+set .@atual,getlook(4);
+changelook 4,471;
+set BaseLevel,BaseLevel-BaseLevel;
+set BaseLevel,@9;
+statusup2 bStr,-readparam(bStr);
+statusup2 bAgi,-readparam(bAgi);
+statusup2 bVit,-readparam(bVit);
+statusup2 bInt,-readparam(bInt);
+statusup2 bDex,-readparam(bDex);
+statusup2 bLuk,-readparam(bLuk);
+set StatusPoint,@19;
+sleep2 300;
+statusup2 bStr,@2-1;
+statusup2 bAgi,@3-1;
+statusup2 bVit,@4-1;
+statusup2 bInt,@5-1;
+statusup2 bDex,@6-1;
+statusup2 bLuk,@7-1;
+percentheal 100,100;
+getmapxy(mapclone$,cmapx,cmapy,0);
+set cloneid,clone(mapclone$,cmapx,cmapy,"OnNothing",@CID,0,64,1,0);
+changelook 4,.@atual;
+jobchange @8;
+set JobLevel,JobLevel-JobLevel;
+set JobLevel,@10;
+set SkillPoint,SkillPoint-SkillPoint;
+set SkillPoint,@20;
+setlook 7,@hroupa;
+setlook 6,@cabelo;
+unitskilluseid getcharid(3),150,1;
+specialeffect2 617;
+if(@11>0) equip @11;
+if(@12>0) equip @12;
+if(@13>0) equip @13;
+if(@14>0) equip @14;
+if(@15>0) equip @15;
+if(@16>0) equip @16;
+set dreamwalk,1;
+return;
+}
+end;
+}
+
+function	script	dreamout	{
+
+if(dreamwalk!=1){
+return;
+}
+set @14,Class;
+set @15,BaseLevel;
+set @16,JobLevel;
+set @cabelo,getlook(6);
+set @hroupa,getlook(7);
+set @CID,getcharid(0);
+if(dreamwalk==1){
+sleep2 500;
+set @blass,Class;
+query_sql ("UPDATE `char_dream` SET `char_id`='"+@CID+"',`str`='"+readparam(bStr)+"',`agi`='"+readparam(bAgi)+"',`vit`='"+readparam(bVit)+"',`int`='"+readparam(bInt)+"',`dex`='"+readparam(bDex)+"',`luk`='"+readparam(bLuk)+"',`class`='"+@14+"',`level`='"+@15+"',`joblevel`='"+@16+"',`arma`='"+getequipid(EQI_HAND_R)+"',`escudo`='"+getequipid(EQI_HAND_L)+"',`cima`='"+getequipid(EQI_HEAD_TOP)+"',`meio`='"+getequipid(EQI_HEAD_MID)+"',`baixo`='"+getequipid(EQI_HEAD_LOW)+"',`robe`='"+getequipid(EQI_GARMENT)+"',`roupa`='"+getlook(7)+"',`cabelo`='"+getlook(6)+"',`StatusPoint`='"+StatusPoint+"', `skill_point`='"+SkillPoint+"' WHERE `char_id`='"+@CID+"'");
+sleep2 500;
+query_sql ("SELECT `char_id`, `str`, `agi`, `vit`, `int`, `dex`, `luk`, `class`, `level`, `joblevel`, `arma`, `escudo`, `cima`, `meio`, `baixo`, `robe`, `roupa`, `cabelo`, `StatusPoint`, `skill_point` FROM `char_store` WHERE char_id = '"+@CID+"' "),@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16,@hroupa,@cabelo,@19,@20;
+nude;
+sleep2 300;
+set BaseLevel,BaseLevel-BaseLevel;
+set BaseLevel,@9;
+if(BaseLevel!=@9) atcommand "@lvup -1";
+if(JobLevel!=@10) atcommand "@joblvup -1";
+statusup2 bStr,-readparam(bStr);
+statusup2 bAgi,-readparam(bAgi);
+statusup2 bVit,-readparam(bVit);
+statusup2 bInt,-readparam(bInt);
+statusup2 bDex,-readparam(bDex);
+statusup2 bLuk,-readparam(bLuk);
+set StatusPoint,@19;
+sleep2 300;
+statusup2 bStr,@2-1;
+statusup2 bAgi,@3-1;
+statusup2 bVit,@4-1;
+statusup2 bInt,@5-1;
+statusup2 bDex,@6-1;
+statusup2 bLuk,@7-1;
+unitkill cloneid;
+set cloneid,0;
+setlook 7,@hroupa;
+setlook 6,@cabelo;
+warp mapclone$,cmapx,cmapy;
+jobchange @8;
+set JobLevel,JobLevel-JobLevel;
+set JobLevel,@10;
+set SkillPoint,SkillPoint-SkillPoint;
+set SkillPoint,@20;
+percentheal 100,100;
+atcommand "@alive";
+if(@11>0) equip @11;
+if(@12>0) equip @12;
+if(@13>0) equip @13;
+if(@14>0) equip @14;
+if(@15>0) equip @15;
+if(@16>0) equip @16;
+savepoint "prontera",150,150;
+set dreamwalk,0;
+set dwemblem,0;
+return;
+}
+end;
+}/*
