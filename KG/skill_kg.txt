@@ -280,4 +280,3 @@ function	script	players3minimap	{
 		}
 	}
 	end;
-}
