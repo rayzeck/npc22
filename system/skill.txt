@@ -18,7 +18,6 @@ end;
 		atcommand "@hide";
 		if(isequipped(30106)) unequip(EQI_HEAD_MID);
 		AddTimer 500, "REMOVERGORDA2KG::OnHPGORDA2REMOVE";
-		set vetudo,1;
 //		getitem2 30106,1,1,0,0,30093,0,0,0; //byakugan no nivel 4 
 		DelTimer "REMOVERGORDAKG::OnHPGORDAREMOVE";
 		end;

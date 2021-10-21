@@ -211,7 +211,6 @@ OnHPSELOSKILL22:
 }
 
 function	script	players2minimap	{
-	if(vetudo == 1) { end; }
 	While((playerattached()?IsEquipped(.itemid):0)){
 		getmapxy(.@N$,.@B,.@C,0);
 		while((playerattached()?.@V<($PlayerNumber<=0?.@V+1:$PlayerNumber):0)){
