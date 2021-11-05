@@ -41,14 +41,9 @@ if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você encontrou com ponto de mineração.";
-
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar?", "", bc_self;
 
 menu "Sim.",usepickaxe,"Não.",-;
-
-close;
-
 
 
 usepickaxe:
