@@ -47,7 +47,6 @@ npctalk "Gostaria de minerar?", "", bc_self;
 menu "Sim.",usepickaxe,"Não.",-;
 
 
-
 usepickaxe:
 
 cutin "p_00",4; sleep2 100; specialeffect2 457;
@@ -78,8 +77,6 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-end;
-
 
 lookagain:
 
@@ -104,8 +101,6 @@ if (break == 7) goto tryagain;
 if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
-
-end;
 
 
 
