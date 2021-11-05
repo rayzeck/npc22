@@ -42,7 +42,7 @@ if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua v
 
 if (countitem(9001) < 1) goto precisapicareta;
 
-npctalk "Gostaria de minerar?", "", bc_self;
+unittalk getcharid(3), "Gostaria de minerar?";
 
 menu "Sim.",usarpicareta,"Não.",-;
 
@@ -272,14 +272,15 @@ end;
 }
 
 
+moc_fild01,358,141,4	duplicate(minerio)	#rock-prt03	1251
 
-moc_fild01,157,360,1	duplicate(Miner)	Mineração#12	754
+moc_fild01,157,360,1	duplicate(minerio)	Mineração#12	1251
 
-moc_fild01,193,127,1	duplicate(Miner)	Mineração#13	754
+moc_fild01,193,127,1	duplicate(minerio)	Mineração#13	1251
 
-moc_fild01,146,29,1	duplicate(Miner)	Mineração#14	754
+moc_fild01,146,29,1	duplicate(minerio)	Mineração#14	1251
 
-moc_fild01,367,65,1	duplicate(Miner)	Mineração#15	754
+moc_fild01,367,65,1	duplicate(minerio)	Mineração#15	1251
 
 
 
@@ -3630,7 +3631,7 @@ end;
 }
 
 
-moc_fild01,358,141,4	duplicate(minerio)	#rock-prt03	1251
+
 
 ve_fild03,146,152,1	duplicate(Miner10)	Mineração#48	754
 
