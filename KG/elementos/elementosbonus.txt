@@ -16,4 +16,14 @@
         dispbottom "[Fuuton] Você tem 5% de resistência contra Raiton";
         end;
     }
+    if(elementosuiton == 1) {
+        bonus_script "{ bonus2 bSubEle,Ele_Fire,5; }",60000;
+        dispbottom "[Suiton] Você tem 5% de resistência contra Katon";
+        end;
+    }
+    if(elementodoton == 1) {
+        bonus_script "{ bonus2 bSubEle,Ele_Water,5; }",60000;
+        dispbottom "[Doton] Você tem 5% de resistência contra Suiton";
+        end;
+    }
 }
