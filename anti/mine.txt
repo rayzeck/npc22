@@ -22,7 +22,7 @@
 
 
 //=======================================================================
--	script	::minerio	FAKE_NPC,{
+-	script	::minerio	PEDRA,{
 	
 setd(".name_"+strnpcinfo(2)+"$",strnpcinfo(0));
 
@@ -33,9 +33,6 @@ OnInit:
 		delwaitingroom;
 
 		
-
-		
-
 		if ($1min < gettimetick(2)) { 
 
 if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
@@ -43,9 +40,6 @@ if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua v
 if (countitem(9001) < 1) goto precisapicareta;
 
 unittalk getcharid(3), "Gostaria de minerar?";
-
-menu "Sim.",usarpicareta,"Não.",-;
-
 
 usarpicareta:
 
