@@ -48,12 +48,6 @@ menu "Sim.",usepickaxe,"Não.",-;
 
 usepickaxe:
 
-cutin "p_00",4; sleep2 100; specialeffect2 457;
-cutin "p_01",4; sleep2 100; specialeffect2 457;
-cutin "p_02",4; sleep2 100; specialeffect2 457;
-cutin "p_03",4; sleep2 100; specialeffect2 457;
-cutin "p_04",4; sleep2 100; specialeffect2 457;
-
 set mine, rand(10);
 
 if (mine == 0) goto lookagain;
@@ -76,9 +70,17 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
+close;
+
 
 
 lookagain:
+
+cutin "p_00",4; sleep2 100; specialeffect2 457;
+cutin "p_01",4; sleep2 100; specialeffect2 457;
+cutin "p_02",4; sleep2 100; specialeffect2 457;
+cutin "p_03",4; sleep2 100; specialeffect2 457;
+cutin "p_04",4; sleep2 100; specialeffect2 457;
 
 set break, rand(10);
 
