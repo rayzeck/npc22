@@ -1,0 +1,8 @@
+-   script  ELEMENTOS   FAKE_NPC,{
+
+    OnPCLoginEvent:
+    if(elementokaton) {
+        bonus_script "{ bonus2 bSubEle,Ele_Wind,5; }",60000;
+        dispbottom "Você tem 5% de resistência contra Fuuton";
+        end;
+    }
