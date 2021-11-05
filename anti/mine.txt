@@ -127,8 +127,8 @@ next;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você não achou nada, quer tentar denovo?";
-
+cutin "p_fail",4; sleep2 500; cutin "",255;
+mes "Quer tentar novamente?";
 menu "Sim.",usepickaxe,"Não.",-;
 
 close;
