@@ -128,7 +128,7 @@ next;
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
 cutin "p_fail",4; sleep2 500; cutin "",255;
-mes "Quer tentar novamente?";
+npctalk "Quer tentar novamente?", "", bc_self;
 menu "Sim.",usepickaxe,"Não.",-;
 
 close;
