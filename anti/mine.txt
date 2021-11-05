@@ -22,7 +22,7 @@
 
 
 //=======================================================================
--	script	::pedra_main	FAKE_NPC,{
+-	script	::minerio	FAKE_NPC,{
 	
 setd(".name_"+strnpcinfo(2)+"$",strnpcinfo(0));
 
@@ -3630,7 +3630,7 @@ end;
 }
 
 
-moc_fild01,358,141,4	duplicate(pedra_main)	#rock-prt03	1251
+moc_fild01,358,141,4	duplicate(minerio)	#rock-prt03	1251
 
 ve_fild03,146,152,1	duplicate(Miner10)	Mineração#48	754
 
