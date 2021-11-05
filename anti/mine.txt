@@ -53,6 +53,12 @@ close;
 
 usepickaxe:
 
+cutin "p_00",4; sleep2 100; specialeffect2 457;
+cutin "p_01",4; sleep2 100; specialeffect2 457;
+cutin "p_02",4; sleep2 100; specialeffect2 457;
+cutin "p_03",4; sleep2 100; specialeffect2 457;
+cutin "p_04",4; sleep2 100; specialeffect2 457;
+
 set mine, rand(10);
 
 if (mine == 0) goto lookagain;
@@ -179,7 +185,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500", "", bc_self;
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -199,7 +205,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500", "", bc_self;
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
