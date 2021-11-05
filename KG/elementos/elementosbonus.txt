@@ -6,3 +6,4 @@
         dispbottom "Você tem 5% de resistência contra Fuuton";
         end;
     }
+}
