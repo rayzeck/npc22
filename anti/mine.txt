@@ -41,10 +41,14 @@ if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
+mes "Você encontrou com ponto de mineração.";
 
-npctalk "Gostaria de minerar?", "", bc_self;
+mes "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
+
+close;
+
 
 
 usepickaxe:
@@ -77,6 +81,9 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
+close;
+
+
 
 lookagain:
 
@@ -101,6 +108,8 @@ if (break == 7) goto tryagain;
 if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
+
+close;
 
 
 
@@ -127,6 +136,9 @@ if (countitem(9001) < 1) goto needpickaxelvl1;
 cutin "p_fail",4; sleep2 500; cutin "",255;
 npctalk "Quer tentar novamente?", "", bc_self;
 menu "Sim.",usepickaxe,"Não.",-;
+
+close;
+
 
 
 founditem:
@@ -160,6 +172,9 @@ if (found == 11) goto carvao;
 if (found == 12) goto carvao;
 
 if (found == 13) goto ferro;
+
+close;
+
 
 
 carvao:
