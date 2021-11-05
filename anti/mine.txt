@@ -49,11 +49,11 @@ menu "Sim.",usepickaxe,"Não.",-;
 usepickaxe:
 
 cutin "p_00",4; sleep2 200; specialeffect2 457;
-cutin "p_01",4; sleep2 200; specialeffect2 457;
-cutin "p_02",4; sleep2 200; specialeffect2 457;
-cutin "p_03",4; sleep2 200; specialeffect2 457;
-cutin "p_04",4; sleep2 200; specialeffect2 457;
-cutin "p_05",4; sleep2 200; specialeffect2 457;
+cutin "p_01",4; sleep2 205; specialeffect2 457;
+cutin "p_02",4; sleep2 210; specialeffect2 457;
+cutin "p_03",4; sleep2 220; specialeffect2 457;
+cutin "p_04",4; sleep2 230; specialeffect2 457;
+cutin "p_05",4; sleep2 250; specialeffect2 457;
 
 set mine, rand(10);
 
