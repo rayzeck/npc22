@@ -39,14 +39,14 @@ OnInit:
 
 if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Gostaria de minerar?", "", bc_self;
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 
-usepickaxe:
+usarpicareta:
 
 cutin "p_00",4; sleep2 200; specialeffect2 457;
 cutin "p_01",4; sleep2 205; specialeffect2 457;
@@ -57,55 +57,55 @@ cutin "p_05",4; sleep2 250; specialeffect2 457;
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 cutin "p_fail",4; sleep2 250; specialeffect2 457; sleep2 150; cutin "",255;
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
-if (break == 4) goto tryagain;
+if (break == 4) goto tentardenovo;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 
 broke:
@@ -116,27 +116,27 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 cutin "p_fail",4; sleep2 500; cutin "",255;
 npctalk "Quer tentar novamente?", "", bc_self;
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(14);
 cutin "p_06",4; sleep2 200; specialeffect2 457; sleep2 200; cutin "",255;
@@ -210,7 +210,7 @@ goto L_time;
 
 
 
-needpickaxelvl1:
+precisapicareta:
 
 npctalk "Você precisa de uma picareta básica para minerar.";
 
@@ -218,9 +218,9 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
-npctalk "You see a big rock.";
+npctalk "Você encontra um minério enorme.";
 
 end;
 
@@ -280,7 +280,7 @@ moc_fild01,367,65,1	duplicate(Miner)	Mineração#15	754
 
 
 
-//Second level of the mine===========================================
+//===========================================
 
 //===================================================================
 
@@ -304,69 +304,69 @@ if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua v
 
 if (level_minerador < 10) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 10 para minerar nesse ponto"; end;}
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -380,27 +380,27 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(14);
 
@@ -496,7 +496,7 @@ goto L_time;
 
 
 
-needpickaxelvl1:
+precisapicareta:
 
 npctalk "Você precisa de uma picareta.";
 
@@ -504,7 +504,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -592,69 +592,69 @@ if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua v
 
 if (level_minerador < 20) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 20 para minerar nesse ponto"; end;}
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -668,27 +668,27 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(15);
 
@@ -806,7 +806,7 @@ goto L_time;
 
 
 
-needpickaxelvl1:
+precisapicareta:
 
 npctalk "Você precisa de uma picareta.";
 
@@ -814,7 +814,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -900,69 +900,69 @@ if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua v
 
 if (level_minerador < 30) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 30 para minerar nesse ponto"; end;}
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -976,27 +976,27 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
-if (countitem(9001) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto precisapicareta;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(16);
 
@@ -1136,7 +1136,7 @@ goto L_time;
 
 
 
-needpickaxelvl1:
+precisapicareta:
 
 npctalk "Você precisa de uma picareta.";
 
@@ -1144,7 +1144,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -1236,63 +1236,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -1306,13 +1306,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -1320,13 +1320,13 @@ if (countitem(13749) < 1) goto needpickaxelvl2;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -1498,7 +1498,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -1590,63 +1590,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -1660,13 +1660,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -1674,13 +1674,13 @@ if (countitem(13749) < 1) goto needpickaxelvl2;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -1872,7 +1872,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -1964,63 +1964,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -2034,13 +2034,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -2048,13 +2048,13 @@ if (countitem(13749) < 1) goto needpickaxelvl2;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -2268,7 +2268,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -2360,63 +2360,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -2430,13 +2430,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -2444,13 +2444,13 @@ if (countitem(13750) < 1) goto needpickaxelvl3;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -2684,7 +2684,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -2776,63 +2776,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -2846,13 +2846,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -2860,13 +2860,13 @@ if (countitem(13750) < 1) goto needpickaxelvl3;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -3120,7 +3120,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
@@ -3212,63 +3212,63 @@ npctalk "Você encontrou com ponto de mineração.";
 
 npctalk "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-usepickaxe:
+usarpicareta:
 
 set mine, rand(10);
 
-if (mine == 0) goto lookagain;
+if (mine == 0) goto falhoudenovo;
 
-if (mine == 1) goto lookagain;
+if (mine == 1) goto falhoudenovo;
 
-if (mine == 2) goto lookagain;
+if (mine == 2) goto falhoudenovo;
 
-if (mine == 3) goto lookagain;
+if (mine == 3) goto falhoudenovo;
 
-if (mine == 4) goto lookagain;
+if (mine == 4) goto falhoudenovo;
 
-if (mine == 5) goto lookagain;
+if (mine == 5) goto falhoudenovo;
 
-if (mine == 6) goto lookagain;
+if (mine == 6) goto falhoudenovo;
 
-if (mine == 7) goto lookagain;
+if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto founditem;
+if (mine == 8) goto sucesso;
 
-if (mine == 9) goto founditem;
+if (mine == 9) goto sucesso;
 
 end;
 
 
 
-lookagain:
+falhoudenovo:
 
 set break, rand(10);
 
-if (break == 0) goto tryagain;
+if (break == 0) goto tentardenovo;
 
-if (break == 1) goto tryagain;
+if (break == 1) goto tentardenovo;
 
-if (break == 2) goto tryagain;
+if (break == 2) goto tentardenovo;
 
-if (break == 3) goto tryagain;
+if (break == 3) goto tentardenovo;
 
 if (break == 4) goto broke;
 
-if (break == 5) goto tryagain;
+if (break == 5) goto tentardenovo;
 
-if (break == 6) goto tryagain;
+if (break == 6) goto tentardenovo;
 
-if (break == 7) goto tryagain;
+if (break == 7) goto tentardenovo;
 
-if (break == 8) goto tryagain;
+if (break == 8) goto tentardenovo;
 
-if (break == 9) goto tryagain;
+if (break == 9) goto tentardenovo;
 
 end;
 
@@ -3282,13 +3282,13 @@ npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13751,1;
 
-goto tryagain;
+goto tentardenovo;
 
 end;
 
 
 
-tryagain:
+tentardenovo:
 
 sleep2 100;
 
@@ -3296,13 +3296,13 @@ if (countitem(13751) < 1) goto needpickaxelvl4;
 
 npctalk "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"Não.",-;
+menu "Sim.",usarpicareta,"Não.",-;
 
 end;
 
 
 
-founditem:
+sucesso:
 
 set found, rand(18);
 
@@ -3576,7 +3576,7 @@ end;
 
 
 
-bigrock:
+mineriogrande:
 
 npctalk "You see a big rock.";
 
