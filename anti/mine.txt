@@ -113,7 +113,7 @@ next;
 
 mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
-delitem 1452,1;
+delitem 9001,1;
 
 goto tryagain;
 
@@ -125,7 +125,7 @@ tryagain:
 
 next;
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você não achou nada, quer tentar denovo?";
 
@@ -305,7 +305,7 @@ if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"
 
 if (level_minerador < 10) {mes "Seu nível de minerador está muito baixo, é preciso nível 10 para minerar nesse ponto"; close;}
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você encontrou com ponto de mineração.";
 
@@ -379,7 +379,7 @@ next;
 
 mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
-delitem 1452,1;
+delitem 9001,1;
 
 goto tryagain;
 
@@ -391,7 +391,7 @@ tryagain:
 
 next;
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você não achou nada, quer tentar denovo?";
 
@@ -593,7 +593,7 @@ if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"
 
 if (level_minerador < 20) {mes "Seu nível de minerador está muito baixo, é preciso nível 20 para minerar nesse ponto"; close;}
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você encontrou com ponto de mineração.";
 
@@ -667,7 +667,7 @@ next;
 
 mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
-delitem 1452,1;
+delitem 9001,1;
 
 goto tryagain;
 
@@ -679,7 +679,7 @@ tryagain:
 
 next;
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você não achou nada, quer tentar denovo?";
 
@@ -901,7 +901,7 @@ if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"
 
 if (level_minerador < 30) {mes "Seu nível de minerador está muito baixo, é preciso nível 30 para minerar nesse ponto"; close;}
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você encontrou com ponto de mineração.";
 
@@ -975,7 +975,7 @@ next;
 
 mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
-delitem 1452,1;
+delitem 9001,1;
 
 goto tryagain;
 
@@ -987,7 +987,7 @@ tryagain:
 
 next;
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você não achou nada, quer tentar denovo?";
 
