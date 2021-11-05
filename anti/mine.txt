@@ -85,6 +85,8 @@ close;
 
 lookagain:
 
+cutin "p_fail",4; sleep2 100; specialeffect2 457; sleep2 150; cutin "",255;
+
 set break, rand(10);
 
 if (break == 0) goto tryagain;
