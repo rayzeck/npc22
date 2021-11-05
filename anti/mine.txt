@@ -1,26 +1,6 @@
-ï»¿//===== eAthena Script =============================================================================
-
-//= Mining Script
-
-//===== By: ========================================================================================
-
-//= Precious (1.4)
-
-//===== Edited to work with current versions of eAthena by: ========================================
-
-//= ChrisBowen (1.5)
-
-//===== Current Version: ===========================================================================
-
-//= 1.5
-
-//===== Compatible With: ===========================================================================
-
-//= Any eAthena Version
-
 //===== Description: ===============================================================================
 
-//= Enables the player to "mine" in certain MineraÃ§Ã£os.
+//= Enables the player to "mine" in certain Mineraçãos.
 
 //= There are three levels to the mines
 
@@ -40,23 +20,10 @@
 
 //= 4/18/07 - v.1.5 added new spots to mine (ChrisBowen)
 
-//==================================================================================================
-
-//Mining quest===========================================================
 
 //=======================================================================
 
-//first level of the mine================================================
-
-//=======================================================================
-
-//= Edited script by: ===================================================
-
-//= ChrisBowen (1.5) (for download go to http://nopaste.php-q.net/290213=
-
-//=======================================================================
-
-moc_fild01,358,141,1	script	MineraÃ§Ã£o::Miner	754,{
+moc_fild01,358,141,1	script	Mineração::Miner	754,{
 
 OnInit:
 
@@ -70,15 +37,15 @@ OnInit:
 
 		if ($1min < gettimetick(2)) { 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -144,7 +111,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 1452,1;
 
@@ -160,9 +127,9 @@ next;
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -212,9 +179,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 set $1min,gettimetick(2) + 3;
 
@@ -232,9 +199,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 set $1min,gettimetick(2) + 3;
 
@@ -246,7 +213,7 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "VocÃª precisa de uma picareta bÃ¡sica para minerar.";
+mes "Você precisa de uma picareta básica para minerar.";
 
 close;
 
@@ -304,13 +271,13 @@ close;
 
 
 
-moc_fild01,157,360,1	duplicate(Miner)	MineraÃ§Ã£o#12	754
+moc_fild01,157,360,1	duplicate(Miner)	Mineração#12	754
 
-moc_fild01,193,127,1	duplicate(Miner)	MineraÃ§Ã£o#13	754
+moc_fild01,193,127,1	duplicate(Miner)	Mineração#13	754
 
-moc_fild01,146,29,1	duplicate(Miner)	MineraÃ§Ã£o#14	754
+moc_fild01,146,29,1	duplicate(Miner)	Mineração#14	754
 
-moc_fild01,367,65,1	duplicate(Miner)	MineraÃ§Ã£o#15	754
+moc_fild01,367,65,1	duplicate(Miner)	Mineração#15	754
 
 
 
@@ -318,7 +285,7 @@ moc_fild01,367,65,1	duplicate(Miner)	MineraÃ§Ã£o#15	754
 
 //===================================================================
 
-cmd_fild09,11,291,1	script	MineraÃ§Ã£o::Miner2	754,{
+cmd_fild09,11,291,1	script	Mineração::Miner2	754,{
 
 OnInit:
 
@@ -334,17 +301,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 10) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 10 para minerar nesse ponto"; close;}
+if (level_minerador < 10) {mes "Seu nível de minerador está muito baixo, é preciso nível 10 para minerar nesse ponto"; close;}
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -410,7 +377,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 1452,1;
 
@@ -426,9 +393,9 @@ next;
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -476,9 +443,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -496,9 +463,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -516,9 +483,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -532,7 +499,7 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -590,13 +557,13 @@ close;
 
 
 
-cmd_fild09,113,169,1	duplicate(Miner2)	MineraÃ§Ã£o#16	754
+cmd_fild09,113,169,1	duplicate(Miner2)	Mineração#16	754
 
-cmd_fild09,312,184,1	duplicate(Miner2)	MineraÃ§Ã£o#17	754
+cmd_fild09,312,184,1	duplicate(Miner2)	Mineração#17	754
 
-cmd_fild09,344,303,1	duplicate(Miner2)	MineraÃ§Ã£o#18	754
+cmd_fild09,344,303,1	duplicate(Miner2)	Mineração#18	754
 
-cmd_fild09,127,303,1	duplicate(Miner2)	MineraÃ§Ã£o#19	754
+cmd_fild09,127,303,1	duplicate(Miner2)	Mineração#19	754
 
 
 
@@ -606,7 +573,7 @@ cmd_fild09,127,303,1	duplicate(Miner2)	MineraÃ§Ã£o#19	754
 
 //===================================================================
 
-moc_fild13,95,319,1	script	MineraÃ§Ã£o::Miner3	754,{
+moc_fild13,95,319,1	script	Mineração::Miner3	754,{
 
 OnInit:
 
@@ -622,17 +589,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 20) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 20 para minerar nesse ponto"; close;}
+if (level_minerador < 20) {mes "Seu nível de minerador está muito baixo, é preciso nível 20 para minerar nesse ponto"; close;}
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -698,7 +665,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 1452,1;
 
@@ -714,9 +681,9 @@ next;
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -766,9 +733,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -786,9 +753,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -806,9 +773,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -826,9 +793,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -842,7 +809,7 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -900,13 +867,13 @@ close;
 
 
 
-moc_fild13,120,346,1	duplicate(Miner3)	MineraÃ§Ã£o#20	754
+moc_fild13,120,346,1	duplicate(Miner3)	Mineração#20	754
 
-moc_fild13,253,196,1	duplicate(Miner3)	MineraÃ§Ã£o#21	754
+moc_fild13,253,196,1	duplicate(Miner3)	Mineração#21	754
 
-moc_fild13,311,231,1	duplicate(Miner3)	MineraÃ§Ã£o#22	754
+moc_fild13,311,231,1	duplicate(Miner3)	Mineração#22	754
 
-moc_fild13,280,341,1	duplicate(Miner3)	MineraÃ§Ã£o#23	754
+moc_fild13,280,341,1	duplicate(Miner3)	Mineração#23	754
 
 
 
@@ -914,7 +881,7 @@ moc_fild13,280,341,1	duplicate(Miner3)	MineraÃ§Ã£o#23	754
 
 //===================================================================
 
-moc_fild08,299,369,1	script	MineraÃ§Ã£o::Miner4	754,{
+moc_fild08,299,369,1	script	Mineração::Miner4	754,{
 
 OnInit:
 
@@ -930,17 +897,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 30) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 30 para minerar nesse ponto"; close;}
+if (level_minerador < 30) {mes "Seu nível de minerador está muito baixo, é preciso nível 30 para minerar nesse ponto"; close;}
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1006,7 +973,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 1452,1;
 
@@ -1022,9 +989,9 @@ next;
 
 if (countitem(1452) < 1) goto needpickaxelvl1;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1076,9 +1043,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -1096,9 +1063,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -1116,9 +1083,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -1136,9 +1103,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -1156,9 +1123,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -1172,7 +1139,7 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -1230,13 +1197,13 @@ close;
 
 
 
-moc_fild08,87,85,1	duplicate(Miner4)	MineraÃ§Ã£o#24	754
+moc_fild08,87,85,1	duplicate(Miner4)	Mineração#24	754
 
-moc_fild08,21,357,1	duplicate(Miner4)	MineraÃ§Ã£o#25	754
+moc_fild08,21,357,1	duplicate(Miner4)	Mineração#25	754
 
-moc_fild08,127,32,1	duplicate(Miner4)	MineraÃ§Ã£o#26	754
+moc_fild08,127,32,1	duplicate(Miner4)	Mineração#26	754
 
-moc_fild08,198,205,1	duplicate(Miner4)	MineraÃ§Ã£o#27	754
+moc_fild08,198,205,1	duplicate(Miner4)	Mineração#27	754
 
 
 
@@ -1244,7 +1211,7 @@ moc_fild08,198,205,1	duplicate(Miner4)	MineraÃ§Ã£o#27	754
 
 //===================================================================
 
-ve_fild04,172,103,1	script	MineraÃ§Ã£o::Miner5	754,{
+ve_fild04,172,103,1	script	Mineração::Miner5	754,{
 
 OnInit:
 
@@ -1260,17 +1227,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 40) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 40 para minerar nesse ponto"; close;}
+if (level_minerador < 40) {mes "Seu nível de minerador está muito baixo, é preciso nível 40 para minerar nesse ponto"; close;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1336,7 +1303,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
@@ -1352,9 +1319,9 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1410,9 +1377,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -1430,9 +1397,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -1450,9 +1417,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -1470,9 +1437,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -1490,9 +1457,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -1510,9 +1477,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -1526,7 +1493,7 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -1584,13 +1551,13 @@ close;
 
 
 
-ve_fild04,284,191,1	duplicate(Miner5)	MineraÃ§Ã£o#28	754
+ve_fild04,284,191,1	duplicate(Miner5)	Mineração#28	754
 
-ve_fild04,285,319,1	duplicate(Miner5)	MineraÃ§Ã£o#29	754
+ve_fild04,285,319,1	duplicate(Miner5)	Mineração#29	754
 
-ve_fild04,89,311,1	duplicate(Miner5)	MineraÃ§Ã£o#30	754
+ve_fild04,89,311,1	duplicate(Miner5)	Mineração#30	754
 
-ve_fild04,190,78,1	duplicate(Miner5)	MineraÃ§Ã£o#31	754
+ve_fild04,190,78,1	duplicate(Miner5)	Mineração#31	754
 
 
 
@@ -1598,7 +1565,7 @@ ve_fild04,190,78,1	duplicate(Miner5)	MineraÃ§Ã£o#31	754
 
 //===================================================================
 
-moc_fild14,278,367,1	script	MineraÃ§Ã£o::Miner6	754,{
+moc_fild14,278,367,1	script	Mineração::Miner6	754,{
 
 OnInit:
 
@@ -1614,17 +1581,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 50) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 50 para minerar nesse ponto"; close;}
+if (level_minerador < 50) {mes "Seu nível de minerador está muito baixo, é preciso nível 50 para minerar nesse ponto"; close;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1690,7 +1657,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
@@ -1706,9 +1673,9 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -1764,9 +1731,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -1784,9 +1751,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -1804,9 +1771,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -1824,9 +1791,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -1844,9 +1811,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -1864,9 +1831,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -1884,9 +1851,9 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13875,1;
 
@@ -1900,7 +1867,7 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -1958,13 +1925,13 @@ close;
 
 
 
-moc_fild14,185,135,1	duplicate(Miner6)	MineraÃ§Ã£o#32	754
+moc_fild14,185,135,1	duplicate(Miner6)	Mineração#32	754
 
-moc_fild14,63,132,1	duplicate(Miner6)	MineraÃ§Ã£o#33	754
+moc_fild14,63,132,1	duplicate(Miner6)	Mineração#33	754
 
-moc_fild14,101,61,1	duplicate(Miner6)	MineraÃ§Ã£o#34	754
+moc_fild14,101,61,1	duplicate(Miner6)	Mineração#34	754
 
-moc_fild14,111,105,1	duplicate(Miner6)	MineraÃ§Ã£o#35	754
+moc_fild14,111,105,1	duplicate(Miner6)	Mineração#35	754
 
 
 
@@ -1972,7 +1939,7 @@ moc_fild14,111,105,1	duplicate(Miner6)	MineraÃ§Ã£o#35	754
 
 //===================================================================
 
-moc_fild06,359,338,1	script	MineraÃ§Ã£o::Miner7	754,{
+moc_fild06,359,338,1	script	Mineração::Miner7	754,{
 
 OnInit:
 
@@ -1988,17 +1955,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 60) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 60 para minerar nesse ponto"; close;}
+if (level_minerador < 60) {mes "Seu nível de minerador está muito baixo, é preciso nível 60 para minerar nesse ponto"; close;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2064,7 +2031,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
@@ -2080,9 +2047,9 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2138,9 +2105,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -2158,9 +2125,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -2178,9 +2145,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -2198,9 +2165,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -2218,9 +2185,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -2238,9 +2205,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -2258,9 +2225,9 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13875,1;
 
@@ -2280,9 +2247,9 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13876,1;
 
@@ -2296,7 +2263,7 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -2354,13 +2321,13 @@ close;
 
 
 
-moc_fild06,208,249,1	duplicate(Miner7)	MineraÃ§Ã£o#36	754
+moc_fild06,208,249,1	duplicate(Miner7)	Mineração#36	754
 
-moc_fild06,99,105,1	duplicate(Miner7)	MineraÃ§Ã£o#37	754
+moc_fild06,99,105,1	duplicate(Miner7)	Mineração#37	754
 
-moc_fild06,42,167,1	duplicate(Miner7)	MineraÃ§Ã£o#38	754
+moc_fild06,42,167,1	duplicate(Miner7)	Mineração#38	754
 
-moc_fild06,39,190,1	duplicate(Miner7)	MineraÃ§Ã£o#39	754
+moc_fild06,39,190,1	duplicate(Miner7)	Mineração#39	754
 
 
 
@@ -2368,7 +2335,7 @@ moc_fild06,39,190,1	duplicate(Miner7)	MineraÃ§Ã£o#39	754
 
 //===================================================================
 
-moc_fild17,247,352,1	script	MineraÃ§Ã£o::Miner8	754,{
+moc_fild17,247,352,1	script	Mineração::Miner8	754,{
 
 OnInit:
 
@@ -2384,17 +2351,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 70) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 70 para minerar nesse ponto"; close;}
+if (level_minerador < 70) {mes "Seu nível de minerador está muito baixo, é preciso nível 70 para minerar nesse ponto"; close;}
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2460,7 +2427,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
@@ -2476,9 +2443,9 @@ next;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2534,9 +2501,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -2554,9 +2521,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -2574,9 +2541,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -2594,9 +2561,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -2614,9 +2581,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -2634,9 +2601,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -2654,9 +2621,9 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13875,1;
 
@@ -2676,9 +2643,9 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13876,1;
 
@@ -2696,9 +2663,9 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13877,1;
 
@@ -2712,7 +2679,7 @@ goto L_time;
 
 needpickaxelvl3:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -2770,13 +2737,13 @@ close;
 
 
 
-moc_fild17,97,363,1	duplicate(Miner8)	MineraÃ§Ã£o#40	754
+moc_fild17,97,363,1	duplicate(Miner8)	Mineração#40	754
 
-moc_fild17,318,187,1	duplicate(Miner8)	MineraÃ§Ã£o#41	754
+moc_fild17,318,187,1	duplicate(Miner8)	Mineração#41	754
 
-moc_fild17,63,302,1	duplicate(Miner8)	MineraÃ§Ã£o#42	754
+moc_fild17,63,302,1	duplicate(Miner8)	Mineração#42	754
 
-moc_fild17,69,190,1	duplicate(Miner8)	MineraÃ§Ã£o#43	754
+moc_fild17,69,190,1	duplicate(Miner8)	Mineração#43	754
 
 
 
@@ -2784,7 +2751,7 @@ moc_fild17,69,190,1	duplicate(Miner8)	MineraÃ§Ã£o#43	754
 
 //===================================================================
 
-ra_fild03,180,163,1	script	MineraÃ§Ã£o::Miner9	754,{
+ra_fild03,180,163,1	script	Mineração::Miner9	754,{
 
 OnInit:
 
@@ -2800,17 +2767,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 80) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 80 para minerar nesse ponto"; close;}
+if (level_minerador < 80) {mes "Seu nível de minerador está muito baixo, é preciso nível 80 para minerar nesse ponto"; close;}
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2876,7 +2843,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
@@ -2892,9 +2859,9 @@ next;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -2950,9 +2917,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -2970,9 +2937,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -2990,9 +2957,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -3010,9 +2977,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -3030,9 +2997,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -3050,9 +3017,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -3070,9 +3037,9 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13875,1;
 
@@ -3092,9 +3059,9 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13876,1;
 
@@ -3112,9 +3079,9 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13877,1;
 
@@ -3132,9 +3099,9 @@ set mineracaoexp,mineracaoexp +10;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")";}
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
 getitem 13878,1;
 
@@ -3148,7 +3115,7 @@ goto L_time;
 
 needpickaxelvl3:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -3206,13 +3173,13 @@ close;
 
 
 
-ra_fild03,128,217,1	duplicate(Miner9)	MineraÃ§Ã£o#44	754
+ra_fild03,128,217,1	duplicate(Miner9)	Mineração#44	754
 
-ra_fild03,210,313,1	duplicate(Miner9)	MineraÃ§Ã£o#45	754
+ra_fild03,210,313,1	duplicate(Miner9)	Mineração#45	754
 
-ra_fild03,255,252,1	duplicate(Miner9)	MineraÃ§Ã£o#46	754
+ra_fild03,255,252,1	duplicate(Miner9)	Mineração#46	754
 
-ra_fild03,146,370,1	duplicate(Miner9)	MineraÃ§Ã£o#47	754
+ra_fild03,146,370,1	duplicate(Miner9)	Mineração#47	754
 
 
 
@@ -3220,7 +3187,7 @@ ra_fild03,146,370,1	duplicate(Miner9)	MineraÃ§Ã£o#47	754
 
 //===================================================================
 
-ve_fild03,220,145,1	script	MineraÃ§Ã£o::Miner10	754,{
+ve_fild03,220,145,1	script	Mineração::Miner10	754,{
 
 OnInit:
 
@@ -3236,17 +3203,17 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "VocÃª ainda nÃ£o Ã© minerador, faÃ§a a quest em sua vila"; close;}
+if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (level_minerador < 90) {mes "Seu nÃ­vel de minerador estÃ¡ muito baixo, Ã© preciso nÃ­vel 90 para minerar nesse ponto"; close;}
+if (level_minerador < 90) {mes "Seu nível de minerador está muito baixo, é preciso nível 90 para minerar nesse ponto"; close;}
 
 if (countitem(13751) < 1) goto needpickaxelvl4;
 
-mes "VocÃª encontrou com ponto de mineraÃ§Ã£o.";
+mes "Você encontrou com ponto de mineração.";
 
 mes "Gostaria de minerar.";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -3312,7 +3279,7 @@ broke:
 
 next;
 
-mes "Oh nÃ£o... sua picareta quebrou...espero que tenha outra..";
+mes "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13751,1;
 
@@ -3328,9 +3295,9 @@ next;
 
 if (countitem(13751) < 1) goto needpickaxelvl4;
 
-mes "VocÃª nÃ£o achou nada, quer tentar denovo?";
+mes "Você não achou nada, quer tentar denovo?";
 
-menu "Sim.",usepickaxe,"NÃ£o.",-;
+menu "Sim.",usepickaxe,"Não.",-;
 
 close;
 
@@ -3386,9 +3353,9 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 1003,1;
 
@@ -3406,9 +3373,9 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 7231,1;
 
@@ -3426,9 +3393,9 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13871,1;
 
@@ -3446,9 +3413,9 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13872,1;
 
@@ -3466,9 +3433,9 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13873,1;
 
@@ -3486,9 +3453,9 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13874,1;
 
@@ -3506,9 +3473,9 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13875,1;
 
@@ -3528,9 +3495,9 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13876,1;
 
@@ -3548,9 +3515,9 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")"; }
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
 getitem 13877,1;
 
@@ -3568,9 +3535,9 @@ set mineracaoexp,mineracaoexp +10;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")";}
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
 getitem 13878,1;
 
@@ -3588,9 +3555,9 @@ set mineracaoexp,mineracaoexp +11;
 
 next;
 
-mes "Material coletado com sucesso, experiÃªncia de mineirador: "+mineracaoexp+"/500";
+mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
-if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "ProfissÃ£o: Minerador, level up (nÃ­vel atual: "+level_minerador+")";}
+if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
 getitem 13879,1;
 
@@ -3604,7 +3571,7 @@ goto L_time;
 
 needpickaxelvl4:
 
-mes "VocÃª precisa de uma picareta.";
+mes "Você precisa de uma picareta.";
 
 close;
 
@@ -3662,10 +3629,10 @@ close;
 
 
 
-ve_fild03,146,152,1	duplicate(Miner10)	MineraÃ§Ã£o#48	754
+ve_fild03,146,152,1	duplicate(Miner10)	Mineração#48	754
 
-ve_fild03,255,225,1	duplicate(Miner10)	MineraÃ§Ã£o#49	754
+ve_fild03,255,225,1	duplicate(Miner10)	Mineração#49	754
 
-ve_fild03,108,123,1	duplicate(Miner10)	MineraÃ§Ã£o#50	754
+ve_fild03,108,123,1	duplicate(Miner10)	Mineração#50	754
 
-ve_fild03,77,175,1	duplicate(Miner10)	MineraÃ§Ã£o#51	754
+ve_fild03,77,175,1	duplicate(Miner10)	Mineração#51	754
