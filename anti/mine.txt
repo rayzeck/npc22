@@ -39,7 +39,7 @@ OnInit:
 
 if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
 
-if (countitem(1452) < 1) goto needpickaxelvl1;
+if (countitem(9001) < 1) goto needpickaxelvl1;
 
 mes "Você encontrou com ponto de mineração.";
 
