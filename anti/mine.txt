@@ -183,7 +183,7 @@ if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracao
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -203,7 +203,7 @@ if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracao
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -449,7 +449,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -469,7 +469,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -489,7 +489,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -739,7 +739,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -759,7 +759,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -779,7 +779,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -799,7 +799,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1049,7 +1049,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1069,7 +1069,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1089,7 +1089,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1109,7 +1109,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1129,7 +1129,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1383,7 +1383,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1403,7 +1403,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1423,7 +1423,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1443,7 +1443,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1463,7 +1463,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1483,7 +1483,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1737,7 +1737,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1757,7 +1757,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1777,7 +1777,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1797,7 +1797,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1817,7 +1817,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1837,7 +1837,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -1857,7 +1857,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2111,7 +2111,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2131,7 +2131,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2151,7 +2151,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2171,7 +2171,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2191,7 +2191,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2211,7 +2211,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2231,7 +2231,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2253,7 +2253,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2507,7 +2507,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2527,7 +2527,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2547,7 +2547,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2567,7 +2567,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2587,7 +2587,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2607,7 +2607,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2627,7 +2627,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2649,7 +2649,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2669,7 +2669,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2923,7 +2923,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2943,7 +2943,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2963,7 +2963,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -2983,7 +2983,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3003,7 +3003,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3023,7 +3023,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3043,7 +3043,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3065,7 +3065,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3085,7 +3085,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3105,7 +3105,7 @@ getitem 13878,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3359,7 +3359,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3379,7 +3379,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3399,7 +3399,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3419,7 +3419,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3439,7 +3439,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3459,7 +3459,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3479,7 +3479,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3501,7 +3501,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3521,7 +3521,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3541,7 +3541,7 @@ getitem 13878,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
@@ -3561,7 +3561,7 @@ getitem 13879,1;
 
 set $1min,gettimetick(2) + 3;
 
-end2;
+end;
 
 goto L_time;
 
