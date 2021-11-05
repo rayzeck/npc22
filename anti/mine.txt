@@ -109,7 +109,7 @@ if (break == 9) goto tryagain;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -123,7 +123,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
@@ -175,7 +175,7 @@ getitem 1003,1;
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500", "", bc_self;
 
@@ -195,7 +195,7 @@ getitem 7231,1;
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500", "", bc_self;
 
@@ -373,7 +373,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -387,7 +387,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
@@ -439,7 +439,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -459,7 +459,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -479,7 +479,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -661,7 +661,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -675,7 +675,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
@@ -729,7 +729,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -749,7 +749,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -769,7 +769,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -789,7 +789,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -969,7 +969,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -983,7 +983,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
@@ -1039,7 +1039,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1059,7 +1059,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1079,7 +1079,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1099,7 +1099,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1119,7 +1119,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1299,7 +1299,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -1313,7 +1313,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
@@ -1373,7 +1373,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1393,7 +1393,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1413,7 +1413,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1433,7 +1433,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1453,7 +1453,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1473,7 +1473,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1653,7 +1653,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -1667,7 +1667,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
@@ -1727,7 +1727,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1747,7 +1747,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1767,7 +1767,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1787,7 +1787,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1807,7 +1807,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1827,7 +1827,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -1847,7 +1847,7 @@ ferro6:
 
 set mineracaoexp,mineracaoexp +7;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2027,7 +2027,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -2041,7 +2041,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
@@ -2101,7 +2101,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2121,7 +2121,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2141,7 +2141,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2161,7 +2161,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2181,7 +2181,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2201,7 +2201,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2221,7 +2221,7 @@ ferro6:
 
 set mineracaoexp,mineracaoexp +7;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2243,7 +2243,7 @@ ferro7:
 
 set mineracaoexp,mineracaoexp +8;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2423,7 +2423,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -2437,7 +2437,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
@@ -2497,7 +2497,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2517,7 +2517,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2537,7 +2537,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2557,7 +2557,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2577,7 +2577,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2597,7 +2597,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2617,7 +2617,7 @@ ferro6:
 
 set mineracaoexp,mineracaoexp +7;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2639,7 +2639,7 @@ ferro7:
 
 set mineracaoexp,mineracaoexp +8;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2659,7 +2659,7 @@ ferro8:
 
 set mineracaoexp,mineracaoexp +9;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2839,7 +2839,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -2853,7 +2853,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
@@ -2913,7 +2913,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2933,7 +2933,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2953,7 +2953,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2973,7 +2973,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -2993,7 +2993,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3013,7 +3013,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3033,7 +3033,7 @@ ferro6:
 
 set mineracaoexp,mineracaoexp +7;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3055,7 +3055,7 @@ ferro7:
 
 set mineracaoexp,mineracaoexp +8;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3075,7 +3075,7 @@ ferro8:
 
 set mineracaoexp,mineracaoexp +9;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3095,7 +3095,7 @@ ferro9:
 
 set mineracaoexp,mineracaoexp +10;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3275,7 +3275,7 @@ end;
 
 broke:
 
-next;
+sleep2 100;
 
 npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
@@ -3289,7 +3289,7 @@ end;
 
 tryagain:
 
-next;
+sleep2 100;
 
 if (countitem(13751) < 1) goto needpickaxelvl4;
 
@@ -3349,7 +3349,7 @@ carvao:
 
 set mineracaoexp,mineracaoexp +1;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3369,7 +3369,7 @@ ferro:
 
 set mineracaoexp,mineracaoexp +2;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3389,7 +3389,7 @@ ferro2:
 
 set mineracaoexp,mineracaoexp +3;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3409,7 +3409,7 @@ ferro3:
 
 set mineracaoexp,mineracaoexp +4;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3429,7 +3429,7 @@ ferro4:
 
 set mineracaoexp,mineracaoexp +5;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3449,7 +3449,7 @@ ferro5:
 
 set mineracaoexp,mineracaoexp +6;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3469,7 +3469,7 @@ ferro6:
 
 set mineracaoexp,mineracaoexp +7;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3491,7 +3491,7 @@ ferro7:
 
 set mineracaoexp,mineracaoexp +8;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3511,7 +3511,7 @@ ferro8:
 
 set mineracaoexp,mineracaoexp +9;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3531,7 +3531,7 @@ ferro9:
 
 set mineracaoexp,mineracaoexp +10;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
@@ -3551,7 +3551,7 @@ ferro10:
 
 set mineracaoexp,mineracaoexp +11;
 
-next;
+sleep2 100;
 
 npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
