@@ -75,9 +75,9 @@ if (mine == 6) goto falhoudenovo;
 
 if (mine == 7) goto falhoudenovo;
 
-if (mine == 8) goto sucesso;
+if (mine == 8) classchange 1254,getd(".name_"+strnpcinfo(2)+"$"),bc_area; goto sucesso;
 
-if (mine == 9) goto sucesso;
+if (mine == 9) classchange 1254,getd(".name_"+strnpcinfo(2)+"$"),bc_area; goto sucesso;
 
 end;
 
@@ -142,7 +142,6 @@ sucesso:
 
 set found, rand(14);
 cutin "p_06",4; sleep2 500; specialeffect2 457; sleep2 300; cutin "",255;
-classchange 1254,getd(".name_"+strnpcinfo(2)+"$"),bc_area;
 sleep2 300;
 disablenpc getd(".name_"+strnpcinfo(2)+"$");
 
