@@ -106,9 +106,6 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-end;
-
-
 
 broke:
 
@@ -170,9 +167,6 @@ if (found == 11) goto carvao;
 if (found == 12) goto carvao;
 
 if (found == 13) goto ferro;
-
-close;
-
 
 
 carvao:
