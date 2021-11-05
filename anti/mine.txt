@@ -45,9 +45,6 @@ npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoex
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
-
-
 
 usepickaxe:
 
@@ -79,7 +76,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -109,7 +106,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
