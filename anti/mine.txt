@@ -76,8 +76,6 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
-
 
 
 lookagain:
