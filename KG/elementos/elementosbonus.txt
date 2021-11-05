@@ -3,7 +3,17 @@
     OnPCLoginEvent:
     if(elementokaton == 1) {
         bonus_script "{ bonus2 bSubEle,Ele_Wind,5; }",60000;
-        dispbottom "Você tem 5% de resistência contra Fuuton";
+        dispbottom "[Katon] Você tem 5% de resistência contra Fuuton";
+        end;
+    }
+    if(elementoraiton == 1) {
+        bonus_script "{ bonus2 bSubEle,Ele_Earth,5; }",60000;
+        dispbottom "[Raiton] Você tem 5% de resistência contra Doton";
+        end;
+    }
+    if(elementofuuton == 1) {
+        bonus_script "{ bonus2 bSubEle,Ele_Dark,5; }",60000;
+        dispbottom "[Fuuton] Você tem 5% de resistência contra Raiton";
         end;
     }
 }
