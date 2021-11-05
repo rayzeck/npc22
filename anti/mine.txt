@@ -142,6 +142,7 @@ close;
 founditem:
 
 set found, rand(14);
+cutin "p_06",4; sleep2 100; specialeffect2 457;
 
 if (found == 0) goto carvao;
 
