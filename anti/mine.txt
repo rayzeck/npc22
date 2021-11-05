@@ -48,11 +48,11 @@ menu "Sim.",usepickaxe,"Não.",-;
 
 usepickaxe:
 
-cutin "p_00",4; sleep2 100; specialeffect2 457;
-cutin "p_01",4; sleep2 100; specialeffect2 457;
-cutin "p_02",4; sleep2 100; specialeffect2 457;
-cutin "p_03",4; sleep2 100; specialeffect2 457;
-cutin "p_04",4; sleep2 100; specialeffect2 457;
+cutin "p_00",4; sleep2 200; specialeffect2 457;
+cutin "p_01",4; sleep2 200; specialeffect2 457;
+cutin "p_02",4; sleep2 200; specialeffect2 457;
+cutin "p_03",4; sleep2 200; specialeffect2 457;
+cutin "p_04",4; sleep2 200; specialeffect2 457;
 
 set mine, rand(10);
 
@@ -82,7 +82,7 @@ end;
 
 lookagain:
 
-cutin "p_fail",4; sleep2 100; specialeffect2 457; sleep2 150; cutin "",255;
+cutin "p_fail",4; sleep2 200; specialeffect2 457; sleep2 150; cutin "",255;
 
 set break, rand(10);
 
@@ -138,7 +138,7 @@ end;
 founditem:
 
 set found, rand(14);
-cutin "p_06",4; sleep2 100; specialeffect2 457; sleep2 200; cutin "",255;
+cutin "p_06",4; sleep2 200; specialeffect2 457; sleep2 200; cutin "",255;
 
 if (found == 0) goto carvao;
 
