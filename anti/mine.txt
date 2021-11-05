@@ -46,8 +46,6 @@ npctalk "Gostaria de minerar?", "", bc_self;
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-end;
-
 
 
 usepickaxe:
