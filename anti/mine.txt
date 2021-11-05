@@ -113,7 +113,7 @@ broke:
 
 sleep2 100;
 
-npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
+unittalk getcharid(3), "Oh não... minha picareta quebrou...espero que eu tenha outra..";
 
 delitem 9001,1;
 
@@ -130,7 +130,7 @@ sleep2 100;
 if (countitem(9001) < 1) goto precisapicareta;
 
 cutin "p_fail",4; sleep2 500; cutin "",255;
-npctalk "Quer tentar novamente?", "", bc_self;
+unittalk getcharid(3), "Será que eu tento novamente?";
 menu "Sim.",usarpicareta,"Não.",-;
 
 end;
@@ -215,7 +215,7 @@ goto L_time;
 
 precisapicareta:
 
-npctalk "Você precisa de uma picareta básica para minerar.";
+unittalk getcharid(3), "Ah, droga! Eu preciso de uma picareta para minerar.";
 
 end;
 
@@ -272,7 +272,7 @@ end;
 }
 
 
-moc_fild01,358,141,4	duplicate(minerio)	#rock-prt03	1251
+moc_fild01,358,141,4	duplicate(minerio)	Mineração	1251
 
 moc_fild01,157,360,1	duplicate(minerio)	Mineração#12	1251
 
