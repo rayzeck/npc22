@@ -1,4 +1,4 @@
--   script  ELEMENTOS   FAKE_NPC,{
+    -	script	ELEMENTOS	FAKE_NPC,{
 
     OnPCLoginEvent:
     if(elementokaton == 1) {
