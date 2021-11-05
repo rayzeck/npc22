@@ -12,7 +12,7 @@
 
 //= 6/14/05 - Started writing the script
 
-//= 6/15/05 - v.1.1 worked out the bugs and messed with the random.
+//= 6/15/05 - v.1.1 worked out the bugs and npctalksed with the random.
 
 //= 6/16/05 - v.1.3 testesd all spots and added the dup coords. enjoy my script happy.gif
 
@@ -37,7 +37,7 @@ OnInit:
 
 		if ($1min < gettimetick(2)) { 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
@@ -111,13 +111,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -131,7 +131,7 @@ cutin "p_fail",4; sleep2 500; cutin "",255;
 npctalk "Quer tentar novamente?", "", bc_self;
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -183,7 +183,7 @@ if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracao
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -203,7 +203,7 @@ if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracao
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -211,17 +211,17 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "Você precisa de uma picareta básica para minerar.";
+npctalk "Você precisa de uma picareta básica para minerar.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -299,19 +299,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 10) {mes "Seu nível de minerador está muito baixo, é preciso nível 10 para minerar nesse ponto"; close;}
+if (level_minerador < 10) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 10 para minerar nesse ponto"; end;}
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -339,7 +339,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -367,7 +367,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -375,13 +375,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -391,11 +391,11 @@ next;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -431,7 +431,7 @@ if (found == 12) goto ferro;
 
 if (found == 13) goto ferro2;
 
-close;
+end;
 
 
 
@@ -441,7 +441,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -449,7 +449,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -461,7 +461,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -469,7 +469,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -481,7 +481,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -489,7 +489,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -497,17 +497,17 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -587,19 +587,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 20) {mes "Seu nível de minerador está muito baixo, é preciso nível 20 para minerar nesse ponto"; close;}
+if (level_minerador < 20) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 20 para minerar nesse ponto"; end;}
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -627,7 +627,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -655,7 +655,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -663,13 +663,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -679,11 +679,11 @@ next;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -721,7 +721,7 @@ if (found == 13) goto carvao;
 
 if (found == 14) goto carvao;
 
-close;
+end;
 
 
 
@@ -731,7 +731,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -739,7 +739,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -751,7 +751,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -759,7 +759,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -771,7 +771,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -779,7 +779,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -791,7 +791,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -799,7 +799,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -807,17 +807,17 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -895,19 +895,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 30) {mes "Seu nível de minerador está muito baixo, é preciso nível 30 para minerar nesse ponto"; close;}
+if (level_minerador < 30) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 30 para minerar nesse ponto"; end;}
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -935,7 +935,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -963,7 +963,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -971,13 +971,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 9001,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -987,11 +987,11 @@ next;
 
 if (countitem(9001) < 1) goto needpickaxelvl1;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1031,7 +1031,7 @@ if (found == 14) goto carvao;
 
 if (found == 15) goto carvao;
 
-close;
+end;
 
 
 
@@ -1041,7 +1041,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1049,7 +1049,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1061,7 +1061,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1069,7 +1069,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1081,7 +1081,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1089,7 +1089,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1101,7 +1101,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1109,7 +1109,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1121,7 +1121,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1129,7 +1129,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1137,17 +1137,17 @@ goto L_time;
 
 needpickaxelvl1:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -1225,19 +1225,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 40) {mes "Seu nível de minerador está muito baixo, é preciso nível 40 para minerar nesse ponto"; close;}
+if (level_minerador < 40) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 40 para minerar nesse ponto"; end;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1265,7 +1265,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -1293,7 +1293,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -1301,13 +1301,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -1317,11 +1317,11 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1365,7 +1365,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -1375,7 +1375,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1383,7 +1383,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1395,7 +1395,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1403,7 +1403,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1415,7 +1415,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1423,7 +1423,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1435,7 +1435,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1443,7 +1443,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1455,7 +1455,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1463,7 +1463,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1475,7 +1475,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1483,7 +1483,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1491,17 +1491,17 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -1579,19 +1579,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 50) {mes "Seu nível de minerador está muito baixo, é preciso nível 50 para minerar nesse ponto"; close;}
+if (level_minerador < 50) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 50 para minerar nesse ponto"; end;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1619,7 +1619,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -1647,7 +1647,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -1655,13 +1655,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -1671,11 +1671,11 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1719,7 +1719,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -1729,7 +1729,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1737,7 +1737,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1749,7 +1749,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1757,7 +1757,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1769,7 +1769,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1777,7 +1777,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1789,7 +1789,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1797,7 +1797,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1809,7 +1809,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1817,7 +1817,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1829,7 +1829,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1837,7 +1837,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1849,7 +1849,7 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -1857,7 +1857,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -1865,17 +1865,17 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -1953,19 +1953,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 60) {mes "Seu nível de minerador está muito baixo, é preciso nível 60 para minerar nesse ponto"; close;}
+if (level_minerador < 60) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 60 para minerar nesse ponto"; end;}
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -1993,7 +1993,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -2021,7 +2021,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -2029,13 +2029,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13749,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -2045,11 +2045,11 @@ next;
 
 if (countitem(13749) < 1) goto needpickaxelvl2;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -2093,7 +2093,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -2103,7 +2103,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2111,7 +2111,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2123,7 +2123,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2131,7 +2131,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2143,7 +2143,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2151,7 +2151,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2163,7 +2163,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2171,7 +2171,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2183,7 +2183,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2191,7 +2191,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2203,7 +2203,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2211,7 +2211,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2223,7 +2223,7 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2231,7 +2231,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2245,7 +2245,7 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2253,7 +2253,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2261,17 +2261,17 @@ goto L_time;
 
 needpickaxelvl2:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -2349,19 +2349,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 70) {mes "Seu nível de minerador está muito baixo, é preciso nível 70 para minerar nesse ponto"; close;}
+if (level_minerador < 70) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 70 para minerar nesse ponto"; end;}
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -2389,7 +2389,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -2417,7 +2417,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -2425,13 +2425,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -2441,11 +2441,11 @@ next;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -2489,7 +2489,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -2499,7 +2499,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2507,7 +2507,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2519,7 +2519,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2527,7 +2527,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2539,7 +2539,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2547,7 +2547,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2559,7 +2559,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2567,7 +2567,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2579,7 +2579,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2587,7 +2587,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2599,7 +2599,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2607,7 +2607,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2619,7 +2619,7 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2627,7 +2627,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2641,7 +2641,7 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2649,7 +2649,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2661,7 +2661,7 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2669,7 +2669,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2677,17 +2677,17 @@ goto L_time;
 
 needpickaxelvl3:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -2765,19 +2765,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 80) {mes "Seu nível de minerador está muito baixo, é preciso nível 80 para minerar nesse ponto"; close;}
+if (level_minerador < 80) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 80 para minerar nesse ponto"; end;}
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -2805,7 +2805,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -2833,7 +2833,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -2841,13 +2841,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13750,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -2857,11 +2857,11 @@ next;
 
 if (countitem(13750) < 1) goto needpickaxelvl3;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -2905,7 +2905,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -2915,7 +2915,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2923,7 +2923,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2935,7 +2935,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2943,7 +2943,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2955,7 +2955,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2963,7 +2963,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2975,7 +2975,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -2983,7 +2983,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -2995,7 +2995,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3003,7 +3003,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3015,7 +3015,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3023,7 +3023,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3035,7 +3035,7 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3043,7 +3043,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3057,7 +3057,7 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3065,7 +3065,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3077,7 +3077,7 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3085,7 +3085,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3097,7 +3097,7 @@ set mineracaoexp,mineracaoexp +10;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
@@ -3105,7 +3105,7 @@ getitem 13878,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3113,17 +3113,17 @@ goto L_time;
 
 needpickaxelvl3:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
@@ -3201,19 +3201,19 @@ OnInit:
 
 
 
-if (mineirador != 1) {mes "Você ainda não é minerador, faça a quest em sua vila"; close;}
+if (mineirador != 1) {npctalk "Você ainda não é minerador, faça a quest em sua vila"; end;}
 
-if (level_minerador < 90) {mes "Seu nível de minerador está muito baixo, é preciso nível 90 para minerar nesse ponto"; close;}
+if (level_minerador < 90) {npctalk "Seu nível de minerador está muito baixo, é preciso nível 90 para minerar nesse ponto"; end;}
 
 if (countitem(13751) < 1) goto needpickaxelvl4;
 
-mes "Você encontrou com ponto de mineração.";
+npctalk "Você encontrou com ponto de mineração.";
 
-mes "Gostaria de minerar.";
+npctalk "Gostaria de minerar.";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -3241,7 +3241,7 @@ if (mine == 8) goto founditem;
 
 if (mine == 9) goto founditem;
 
-close;
+end;
 
 
 
@@ -3269,7 +3269,7 @@ if (break == 8) goto tryagain;
 
 if (break == 9) goto tryagain;
 
-close;
+end;
 
 
 
@@ -3277,13 +3277,13 @@ broke:
 
 next;
 
-mes "Oh não... sua picareta quebrou...espero que tenha outra..";
+npctalk "Oh não... sua picareta quebrou...espero que tenha outra..";
 
 delitem 13751,1;
 
 goto tryagain;
 
-close;
+end;
 
 
 
@@ -3293,11 +3293,11 @@ next;
 
 if (countitem(13751) < 1) goto needpickaxelvl4;
 
-mes "Você não achou nada, quer tentar denovo?";
+npctalk "Você não achou nada, quer tentar denovo?";
 
 menu "Sim.",usepickaxe,"Não.",-;
 
-close;
+end;
 
 
 
@@ -3341,7 +3341,7 @@ if (found == 16) goto carvao;
 
 if (found == 17) goto carvao;
 
-close;
+end;
 
 
 
@@ -3351,7 +3351,7 @@ set mineracaoexp,mineracaoexp +1;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3359,7 +3359,7 @@ getitem 1003,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3371,7 +3371,7 @@ set mineracaoexp,mineracaoexp +2;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3379,7 +3379,7 @@ getitem 7231,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3391,7 +3391,7 @@ set mineracaoexp,mineracaoexp +3;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3399,7 +3399,7 @@ getitem 13871,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3411,7 +3411,7 @@ set mineracaoexp,mineracaoexp +4;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3419,7 +3419,7 @@ getitem 13872,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3431,7 +3431,7 @@ set mineracaoexp,mineracaoexp +5;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3439,7 +3439,7 @@ getitem 13873,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3451,7 +3451,7 @@ set mineracaoexp,mineracaoexp +6;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3459,7 +3459,7 @@ getitem 13874,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3471,7 +3471,7 @@ set mineracaoexp,mineracaoexp +7;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3479,7 +3479,7 @@ getitem 13875,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3493,7 +3493,7 @@ set mineracaoexp,mineracaoexp +8;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3501,7 +3501,7 @@ getitem 13876,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3513,7 +3513,7 @@ set mineracaoexp,mineracaoexp +9;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")"; }
 
@@ -3521,7 +3521,7 @@ getitem 13877,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3533,7 +3533,7 @@ set mineracaoexp,mineracaoexp +10;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
@@ -3541,7 +3541,7 @@ getitem 13878,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3553,7 +3553,7 @@ set mineracaoexp,mineracaoexp +11;
 
 next;
 
-mes "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
+npctalk "Material coletado com sucesso, experiência de mineirador: "+mineracaoexp+"/500";
 
 if (mineracaoexp >= 500) {set level_minerador, level_minerador +1; set mineracaoexp,0; dispbottom "Profissão: Minerador, level up (nível atual: "+level_minerador+")";}
 
@@ -3561,7 +3561,7 @@ getitem 13879,1;
 
 set $1min,gettimetick(2) + 3;
 
-close2;
+end2;
 
 goto L_time;
 
@@ -3569,17 +3569,17 @@ goto L_time;
 
 needpickaxelvl4:
 
-mes "Você precisa de uma picareta.";
+npctalk "Você precisa de uma picareta.";
 
-close;
+end;
 
 
 
 bigrock:
 
-mes "You see a big rock.";
+npctalk "You see a big rock.";
 
-close;
+end;
 
 
 
