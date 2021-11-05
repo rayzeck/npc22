@@ -172,7 +172,7 @@ if (found == 12) goto carvao;
 
 if (found == 13) goto ferro;
 
-close;
+end;
 
 
 
